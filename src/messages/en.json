@@ -1,27 +1,82 @@
 {
   "Metadata": {
-    "title": "GECAAB — Capoeira Angola África Bantu School",
-    "description": "Official site of the Group/School of Capoeira Angola África Bantu. Classes, events and members-only content for students."
+    "title": "CMC/CA — Capoeira Angola Association · Geneva",
+    "description": "CMC/CA, association dedicated to the memory and knowledge of Capoeira Angola, home of the GECAAB / África Bantu school of Mestre Braga in Geneva. History, library, classes and members-only content."
   },
   "Nav": {
     "home": "Home",
-    "about": "About",
+    "association": "Association",
+    "school": "School",
     "mestre": "Mestre Braga",
     "courses": "Classes",
+    "library": "Library",
     "gallery": "Gallery",
     "history": "History",
     "contact": "Contact",
-    "studentArea": "Student area"
+    "memberArea": "Member area"
   },
   "HomePage": {
-    "heroTitle": "Group/School of Capoeira Angola África Bantu",
-    "heroSubtitle": "From Rio de Janeiro to Geneva — Mestre Braga's school, since 1993.",
+    "kicker": "Capoeira Angola",
+    "mission": "The memory and knowledge of the capoeiras in Capoeira Angola",
+    "heroTitle": "CMC/CA",
+    "heroSubtitle": "An association dedicated to teaching and keeping alive the memory of Capoeira Angola — and the home of the GECAAB / África Bantu school of Mestre Braga, in Geneva.",
     "videoCaption": "N'golo, the zebra dance — the two zebras of our emblem",
-    "heroCta": "Enter student area",
-    "aboutTitle": "About the group",
-    "aboutBody": "The Group/School of Capoeira Angola África Bantu was founded in Rio de Janeiro in 1993/4 by Mestre Braga. Today it brings together chapters in three cities: Rio de Janeiro, led by Mestre Edson; Aarhus, in Denmark, by Contramestre Andréas; and Geneva, led by Mestre Braga himself. The Geneva group is organised as an association, a member of the Ateliers d'Ethnomusicologie (ADEM).",
-    "contactTitle": "Contact",
-    "contactBody": "Centre ADEM, 10 rue de Montbrillant, CH-1201 Geneva."
+    "assocNumber": "N° 01 ·",
+    "assocTitle": "The association",
+    "assocBody": "CMC/CA is the umbrella association. Its purpose is the transmission of a knowledge of memory: informing about the cultural sources of Capoeira Angola, born of the Bantu diaspora in Brazil, and supporting its practice as education, socialisation and physical and mental wellbeing.",
+    "assocCta": "About the association",
+    "schoolNumber": "N° 02 ·",
+    "schoolTitle": "The school — GECAAB / África Bantu",
+    "schoolBody": "Inside the association lives the Group/School of Capoeira Angola África Bantu, founded by Mestre Braga in Rio de Janeiro in 1993/4 and established in Geneva, a member of the Ateliers d'Ethnomusicologie (ADEM).",
+    "schoolCtaMestre": "Mestre Braga",
+    "schoolCtaCourses": "Classes",
+    "schoolCtaHistory": "History",
+    "libraryNumber": "N° 03 ·",
+    "libraryTitle": "Esfera Intelectual — the library",
+    "libraryBody": "A living memory archive: a bibliography of essential works on the Bantu, Brazil and Capoeira Angola, and a curated video library reserved for members.",
+    "libraryCta": "Enter the library",
+    "contactNumber": "N° 04 ·",
+    "contactTitle": "Contact"
+  },
+  "AssociationPage": {
+    "eyebrow": "The umbrella",
+    "title": "Association",
+    "intro": "CMC/CA is an association dedicated to the memory and knowledge of the capoeiras in Capoeira Angola. It carries the cultural transmission of the practice and shelters the GECAAB / África Bantu school.",
+    "missionTitle": "Mission",
+    "missionBody": "To teach this knowledge — that is, to inform about the values and the cultural sources that gave rise to Capoeira Angola, born of the trans-Atlantic Bantu diaspora and of the enslaved labour on the sugar, coffee and cotton plantations of Brazil. From 1860, Capoeira Angola took a new order, joined to the musical bow, the berimbau.",
+    "structureTitle": "Association and school",
+    "structureBody": "The association (CMC/CA) is the umbrella. Within it, the school (GECAAB / África Bantu) carries the day-to-day teaching of Capoeira Angola — classes, roda and the transmission of Mestre Braga's lineage.",
+    "ademTitle": "ADEM",
+    "ademBody": "The Geneva group is organised as an association and is a member of the Ateliers d'Ethnomusicologie (ADEM), at Centre ADEM, 10 rue de Montbrillant, CH-1201 Geneva.",
+    "noteTitle": "A note on our purpose",
+    "noteBody": "This work is dedicated exclusively to teaching this knowledge and honouring the cultural sources that produced it. Although capoeira was, in the past, used in or entangled with political matters, our struggle is for the right to practise and to assist in socialisation — educating, too, with benefits offered to the physical and mental health that practitioners can improve. Ideologies are foreign to it — neither foreseen nor part of this."
+  },
+  "LibraryPage": {
+    "eyebrow": "Esfera Intelectual",
+    "title": "Library",
+    "intro": "Aids to memory. A reading list of essential works, and a curated video library — the moving-image memory of the Bantu, of Brazil and of Capoeira Angola — reserved for members.",
+    "booksTitle": "Books",
+    "booksIntro": "A bibliography to ground the study of this knowledge.",
+    "books": [
+      { "title": "Bantus e Malês", "author": "Nei Lopes" },
+      { "title": "Negregada Instituição", "author": "Carlos Eugênio Líbano Soares" },
+      { "title": "Capoeira Angola", "author": "Waldeloir Rego" },
+      { "title": "Capoeira Angola", "author": "Mestre Pastinha" },
+      { "title": "Mestre Bimba, a Crônica da Capoeiragem", "author": "Jair Moura" }
+    ],
+    "livesTitle": "Video library",
+    "livesIntro": "Curated talks and recordings, organised by theme. Reserved for members.",
+    "livesLocked": "Members only",
+    "liveCats": [
+      "On the Bantu",
+      "On Brazil",
+      "Capoeiras",
+      "Capoeira Angola"
+    ],
+    "livesCta": "Sign in to watch",
+    "recordingsTitle": "Recordings",
+    "recordingsIntro": "Audio recordings of the group — an archive in progress.",
+    "recordingsLink": "Listen on Last.fm"
   },
   "CoursPage": {
     "eyebrow": "Weekly classes",
@@ -36,13 +91,20 @@
     "wednesdayLabel": "Advanced · Roda until 22:00",
     "friday": "Friday",
     "fridayHours": "19:30 – 21:00",
-    "fridayLabel": "Salle l'ilôt 13, behind Cornavin station",
+    "fridayLabel": "Salle l'ilôt 13, near Parc des Cropettes",
     "locationTitle": "Location",
     "locationName": "Centre ADEM",
     "locationAddress": "10 rue de Montbrillant (behind Cornavin), CH-1201 Geneva",
     "locationNote": "Centre ADEM has showers and changing rooms.",
     "dressCodeTitle": "Dress",
     "dressCodeBody": "Black trousers and white t-shirt.",
+    "ensinoTitle": "The teaching",
+    "ensinoIntro": "Teaching follows two parallel paths. The full, staged programme — with its materials — lives in the member area.",
+    "track1Title": "Rational development",
+    "track1Body": "The body path: building movement, endurance and resistance, in stages.",
+    "track2Title": "The social of the berimbau",
+    "track2Body": "The music and community path: songs, berimbaus, the roda and its protocols.",
+    "ensinoCta": "See the programme in the member area",
     "pricesTitle": "Prices",
     "pricesCurrency": "CHF",
     "priceMembersTitle": "G/E.C.A.A.B. members",
@@ -62,6 +124,17 @@
     "videoCaption": "The berimbau — the instrument that leads the roda",
     "lineageTitle": "Lineage",
     "lineageBody": "Mestre Pastinha (Bahia) · Mestre Moraes · Mestre Braga · Mestre Edson (Rio) · Contramestre Andréas (Aarhus).",
+    "fichaTitle": "In brief",
+    "fullNameLabel": "Full name",
+    "fullName": "Antonio Neves Braga",
+    "bornLabel": "Born",
+    "born": "13 June 1957 · Rio de Janeiro",
+    "gradedLabel": "Graded mestre",
+    "graded": "16 December 1978 · by Mestre Moraes, Parque Lage (Rio)",
+    "foundedLabel": "Schools established",
+    "founded": "GECAAB — Rio, 1993/4 · Aarhus & Copenhagen, 1997 · Geneva, 2002",
+    "emblemTitle": "The emblem",
+    "emblemBody": "Mestre Braga created the group's emblem — a berimbau and two zebras, evoking n'golo, the zebra dance at the African root of the game. The motif lives on in the África Bantu mark.",
     "memoriasTitle": "Memórias",
     "memoriasP1": "I grew up in Lins, in the north zone of Rio de Janeiro — still in the days of the state of Guanabara. Those were the days of cerol in kite wars, marbles, spinning tops, barefoot football matches between the hillside favelas and the paved streets, the sound of macumba at night and offerings at every corner in the morning, samba played on matchboxes, the surdo from carnival rehearsals. That's how it was, more or less, until I was around 13 or 14.",
     "memoriasP2": "Up on the morro, a fight always made the distinction. They said a man's fight was never grappling: hence the slaps, the leg-sweeps that put the other on the horizontal, and plenty of ginga — which in slang was called ciscar. I got my first lessons in middle school, from a Black classmate who one day invited me to watch a street fight. Moving loosely, he landed a leg-sweep, two or three slaps, and finally a headbutt on a much bigger boy. I pressed him so hard to teach me that he eventually did.",
@@ -107,7 +180,7 @@
       {
         "title": "Capoeiras and Portuguese fadistas",
         "paragraphs": [
-          "From 1850 onwards, with the end of the Atlantic slave trade and Rio's growing urban demand for labour, Portuguese immigration to the city intensified — many came from the Azores. Newly arrived Portuguese and Rio's Black population shared the same cortiços, the same epidemics, the same low-wage occupations. From that proximity arose an intense cultural exchange, documented by historians such as Marcos Bretas and Carlos Eugenio Líbano Soares.",
+          "From 1850 onwards, with the end of the Atlantic slave trade and Rio's growing urban demand for labour, Portuguese immigration to the city intensified — many came from the Azores. Newly arrived Portuguese and Rio's Black population shared the same cortiços, the same epidemics, the same low-wage occupations. From that proximity arose an intense cultural exchange, documented by historians such as Marcos Bretas and Carlos Eugênio Líbano Soares.",
           "The fadista — a marginal figure of 19th-century Lisbon, alongside prostitutes, sailors and vagabonds — brought to Rio not only the fado song but also a particular way of fighting: the razor, the ginga, agility. The journalist Tinop wrote that \"the fadistas of Rio de Janeiro are the capoeiras.\" The vocabulary itself overlapped — \"sardinha\", \"rasteira\", \"ginga\" belonged to both worlds. The duel between the carioca capoeira Manduca da Praia (Nagôa) and the fadista Sant'Anna sealed the encounter: from then on, they walked together through the bustling streets of the imperial capital.",
           "There was also the marialva — a bourgeois used to frequenting the underworld, or the son of aristocratic families slumming it. The most famous marialva of Rio's court was José Elysio dos Reis, \"Juca Reis\", son of an important Lusitanian family. The cyclical police repression that fell upon Lisbon's nightlife — and upon Rio capoeira — was repeatedly motivated by the reappearance of this figure in the worst districts.",
           "On 11 October 1890, decree no. 847 introduced capoeira into the Penal Code of the Republic, in chapter XIII \"Dos vadios e capoeiras\" — articles 402, 403 and 404. The arrest and deportation of capoeiras continued: from the penal colony of Fernando de Noronha to the Dois Rios correctional colony on Ilha Grande."
@@ -124,7 +197,7 @@
       {
         "title": "National Gymnastics (1928) — the first deafricanisation",
         "paragraphs": [
-          "After centuries of police repression in the three states where capoeira had taken root most deeply — Rio, Bahia and Pernambuco — the National Gymnastics appears in Rio de Janeiro in 1928. It was a project by Anibal Burlamaque (known as \"Zuma\"), presented as the first Sporting Code of Capoeira, \"Methodised and Regulated\". The book contained an illustrated nomenclature, attacks and counter-attacks translated into a more \"understandable\" language, competition areas, rules, criteria for training referees and uniforms.",
+          "After centuries of police repression in the three states where capoeira had taken root most deeply — Rio, Bahia and Pernambuco — the National Gymnastics appears in Rio de Janeiro in 1928. It was a project by Aníbal Burlamaque (known as \"Zuma\"), presented as the first Sporting Code of Capoeira, \"Methodised and Regulated\". The book contained an illustrated nomenclature, attacks and counter-attacks translated into a more \"understandable\" language, competition areas, rules, criteria for training referees and uniforms.",
           "It was the first explicit attempt to deafricanise the practice — to detach it from its Black cultural source and frame it within the European rules of competitive gymnastics. For a long time, it was the only form tolerated by the police."
         ]
       },
@@ -155,24 +228,57 @@
     ]
   },
   "LoginPage": {
-    "title": "Student area",
-    "description": "Sign in with your email and password to access the mestre's videos and materials.",
+    "title": "Member area",
+    "description": "Sign in with your email and password to access the curriculum, the video library and members-only materials.",
     "emailLabel": "Email",
     "passwordLabel": "Password",
     "submit": "Sign in",
     "invalidCredentials": "Invalid email or password.",
     "backHome": "Back to home"
   },
-  "StudentArea": {
-    "title": "Student area",
+  "MemberArea": {
+    "badge": "Members only",
+    "title": "Member area",
     "connectedAs": "Signed in as {email}",
     "signOut": "Sign out",
+    "ensinoTitle": "The teaching",
+    "ensinoIntro": "Two parallel paths, in stages, leading to certificates.",
+    "track1Title": "Rational development for resistance",
+    "track1Desc": "The body path: movement, endurance and resistance.",
+    "track2Title": "The social of the berimbau",
+    "track2Desc": "The music and community path of the roda.",
+    "etapaLabel": "Stage",
+    "track1Etapas": [
+      "Stage 1",
+      "Stage 2",
+      "Stage 3"
+    ],
+    "track2Etapas": [
+      "Stage 1 — songs and lyric sheets",
+      "Stage 2 — berimbaus",
+      "Stage 3 — roda de capoeira",
+      "Stage 4 — protocols and procedures"
+    ],
+    "comingSoon": "The mestre will add the content of this stage here.",
+    "livesTitle": "Video library",
+    "livesIntro": "Curated recordings, organised by theme.",
+    "liveCats": [
+      "On the Bantu",
+      "On Brazil",
+      "Capoeiras",
+      "Capoeira Angola"
+    ],
+    "certsTitle": "Achievements & certificates",
+    "certsBody": "Your progress and certificates will appear here.",
+    "mediaTitle": "Photos & videos",
     "photosTitle": "Photos",
     "videosTitle": "Videos",
-    "empty": "Nothing here yet. The mestre will drop the student-only photos and videos here."
+    "empty": "Nothing here yet. The mestre will drop the members-only photos and videos here."
   },
   "Footer": {
-    "copyright": "© {year} GECAAB",
+    "association": "CMC/CA",
+    "school": "GECAAB · Capoeira Angola África Bantu",
+    "copyright": "© {year} CMC/CA",
     "tagline": "Geneva · Rio de Janeiro · Aarhus"
   },
   "LanguageSwitcher": {

@@ -27,5 +27,5 @@ export async function login(formData: FormData) {
     redirect({ href: `/login?${params.toString()}`, locale })
   }
 
-  redirect({ href: isSafeRedirect(next) ? next : '/alunos', locale })
+  redirect({ href: isSafeRedirect(next) ? next : '/membros', locale })
 }

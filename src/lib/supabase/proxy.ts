@@ -41,10 +41,16 @@ export async function updateSession(
     },
   })
 
-  const { data: { user } } = await supabase.auth.getUser()
+  // Fail fast: never let a slow or unreachable Supabase hang every request.
+  // If the auth check doesn't answer in time, treat the visitor as logged out.
+  const AUTH_TIMEOUT_MS = 2000
+  const user = await Promise.race([
+    supabase.auth.getUser().then(({ data }) => data.user),
+    new Promise<null>((resolve) => setTimeout(() => resolve(null), AUTH_TIMEOUT_MS)),
+  ]).catch(() => null)
 
   const { locale, rest } = stripLocale(request.nextUrl.pathname)
-  const isProtected = rest.startsWith('/alunos')
+  const isProtected = rest.startsWith('/membros')
   const isAuthRoute = rest === '/login' || rest.startsWith('/login/')
 
   if (isProtected && !user) {
@@ -57,7 +63,7 @@ export async function updateSession(
 
   if (isAuthRoute && user) {
     const redirectUrl = request.nextUrl.clone()
-    redirectUrl.pathname = `/${locale}/alunos`
+    redirectUrl.pathname = `/${locale}/membros`
     redirectUrl.search = ''
     return NextResponse.redirect(redirectUrl)
   }

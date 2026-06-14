@@ -18,7 +18,7 @@ export async function GET(
   const next =
     nextParam && nextParam.startsWith('/') && !nextParam.startsWith('//')
       ? nextParam
-      : '/alunos'
+      : '/membros'
 
   if (code) {
     const supabase = await createClient()

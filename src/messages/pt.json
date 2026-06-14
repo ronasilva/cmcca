@@ -1,27 +1,82 @@
 {
   "Metadata": {
-    "title": "GECAAB — Escola de Capoeira Angola África Bantu",
-    "description": "Site oficial do Grupo/Escola de Capoeira Angola África Bantu. Aulas, eventos e conteúdo exclusivo para alunos."
+    "title": "CMC/CA — Associação de Capoeira Angola · Genebra",
+    "description": "CMC/CA, associação dedicada à memória e ao conhecimento da Capoeira Angola, casa da escola GECAAB / África Bantu do Mestre Braga em Genebra. História, biblioteca, aulas e conteúdo reservado aos membros."
   },
   "Nav": {
     "home": "Início",
-    "about": "Sobre",
+    "association": "Associação",
+    "school": "Escola",
     "mestre": "Mestre Braga",
     "courses": "Aulas",
+    "library": "Biblioteca",
     "gallery": "Galeria",
     "history": "História",
     "contact": "Contato",
-    "studentArea": "Área do aluno"
+    "memberArea": "Área do membro"
   },
   "HomePage": {
-    "heroTitle": "Grupo/Escola de Capoeira Angola África Bantu",
-    "heroSubtitle": "Do Rio de Janeiro a Genebra — a escola do Mestre Braga, desde 1993.",
+    "kicker": "Capoeira Angola",
+    "mission": "O conhecimento de memória dos capoeiras em Capoeira Angola",
+    "heroTitle": "CMC/CA",
+    "heroSubtitle": "Uma associação dedicada ao ensino e à preservação da memória da Capoeira Angola — e a casa da escola GECAAB / África Bantu do Mestre Braga, em Genebra.",
     "videoCaption": "N'golo, a dança da zebra — as duas zebras do nosso emblema",
-    "heroCta": "Acessar área do aluno",
-    "aboutTitle": "Sobre o grupo",
-    "aboutBody": "O Grupo/Escola de Capoeira Angola África Bantu foi fundado no Rio de Janeiro em 1993/4 pelo Mestre Braga. Hoje reúne capítulos em três cidades: Rio de Janeiro, dirigido pelo Mestre Edson; Aarhus, na Dinamarca, pelo Contramestre Andréas; e Genebra, conduzido pelo próprio Mestre Braga. O grupo de Genebra organiza-se como associação, membro dos Ateliers d'Ethnomusicologie (ADEM).",
-    "contactTitle": "Contato",
-    "contactBody": "Centre ADEM, 10 rue de Montbrillant, CH-1201 Genebra."
+    "assocNumber": "N° 01 ·",
+    "assocTitle": "A associação",
+    "assocBody": "A CMC/CA é a associação que abriga tudo. A sua razão de ser é a transmissão de um conhecimento de memória: informar sobre as fontes culturais da Capoeira Angola, nascida da diáspora bantu no Brasil, e apoiar a sua prática como educação, sociabilização e bem-estar físico e mental.",
+    "assocCta": "Sobre a associação",
+    "schoolNumber": "N° 02 ·",
+    "schoolTitle": "A escola — GECAAB / África Bantu",
+    "schoolBody": "Dentro da associação vive o Grupo/Escola de Capoeira Angola África Bantu, fundado pelo Mestre Braga no Rio de Janeiro em 1993/4 e estabelecido em Genebra, membro dos Ateliers d'Ethnomusicologie (ADEM).",
+    "schoolCtaMestre": "Mestre Braga",
+    "schoolCtaCourses": "Aulas",
+    "schoolCtaHistory": "História",
+    "libraryNumber": "N° 03 ·",
+    "libraryTitle": "Esfera Intelectual — a biblioteca",
+    "libraryBody": "Um arquivo vivo da memória: uma bibliografia das obras essenciais sobre os bantus, o Brasil e a Capoeira Angola, e uma videoteca selecionada, reservada aos membros.",
+    "libraryCta": "Entrar na biblioteca",
+    "contactNumber": "N° 04 ·",
+    "contactTitle": "Contato"
+  },
+  "AssociationPage": {
+    "eyebrow": "A casa",
+    "title": "Associação",
+    "intro": "A CMC/CA é uma associação dedicada à memória e ao conhecimento dos capoeiras em Capoeira Angola. Conduz a transmissão cultural da prática e abriga a escola GECAAB / África Bantu.",
+    "missionTitle": "Missão",
+    "missionBody": "Ensinar esse conhecimento — ou seja, informar dos valores e das fontes culturais que geraram a Capoeira Angola, nascida da diáspora bantu transatlântica e do trabalho escravo nas lavouras de cana-de-açúcar, café e algodão do Brasil. A contar de 1860, a Capoeira Angola passou por uma nova ordem, que junta o arco musical, o berimbau.",
+    "structureTitle": "Associação e escola",
+    "structureBody": "A associação (CMC/CA) é a casa que abriga. Dentro dela, a escola (GECAAB / África Bantu) conduz o ensino do dia a dia da Capoeira Angola — aulas, roda e a transmissão da linhagem do Mestre Braga.",
+    "ademTitle": "ADEM",
+    "ademBody": "O grupo de Genebra organiza-se como associação e é membro dos Ateliers d'Ethnomusicologie (ADEM), no Centre ADEM, 10 rue de Montbrillant, CH-1201 Genebra.",
+    "noteTitle": "Uma nota sobre o nosso propósito",
+    "noteBody": "Esta referência dedica-se única e exclusivamente ao ensino desse conhecimento e a honrar as fontes culturais que o geraram. Embora a capoeira tenha sido, no passado, usada ou envolvida em assuntos políticos, a luta é por autorização de poder praticar e auxiliar na sociabilização — educando também, com os benefícios oferecidos à saúde física e mental que os praticantes podem melhorar. Ideologias são estranhas a isto — não previstas, nem parte disto."
+  },
+  "LibraryPage": {
+    "eyebrow": "Esfera Intelectual",
+    "title": "Biblioteca",
+    "intro": "De ajuda à memória. Uma lista de leituras essenciais, e uma videoteca selecionada — a memória em imagens dos bantus, do Brasil e da Capoeira Angola — reservada aos membros.",
+    "booksTitle": "Livros",
+    "booksIntro": "Uma bibliografia para fundamentar o estudo desse conhecimento.",
+    "books": [
+      { "title": "Bantus e Malês", "author": "Nei Lopes" },
+      { "title": "Negregada Instituição", "author": "Carlos Eugênio Líbano Soares" },
+      { "title": "Capoeira Angola", "author": "Waldeloir Rego" },
+      { "title": "Capoeira Angola", "author": "Mestre Pastinha" },
+      { "title": "Mestre Bimba, a Crônica da Capoeiragem", "author": "Jair Moura" }
+    ],
+    "livesTitle": "Videoteca",
+    "livesIntro": "Lives e gravações selecionadas, organizadas por tema. Reservado aos membros.",
+    "livesLocked": "Reservado aos membros",
+    "liveCats": [
+      "Sobre os bantus",
+      "Sobre o Brasil",
+      "Capoeiras",
+      "Capoeira Angola"
+    ],
+    "livesCta": "Entrar para assistir",
+    "recordingsTitle": "Gravações",
+    "recordingsIntro": "Gravações em áudio do grupo — um arquivo em construção.",
+    "recordingsLink": "Ouvir no Last.fm"
   },
   "CoursPage": {
     "eyebrow": "Aulas semanais",
@@ -36,13 +91,20 @@
     "wednesdayLabel": "Avançados · Roda até 22h00",
     "friday": "Sexta-feira",
     "fridayHours": "19h30 – 21h00",
-    "fridayLabel": "Salle l'ilôt 13, atrás da estação Cornavin",
+    "fridayLabel": "Salle l'ilôt 13, perto do Parc des Cropettes",
     "locationTitle": "Local",
     "locationName": "Centre ADEM",
     "locationAddress": "10, rue de Montbrillant (atrás da estação Cornavin), CH-1201 Genebra",
     "locationNote": "O Centre ADEM dispõe de chuveiros e vestiários.",
     "dressCodeTitle": "Vestimenta",
     "dressCodeBody": "Calça preta e camiseta branca.",
+    "ensinoTitle": "O ensino",
+    "ensinoIntro": "O ensino segue dois caminhos paralelos. O programa completo, por etapas — com o seu material — está na área do membro.",
+    "track1Title": "Desenvolvimento racional",
+    "track1Body": "O caminho do corpo: construir o movimento, a resistência e o fôlego, por etapas.",
+    "track2Title": "O social do berimbau",
+    "track2Body": "O caminho da música e da comunidade: cantorias, berimbaus, a roda e os seus procedimentos.",
+    "ensinoCta": "Ver o programa na área do membro",
     "pricesTitle": "Valores",
     "pricesCurrency": "CHF",
     "priceMembersTitle": "Sócios G/E.C.A.A.B.",
@@ -62,13 +124,24 @@
     "videoCaption": "O berimbau — o instrumento que conduz a roda",
     "lineageTitle": "Linhagem",
     "lineageBody": "Mestre Pastinha (Bahia) · Mestre Moraes · Mestre Braga · Mestre Edson (Rio) · Contramestre Andréas (Aarhus).",
+    "fichaTitle": "Em resumo",
+    "fullNameLabel": "Nome completo",
+    "fullName": "Antonio Neves Braga",
+    "bornLabel": "Nascimento",
+    "born": "13 de junho de 1957 · Rio de Janeiro",
+    "gradedLabel": "Graduado mestre",
+    "graded": "16 de dezembro de 1978 · por Mestre Moraes, Parque Lage (Rio)",
+    "foundedLabel": "Escolas fundadas",
+    "founded": "GECAAB — Rio, 1993/4 · Aarhus & Copenhague, 1997 · Genebra, 2002",
+    "emblemTitle": "O emblema",
+    "emblemBody": "Mestre Braga criou o emblema do grupo — um berimbau e duas zebras, evocando o n'golo, a dança da zebra na raiz africana do jogo. O motivo permanece na marca África Bantu.",
     "memoriasTitle": "Memórias",
     "memoriasP1": "Cresci em Lins, na zona norte do Rio de Janeiro — ainda no tempo do estado da Guanabara. Eram os tempos de cerol nas guerras de pipa, jogo de gude, pião, peladas descalço entre o morro e o asfalto, som de macumba pela noite e despachos nas esquinas pela manhã, samba na caixa de fósforo, o surdo dos ensaios das escolas de samba para o carnaval. Assim foi, mais ou menos, até os 13 ou 14 anos.",
     "memoriasP2": "No morro, a briga sempre fez a distinção. Dizia-se que briga de homem não era agarrado: daí os tapas, as rasteiras que deixavam o outro na horizontal, e muita ginga — que, na gíria, chamavam de ciscar. Recebi minhas primeiras lições no ginásio, de um colega negro da mesma sala, que um dia me convidou a assistir a uma briga de rua. De movimento solto, ele aplicou uma rasteira, dois ou três tapas e, por fim, uma cabeçada num rapaz bem mais forte. Tanto insisti em aprender que ele acabou me ensinando.",
     "memoriasP3": "Comecei aprendendo com outros colegas que já frequentavam academias. Com uns 14 para 15 anos, entrei na minha primeira escola: o Grupo Palmares, na rua Paula de Frontin, com os mestres Roni, Zé Macaco e Cabelo Russo. O grupo passou depois pela academia Almir Ribeiro, na Tijuca, pelo morro do Catumbi, por Santa Teresa. Quando se dispersou, frequentei por um tempo o Mestre Dentinho, em Vila Isabel, e em seguida o Grupo Corda Bamba do Mestre Touro, na Penha — capoeira angola — onde fiquei cerca de seis meses.",
-    "memoriasP4": "Esses mestres — todos negros — sempre destacavam que capoeira era angola. O Mestre Roni, embora faixa-preta em karatê e judô, era habilíssimo em levar o oponente à queda por rasteira: nunca o vi misturar as coisas. A maioria dos baianos que emigravam para o Rio, porém, não se sustentavam com a angola diante dos cariocas e acabavam transmitindo as influências da Luta Regional do Mestre Bimba.",
-    "memoriasP5": "Foi no carnaval, na roda da Central do Brasil, que vi pela primeira vez o Moraes andando de bananeira, parecendo um caranguejo ao jogar com Dentinho. Diziam que era um aluno de Pastinha vindo de São João de Meriti; alguns o chamavam de «o africano», pelo modo como se movimentava. Na roda de mestres e contramestres em Bonsucesso, do Mestre Zé Pedro, pude vê-lo jogar várias vezes — a diferença era de 360° em relação à maneira regional, e muitos ficavam sem saber como reagir. Poucos — Luiz Malhado, Dentinho, Touro, Celso do Engenho da Rainha — conseguiam jogar com ele. Moraes foi inicialmente subestimado por se assumir angoleiro; isso mudou quando, na pancada para valer, deixou claro porque era fiel a essa escola. Dizia sempre «aprendi com o velho», referindo-se a Pastinha; mas esclarecia que seus mestres mesmo tinham sido João Grande, seu ídolo da angola, e João Pequeno. Comecei com ele em 5 de julho de 1975, no Clube Gurilândia, em Botafogo. Eu tinha 17 ou 18 anos.",
-    "memoriasP6": "Em dezembro de 1975 fomos à Bahia — Moraes, eu, Neco, Marco Aurélio, Zé Carlos da Posse, Tete e Amalha. Visitamos todos o Mestre Pastinha, que se lembrou de Moraes pelo nome de Pedrinho. Permaneci em Salvador todo o mês de janeiro, e voltei outras vezes. Numa dessas visitas pude passar-lhe um berimbau que comprei no mercado modelo e vê-lo tocar. Os três tipos de berimbau — gunga, médio e viola — aprendi sem dúvida com Mestre Moraes, exímio também no arco musical."
+    "memoriasP4": "Esses mestres — todos negros — sempre destacavam que capoeira era angola. O Mestre Roni, embora faixa-preta em karatê e judô, era habilíssimo em levar o oponente à queda por rasteira: nunca o vi misturar as coisas. A maioria dos baianos que migravam para o Rio, porém, não se sustentavam com a angola diante dos cariocas e acabavam transmitindo as influências da Luta Regional do Mestre Bimba.",
+    "memoriasP5": "Foi no carnaval, na roda da Central do Brasil, que vi pela primeira vez o Moraes andando de bananeira, parecendo um caranguejo ao jogar com Dentinho. Diziam que era um aluno de Pastinha vindo de São João de Meriti; alguns o chamavam de «o africano», pelo modo como se movimentava. Na roda de mestres e contramestres em Bonsucesso, do Mestre Zé Pedro, pude vê-lo jogar várias vezes — a diferença era de 360° em relação à maneira regional, e muitos ficavam sem saber como reagir. Poucos — Luiz Malhado, Dentinho, Touro, Celso do Engenho da Rainha — conseguiam jogar com ele. Moraes foi inicialmente subestimado por se assumir angoleiro; isso mudou quando, na pancada para valer, deixou claro por que era fiel a essa escola. Dizia sempre «aprendi com o velho», referindo-se a Pastinha; mas esclarecia que seus mestres mesmo tinham sido João Grande, seu ídolo da angola, e João Pequeno. Comecei com ele em 5 de julho de 1975, no Clube Gurilândia, em Botafogo. Eu tinha 17 ou 18 anos.",
+    "memoriasP6": "Em dezembro de 1975 fomos à Bahia — Moraes, eu, Neco, Marco Aurélio, Zé Carlos da Posse, Tete e Amalha. Visitamos todos o Mestre Pastinha, que se lembrou de Moraes pelo nome de Pedrinho. Permaneci em Salvador todo o mês de janeiro, e voltei outras vezes. Numa dessas visitas pude passar-lhe um berimbau que comprei no Mercado Modelo e vê-lo tocar. Os três tipos de berimbau — gunga, médio e viola — aprendi sem dúvida com Mestre Moraes, exímio também no arco musical."
   },
   "GalleryPage": {
     "eyebrow": "Roda, encontros, viagens",
@@ -107,7 +180,7 @@
       {
         "title": "Capoeiras e fadistas portugueses",
         "paragraphs": [
-          "A partir de 1850, com o fim do tráfico atlântico de escravos e a crescente demanda urbana por mão-de-obra, intensifica-se a imigração portuguesa para o Rio — boa parte vinda dos Açores. Portugueses recém-chegados e a população negra carioca partilhavam os mesmos cortiços, as mesmas epidemias, os mesmos nichos ocupacionais. Dessa proximidade nasceu um intercâmbio cultural intenso, documentado por historiadores como Marcos Bretas e Carlos Eugenio Líbano Soares.",
+          "A partir de 1850, com o fim do tráfico atlântico de escravos e a crescente demanda urbana por mão de obra, intensifica-se a imigração portuguesa para o Rio — boa parte vinda dos Açores. Portugueses recém-chegados e a população negra carioca partilhavam os mesmos cortiços, as mesmas epidemias, os mesmos nichos ocupacionais. Dessa proximidade nasceu um intercâmbio cultural intenso, documentado por historiadores como Marcos Bretas e Carlos Eugênio Líbano Soares.",
           "O fadista — figura marginal da Lisboa do século XIX, ao lado de prostitutas, marinheiros e vagabundos — trouxe ao Rio não apenas o canto do fado, mas uma maneira singular de luta: a navalha, a ginga, a agilidade. O jornalista Tinop chegou a afirmar que «os fadistas do Rio de Janeiro são os capoeiras». O próprio vocabulário se sobrepunha — «sardinha», «rasteira», «ginga» pertenciam aos dois mundos. O duelo entre o capoeira carioca Manduca da Praia (Nagôa) e o fadista Sant'Anna selou o encontro: a partir dali, ambos caminhariam juntos pelas ruas movimentadas da capital do Império.",
           "Havia também o marialva — burguês acostumado a frequentar o submundo, ou filho de famílias aristocráticas que percorria a sarjeta. O mais famoso marialva da Corte do Rio foi José Elysio dos Reis, o «Juca Reis», filho de importante família lusitana. A repressão policial cíclica que recaía sobre a vida noturna lisboeta — e sobre a capoeira carioca — era reiteradamente motivada pela presença desse personagem nos piores bairros.",
           "Em 11 de outubro de 1890, o decreto n° 847 introduziu a capoeira no Código Penal da República, no capítulo XIII «Dos vadios e capoeiras» — artigos 402, 403 e 404. A prisão e deportação dos capoeiras continuaram: do Presídio de Fernando de Noronha à Colônia Correcional de Dois Rios, na Ilha Grande."
@@ -116,23 +189,23 @@
       {
         "title": "O berimbau, do mercado à roda",
         "paragraphs": [
-          "O berimbau é um instrumento africano de corda e sonoridade binária, carregado pelos griôs em certas regiões da África, onde acompanhava a narração da memória social dos seus povos. Em 1739 regista-se o primeiro arco musical desembarcando no Brasil, importado do Benim e enviado ao Rio de Janeiro pelo porto de Santos.",
-          "No Rio dos séculos XVIII e XIX, virou moda dos vendedores ambulantes — usavam o som do berimbau para atrair a atenção dos fregueses nas ruas. Em 18 de janeiro de 1860, um baiano de nome Bento Angola, de passagem pelo Rio, ouviu o instrumento, levou a ideia de volta à Bahia e ali a destinou a outra função: acompanhar as habilidades da destreza dos capoeiras do Recôncavo. É dessa data a primeira roda registrada que junta rasteira, rabo de arraia e cabeçada às sonoridades do arco musical.",
+          "O berimbau é um instrumento africano de corda e sonoridade binária, carregado pelos griôs em certas regiões da África, onde acompanhava a narração da memória social dos seus povos. Em 1739 registra-se o primeiro arco musical desembarcando no Brasil, importado do Benim e enviado ao Rio de Janeiro pelo porto de Santos.",
+          "No Rio dos séculos XVIII e XIX, virou moda dos vendedores ambulantes — usavam o som do berimbau para atrair a atenção dos fregueses nas ruas. Em 18 de janeiro de 1860, um baiano de nome Bento Angola, de passagem pelo Rio, ouviu o instrumento, levou a ideia de volta à Bahia e ali a destinou a outra função: acompanhar a destreza dos capoeiras do Recôncavo. É dessa data a primeira roda registrada que junta rasteira, rabo de arraia e cabeçada às sonoridades do arco musical.",
           "Antes disso, o berimbau já tinha uso de alerta na Bahia: o toque chamado cavalaria servia para avisar da chegada de estranhos ou da polícia montada."
         ]
       },
       {
         "title": "Ginástica Nacional (1928) — a primeira desafricanização",
         "paragraphs": [
-          "Depois de séculos de repressão policial nos três estados onde a capoeira mais se enraizou — Rio, Bahia e Pernambuco — surge em 1928, no Rio de Janeiro, a Ginástica Nacional, projeto de Anibal Burlamaque (o «Zuma»), apresentado como o primeiro Código Desportivo de Capoeira «Methodizada e Regrada». O livro continha nomenclatura ilustrada, golpes e contra-golpes traduzidos para uma linguagem mais «compreensível», área de competição, regulamentos, critérios de formação de árbitros, uniformes.",
-          "Foi a primeira tentativa explícita de desafricanizar a prática — afastá-la da fonte cultural negra e enquadrá-la nas regras europeias de ginástica desportiva. Durante muito tempo foi a única forma tolerada pela polícia."
+          "Depois de séculos de repressão policial nos três estados onde a capoeira mais se enraizou — Rio, Bahia e Pernambuco — surge em 1928, no Rio de Janeiro, a Ginástica Nacional, projeto de Aníbal Burlamaque (o «Zuma»), apresentado como o primeiro Código Esportivo de Capoeira «Methodizada e Regrada». O livro continha nomenclatura ilustrada, golpes e contragolpes traduzidos para uma linguagem mais «compreensível», área de competição, regulamentos, critérios de formação de árbitros, uniformes.",
+          "Foi a primeira tentativa explícita de desafricanizar a prática — afastá-la da fonte cultural negra e enquadrá-la nas regras europeias de ginástica esportiva. Durante muito tempo foi a única forma tolerada pela polícia."
         ]
       },
       {
         "title": "Luta Regional Baiana (1936–37) e o CECA (1940–41)",
         "paragraphs": [
-          "Na Bahia, os capoeiras já estavam afeiçoados ao berimbau e relutavam em adotar a Ginástica Nacional. Pelas regras esportivas, o instrumento não fazia sentido no ringue — música é para dançar, não para lutar. Foi então que Mestre Bimba, ele mesmo angoleiro de origem, propôs por volta de 1936–37 um arranjamento próprio: a Luta Regional Baiana.",
-          "Apresentou-a como modalidade compatível com o ringue — sem dedo no olho, sem chute no saco — usando o berimbau apenas para aquecimento antes do combate. Era um modo de preservar o instrumento dentro das regras esportivas que a polícia exigia. Há quem diga que o arranjamento já existia desde 1922; o próprio Mestre Bimba, no fundo, talvez não estivesse de pleno acordo com a desafricanização — mas, para não ver o berimbau se perder de vez, aceitou jogar pelas regras.",
+          "Na Bahia, os capoeiras já estavam afeiçoados ao berimbau e relutavam em adotar a Ginástica Nacional. Pelas regras esportivas, o instrumento não fazia sentido no ringue — música é para dançar, não para lutar. Foi então que Mestre Bimba, ele mesmo angoleiro de origem, propôs por volta de 1936–37 um arranjo próprio: a Luta Regional Baiana.",
+          "Apresentou-a como modalidade compatível com o ringue — sem dedo no olho, sem chute no saco — usando o berimbau apenas para aquecimento antes do combate. Era um modo de preservar o instrumento dentro das regras esportivas que a polícia exigia. Há quem diga que o arranjo já existia desde 1922; o próprio Mestre Bimba, no fundo, talvez não estivesse de pleno acordo com a desafricanização — mas, para não ver o berimbau se perder de vez, aceitou jogar pelas regras.",
           "Poucos anos depois, em 1940–41, Mestre Pastinha inaugura no Largo do Pelourinho 19, em Salvador, o Centro Esportivo de Capoeira Angola (CECA). É ali que a capoeira angola se consagra na conservação do ensino pela memória da africanidade — não como esporte, mas como cultura. É também nesse contexto que o berimbau ganha definitivamente o seu papel social na roda: certa repetição sonora comunica que o jogo deve parar, obrigando os contendores a sentarem-se no banco para entender o porquê."
         ]
       },
@@ -149,30 +222,63 @@
         "paragraphs": [
           "Religião dos capoeiras e conhecimento das habilidades corporais são realidades distintas. Muitos africanos e seus descendentes, mesmo obrigados a converter-se ao catolicismo, conservavam crenças da africanidade — entre elas a muçulmana, no norte da África. Outros optavam por uma adesão integral às crenças cristianizadoras. Já as habilidades corporais serviam a outra função: enfrentar as intempéries da rua, os perseguidores, os capangas, os inimigos, a polícia.",
           "Por princípios espirituais não cabe a prática de delitos, nem usar da vantagem corporal para bater em idosos, crianças e mulheres — coisas que ocorreram no século XIX e custaram a forte repressão policial. Uma coisa não tem a ver com a outra.",
-          "A cultura da africanidade foi confrontada pela bula papal cristianizadora da maneira mais perversa, e os conhecimentos da cultura preta, ao serem atacados, tiveram que se defender para sobreviver. Foi do próprio cultural que veio a mola propulsora de coragem para resistir e continuar. Estudar é necessário para não entrar em confusão cultural — caso contrário, corre-se o risco de se tornar presa fácil de manipuladores em nome de Deus."
+          "A cultura da africanidade foi confrontada pela bula papal cristianizadora da maneira mais perversa, e os conhecimentos da cultura preta, ao serem atacados, tiveram que se defender para sobreviver. Foi da própria cultura que veio a mola propulsora de coragem para resistir e continuar. Estudar é necessário para não entrar em confusão cultural — caso contrário, corre-se o risco de se tornar presa fácil de manipuladores em nome de Deus."
         ]
       }
     ]
   },
   "LoginPage": {
-    "title": "Área do aluno",
-    "description": "Entre com seu e-mail e senha para acessar vídeos e materiais do mestre.",
+    "title": "Área do membro",
+    "description": "Entre com seu e-mail e senha para acessar o programa, a videoteca e os materiais reservados aos membros.",
     "emailLabel": "E-mail",
     "passwordLabel": "Senha",
     "submit": "Entrar",
     "invalidCredentials": "E-mail ou senha inválidos.",
     "backHome": "Voltar ao início"
   },
-  "StudentArea": {
-    "title": "Área do aluno",
+  "MemberArea": {
+    "badge": "Reservado · Membros",
+    "title": "Área do membro",
     "connectedAs": "Conectado como {email}",
     "signOut": "Sair",
+    "ensinoTitle": "O ensino",
+    "ensinoIntro": "Dois caminhos paralelos, por etapas, que levam aos certificados.",
+    "track1Title": "Desenvolvimento racional para resistência",
+    "track1Desc": "O caminho do corpo: movimento, resistência e fôlego.",
+    "track2Title": "O social do berimbau",
+    "track2Desc": "O caminho da música e da comunidade da roda.",
+    "etapaLabel": "Etapa",
+    "track1Etapas": [
+      "Etapa 1",
+      "Etapa 2",
+      "Etapa 3"
+    ],
+    "track2Etapas": [
+      "Etapa 1 — cantorias e folhas de letras",
+      "Etapa 2 — berimbaus",
+      "Etapa 3 — roda de capoeira",
+      "Etapa 4 — obediências e procedimentos"
+    ],
+    "comingSoon": "O mestre vai acrescentar aqui o conteúdo desta etapa.",
+    "livesTitle": "Videoteca",
+    "livesIntro": "Gravações selecionadas, organizadas por tema.",
+    "liveCats": [
+      "Sobre os bantus",
+      "Sobre o Brasil",
+      "Capoeiras",
+      "Capoeira Angola"
+    ],
+    "certsTitle": "Aproveitamentos & certificados",
+    "certsBody": "O seu progresso e os seus certificados aparecerão aqui.",
+    "mediaTitle": "Fotos & vídeos",
     "photosTitle": "Fotos",
     "videosTitle": "Vídeos",
-    "empty": "Nenhum conteúdo por enquanto. O mestre vai depositar aqui as fotos e vídeos reservados aos alunos."
+    "empty": "Nenhum conteúdo por enquanto. O mestre vai depositar aqui as fotos e vídeos reservados aos membros."
   },
   "Footer": {
-    "copyright": "© {year} GECAAB",
+    "association": "CMC/CA",
+    "school": "GECAAB · Capoeira Angola África Bantu",
+    "copyright": "© {year} CMC/CA",
     "tagline": "Genebra · Rio de Janeiro · Aarhus"
   },
   "LanguageSwitcher": {

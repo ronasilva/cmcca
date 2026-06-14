@@ -22,6 +22,13 @@ export default async function MestrePage({
     t("memoriasP6"),
   ];
 
+  const facts = [
+    { label: t("fullNameLabel"), value: t("fullName") },
+    { label: t("bornLabel"), value: t("born") },
+    { label: t("gradedLabel"), value: t("graded") },
+    { label: t("foundedLabel"), value: t("founded") },
+  ];
+
   return (
     <div className="flex flex-col flex-1 text-espresso">
       <Header />
@@ -64,6 +71,30 @@ export default async function MestrePage({
             <p className="font-display text-xl leading-relaxed text-espresso">
               {t("bio")}
             </p>
+
+            {/* KEY FACTS */}
+            <dl className="mt-12 grid grid-cols-1 gap-x-8 gap-y-6 border-t border-espresso/15 pt-10 sm:grid-cols-2">
+              {facts.map((f) => (
+                <div key={f.label}>
+                  <dt className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+                    {f.label}
+                  </dt>
+                  <dd className="mt-2 font-display text-lg italic leading-snug text-espresso">
+                    {f.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+
+            {/* EMBLEM NOTE */}
+            <figure className="mt-12 border-l-2 border-terracotta pl-6">
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+                {t("emblemTitle")}
+              </p>
+              <p className="mt-3 font-display text-xl italic leading-relaxed text-espresso">
+                {t("emblemBody")}
+              </p>
+            </figure>
           </div>
         </div>
       </section>
