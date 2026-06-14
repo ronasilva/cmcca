@@ -1,0 +1,184 @@
+{
+  "Metadata": {
+    "title": "GECAAB — Escola de Capoeira Angola África Bantu",
+    "description": "Site oficial do Grupo/Escola de Capoeira Angola África Bantu. Aulas, eventos e conteúdo exclusivo para alunos."
+  },
+  "Nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "mestre": "Mestre Braga",
+    "courses": "Aulas",
+    "gallery": "Galeria",
+    "history": "História",
+    "contact": "Contato",
+    "studentArea": "Área do aluno"
+  },
+  "HomePage": {
+    "heroTitle": "Grupo/Escola de Capoeira Angola África Bantu",
+    "heroSubtitle": "Do Rio de Janeiro a Genebra — a escola do Mestre Braga, desde 1993.",
+    "videoCaption": "N'golo, a dança da zebra — as duas zebras do nosso emblema",
+    "heroCta": "Acessar área do aluno",
+    "aboutTitle": "Sobre o grupo",
+    "aboutBody": "O Grupo/Escola de Capoeira Angola África Bantu foi fundado no Rio de Janeiro em 1993/4 pelo Mestre Braga. Hoje reúne capítulos em três cidades: Rio de Janeiro, dirigido pelo Mestre Edson; Aarhus, na Dinamarca, pelo Contramestre Andréas; e Genebra, conduzido pelo próprio Mestre Braga. O grupo de Genebra organiza-se como associação, membro dos Ateliers d'Ethnomusicologie (ADEM).",
+    "contactTitle": "Contato",
+    "contactBody": "Centre ADEM, 10 rue de Montbrillant, CH-1201 Genebra."
+  },
+  "CoursPage": {
+    "eyebrow": "Aulas semanais",
+    "title": "Aulas",
+    "intro": "O Centre ADEM recebe as aulas durante todo o ano. Inscrição possível a qualquer momento, sem estrutura formal de curso.",
+    "scheduleTitle": "Horários",
+    "monday": "Segunda-feira",
+    "mondayHours": "20h00 – 22h00",
+    "mondayLabel": "Iniciantes",
+    "wednesday": "Quarta-feira",
+    "wednesdayHours": "20h00 – 21h00",
+    "wednesdayLabel": "Avançados · Roda até 22h00",
+    "friday": "Sexta-feira",
+    "fridayHours": "19h30 – 21h00",
+    "fridayLabel": "Salle l'ilôt 13, atrás da estação Cornavin",
+    "locationTitle": "Local",
+    "locationName": "Centre ADEM",
+    "locationAddress": "10, rue de Montbrillant (atrás da estação Cornavin), CH-1201 Genebra",
+    "locationNote": "O Centre ADEM dispõe de chuveiros e vestiários.",
+    "dressCodeTitle": "Vestimenta",
+    "dressCodeBody": "Calça preta e camiseta branca.",
+    "pricesTitle": "Valores",
+    "pricesCurrency": "CHF",
+    "priceMembersTitle": "Sócios G/E.C.A.A.B.",
+    "priceMembersBody": "200,– por trimestre",
+    "priceMembersAdem": "+ 50,– anuais para sócios da ADEM",
+    "priceStudentsTitle": "Estudantes · Desempregados",
+    "priceStudents1": "1 mês — 100,–",
+    "priceStudents3": "3 meses — 85,–/mês",
+    "priceStudents10": "10 meses — 75,–/mês",
+    "priceStudentsAdem": "+ 50,– anuais para sócios da ADEM"
+  },
+  "MestrePage": {
+    "eyebrow": "Mestre fundador",
+    "title": "Mestre Braga",
+    "subtitle": "Fundador do Grupo/Escola de Capoeira Angola África Bantu",
+    "bio": "Mestre Braga cresceu em Lins, na zona norte do Rio de Janeiro. Conheceu a capoeira aos 13 ou 14 anos, pelos colegas de rua, e passou em seguida pelo Grupo Palmares — com os mestres Roni, Zé Macaco e Cabelo Russo — e pelo Grupo Corda Bamba do Mestre Touro, na Penha. Tornou-se aluno do Mestre Moraes em 5 de julho de 1975 e, em dezembro do mesmo ano, viajou à Bahia para visitar o Mestre Pastinha em Salvador — encontro decisivo na sua trajetória. Fundou o GECAAB no Rio em 1993/4 e estabeleceu o grupo em Genebra, onde ensina até hoje.",
+    "videoCaption": "O berimbau — o instrumento que conduz a roda",
+    "lineageTitle": "Linhagem",
+    "lineageBody": "Mestre Pastinha (Bahia) · Mestre Moraes · Mestre Braga · Mestre Edson (Rio) · Contramestre Andréas (Aarhus).",
+    "memoriasTitle": "Memórias",
+    "memoriasP1": "Cresci em Lins, na zona norte do Rio de Janeiro — ainda no tempo do estado da Guanabara. Eram os tempos de cerol nas guerras de pipa, jogo de gude, pião, peladas descalço entre o morro e o asfalto, som de macumba pela noite e despachos nas esquinas pela manhã, samba na caixa de fósforo, o surdo dos ensaios das escolas de samba para o carnaval. Assim foi, mais ou menos, até os 13 ou 14 anos.",
+    "memoriasP2": "No morro, a briga sempre fez a distinção. Dizia-se que briga de homem não era agarrado: daí os tapas, as rasteiras que deixavam o outro na horizontal, e muita ginga — que, na gíria, chamavam de ciscar. Recebi minhas primeiras lições no ginásio, de um colega negro da mesma sala, que um dia me convidou a assistir a uma briga de rua. De movimento solto, ele aplicou uma rasteira, dois ou três tapas e, por fim, uma cabeçada num rapaz bem mais forte. Tanto insisti em aprender que ele acabou me ensinando.",
+    "memoriasP3": "Comecei aprendendo com outros colegas que já frequentavam academias. Com uns 14 para 15 anos, entrei na minha primeira escola: o Grupo Palmares, na rua Paula de Frontin, com os mestres Roni, Zé Macaco e Cabelo Russo. O grupo passou depois pela academia Almir Ribeiro, na Tijuca, pelo morro do Catumbi, por Santa Teresa. Quando se dispersou, frequentei por um tempo o Mestre Dentinho, em Vila Isabel, e em seguida o Grupo Corda Bamba do Mestre Touro, na Penha — capoeira angola — onde fiquei cerca de seis meses.",
+    "memoriasP4": "Esses mestres — todos negros — sempre destacavam que capoeira era angola. O Mestre Roni, embora faixa-preta em karatê e judô, era habilíssimo em levar o oponente à queda por rasteira: nunca o vi misturar as coisas. A maioria dos baianos que emigravam para o Rio, porém, não se sustentavam com a angola diante dos cariocas e acabavam transmitindo as influências da Luta Regional do Mestre Bimba.",
+    "memoriasP5": "Foi no carnaval, na roda da Central do Brasil, que vi pela primeira vez o Moraes andando de bananeira, parecendo um caranguejo ao jogar com Dentinho. Diziam que era um aluno de Pastinha vindo de São João de Meriti; alguns o chamavam de «o africano», pelo modo como se movimentava. Na roda de mestres e contramestres em Bonsucesso, do Mestre Zé Pedro, pude vê-lo jogar várias vezes — a diferença era de 360° em relação à maneira regional, e muitos ficavam sem saber como reagir. Poucos — Luiz Malhado, Dentinho, Touro, Celso do Engenho da Rainha — conseguiam jogar com ele. Moraes foi inicialmente subestimado por se assumir angoleiro; isso mudou quando, na pancada para valer, deixou claro porque era fiel a essa escola. Dizia sempre «aprendi com o velho», referindo-se a Pastinha; mas esclarecia que seus mestres mesmo tinham sido João Grande, seu ídolo da angola, e João Pequeno. Comecei com ele em 5 de julho de 1975, no Clube Gurilândia, em Botafogo. Eu tinha 17 ou 18 anos.",
+    "memoriasP6": "Em dezembro de 1975 fomos à Bahia — Moraes, eu, Neco, Marco Aurélio, Zé Carlos da Posse, Tete e Amalha. Visitamos todos o Mestre Pastinha, que se lembrou de Moraes pelo nome de Pedrinho. Permaneci em Salvador todo o mês de janeiro, e voltei outras vezes. Numa dessas visitas pude passar-lhe um berimbau que comprei no mercado modelo e vê-lo tocar. Os três tipos de berimbau — gunga, médio e viola — aprendi sem dúvida com Mestre Moraes, exímio também no arco musical."
+  },
+  "GalleryPage": {
+    "eyebrow": "Roda, encontros, viagens",
+    "title": "Galeria",
+    "intro": "Fotos do grupo em rodas, aulas e encontros pela Europa. Clique numa imagem para ampliar.",
+    "caption1": "Roda em Genebra, fevereiro 2022",
+    "caption2": "Encontro, abril 2018",
+    "caption3": "Roda, fevereiro 2022",
+    "caption4": "Roda, fevereiro 2022",
+    "caption5": "Roda, fevereiro 2022",
+    "caption6": "Roda, fevereiro 2022",
+    "caption7": "Roda, fevereiro 2022",
+    "caption8": "Abril 2018",
+    "caption9": "Maio 2018"
+  },
+  "HistoryPage": {
+    "eyebrow": "Cronologia comentada por Mestre Braga",
+    "title": "História",
+    "intro": "A capoeira é uma cultura das diásporas africanas no Brasil. Esta página reúne uma cronologia, das origens indígenas do termo «capoeira» até a consolidação da capoeira angola por Mestre Pastinha no século XX.",
+    "sections": [
+      {
+        "title": "A origem da palavra",
+        "paragraphs": [
+          "A palavra «kaá puera» vem do tupi-guarani e identificava, originalmente, regiões antes dominadas por mato alto e arbustos que, depois da coivara — técnica agrícola indígena de queima controlada — se transformavam em vegetação secundária, prontas para plantação, criação ou moradia. Foi uma técnica adotada também pelos africanos foragidos, fugindo das fazendas para construir comunidades autônomas no interior da mata.",
+          "A grafia aportuguesada, com «c», passou a designar duas coisas. Por um lado, as comunidades de negros e mestiços (mulatos, afrodescendentes) que viviam nesse mato secundário, afastadas dos centros urbanos — um paralelo do que mais tarde se chamaria caipira. Por outro, os cestos de tira de bambu que esses mesmos povos carregavam à cabeça quando desciam à cidade para vender frutas, legumes e aves.",
+          "Quando chegavam aos centros urbanos, muitos prestavam pequenos serviços — carregadores, barbeiros para outros negros, vendedores ambulantes. Outros, mais preparados nas habilidades da rua (rasteiras, cabeçadas, rabo de arraia, a navalha entre os dedos), eram absorvidos como capangas, guarda-costas de políticos ou informantes da polícia."
+        ]
+      },
+      {
+        "title": "As maltas de capoeiras",
+        "paragraphs": [
+          "No Rio de Janeiro do Império, no século XIX, os capoeiras se organizam em maltas — uma instituição negra de poder paralelo, de oposição ao regime escravagista. O perigo dessas organizações vinha menos das armas de fogo, que detestavam, do que da destreza corporal: jogavam bem, eram hábeis na rasteira, na cabeçada, e carregavam a navalha herdada do convívio com os fadistas portugueses nos cortiços.",
+          "A polícia tinha terror das maltas. Muitos dos seus integrantes acabavam capturados como capangas a serviço de políticos, da própria polícia ou de informantes. Nos subúrbios cariocas, alguns chamavam de tiririca a maneira de mover o corpo, mãos, pés e cabeça na hora da briga."
+        ]
+      },
+      {
+        "title": "Capoeiras e fadistas portugueses",
+        "paragraphs": [
+          "A partir de 1850, com o fim do tráfico atlântico de escravos e a crescente demanda urbana por mão-de-obra, intensifica-se a imigração portuguesa para o Rio — boa parte vinda dos Açores. Portugueses recém-chegados e a população negra carioca partilhavam os mesmos cortiços, as mesmas epidemias, os mesmos nichos ocupacionais. Dessa proximidade nasceu um intercâmbio cultural intenso, documentado por historiadores como Marcos Bretas e Carlos Eugenio Líbano Soares.",
+          "O fadista — figura marginal da Lisboa do século XIX, ao lado de prostitutas, marinheiros e vagabundos — trouxe ao Rio não apenas o canto do fado, mas uma maneira singular de luta: a navalha, a ginga, a agilidade. O jornalista Tinop chegou a afirmar que «os fadistas do Rio de Janeiro são os capoeiras». O próprio vocabulário se sobrepunha — «sardinha», «rasteira», «ginga» pertenciam aos dois mundos. O duelo entre o capoeira carioca Manduca da Praia (Nagôa) e o fadista Sant'Anna selou o encontro: a partir dali, ambos caminhariam juntos pelas ruas movimentadas da capital do Império.",
+          "Havia também o marialva — burguês acostumado a frequentar o submundo, ou filho de famílias aristocráticas que percorria a sarjeta. O mais famoso marialva da Corte do Rio foi José Elysio dos Reis, o «Juca Reis», filho de importante família lusitana. A repressão policial cíclica que recaía sobre a vida noturna lisboeta — e sobre a capoeira carioca — era reiteradamente motivada pela presença desse personagem nos piores bairros.",
+          "Em 11 de outubro de 1890, o decreto n° 847 introduziu a capoeira no Código Penal da República, no capítulo XIII «Dos vadios e capoeiras» — artigos 402, 403 e 404. A prisão e deportação dos capoeiras continuaram: do Presídio de Fernando de Noronha à Colônia Correcional de Dois Rios, na Ilha Grande."
+        ]
+      },
+      {
+        "title": "O berimbau, do mercado à roda",
+        "paragraphs": [
+          "O berimbau é um instrumento africano de corda e sonoridade binária, carregado pelos griôs em certas regiões da África, onde acompanhava a narração da memória social dos seus povos. Em 1739 regista-se o primeiro arco musical desembarcando no Brasil, importado do Benim e enviado ao Rio de Janeiro pelo porto de Santos.",
+          "No Rio dos séculos XVIII e XIX, virou moda dos vendedores ambulantes — usavam o som do berimbau para atrair a atenção dos fregueses nas ruas. Em 18 de janeiro de 1860, um baiano de nome Bento Angola, de passagem pelo Rio, ouviu o instrumento, levou a ideia de volta à Bahia e ali a destinou a outra função: acompanhar as habilidades da destreza dos capoeiras do Recôncavo. É dessa data a primeira roda registrada que junta rasteira, rabo de arraia e cabeçada às sonoridades do arco musical.",
+          "Antes disso, o berimbau já tinha uso de alerta na Bahia: o toque chamado cavalaria servia para avisar da chegada de estranhos ou da polícia montada."
+        ]
+      },
+      {
+        "title": "Ginástica Nacional (1928) — a primeira desafricanização",
+        "paragraphs": [
+          "Depois de séculos de repressão policial nos três estados onde a capoeira mais se enraizou — Rio, Bahia e Pernambuco — surge em 1928, no Rio de Janeiro, a Ginástica Nacional, projeto de Anibal Burlamaque (o «Zuma»), apresentado como o primeiro Código Desportivo de Capoeira «Methodizada e Regrada». O livro continha nomenclatura ilustrada, golpes e contra-golpes traduzidos para uma linguagem mais «compreensível», área de competição, regulamentos, critérios de formação de árbitros, uniformes.",
+          "Foi a primeira tentativa explícita de desafricanizar a prática — afastá-la da fonte cultural negra e enquadrá-la nas regras europeias de ginástica desportiva. Durante muito tempo foi a única forma tolerada pela polícia."
+        ]
+      },
+      {
+        "title": "Luta Regional Baiana (1936–37) e o CECA (1940–41)",
+        "paragraphs": [
+          "Na Bahia, os capoeiras já estavam afeiçoados ao berimbau e relutavam em adotar a Ginástica Nacional. Pelas regras esportivas, o instrumento não fazia sentido no ringue — música é para dançar, não para lutar. Foi então que Mestre Bimba, ele mesmo angoleiro de origem, propôs por volta de 1936–37 um arranjamento próprio: a Luta Regional Baiana.",
+          "Apresentou-a como modalidade compatível com o ringue — sem dedo no olho, sem chute no saco — usando o berimbau apenas para aquecimento antes do combate. Era um modo de preservar o instrumento dentro das regras esportivas que a polícia exigia. Há quem diga que o arranjamento já existia desde 1922; o próprio Mestre Bimba, no fundo, talvez não estivesse de pleno acordo com a desafricanização — mas, para não ver o berimbau se perder de vez, aceitou jogar pelas regras.",
+          "Poucos anos depois, em 1940–41, Mestre Pastinha inaugura no Largo do Pelourinho 19, em Salvador, o Centro Esportivo de Capoeira Angola (CECA). É ali que a capoeira angola se consagra na conservação do ensino pela memória da africanidade — não como esporte, mas como cultura. É também nesse contexto que o berimbau ganha definitivamente o seu papel social na roda: certa repetição sonora comunica que o jogo deve parar, obrigando os contendores a sentarem-se no banco para entender o porquê."
+        ]
+      },
+      {
+        "title": "GCAP — a continuação do CECA",
+        "paragraphs": [
+          "A tradição preservada no CECA de Mestre Pastinha só voltaria ao Rio de Janeiro nos anos 1970, pelas mãos do Mestre Moraes — Pedro Moraes Trindade — aluno de Pastinha desde criança, que veio à capital para prestar serviço militar no Corpo de Fuzileiros Navais. No Clube Gurilândia, em Botafogo, começou a ensinar aos sábados. Em 5 de julho de 1975, Mestre Braga entrou para o grupo. O conjunto era identificado simplesmente como Capoeira Angola Mestre Moraes.",
+          "Em 16 de dezembro de 1978, numa manhã de sábado no Parque Lage, no Jardim Botânico, Mestre Moraes elevou três alunos ao posto de mestre — Braga, Neco e José Carlos — e um ao de contramestre, Marco Aurélio. Estavam presentes os mestres Camisa e Preguiça. Foi de Neco a ideia de reunir essa força num único grupo, em continuação do CECA. Em 5 de outubro de 1980, numa feira de artesanato no Cosme Velho — zona sul do Rio — fundou-se o Grupo de Capoeira Angola Pelourinho (GCAP) com uma demonstração de capoeira e maculelê. A única exigência de Moraes foi manter as cores do CECA: preto e amarelo.",
+          "Em 1982, Mestre Moraes regressou definitivamente a Salvador, onde, a partir do Forte Santo Antônio Além do Carmo, levou a experiência do GCAP. As Mostras de Capoeira Angola começaram em 1985 e reuniram os antigos angoleiros da Bahia — J. Grande, J. Pequeno, Barba Branca, Bobó, Lua de Bobó, Curió, Paulo dos Anjos — ajudando a revitalizar a prática. De Salvador, a diáspora se ampliou: Belo Horizonte, Olinda, Califórnia, Estados Unidos, Europa. Em 1993/4, o GCAP-RJ se extinguiu; seus membros fundaram grupos próprios — entre eles, Mestre Braga, que estabeleceu o GECAAB, primeiro no Rio e depois em Genebra."
+        ]
+      },
+      {
+        "title": "Religião e habilidades corporais — não é a mesma coisa",
+        "paragraphs": [
+          "Religião dos capoeiras e conhecimento das habilidades corporais são realidades distintas. Muitos africanos e seus descendentes, mesmo obrigados a converter-se ao catolicismo, conservavam crenças da africanidade — entre elas a muçulmana, no norte da África. Outros optavam por uma adesão integral às crenças cristianizadoras. Já as habilidades corporais serviam a outra função: enfrentar as intempéries da rua, os perseguidores, os capangas, os inimigos, a polícia.",
+          "Por princípios espirituais não cabe a prática de delitos, nem usar da vantagem corporal para bater em idosos, crianças e mulheres — coisas que ocorreram no século XIX e custaram a forte repressão policial. Uma coisa não tem a ver com a outra.",
+          "A cultura da africanidade foi confrontada pela bula papal cristianizadora da maneira mais perversa, e os conhecimentos da cultura preta, ao serem atacados, tiveram que se defender para sobreviver. Foi do próprio cultural que veio a mola propulsora de coragem para resistir e continuar. Estudar é necessário para não entrar em confusão cultural — caso contrário, corre-se o risco de se tornar presa fácil de manipuladores em nome de Deus."
+        ]
+      }
+    ]
+  },
+  "LoginPage": {
+    "title": "Área do aluno",
+    "description": "Entre com seu e-mail e senha para acessar vídeos e materiais do mestre.",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Senha",
+    "submit": "Entrar",
+    "invalidCredentials": "E-mail ou senha inválidos.",
+    "backHome": "Voltar ao início"
+  },
+  "StudentArea": {
+    "title": "Área do aluno",
+    "connectedAs": "Conectado como {email}",
+    "signOut": "Sair",
+    "photosTitle": "Fotos",
+    "videosTitle": "Vídeos",
+    "empty": "Nenhum conteúdo por enquanto. O mestre vai depositar aqui as fotos e vídeos reservados aos alunos."
+  },
+  "Footer": {
+    "copyright": "© {year} GECAAB",
+    "tagline": "Genebra · Rio de Janeiro · Aarhus"
+  },
+  "LanguageSwitcher": {
+    "label": "Idioma",
+    "fr": "Français",
+    "pt": "Português",
+    "en": "English"
+  }
+}

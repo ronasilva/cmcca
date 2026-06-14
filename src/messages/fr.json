@@ -1,0 +1,184 @@
+{
+  "Metadata": {
+    "title": "GECAAB — École de Capoeira Angola África Bantu",
+    "description": "Site officiel du Groupe/École de Capoeira Angola África Bantu. Cours, événements et contenu réservé aux élèves."
+  },
+  "Nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "mestre": "Mestre Braga",
+    "courses": "Cours",
+    "gallery": "Galerie",
+    "history": "Histoire",
+    "contact": "Contact",
+    "studentArea": "Espace élève"
+  },
+  "HomePage": {
+    "heroTitle": "Groupe/École de Capoeira Angola África Bantu",
+    "heroSubtitle": "De Rio de Janeiro à Genève — l'école de Mestre Braga, depuis 1993.",
+    "videoCaption": "N'golo, la danse de la zèbre — les deux zèbres de notre emblème",
+    "heroCta": "Accéder à l'espace élève",
+    "aboutTitle": "À propos du groupe",
+    "aboutBody": "Le Groupe/École de Capoeira Angola África Bantu a été fondé à Rio de Janeiro en 1993/4 par Mestre Braga. Il réunit aujourd'hui des chapitres dans trois villes : Rio de Janeiro, dirigé par Mestre Edson ; Aarhus, au Danemark, par le Contramestre Andréas ; et Genève, mené par Mestre Braga lui-même. Le groupe de Genève est organisé en association, membre des Ateliers d'Ethnomusicologie (ADEM).",
+    "contactTitle": "Contact",
+    "contactBody": "Centre ADEM, 10 rue de Montbrillant, CH-1201 Genève."
+  },
+  "CoursPage": {
+    "eyebrow": "Cours hebdomadaires",
+    "title": "Cours",
+    "intro": "Le Centre ADEM accueille les cours toute l'année. Inscription possible à tout moment, sans structure formelle de cursus.",
+    "scheduleTitle": "Horaires",
+    "monday": "Lundi",
+    "mondayHours": "20h00 – 22h00",
+    "mondayLabel": "Débutants",
+    "wednesday": "Mercredi",
+    "wednesdayHours": "20h00 – 21h00",
+    "wednesdayLabel": "Avancés · Roda jusqu'à 22h00",
+    "friday": "Vendredi",
+    "fridayHours": "19h30 – 21h00",
+    "fridayLabel": "Salle l'ilôt 13, derrière la gare Cornavin",
+    "locationTitle": "Lieu",
+    "locationName": "Centre ADEM",
+    "locationAddress": "10, rue de Montbrillant (derrière Cornavin), CH-1201 Genève",
+    "locationNote": "Le Centre ADEM dispose de douches et de vestiaires.",
+    "dressCodeTitle": "Tenue",
+    "dressCodeBody": "Pantalon noir et t-shirt blanc.",
+    "pricesTitle": "Tarifs",
+    "pricesCurrency": "CHF",
+    "priceMembersTitle": "Membre G/E.C.A.A.B.",
+    "priceMembersBody": "200.– par trimestre",
+    "priceMembersAdem": "+ 50.– annuel pour les membres ADEM",
+    "priceStudentsTitle": "Étudiants · Sans emploi",
+    "priceStudents1": "1 mois — 100.–",
+    "priceStudents3": "3 mois — 85.–/mois",
+    "priceStudents10": "10 mois — 75.–/mois",
+    "priceStudentsAdem": "+ 50.– annuel pour les membres ADEM"
+  },
+  "MestrePage": {
+    "eyebrow": "Mestre fondateur",
+    "title": "Mestre Braga",
+    "subtitle": "Fondateur du Groupe/École de Capoeira Angola África Bantu",
+    "bio": "Mestre Braga a grandi à Lins, dans la zone nord de Rio de Janeiro. Il a découvert la capoeira à 13 ou 14 ans, par des camarades de rue, puis est passé par le Grupo Palmares — avec les mestres Roni, Zé Macaco et Cabelo Russo — et par le Grupo Corda Bamba du Mestre Touro, à Penha. Il devient l'élève de Mestre Moraes le 5 juillet 1975 et, en décembre de la même année, voyage à Bahia pour rendre visite à Mestre Pastinha à Salvador — rencontre décisive dans sa trajectoire. Il fonde le GECAAB à Rio en 1993/4 et installe le groupe à Genève, où il enseigne aujourd'hui.",
+    "videoCaption": "Le berimbau — l'instrument qui mène la roda",
+    "lineageTitle": "Lignée",
+    "lineageBody": "Mestre Pastinha (Bahia) · Mestre Moraes · Mestre Braga · Mestre Edson (Rio) · Contramestre Andréas (Aarhus).",
+    "memoriasTitle": "Memórias",
+    "memoriasP1": "J'ai grandi à Lins, dans la zone nord de Rio de Janeiro — encore au temps de l'état de Guanabara. C'étaient les années de cerol dans les guerres de cerfs-volants, des billes, des toupies, des matchs de football pieds nus entre le morro et l'asphalte, du son des macumbas la nuit et des offrandes aux carrefours le matin, du samba joué sur les boîtes d'allumettes, du surdo des répétitions pour le carnaval. Ce fut ainsi, plus ou moins, jusqu'à mes 13 ou 14 ans.",
+    "memoriasP2": "Sur le morro, la bagarre faisait toujours la distinction. On disait qu'une bagarre d'homme ne se faisait pas en se tenant : d'où les gifles, les balayages qui mettaient l'autre à l'horizontale, et beaucoup de ginga — qu'en argot on appelait ciscar. J'ai reçu mes premières leçons au collège, par un camarade noir de ma classe, qui un jour m'a invité à assister à une bagarre de rue. D'un mouvement libre, il a placé un balayage, deux ou trois gifles, et enfin un coup de tête à un garçon bien plus fort que lui. J'ai tellement insisté pour apprendre qu'il a fini par m'enseigner.",
+    "memoriasP3": "J'ai commencé à apprendre avec d'autres camarades qui fréquentaient déjà des académies. Vers 14-15 ans, je suis entré dans ma première école : le Grupo Palmares, rue Paula de Frontin, avec les mestres Roni, Zé Macaco et Cabelo Russo. Le groupe est ensuite passé par l'académie Almir Ribeiro, à Tijuca, puis par le morro do Catumbi, et par Santa Teresa. Quand il s'est dispersé, j'ai fréquenté un temps le Mestre Dentinho, à Vila Isabel, puis le Grupo Corda Bamba du Mestre Touro, à Penha — capoeira angola — où je suis resté environ six mois.",
+    "memoriasP4": "Ces mestres — tous noirs — ont toujours souligné que la capoeira était angola. Le Mestre Roni, bien que ceinture noire de karaté et de judo, était habile à faire tomber l'adversaire d'un balayage : je ne l'ai jamais vu mélanger les disciplines. La plupart des Bahianais qui émigraient à Rio, en revanche, ne parvenaient pas à vivre de l'angola face aux Cariocas et finissaient par transmettre les influences de la Luta Regional du Mestre Bimba.",
+    "memoriasP5": "C'est au carnaval, à la roda de la Central do Brasil, que j'ai vu pour la première fois Moraes marcher sur les mains, semblable à un crabe en jouant avec Dentinho. On disait que c'était un élève de Pastinha venu de São João de Meriti ; certains l'appelaient « l'Africain », pour sa façon de se mouvoir. À la roda de mestres et contramestres de Bonsucesso, animée par le Mestre Zé Pedro, j'ai pu le voir jouer plusieurs fois — la différence était de 360° par rapport au style régional, et beaucoup ne savaient pas comment réagir. Rares étaient ceux — Luiz Malhado, Dentinho, Touro, Celso do Engenho da Rainha — qui parvenaient à jouer avec lui. Moraes a d'abord été sous-estimé pour s'être assumé angoleiro ; cela a changé quand, dans le jeu sérieux, il a montré pourquoi il restait fidèle à cette école. Il disait toujours « j'ai appris avec le vieux », en parlant de Pastinha ; mais il précisait que ses vrais mestres avaient été João Grande, son idole de l'angola, et João Pequeno. J'ai commencé avec lui le 5 juillet 1975, au Clube Gurilândia, à Botafogo. J'avais 17 ou 18 ans.",
+    "memoriasP6": "En décembre 1975, nous sommes partis à Bahia — Moraes, moi, Neco, Marco Aurélio, Zé Carlos da Posse, Tete et Amalha. Nous avons tous rendu visite au Mestre Pastinha, qui s'est souvenu de Moraes sous le nom de Pedrinho. Je suis resté à Salvador tout le mois de janvier, et je suis revenu plusieurs fois. Au cours d'une de ces visites, j'ai pu lui tendre un berimbau acheté au mercado modelo et l'écouter en jouer. Les trois types de berimbau — gunga, médio et viola — je les ai appris sans aucun doute avec Mestre Moraes, également excellent à l'arc musical."
+  },
+  "GalleryPage": {
+    "eyebrow": "Roda, rencontres, voyages",
+    "title": "Galerie",
+    "intro": "Photos du groupe lors de rodas, classes et rencontres en Europe. Cliquez sur une image pour l'agrandir.",
+    "caption1": "Roda à Genève, février 2022",
+    "caption2": "Rencontre, avril 2018",
+    "caption3": "Roda, février 2022",
+    "caption4": "Roda, février 2022",
+    "caption5": "Roda, février 2022",
+    "caption6": "Roda, février 2022",
+    "caption7": "Roda, février 2022",
+    "caption8": "Avril 2018",
+    "caption9": "Mai 2018"
+  },
+  "HistoryPage": {
+    "eyebrow": "Chronologie commentée par Mestre Braga",
+    "title": "Histoire",
+    "intro": "La capoeira est une culture des diasporas africaines au Brésil. Cette page rassemble une chronologie, des origines indigènes du mot « capoeira » jusqu'à la consolidation de la capoeira angola par Mestre Pastinha au XXᵉ siècle.",
+    "sections": [
+      {
+        "title": "L'origine du mot",
+        "paragraphs": [
+          "Le mot « kaá puera » vient du tupi-guarani et désignait à l'origine des régions auparavant couvertes de hautes broussailles, qui, après le brûlis — technique agricole indigène — se transformaient en végétation secondaire, prêtes à être cultivées, habitées ou destinées à l'élevage. Cette technique fut adoptée également par les Africains en fuite, qui quittaient les plantations pour construire des communautés autonomes à l'intérieur des terres.",
+          "L'orthographe portugaise, avec un « c », a fini par désigner deux choses. D'un côté, les communautés de Noirs et de métis (mulâtres, afrodescendants) qui vivaient dans ces forêts secondaires, à l'écart des centres urbains — un parallèle de ce qu'on appellerait plus tard caipira. De l'autre, les paniers en tige de bambou que ces mêmes peuples portaient sur la tête lorsqu'ils descendaient en ville pour vendre fruits, légumes et volailles.",
+          "Une fois arrivés en ville, beaucoup exerçaient de petits métiers — porteurs, barbiers pour d'autres Noirs, vendeurs ambulants. D'autres, plus habiles dans les techniques de la rue (balayages, coups de tête, rabo de arraia, le rasoir glissé entre les doigts), étaient absorbés comme hommes de main, gardes du corps de politiciens ou indicateurs de la police."
+        ]
+      },
+      {
+        "title": "Les maltas de capoeiras",
+        "paragraphs": [
+          "Dans le Rio de Janeiro impérial du XIXᵉ siècle, les capoeiras s'organisent en maltas — une institution noire de pouvoir parallèle, opposée au régime esclavagiste. Le danger venait moins des armes à feu, qu'ils détestaient, que de la dextérité corporelle : ils jouaient bien, ils étaient habiles au balayage et au coup de tête, et portaient le rasoir hérité de la fréquentation des chanteurs de fado portugais dans les cortiços.",
+          "La police craignait les maltas. Beaucoup de leurs membres étaient capturés comme hommes de main de politiciens, de la police elle-même ou d'informateurs. Dans les banlieues cariocas, certains appelaient tiririca cette manière de mouvoir le corps, les mains, les pieds et la tête au moment de la bagarre."
+        ]
+      },
+      {
+        "title": "Capoeiras et fadistas portugais",
+        "paragraphs": [
+          "À partir de 1850, avec la fin de la traite atlantique et la demande urbaine croissante de main-d'œuvre, l'immigration portugaise vers Rio s'intensifie — beaucoup venant des Açores. Portugais nouvellement arrivés et population noire carioca partageaient les mêmes cortiços, les mêmes épidémies, les mêmes niches professionnelles. De cette proximité naquit un intense échange culturel, documenté par les historiens Marcos Bretas et Carlos Eugenio Líbano Soares.",
+          "Le fadista — figure marginale de la Lisbonne du XIXᵉ siècle, aux côtés des prostituées, des marins et des vagabonds — apporta à Rio non seulement le chant du fado, mais aussi une manière singulière de se battre : le rasoir, la ginga, l'agilité. Le journaliste Tinop écrivait que « les fadistas de Rio de Janeiro sont les capoeiras ». Le vocabulaire lui-même se superposait — « sardinha », « rasteira », « ginga » appartenaient aux deux mondes. Le duel entre le capoeira carioca Manduca da Praia (Nagôa) et le fadista Sant'Anna scella la rencontre : à partir de là, tous deux marchaient ensemble dans les rues animées de la capitale impériale.",
+          "Il y avait aussi le marialva — bourgeois habitué à fréquenter les bas-fonds, ou fils de familles aristocratiques qui sillonnaient la canaille. Le marialva le plus célèbre de la Cour de Rio fut José Elysio dos Reis, dit « Juca Reis », fils d'une importante famille lusitanienne. La répression policière cyclique qui s'abattait sur la vie nocturne lisboète — et sur la capoeira carioca — était constamment motivée par la présence de cette figure dans les pires quartiers.",
+          "Le 11 octobre 1890, le décret n° 847 introduisit la capoeira dans le Code Pénal de la République, au chapitre XIII « Dos vadios e capoeiras » — articles 402, 403 et 404. L'arrestation et la déportation des capoeiras se poursuivirent : du bagne de Fernando de Noronha à la Colonie Correctionnelle de Dois Rios, sur Ilha Grande."
+        ]
+      },
+      {
+        "title": "Le berimbau, du marché à la roda",
+        "paragraphs": [
+          "Le berimbau est un instrument africain à corde, à sonorité binaire, porté par les griots de certaines régions d'Afrique, où il accompagnait la transmission de la mémoire sociale des peuples. En 1739, le premier arc musical débarque au Brésil, importé du Bénin et envoyé à Rio de Janeiro par le port de Santos.",
+          "À Rio, aux XVIIIᵉ et XIXᵉ siècles, le berimbau devient l'instrument des vendeurs ambulants — ils s'en servaient pour attirer l'attention des clients dans les rues. Le 18 janvier 1860, un Bahianais nommé Bento Angola, de passage à Rio, entend l'instrument, en ramène l'idée à Bahia et lui donne une autre destination : accompagner les techniques des capoeiras du Recôncavo. C'est de cette date qu'est attestée la première roda combinant balayage, rabo de arraia et coup de tête avec les sonorités de l'arc musical.",
+          "Avant cela, le berimbau avait déjà un usage d'alerte à Bahia : le toque appelé cavalaria servait à signaler l'arrivée d'étrangers ou de la police montée."
+        ]
+      },
+      {
+        "title": "Gymnastique Nationale (1928) — la première désafricanisation",
+        "paragraphs": [
+          "Après des siècles de répression policière dans les trois États où la capoeira s'était le plus enracinée — Rio, Bahia et Pernambouc — apparaît en 1928, à Rio de Janeiro, la Gymnastique Nationale, projet d'Anibal Burlamaque (dit « Zuma »), présenté comme le premier Code Sportif de Capoeira « Methodizada e Regrada ». L'ouvrage contenait une nomenclature illustrée, des coups et contre-coups traduits dans un langage plus « compréhensible », des aires de compétition, des règlements, des critères de formation d'arbitres et des uniformes.",
+          "Ce fut la première tentative explicite de désafricaniser la pratique — l'éloigner de sa source culturelle noire et l'encadrer dans les règles européennes de la gymnastique sportive. Pendant longtemps, ce fut la seule forme tolérée par la police."
+        ]
+      },
+      {
+        "title": "Luta Regional Baiana (1936–37) et le CECA (1940–41)",
+        "paragraphs": [
+          "À Bahia, les capoeiras étaient déjà attachés au berimbau et refusaient d'adopter la Gymnastique Nationale. Selon les règles sportives, l'instrument n'avait pas sa place sur un ring — la musique est faite pour danser, pas pour combattre. C'est alors que Mestre Bimba, lui-même angoleiro à l'origine, propose vers 1936–37 son propre arrangement : la Luta Regional Baiana.",
+          "Il la présenta comme une discipline compatible avec le ring — sans doigt dans l'œil, sans coup de pied dans les parties — en utilisant le berimbau seulement pour l'échauffement avant le combat. C'était une manière de préserver l'instrument dans le cadre des règles sportives exigées par la police. Certains affirment que l'arrangement existait déjà depuis 1922 ; Mestre Bimba, au fond, n'était peut-être pas pleinement d'accord avec la désafricanisation — mais, pour ne pas voir le berimbau se perdre, il a accepté de jouer selon les règles.",
+          "Quelques années plus tard, en 1940–41, Mestre Pastinha inaugure au Largo do Pelourinho 19, à Salvador, le Centro Esportivo de Capoeira Angola (CECA). C'est là que la capoeira angola se consacre dans la conservation de l'enseignement par la mémoire de l'africanité — non comme un sport, mais comme une culture. C'est aussi dans ce contexte que le berimbau acquiert définitivement son rôle social dans la roda : une certaine répétition sonore communique que le jeu doit s'arrêter, obligeant les joueurs à s'asseoir sur le banc pour en comprendre la raison."
+        ]
+      },
+      {
+        "title": "GCAP — la continuation du CECA",
+        "paragraphs": [
+          "La tradition préservée au CECA de Mestre Pastinha ne retourna à Rio de Janeiro que dans les années 1970, par les mains de Mestre Moraes — Pedro Moraes Trindade — élève de Pastinha depuis l'enfance, venu dans la capitale pour effectuer son service militaire dans le Corps des Fusiliers Marins. Au Clube Gurilândia, à Botafogo, il commença à enseigner les samedis. Le 5 juillet 1975, Mestre Braga rejoignit le groupe. L'ensemble s'identifiait simplement comme Capoeira Angola Mestre Moraes.",
+          "Le 16 décembre 1978, lors d'une matinée de samedi au Parque Lage, dans le Jardin Botanique, Mestre Moraes éleva trois élèves au rang de mestre — Braga, Neco et José Carlos — et un au rang de contramestre, Marco Aurélio. Étaient présents les mestres Camisa et Preguiça. C'est de Neco que vint l'idée de réunir cette force en un seul groupe, dans la continuité du CECA. Le 5 octobre 1980, lors d'une foire artisanale à Cosme Velho — zone sud de Rio — fut fondé le Grupo de Capoeira Angola Pelourinho (GCAP) avec une démonstration de capoeira et de maculelê. La seule exigence de Moraes fut de conserver les couleurs du CECA : noir et jaune.",
+          "En 1982, Mestre Moraes retourna définitivement à Salvador, où, depuis le Forte Santo Antônio Além do Carmo, il emporta l'expérience du GCAP. Les Mostras de Capoeira Angola débutèrent en 1985 et réunirent les anciens angoleiros de Bahia — J. Grande, J. Pequeno, Barba Branca, Bobó, Lua de Bobó, Curió, Paulo dos Anjos — contribuant à revitaliser la pratique. Depuis Salvador, la diaspora s'élargit : Belo Horizonte, Olinda, Californie, États-Unis, Europe. En 1993/4, le GCAP-RJ s'éteignit ; ses membres fondèrent leurs propres groupes — parmi eux, Mestre Braga, qui établit le GECAAB, d'abord à Rio puis à Genève."
+        ]
+      },
+      {
+        "title": "Religion et techniques corporelles — ce ne sont pas la même chose",
+        "paragraphs": [
+          "La religion des capoeiras et la connaissance des techniques corporelles sont deux réalités distinctes. Beaucoup d'Africains et de leurs descendants, même contraints de se convertir au catholicisme, conservaient les croyances de l'africanité — parmi elles la croyance musulmane, en Afrique du Nord. D'autres optaient pleinement pour les croyances chrétiennes. Les techniques corporelles, elles, servaient à autre chose : affronter les intempéries de la rue, les persécuteurs, les hommes de main, les ennemis, la police.",
+          "Les principes spirituels n'autorisent pas la pratique de délits, ni l'usage de la supériorité corporelle pour frapper les personnes âgées, les enfants et les femmes — ce qui s'est produit au XIXᵉ siècle et a entraîné une dure répression policière. L'une n'a rien à voir avec l'autre.",
+          "La culture de l'africanité a été confrontée à la bulle papale christianisatrice de la manière la plus perverse, et les savoirs de la culture noire, attaqués, ont dû se défendre pour survivre. C'est de la culture même qu'est venu le ressort de courage pour résister et continuer. Étudier est nécessaire pour ne pas tomber dans la confusion culturelle — sans quoi on risque de devenir une proie facile des manipulateurs au nom de Dieu."
+        ]
+      }
+    ]
+  },
+  "LoginPage": {
+    "title": "Espace élève",
+    "description": "Connectez-vous avec votre e-mail et votre mot de passe pour accéder aux vidéos et au matériel du mestre.",
+    "emailLabel": "E-mail",
+    "passwordLabel": "Mot de passe",
+    "submit": "Se connecter",
+    "invalidCredentials": "E-mail ou mot de passe invalide.",
+    "backHome": "Retour à l'accueil"
+  },
+  "StudentArea": {
+    "title": "Espace élève",
+    "connectedAs": "Connecté en tant que {email}",
+    "signOut": "Se déconnecter",
+    "photosTitle": "Photos",
+    "videosTitle": "Vidéos",
+    "empty": "Aucun contenu pour le moment. Le mestre déposera ici les photos et vidéos réservées aux élèves."
+  },
+  "Footer": {
+    "copyright": "© {year} GECAAB",
+    "tagline": "Genève · Rio de Janeiro · Aarhus"
+  },
+  "LanguageSwitcher": {
+    "label": "Langue",
+    "fr": "Français",
+    "pt": "Português",
+    "en": "English"
+  }
+}

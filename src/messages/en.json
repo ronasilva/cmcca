@@ -1,0 +1,184 @@
+{
+  "Metadata": {
+    "title": "GECAAB — Capoeira Angola África Bantu School",
+    "description": "Official site of the Group/School of Capoeira Angola África Bantu. Classes, events and members-only content for students."
+  },
+  "Nav": {
+    "home": "Home",
+    "about": "About",
+    "mestre": "Mestre Braga",
+    "courses": "Classes",
+    "gallery": "Gallery",
+    "history": "History",
+    "contact": "Contact",
+    "studentArea": "Student area"
+  },
+  "HomePage": {
+    "heroTitle": "Group/School of Capoeira Angola África Bantu",
+    "heroSubtitle": "From Rio de Janeiro to Geneva — Mestre Braga's school, since 1993.",
+    "videoCaption": "N'golo, the zebra dance — the two zebras of our emblem",
+    "heroCta": "Enter student area",
+    "aboutTitle": "About the group",
+    "aboutBody": "The Group/School of Capoeira Angola África Bantu was founded in Rio de Janeiro in 1993/4 by Mestre Braga. Today it brings together chapters in three cities: Rio de Janeiro, led by Mestre Edson; Aarhus, in Denmark, by Contramestre Andréas; and Geneva, led by Mestre Braga himself. The Geneva group is organised as an association, a member of the Ateliers d'Ethnomusicologie (ADEM).",
+    "contactTitle": "Contact",
+    "contactBody": "Centre ADEM, 10 rue de Montbrillant, CH-1201 Geneva."
+  },
+  "CoursPage": {
+    "eyebrow": "Weekly classes",
+    "title": "Classes",
+    "intro": "Centre ADEM hosts classes year-round. Enrol any time — no fixed course structure.",
+    "scheduleTitle": "Schedule",
+    "monday": "Monday",
+    "mondayHours": "20:00 – 22:00",
+    "mondayLabel": "Beginners",
+    "wednesday": "Wednesday",
+    "wednesdayHours": "20:00 – 21:00",
+    "wednesdayLabel": "Advanced · Roda until 22:00",
+    "friday": "Friday",
+    "fridayHours": "19:30 – 21:00",
+    "fridayLabel": "Salle l'ilôt 13, behind Cornavin station",
+    "locationTitle": "Location",
+    "locationName": "Centre ADEM",
+    "locationAddress": "10 rue de Montbrillant (behind Cornavin), CH-1201 Geneva",
+    "locationNote": "Centre ADEM has showers and changing rooms.",
+    "dressCodeTitle": "Dress",
+    "dressCodeBody": "Black trousers and white t-shirt.",
+    "pricesTitle": "Prices",
+    "pricesCurrency": "CHF",
+    "priceMembersTitle": "G/E.C.A.A.B. members",
+    "priceMembersBody": "200.– per term",
+    "priceMembersAdem": "+ 50.– yearly for ADEM members",
+    "priceStudentsTitle": "Students · Unemployed",
+    "priceStudents1": "1 month — 100.–",
+    "priceStudents3": "3 months — 85.– / month",
+    "priceStudents10": "10 months — 75.– / month",
+    "priceStudentsAdem": "+ 50.– yearly for ADEM members"
+  },
+  "MestrePage": {
+    "eyebrow": "Founding mestre",
+    "title": "Mestre Braga",
+    "subtitle": "Founder of the Group/School of Capoeira Angola África Bantu",
+    "bio": "Mestre Braga grew up in Lins, in the north zone of Rio de Janeiro. He first encountered capoeira at 13 or 14, through street friends, and went on to train at Grupo Palmares — with mestres Roni, Zé Macaco and Cabelo Russo — and at Grupo Corda Bamba under Mestre Touro, in Penha. He became a student of Mestre Moraes on 5 July 1975, and in December of that year travelled to Bahia to visit Mestre Pastinha in Salvador — a defining encounter. He founded GECAAB in Rio in 1993/4 and established the group in Geneva, where he still teaches.",
+    "videoCaption": "The berimbau — the instrument that leads the roda",
+    "lineageTitle": "Lineage",
+    "lineageBody": "Mestre Pastinha (Bahia) · Mestre Moraes · Mestre Braga · Mestre Edson (Rio) · Contramestre Andréas (Aarhus).",
+    "memoriasTitle": "Memórias",
+    "memoriasP1": "I grew up in Lins, in the north zone of Rio de Janeiro — still in the days of the state of Guanabara. Those were the days of cerol in kite wars, marbles, spinning tops, barefoot football matches between the hillside favelas and the paved streets, the sound of macumba at night and offerings at every corner in the morning, samba played on matchboxes, the surdo from carnival rehearsals. That's how it was, more or less, until I was around 13 or 14.",
+    "memoriasP2": "Up on the morro, a fight always made the distinction. They said a man's fight was never grappling: hence the slaps, the leg-sweeps that put the other on the horizontal, and plenty of ginga — which in slang was called ciscar. I got my first lessons in middle school, from a Black classmate who one day invited me to watch a street fight. Moving loosely, he landed a leg-sweep, two or three slaps, and finally a headbutt on a much bigger boy. I pressed him so hard to teach me that he eventually did.",
+    "memoriasP3": "I started learning with other friends who already trained at academies. Around 14 or 15, I joined my first school: Grupo Palmares, on Paula de Frontin street, with mestres Roni, Zé Macaco and Cabelo Russo. The group later moved to the Almir Ribeiro academy in Tijuca, then to the morro do Catumbi, then to Santa Teresa. When it broke up, I spent time with Mestre Dentinho in Vila Isabel, and then joined Grupo Corda Bamba under Mestre Touro in Penha — capoeira angola — for about six months.",
+    "memoriasP4": "These mestres — all of them Black — always emphasised that capoeira was angola. Mestre Roni, although a black belt in karate and judo, was remarkably skilled at putting an opponent down with a sweep: I never saw him mix the practices. Most Bahians who emigrated to Rio, however, could not make a living from angola against the local cariocas and ended up passing on the influences of Mestre Bimba's Luta Regional.",
+    "memoriasP5": "It was during carnival, at the roda at Central do Brasil station, that I first saw Moraes walking on his hands — like a crab — while playing with Dentinho. They said he was a student of Pastinha who had come from São João de Meriti; some called him \"the African\", for the way he moved. At the mestres' and contramestres' roda in Bonsucesso, run by Mestre Zé Pedro, I got to see him play several times — the difference was 360° compared to the more common Regional style, and many didn't know how to respond. Only a few — Luiz Malhado, Dentinho, Touro, Celso do Engenho da Rainha — could really play with him. Moraes was at first underestimated for openly identifying as an angoleiro; that changed when in a serious exchange he made clear why he was loyal to the school. He always used to say \"I learned from the old man\" — meaning Pastinha; but he would explain that his true mestres had been João Grande, his angola idol, and João Pequeno. I started training with him on 5 July 1975, at Clube Gurilândia in Botafogo. I was 17 or 18.",
+    "memoriasP6": "In December 1975 we went to Bahia — Moraes, me, Neco, Marco Aurélio, Zé Carlos da Posse, Tete and Amalha. We all visited Mestre Pastinha, who remembered Moraes by the name Pedrinho. I stayed in Salvador the whole month of January, and went back several times. On one of those visits I handed him a berimbau I had bought at the mercado modelo, and watched him play it. The three types of berimbau — gunga, médio and viola — I learned, without a doubt, from Mestre Moraes, who was also extraordinary on the musical bow."
+  },
+  "GalleryPage": {
+    "eyebrow": "Roda, encounters, journeys",
+    "title": "Gallery",
+    "intro": "Photos from rodas, classes and capoeira encounters across Europe. Click an image to enlarge.",
+    "caption1": "Roda in Geneva, February 2022",
+    "caption2": "Encounter, April 2018",
+    "caption3": "Roda, February 2022",
+    "caption4": "Roda, February 2022",
+    "caption5": "Roda, February 2022",
+    "caption6": "Roda, February 2022",
+    "caption7": "Roda, February 2022",
+    "caption8": "April 2018",
+    "caption9": "May 2018"
+  },
+  "HistoryPage": {
+    "eyebrow": "A chronology by Mestre Braga",
+    "title": "History",
+    "intro": "Capoeira is a culture of the African diasporas in Brazil. This page gathers a chronology, from the indigenous origins of the word \"capoeira\" to the consolidation of capoeira angola by Mestre Pastinha in the 20th century.",
+    "sections": [
+      {
+        "title": "The origin of the word",
+        "paragraphs": [
+          "The word \"kaá puera\" comes from Tupi-Guarani and originally referred to regions once covered by tall scrub that, after coivara — an indigenous slash-and-burn farming technique — turned into secondary vegetation, ready for planting, livestock or settlement. The same technique was adopted by Africans on the run, who left the plantations to build autonomous communities in the interior.",
+          "The Portuguese spelling, with a \"c\", came to mean two things. On one hand, the communities of Black and mixed-heritage people (mulattos, Afro-descendants) who lived in that secondary forest, away from urban centres — a parallel to what would later be called caipira. On the other, the bamboo-strip baskets these same people carried on their heads when they came down to town to sell fruit, vegetables and poultry.",
+          "Once in town, many of them took on small trades — porters, barbers for other Black people, street vendors. Others, more skilled in street techniques (sweeps, headbutts, rabo de arraia, the razor slipped between the fingers), were absorbed as henchmen, bodyguards for politicians, or police informers."
+        ]
+      },
+      {
+        "title": "The maltas de capoeiras",
+        "paragraphs": [
+          "In imperial Rio de Janeiro of the 19th century, the capoeiras organised themselves into maltas — a Black institution of parallel power, in opposition to the slaveholding regime. The danger of these organisations came less from firearms, which they despised, than from bodily skill: they played well, they were adept at the leg-sweep and the headbutt, and they carried the razor inherited from rubbing shoulders with Portuguese fadistas in the cortiços (slums).",
+          "The police were terrified of the maltas. Many of their members ended up captured as henchmen in the service of politicians, the police itself, or informers. In the suburbs of Rio, some called the way of moving the body, hands, feet and head in a fight tiririca."
+        ]
+      },
+      {
+        "title": "Capoeiras and Portuguese fadistas",
+        "paragraphs": [
+          "From 1850 onwards, with the end of the Atlantic slave trade and Rio's growing urban demand for labour, Portuguese immigration to the city intensified — many came from the Azores. Newly arrived Portuguese and Rio's Black population shared the same cortiços, the same epidemics, the same low-wage occupations. From that proximity arose an intense cultural exchange, documented by historians such as Marcos Bretas and Carlos Eugenio Líbano Soares.",
+          "The fadista — a marginal figure of 19th-century Lisbon, alongside prostitutes, sailors and vagabonds — brought to Rio not only the fado song but also a particular way of fighting: the razor, the ginga, agility. The journalist Tinop wrote that \"the fadistas of Rio de Janeiro are the capoeiras.\" The vocabulary itself overlapped — \"sardinha\", \"rasteira\", \"ginga\" belonged to both worlds. The duel between the carioca capoeira Manduca da Praia (Nagôa) and the fadista Sant'Anna sealed the encounter: from then on, they walked together through the bustling streets of the imperial capital.",
+          "There was also the marialva — a bourgeois used to frequenting the underworld, or the son of aristocratic families slumming it. The most famous marialva of Rio's court was José Elysio dos Reis, \"Juca Reis\", son of an important Lusitanian family. The cyclical police repression that fell upon Lisbon's nightlife — and upon Rio capoeira — was repeatedly motivated by the reappearance of this figure in the worst districts.",
+          "On 11 October 1890, decree no. 847 introduced capoeira into the Penal Code of the Republic, in chapter XIII \"Dos vadios e capoeiras\" — articles 402, 403 and 404. The arrest and deportation of capoeiras continued: from the penal colony of Fernando de Noronha to the Dois Rios correctional colony on Ilha Grande."
+        ]
+      },
+      {
+        "title": "The berimbau, from market to roda",
+        "paragraphs": [
+          "The berimbau is an African string instrument with a binary sonority, carried by griots in certain African regions, where it accompanied the telling of their peoples' social memory. In 1739 the first musical bow is recorded landing in Brazil, imported from Benin and sent to Rio de Janeiro via the port of Santos.",
+          "In Rio in the 18th and 19th centuries, the berimbau became the instrument of street vendors — they used its sound to draw the attention of customers. On 18 January 1860, a Bahian named Bento Angola, passing through Rio, heard the instrument, took the idea back to Bahia and gave it another purpose: to accompany the techniques of the capoeiras of the Recôncavo. It is from that date that the first roda is recorded joining the leg-sweep, the rabo de arraia and the headbutt with the sounds of the musical bow.",
+          "Before that, the berimbau already had an alerting use in Bahia: the toque called cavalaria signalled the arrival of strangers or mounted police."
+        ]
+      },
+      {
+        "title": "National Gymnastics (1928) — the first deafricanisation",
+        "paragraphs": [
+          "After centuries of police repression in the three states where capoeira had taken root most deeply — Rio, Bahia and Pernambuco — the National Gymnastics appears in Rio de Janeiro in 1928. It was a project by Anibal Burlamaque (known as \"Zuma\"), presented as the first Sporting Code of Capoeira, \"Methodised and Regulated\". The book contained an illustrated nomenclature, attacks and counter-attacks translated into a more \"understandable\" language, competition areas, rules, criteria for training referees and uniforms.",
+          "It was the first explicit attempt to deafricanise the practice — to detach it from its Black cultural source and frame it within the European rules of competitive gymnastics. For a long time, it was the only form tolerated by the police."
+        ]
+      },
+      {
+        "title": "Luta Regional Baiana (1936–37) and the CECA (1940–41)",
+        "paragraphs": [
+          "In Bahia, the capoeiras were already attached to the berimbau and resisted adopting the National Gymnastics. By the sporting rules, the instrument had no place on the ring — music is for dancing, not for fighting. It was then that Mestre Bimba, himself originally an angoleiro, proposed around 1936–37 his own arrangement: the Luta Regional Baiana.",
+          "He presented it as a discipline compatible with the ring — no fingers in the eye, no kicking in the groin — using the berimbau only for warm-up before combat. It was a way to preserve the instrument within the sporting rules that the police demanded. Some say the arrangement had existed since 1922; Mestre Bimba himself may not have been fully in agreement with the deafricanisation — but, in order not to see the berimbau lost altogether, he accepted the rules of the game.",
+          "A few years later, in 1940–41, Mestre Pastinha opens the Centro Esportivo de Capoeira Angola (CECA) at Largo do Pelourinho 19, in Salvador. It is there that capoeira angola is consecrated in the preservation of teaching through the memory of Africanness — not as sport, but as culture. It is also in this context that the berimbau definitively acquires its social role in the roda: a particular sonic repetition signals that play should stop, forcing the players to come to the bench and find out why."
+        ]
+      },
+      {
+        "title": "GCAP — the continuation of CECA",
+        "paragraphs": [
+          "The tradition preserved at Mestre Pastinha's CECA returned to Rio de Janeiro only in the 1970s, through Mestre Moraes — Pedro Moraes Trindade — Pastinha's student since childhood, who had come to the capital to perform his military service in the Marine Fusiliers Corps. At the Clube Gurilândia in Botafogo, he began teaching on Saturdays. On 5 July 1975, Mestre Braga joined the group. The collective was simply identified as Capoeira Angola Mestre Moraes.",
+          "On 16 December 1978, on a Saturday morning at Parque Lage, in the Botanical Garden, Mestre Moraes raised three students to the rank of mestre — Braga, Neco and José Carlos — and one to contramestre, Marco Aurélio. The mestres Camisa and Preguiça were present at the ceremony. The idea to gather this strength into a single group, in continuity with CECA, came from Neco. On 5 October 1980, at a craft fair in Cosme Velho — Rio's south zone — the Grupo de Capoeira Angola Pelourinho (GCAP) was founded with a capoeira and maculelê demonstration. Moraes's only requirement was to keep CECA's colours: black and yellow.",
+          "In 1982, Mestre Moraes returned definitively to Salvador, where, from the Forte Santo Antônio Além do Carmo, he carried the GCAP experience. The Mostras de Capoeira Angola began in 1985 and gathered the old angoleiros of Bahia — J. Grande, J. Pequeno, Barba Branca, Bobó, Lua de Bobó, Curió, Paulo dos Anjos — helping to revitalise the practice. From Salvador, the diaspora expanded: Belo Horizonte, Olinda, California, the United States, Europe. In 1993/4, GCAP-RJ wound down; its members went on to found their own groups — among them, Mestre Braga, who established GECAAB, first in Rio and later in Geneva."
+        ]
+      },
+      {
+        "title": "Religion and bodily skill — not the same thing",
+        "paragraphs": [
+          "Capoeira religion and bodily skill are two distinct realities. Many Africans and their descendants, even when forced to convert to Catholicism, kept beliefs of African origin — among them Muslim belief, in North Africa. Others gave themselves over entirely to Christianising creeds. Bodily skill, on the other hand, served another purpose: facing the harshness of the street, the persecutors, the henchmen, the enemies, the police.",
+          "Spiritual principles do not endorse the practice of crimes, nor the use of bodily advantage to strike the elderly, children and women — things that occurred in the 19th century and led to harsh police repression. One has nothing to do with the other.",
+          "The culture of Africanness was confronted by the papal christianising bull in the most perverse way, and the knowledge of Black culture, when attacked, had to defend itself in order to survive. It was the culture itself that produced the courage to resist and to go on. Study is necessary in order not to fall into cultural confusion — otherwise one risks becoming easy prey to manipulators in the name of God."
+        ]
+      }
+    ]
+  },
+  "LoginPage": {
+    "title": "Student area",
+    "description": "Sign in with your email and password to access the mestre's videos and materials.",
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "submit": "Sign in",
+    "invalidCredentials": "Invalid email or password.",
+    "backHome": "Back to home"
+  },
+  "StudentArea": {
+    "title": "Student area",
+    "connectedAs": "Signed in as {email}",
+    "signOut": "Sign out",
+    "photosTitle": "Photos",
+    "videosTitle": "Videos",
+    "empty": "Nothing here yet. The mestre will drop the student-only photos and videos here."
+  },
+  "Footer": {
+    "copyright": "© {year} GECAAB",
+    "tagline": "Geneva · Rio de Janeiro · Aarhus"
+  },
+  "LanguageSwitcher": {
+    "label": "Language",
+    "fr": "Français",
+    "pt": "Português",
+    "en": "English"
+  }
+}
