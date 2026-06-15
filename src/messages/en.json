@@ -19,8 +19,11 @@
     "kicker": "Capoeira Angola",
     "mission": "The memory and knowledge of the capoeiras in Capoeira Angola",
     "heroTitle": "CMC/CA",
-    "heroSubtitle": "An association dedicated to teaching and keeping alive the memory of Capoeira Angola — and the home of the GECAAB / África Bantu school of Mestre Braga, in Geneva.",
+    "heroSubtitle": "An association dedicated to teaching and conserving the memory of Capoeira Angola — and the home of the GECAAB / África Bantu school of Mestre Braga, in Geneva.",
+    "culturalIntro": "An Afro-Latin cultural heritage of Brazil, reaching back to the presence of the Bantu peoples — from the 16th to the 19th century, the colonial era.",
     "videoCaption": "N'golo, the zebra dance — the two zebras of our emblem",
+    "gravuraTitle": "The maltas",
+    "gravuraCaption": "Engraving of the maltas — capoeiras of 19th-century Rio de Janeiro, whose stage of exploits was the Lapa.",
     "assocNumber": "N° 01 ·",
     "assocTitle": "The association",
     "assocBody": "CMC/CA is the umbrella association. Its purpose is the transmission of a knowledge of memory: informing about the cultural sources of Capoeira Angola, born of the Bantu diaspora in Brazil, and supporting its practice as education, socialisation and physical and mental wellbeing.",
@@ -28,6 +31,7 @@
     "schoolNumber": "N° 02 ·",
     "schoolTitle": "The school — GECAAB / África Bantu",
     "schoolBody": "Inside the association lives the Group/School of Capoeira Angola África Bantu, founded by Mestre Braga in Rio de Janeiro in 1993/4 and established in Geneva, a member of the Ateliers d'Ethnomusicologie (ADEM).",
+    "schoolTagline": "Association África Bantu — for teaching with a conservation purpose.",
     "schoolCtaMestre": "Mestre Braga",
     "schoolCtaCourses": "Classes",
     "schoolCtaHistory": "History",
@@ -48,8 +52,9 @@
     "structureBody": "The association (CMC/CA) is the umbrella. Within it, the school (GECAAB / África Bantu) carries the day-to-day teaching of Capoeira Angola — classes, roda and the transmission of Mestre Braga's lineage.",
     "ademTitle": "ADEM",
     "ademBody": "The Geneva group is organised as an association and is a member of the Ateliers d'Ethnomusicologie (ADEM), at Centre ADEM, 10 rue de Montbrillant, CH-1201 Geneva.",
+    "noteLabel": "Note",
     "noteTitle": "A note on our purpose",
-    "noteBody": "This work is dedicated exclusively to teaching this knowledge and honouring the cultural sources that produced it. Although capoeira was, in the past, used in or entangled with political matters, our struggle is for the right to practise and to assist in socialisation — educating, too, with benefits offered to the physical and mental health that practitioners can improve. Ideologies are foreign to it — neither foreseen nor part of this."
+    "noteBody": "This reference is dedicated solely and exclusively to teaching the conservation of this knowledge — that is, to inform about the values through the cultural sources that produced it. Although marked by a past of political entanglements, the struggle is for occupation and authorised establishment for the legal practice of the activity, welcoming those who wish to develop themselves and supporting education, socialisation and the physical and mental health benefits that practitioners can improve. Ideologies are foreign to it — neither foreseen nor part of this."
   },
   "LibraryPage": {
     "eyebrow": "Esfera Intelectual",

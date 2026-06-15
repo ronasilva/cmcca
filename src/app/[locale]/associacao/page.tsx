@@ -3,7 +3,6 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
-import { SectionDivider } from "@/components/SectionDivider";
 
 export default async function AssociacaoPage({
   params,
@@ -58,14 +57,7 @@ export default async function AssociacaoPage({
         </section>
       ))}
 
-      <SectionDivider label={t("noteTitle")} />
-
-      {/* THE NOTE — editorial manifesto */}
-      <section className="mx-auto w-full max-w-3xl px-6 pb-24 pt-4">
-        <p className="border-l-2 border-terracotta pl-6 font-display text-2xl font-light italic leading-relaxed text-espresso">
-          {t("noteBody")}
-        </p>
-      </section>
+      <div className="pb-12" />
 
       <Footer />
     </div>

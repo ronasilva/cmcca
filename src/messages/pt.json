@@ -17,10 +17,13 @@
   },
   "HomePage": {
     "kicker": "Capoeira Angola",
-    "mission": "O conhecimento de memória dos capoeiras em Capoeira Angola",
+    "mission": "Conhecimento de Memória dos Capoeiras em Capoeira Angola",
     "heroTitle": "CMC/CA",
-    "heroSubtitle": "Uma associação dedicada ao ensino e à preservação da memória da Capoeira Angola — e a casa da escola GECAAB / África Bantu do Mestre Braga, em Genebra.",
+    "heroSubtitle": "Uma associação dedicada ao ensino e à conservação da memória da Capoeira Angola — e a casa da escola GECAAB / África Bantu do Mestre Braga, em Genebra.",
+    "culturalIntro": "Uma importância cultural afro-latina do Brasil, que remonta à presença dos povos bantu — do século XVI ao XIX, a era colonial.",
     "videoCaption": "N'golo, a dança da zebra — as duas zebras do nosso emblema",
+    "gravuraTitle": "As maltas",
+    "gravuraCaption": "Gravura das maltas — capoeiras do Rio de Janeiro do século XIX, cujo teatro de façanhas era a Lapa.",
     "assocNumber": "N° 01 ·",
     "assocTitle": "A associação",
     "assocBody": "A CMC/CA é a associação que abriga tudo. A sua razão de ser é a transmissão de um conhecimento de memória: informar sobre as fontes culturais da Capoeira Angola, nascida da diáspora bantu no Brasil, e apoiar a sua prática como educação, sociabilização e bem-estar físico e mental.",
@@ -28,6 +31,7 @@
     "schoolNumber": "N° 02 ·",
     "schoolTitle": "A escola — GECAAB / África Bantu",
     "schoolBody": "Dentro da associação vive o Grupo/Escola de Capoeira Angola África Bantu, fundado pelo Mestre Braga no Rio de Janeiro em 1993/4 e estabelecido em Genebra, membro dos Ateliers d'Ethnomusicologie (ADEM).",
+    "schoolTagline": "Associação África Bantu — para o ensino de objetivo conservador.",
     "schoolCtaMestre": "Mestre Braga",
     "schoolCtaCourses": "Aulas",
     "schoolCtaHistory": "História",
@@ -48,8 +52,9 @@
     "structureBody": "A associação (CMC/CA) é a casa que abriga. Dentro dela, a escola (GECAAB / África Bantu) conduz o ensino do dia a dia da Capoeira Angola — aulas, roda e a transmissão da linhagem do Mestre Braga.",
     "ademTitle": "ADEM",
     "ademBody": "O grupo de Genebra organiza-se como associação e é membro dos Ateliers d'Ethnomusicologie (ADEM), no Centre ADEM, 10 rue de Montbrillant, CH-1201 Genebra.",
+    "noteLabel": "Nota",
     "noteTitle": "Uma nota sobre o nosso propósito",
-    "noteBody": "Esta referência dedica-se única e exclusivamente ao ensino desse conhecimento e a honrar as fontes culturais que o geraram. Embora a capoeira tenha sido, no passado, usada ou envolvida em assuntos políticos, a luta é por autorização de poder praticar e auxiliar na sociabilização — educando também, com os benefícios oferecidos à saúde física e mental que os praticantes podem melhorar. Ideologias são estranhas a isto — não previstas, nem parte disto."
+    "noteBody": "Esta referência dedica-se única e exclusivamente ao ensino de conservação do conhecimento — ou seja, informar dos valores pelas fontes culturais que o geraram. Embora marcada por antecedentes de envolvimentos políticos no passado, a luta é por ocupação e estabelecimento autorizado para o exercício legal da atividade, recebendo os interessados em se desenvolver e auxiliando na educação, na sociabilização e nos benefícios à saúde física e mental que os praticantes podem melhorar. Ideologias são estranhas a isto — não previstas, nem parte disto."
   },
   "LibraryPage": {
     "eyebrow": "Esfera Intelectual",

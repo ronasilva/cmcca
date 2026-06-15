@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import { LanguageSwitcher } from './LanguageSwitcher'
@@ -17,52 +16,43 @@ export async function Header() {
 
   return (
     <header>
-      {/* MASTHEAD BAND */}
+      {/* MASTHEAD — wordmark only (the emblem lives in the page body) */}
       <div className="border-b border-espresso/15">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-6">
-          <Link href="/" className="flex items-center gap-4">
-            <Image
-              src="/cmcca-logo.png"
-              alt="CMC/CA — Associação de Capoeira Angola"
-              width={120}
-              height={120}
-              className="h-12 w-12 object-contain"
-              priority
-            />
-            <span className="flex flex-col leading-none">
-              <span className="font-display text-2xl font-medium tracking-tight text-espresso">
-                CMC/CA
-              </span>
-              <span className="mt-2 font-mono text-[9px] uppercase tracking-[0.25em] text-espresso-2">
-                Association · Capoeira Angola · Genève
-              </span>
+        <div className="mx-auto flex max-w-6xl items-center px-6 py-5">
+          <Link href="/" className="flex flex-col leading-none">
+            <span className="font-display text-xl font-medium tracking-tight text-espresso">
+              CMC/CA
+            </span>
+            <span className="mt-1.5 font-mono text-[9px] uppercase tracking-[0.2em] text-espresso-2">
+              Conhecimento de Memória dos Capoeiras em Capoeira Angola
             </span>
           </Link>
-          <LanguageSwitcher />
         </div>
       </div>
 
-      {/* NAV RAIL */}
+      {/* NAV RAIL — menu + language + member area together */}
       <div className="border-b border-espresso/15">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-3">
-          <ul className="hidden items-center gap-7 md:flex">
+          <nav className="hidden items-center gap-7 md:flex">
             {links.map((l) => (
-              <li key={l.href}>
-                <Link
-                  href={l.href}
-                  className="font-mono text-[11px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-espresso"
-                >
-                  {l.label}
-                </Link>
-              </li>
+              <Link
+                key={l.href}
+                href={l.href}
+                className="font-mono text-[11px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-espresso"
+              >
+                {l.label}
+              </Link>
             ))}
-          </ul>
-          <Link
-            href="/login"
-            className="ml-auto font-mono text-[11px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-          >
-            {t('memberArea')} →
-          </Link>
+          </nav>
+          <div className="ml-auto flex items-center gap-5">
+            <LanguageSwitcher />
+            <Link
+              href="/login"
+              className="font-mono text-[11px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+            >
+              {t('memberArea')} →
+            </Link>
+          </div>
         </div>
       </div>
     </header>

@@ -13,25 +13,40 @@ export default async function Home({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("HomePage");
+  const tn = await getTranslations("AssociationPage");
 
   return (
     <div className="flex flex-col flex-1 text-espresso">
       <Header />
 
-      {/* HERO */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-14 pt-20 md:pt-28">
-        <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-terracotta">
-          {t("kicker")}
-        </p>
-        <h1 className="mt-5 font-display text-[clamp(3.5rem,11vw,9rem)] font-light leading-[0.95] tracking-tight text-espresso">
-          {t("heroTitle")}
-        </h1>
-        <p className="mt-6 max-w-4xl font-display text-[clamp(1.5rem,3.2vw,2.75rem)] font-light italic leading-[1.1] text-espresso">
-          {t("mission")}
-        </p>
-        <p className="mt-8 max-w-2xl font-display text-xl leading-relaxed text-espresso-2">
-          {t("heroSubtitle")}
-        </p>
+      {/* IDENTITY — emblem left, description right (Mestre Braga's layout) */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-14 pt-16 md:pt-20">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-center">
+          <div className="md:col-span-4">
+            <Image
+              src="/cmcca-logo.png"
+              alt="Emblema da CMC/CA — Associação de Capoeira Angola"
+              width={400}
+              height={400}
+              priority
+              className="h-auto w-44 max-w-full object-contain md:w-52"
+            />
+          </div>
+          <div className="md:col-span-8">
+            <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-terracotta">
+              {t("kicker")}
+            </p>
+            <h1 className="mt-4 font-display text-[clamp(3rem,7vw,6.5rem)] font-light leading-[0.95] tracking-tight text-espresso">
+              {t("heroTitle")}
+            </h1>
+            <p className="mt-5 font-display text-[clamp(1.4rem,2.6vw,2.25rem)] font-light italic leading-[1.15] text-espresso">
+              {t("mission")}
+            </p>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-espresso-2">
+              {t("culturalIntro")}
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* ZEBRA FILM — full-bleed cinematic band */}
@@ -56,76 +71,53 @@ export default async function Home({
         </div>
       </div>
 
-      {/* THE ASSOCIATION */}
-      <section id="associacao" className="mx-auto w-full max-w-6xl px-6 py-20">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-              {t("assocNumber")}
-            </p>
-            <h2 className="mt-3 font-display text-4xl font-light italic leading-tight text-espresso">
-              {t("assocTitle")}
-            </h2>
-            <div className="mt-10 flex justify-start rounded-sm bg-cream-2/40 p-8">
+      {/* GRAVURAS DE MALTAS — historical engraving */}
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-center">
+          <div className="md:col-span-5">
+            <div className="overflow-hidden rounded-sm border border-espresso/15 bg-plate p-3">
               <Image
-                src="/cmcca-logo.png"
-                alt="Emblema da CMC/CA — Associação de Capoeira Angola"
-                width={400}
-                height={400}
-                className="h-auto w-44 max-w-full object-contain"
+                src="/gravura-maltas.jpg"
+                alt={t("gravuraCaption")}
+                width={313}
+                height={301}
+                className="h-auto w-full object-contain"
               />
             </div>
           </div>
-          <div className="md:col-span-7 md:col-start-6">
-            <p className="font-display text-xl leading-relaxed text-espresso-2">
-              {t("assocBody")}
+          <div className="md:col-span-6 md:col-start-7">
+            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+              {t("gravuraTitle")}
             </p>
-            <figure className="mt-12 border-l-2 border-terracotta pl-6">
-              <blockquote className="font-display text-2xl italic leading-snug text-espresso">
-                « Capoeira Angola, uma das culturas das diásporas africanas no
-                Brasil. »
-              </blockquote>
-              <figcaption className="mt-3 font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-                — Mestre Braga
-              </figcaption>
-            </figure>
-            <Link
-              href="/associacao"
-              className="mt-10 inline-block font-mono text-[11px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-            >
-              {t("assocCta")} →
-            </Link>
+            <p className="mt-3 font-display text-xl leading-relaxed text-espresso-2">
+              {t("gravuraCaption")}
+            </p>
           </div>
         </div>
       </section>
 
       <SectionDivider />
 
-      {/* THE SCHOOL — GECAAB */}
-      <section id="escola" className="mx-auto w-full max-w-6xl px-6 py-20">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
+      {/* ÁFRICA BANTU — the school (logo left, text right) */}
+      <section id="escola" className="mx-auto w-full max-w-6xl px-6 py-16">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-center">
           <div className="md:col-span-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-              {t("schoolNumber")}
-            </p>
-            <h2 className="mt-3 font-display text-4xl font-light italic leading-tight text-espresso">
-              {t("schoolTitle")}
-            </h2>
+            <Image
+              src="/africa-bantu-logo.png"
+              alt="Emblema do GECAAB — Grupo/Escola de Capoeira Angola África Bantu"
+              width={452}
+              height={386}
+              className="h-auto w-44 max-w-full object-contain md:w-52"
+            />
           </div>
-          <div className="md:col-span-7 md:col-start-6">
-            <p className="font-display text-xl leading-relaxed text-espresso-2">
-              {t("schoolBody")}
+          <div className="md:col-span-8">
+            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-terracotta">
+              {t("schoolTagline")}
             </p>
-            <div className="mt-10 flex justify-center rounded-sm bg-plate px-6 py-10">
-              <Image
-                src="/gecaab-logo.png"
-                alt="Emblema do GECAAB — Grupo/Escola de Capoeira Angola África Bantu"
-                width={600}
-                height={388}
-                className="h-auto w-80 max-w-full object-contain"
-              />
-            </div>
-            <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
+            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.3em] text-espresso-2">
+              Genève – Suisse
+            </p>
+            <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
               <li>
                 <Link
                   href="/mestre"
@@ -155,43 +147,21 @@ export default async function Home({
         </div>
       </section>
 
-      <SectionDivider />
-
-      {/* THE LIBRARY — ESFÉRA INTELECTUAL */}
-      <section id="biblioteca" className="mx-auto w-full max-w-6xl px-6 py-20">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-              {t("libraryNumber")}
-            </p>
-            <h2 className="mt-3 font-display text-4xl font-light italic leading-tight text-espresso">
-              {t("libraryTitle")}
-            </h2>
-          </div>
-          <div className="md:col-span-7 md:col-start-6">
-            <p className="font-display text-xl leading-relaxed text-espresso-2">
-              {t("libraryBody")}
-            </p>
-            <Link
-              href="/biblioteca"
-              className="mt-10 inline-block font-mono text-[11px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-            >
-              {t("libraryCta")} →
-            </Link>
-          </div>
-        </div>
+      {/* NOTA — the manifesto, placed with the África Bantu mark */}
+      <SectionDivider label={tn("noteLabel")} />
+      <section className="mx-auto w-full max-w-3xl px-6 py-12">
+        <p className="border-l-2 border-terracotta pl-6 font-display text-2xl font-light italic leading-relaxed text-espresso">
+          {tn("noteBody")}
+        </p>
       </section>
 
       <SectionDivider />
 
       {/* CONTACT */}
-      <section id="contact" className="mx-auto w-full max-w-6xl px-6 py-20">
+      <section id="contact" className="mx-auto w-full max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-              {t("contactNumber")}
-            </p>
-            <h2 className="mt-3 font-display text-4xl font-light italic leading-tight text-espresso">
+            <h2 className="font-display text-4xl font-light italic leading-tight text-espresso">
               {t("contactTitle")}
             </h2>
           </div>

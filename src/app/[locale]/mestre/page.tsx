@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -35,15 +36,15 @@ export default async function MestrePage({
 
       <PageHeader eyebrow={t("eyebrow")} title={t("title")} />
 
-      {/* BERIMBAU FILM — full-bleed cinematic band */}
+      {/* BERIMBAU — full-bleed cinematic band */}
       <section className="relative w-full overflow-hidden border-t border-espresso/15">
-        <video
-          src="/berimbau-close-up.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          aria-hidden="true"
+        <Image
+          src="/berimbau.jpg"
+          alt={t("videoCaption")}
+          width={1535}
+          height={1024}
+          priority
+          sizes="100vw"
           className="h-[52vh] min-h-80 w-full object-cover"
         />
         <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-background/40 via-transparent to-background/70" />

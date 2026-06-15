@@ -19,8 +19,11 @@
     "kicker": "Capoeira Angola",
     "mission": "La mémoire et la connaissance des capoeiras dans la Capoeira Angola",
     "heroTitle": "CMC/CA",
-    "heroSubtitle": "Une association dédiée à l'enseignement et à la préservation de la mémoire de la Capoeira Angola — et la maison de l'école GECAAB / África Bantu de Mestre Braga, à Genève.",
+    "heroSubtitle": "Une association dédiée à l'enseignement et à la conservation de la mémoire de la Capoeira Angola — et la maison de l'école GECAAB / África Bantu de Mestre Braga, à Genève.",
+    "culturalIntro": "Un héritage culturel afro-latino du Brésil, qui remonte à la présence des peuples bantous — du XVIᵉ au XIXᵉ siècle, l'époque coloniale.",
     "videoCaption": "N'golo, la danse de la zèbre — les deux zèbres de notre emblème",
+    "gravuraTitle": "Les maltas",
+    "gravuraCaption": "Gravure des maltas — capoeiras du Rio de Janeiro du XIXᵉ siècle, dont le théâtre des exploits était la Lapa.",
     "assocNumber": "N° 01 ·",
     "assocTitle": "L'association",
     "assocBody": "CMC/CA est l'association faîtière. Sa raison d'être est la transmission d'une connaissance de mémoire : informer sur les sources culturelles de la Capoeira Angola, née de la diaspora bantoue au Brésil, et soutenir sa pratique comme éducation, socialisation et bien-être physique et mental.",
@@ -28,6 +31,7 @@
     "schoolNumber": "N° 02 ·",
     "schoolTitle": "L'école — GECAAB / África Bantu",
     "schoolBody": "Au sein de l'association vit le Groupe/École de Capoeira Angola África Bantu, fondé par Mestre Braga à Rio de Janeiro en 1993/4 et installé à Genève, membre des Ateliers d'Ethnomusicologie (ADEM).",
+    "schoolTagline": "Association África Bantu — pour un enseignement à visée de conservation.",
     "schoolCtaMestre": "Mestre Braga",
     "schoolCtaCourses": "Cours",
     "schoolCtaHistory": "Histoire",
@@ -48,8 +52,9 @@
     "structureBody": "L'association (CMC/CA) est la faîtière. En son sein, l'école (GECAAB / África Bantu) porte l'enseignement quotidien de la Capoeira Angola — cours, roda et transmission de la lignée de Mestre Braga.",
     "ademTitle": "ADEM",
     "ademBody": "Le groupe de Genève est organisé en association et membre des Ateliers d'Ethnomusicologie (ADEM), au Centre ADEM, 10 rue de Montbrillant, CH-1201 Genève.",
+    "noteLabel": "Note",
     "noteTitle": "Une note sur notre raison d'être",
-    "noteBody": "Ce travail se consacre uniquement à enseigner cette connaissance et à honorer les sources culturelles qui l'ont produite. Bien que la capoeira ait été, par le passé, utilisée dans des affaires politiques ou mêlée à elles, notre lutte est celle du droit de pratiquer et d'aider à la socialisation — en éduquant aussi, avec les bienfaits offerts à la santé physique et mentale que les pratiquants peuvent améliorer. Les idéologies y sont étrangères : elles n'y sont ni prévues, ni intégrées."
+    "noteBody": "Cette référence se consacre uniquement et exclusivement à l'enseignement de la conservation de cette connaissance — c'est-à-dire informer sur les valeurs, par les sources culturelles qui l'ont produite. Bien que marquée par un passé d'implications politiques, la lutte est celle de l'occupation et de l'établissement autorisé pour l'exercice légal de l'activité, en accueillant celles et ceux qui souhaitent se développer et en soutenant l'éducation, la sociabilisation et les bienfaits pour la santé physique et mentale que les pratiquants peuvent améliorer. Les idéologies y sont étrangères : elles n'y sont ni prévues, ni intégrées."
   },
   "LibraryPage": {
     "eyebrow": "Esfera Intelectual",

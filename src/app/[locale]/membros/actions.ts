@@ -11,7 +11,13 @@ export async function signOut(formData: FormData) {
     ? rawLocale
     : routing.defaultLocale
 
-  const supabase = await createClient()
-  await supabase.auth.signOut()
+  // No-op when Supabase isn't configured (e.g. local dev) — just go home.
+  if (
+    process.env.NEXT_PUBLIC_SUPABASE_URL &&
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+  ) {
+    const supabase = await createClient()
+    await supabase.auth.signOut()
+  }
   redirect({ href: '/', locale })
 }
