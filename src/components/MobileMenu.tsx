@@ -72,16 +72,24 @@ export function MobileMenu({ links, memberLabel, menuLabel, closeLabel }: Props)
           aria-label={menuLabel}
           className="fixed inset-0 z-50 flex flex-col bg-background"
         >
-          {/* Close sits top-left, exactly where the Menu trigger was —
-              tapping the same spot toggles. */}
+          {/* The hamburger becomes an ✕ in the same spot — the corner toggles. */}
           <div className="flex items-center justify-between border-b border-espresso/15 px-6 py-4">
             <button
               type="button"
               onClick={close}
+              aria-label={closeLabel}
               className="flex items-center gap-2 font-mono text-[12px] uppercase tracking-[0.18em] text-espresso transition hover:text-terracotta"
             >
-              <span aria-hidden className="text-sm leading-none">✕</span>
-              {closeLabel}
+              <svg
+                aria-hidden
+                viewBox="0 0 16 16"
+                className="h-4 w-4"
+                stroke="currentColor"
+                strokeWidth="1.2"
+              >
+                <path d="M2 2l12 12M14 2L2 14" />
+              </svg>
+              {menuLabel}
             </button>
             <span className="font-display text-base font-medium tracking-tight text-espresso">
               CMC/CA
