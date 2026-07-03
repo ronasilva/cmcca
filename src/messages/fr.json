@@ -14,7 +14,9 @@
     "history": "Histoire",
     "contact": "Contact",
     "memberArea": "Espace membre",
-    "skipToContent": "Aller au contenu"
+    "skipToContent": "Aller au contenu",
+    "menu": "Menu",
+    "close": "Fermer"
   },
   "HomePage": {
     "kicker": "Capoeira Angola",

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import { LanguageSwitcher } from './LanguageSwitcher'
+import { MobileMenu } from './MobileMenu'
 import { NavLinks } from './NavLinks'
 import { RailBrand } from './RailBrand'
 
@@ -57,13 +58,21 @@ export async function Header() {
       </header>
 
       {/* NAV RAIL — sticky; a compact wordmark keeps the way home visible
-          once the masthead scrolls away. On small screens the rail scrolls
-          horizontally; a right-edge fade hints at more links. */}
+          once the masthead scrolls away. Small screens get a full-screen
+          menu; md+ keeps the inline rail. */}
       <div className="sticky top-0 z-40 border-b border-espresso/15 bg-background/90 backdrop-blur-sm">
         <div className="scrollbar-none mx-auto flex max-w-6xl items-center gap-6 overflow-x-auto px-6 py-3">
           <RailBrand />
-          <NavLinks links={[...links]} />
-          <div className="ml-auto flex shrink-0 items-center gap-5 pl-2 pr-4 md:pr-0">
+          <MobileMenu
+            links={[...links]}
+            memberLabel={t('memberArea')}
+            menuLabel={t('menu')}
+            closeLabel={t('close')}
+          />
+          <div className="hidden md:block">
+            <NavLinks links={[...links]} />
+          </div>
+          <div className="ml-auto flex shrink-0 items-center gap-5 pl-2">
             <Link
               href="/login"
               className="whitespace-nowrap font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
@@ -72,10 +81,6 @@ export async function Header() {
             </Link>
           </div>
         </div>
-        <span
-          aria-hidden
-          className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-linear-to-l from-background to-transparent md:hidden"
-        />
       </div>
 
       {/* Skip-link target: the page content starts right after the header */}

@@ -45,7 +45,7 @@ export default async function MestrePage({
           height={1024}
           priority
           sizes="100vw"
-          className="h-[52vh] min-h-80 w-full object-cover"
+          className="aspect-3/2 w-full object-cover md:aspect-auto md:h-[52vh] md:min-h-80"
         />
         <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-background/40 via-transparent to-background/70" />
       </section>

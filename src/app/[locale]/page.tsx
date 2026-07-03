@@ -37,14 +37,15 @@ export default async function Home({
               {t("culturalIntro")}
             </p>
           </div>
-          <div className="md:col-span-4 md:col-start-9">
+          {/* Leads on mobile (order-first), sits right of the statement on md+ */}
+          <div className="order-first md:order-0 md:col-span-4 md:col-start-9">
             <Image
               src="/cmcca-logo.png"
               alt="Emblema da CMC/CA — Associação de Capoeira Angola"
               width={370}
               height={373}
               priority
-              className="h-auto w-44 max-w-full object-contain md:w-full"
+              className="h-auto w-36 max-w-full object-contain md:w-full"
             />
           </div>
         </div>
@@ -60,7 +61,7 @@ export default async function Home({
           loop
           playsInline
           aria-hidden="true"
-          className="h-[58vh] min-h-80 w-full object-cover motion-reduce:hidden"
+          className="aspect-video w-full object-cover motion-reduce:hidden md:aspect-auto md:h-[58vh] md:min-h-80"
         />
         {/* Static frame for visitors with reduced-motion enabled */}
         <Image
@@ -69,7 +70,7 @@ export default async function Home({
           aria-hidden="true"
           width={1600}
           height={900}
-          className="hidden h-[58vh] min-h-80 w-full object-cover motion-reduce:block"
+          className="hidden aspect-video w-full object-cover motion-reduce:block md:aspect-auto md:h-[58vh] md:min-h-80"
         />
         <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-background/40 via-transparent to-background/70" />
       </section>
@@ -167,7 +168,8 @@ export default async function Home({
             </div>
           </div>
           <div className="md:col-span-4 md:col-start-9">
-            <div className="rounded-sm border border-espresso/15 bg-white p-6">
+            {/* Signature size on mobile, full column on md+ */}
+            <div className="max-w-64 rounded-sm border border-espresso/15 bg-white p-4 md:max-w-none md:p-6">
               <Image
                 src="/africa-bantu-logo.png"
                 alt="Emblema do GECAAB — Grupo/Escola de Capoeira Angola África Bantu"
