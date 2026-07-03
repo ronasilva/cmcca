@@ -73,6 +73,15 @@ export default async function Home({
           className="hidden aspect-video w-full object-cover motion-reduce:block md:aspect-auto md:h-[58vh] md:min-h-80"
         />
         <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-background/40 via-transparent to-background/70" />
+        {/* On md+ the band crops the file's corner mark away; this overlay
+            sits in the visible corner instead. Mobile shows the full frame,
+            so the baked-in mark is already in view there. */}
+        <span
+          aria-hidden
+          className="pointer-events-none absolute bottom-3 right-6 hidden font-display text-lg text-white/55 [text-shadow:1px_1px_2px_rgba(0,0,0,0.4)] md:block"
+        >
+          CMC/CA
+        </span>
       </section>
       <div className="border-y border-espresso/15">
         <div className="mx-auto flex max-w-6xl items-center gap-3 px-6 py-4">
