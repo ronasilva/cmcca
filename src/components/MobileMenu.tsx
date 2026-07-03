@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Link, usePathname } from '@/i18n/navigation'
 
@@ -21,18 +21,30 @@ export function MobileMenu({ links, memberLabel, menuLabel, closeLabel }: Props)
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
 
+  // Explicit close consumes the history entry pushed on open, so the
+  // back button/gesture and the ✕ leave the same history behind.
+  const close = useCallback(() => {
+    if (window.history.state?.cmccaMenu) window.history.back()
+    else setOpen(false)
+  }, [])
+
   useEffect(() => {
     if (!open) return
     document.body.style.overflow = 'hidden'
+    // Back gesture/button dismisses the menu instead of leaving the page
+    window.history.pushState({ cmccaMenu: true }, '')
+    const onPop = () => setOpen(false)
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setOpen(false)
+      if (e.key === 'Escape') close()
     }
+    window.addEventListener('popstate', onPop)
     window.addEventListener('keydown', onKey)
     return () => {
       document.body.style.overflow = ''
+      window.removeEventListener('popstate', onPop)
       window.removeEventListener('keydown', onKey)
     }
-  }, [open])
+  }, [open, close])
 
   return (
     <div className="md:hidden">
@@ -60,17 +72,20 @@ export function MobileMenu({ links, memberLabel, menuLabel, closeLabel }: Props)
           aria-label={menuLabel}
           className="fixed inset-0 z-50 flex flex-col bg-background"
         >
+          {/* Close sits top-left, exactly where the Menu trigger was —
+              tapping the same spot toggles. */}
           <div className="flex items-center justify-between border-b border-espresso/15 px-6 py-4">
+            <button
+              type="button"
+              onClick={close}
+              className="flex items-center gap-2 font-mono text-[12px] uppercase tracking-[0.18em] text-espresso transition hover:text-terracotta"
+            >
+              <span aria-hidden className="text-sm leading-none">✕</span>
+              {closeLabel}
+            </button>
             <span className="font-display text-base font-medium tracking-tight text-espresso">
               CMC/CA
             </span>
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-espresso"
-            >
-              {closeLabel} ✕
-            </button>
           </div>
 
           <nav className="flex-1 overflow-y-auto px-6 py-10">
