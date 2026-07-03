@@ -74,12 +74,12 @@ export function MobileMenu({ links, memberLabel, menuLabel, closeLabel }: Props)
           </div>
 
           <nav className="flex-1 overflow-y-auto px-6 py-10">
-            <ol className="flex flex-col gap-7">
+            <ol className="flex flex-col gap-6">
               {links.map((l, i) => {
                 const base = l.href.split('#')[0]
                 const active =
                   base !== '' && base !== '/' && pathname.startsWith(base)
-                const className = `font-display text-3xl font-light italic leading-none transition ${
+                const className = `font-display text-2xl font-light italic leading-none transition ${
                   active ? 'text-terracotta' : 'text-espresso'
                 }`
                 return (

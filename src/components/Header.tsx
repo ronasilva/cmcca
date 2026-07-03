@@ -61,7 +61,7 @@ export async function Header() {
           once the masthead scrolls away. Small screens get a full-screen
           menu; md+ keeps the inline rail. */}
       <div className="sticky top-0 z-40 border-b border-espresso/15 bg-background/90 backdrop-blur-sm">
-        <div className="scrollbar-none mx-auto flex max-w-6xl items-center gap-6 overflow-x-auto px-6 py-3">
+        <div className="scrollbar-none mx-auto flex max-w-6xl items-center gap-4 overflow-x-auto px-6 py-3 md:gap-6">
           <RailBrand />
           <MobileMenu
             links={[...links]}

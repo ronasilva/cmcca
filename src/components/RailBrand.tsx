@@ -25,8 +25,8 @@ export function RailBrand() {
   return (
     <div
       aria-hidden={!stuck}
-      className={`flex shrink-0 items-center gap-6 overflow-hidden transition-all duration-300 ${
-        stuck ? 'max-w-40 opacity-100' : '-ml-6 max-w-0 opacity-0'
+      className={`flex shrink-0 items-center gap-4 overflow-hidden transition-all duration-300 md:gap-6 ${
+        stuck ? 'max-w-40 opacity-100' : '-ml-4 max-w-0 opacity-0 md:-ml-6'
       }`}
     >
       <Link
@@ -36,12 +36,12 @@ export function RailBrand() {
       >
         <Image
           src="/cmcca-logo.png"
-          alt=""
+          alt="CMC/CA"
           width={370}
           height={373}
           className="h-6 w-6 shrink-0 object-contain"
         />
-        CMC/CA
+        <span className="hidden md:inline">CMC/CA</span>
       </Link>
       <span aria-hidden className="h-4 w-px shrink-0 bg-espresso/20" />
     </div>
