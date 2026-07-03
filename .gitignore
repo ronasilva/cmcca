@@ -41,5 +41,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# Working/reference material — not part of the site (keep private)
+# Working/reference material — not part of the site (keep private, local only)
+material/
 offline_material/
+image_original/
