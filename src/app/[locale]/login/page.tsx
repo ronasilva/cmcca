@@ -19,13 +19,13 @@ export default async function LoginPage({
   return (
     <div className="flex flex-1 items-center justify-center px-6 py-20 text-espresso">
       <div className="w-full max-w-md">
-        <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-terracotta">
+        <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-terracotta">
           Réservé · Members only
         </p>
-        <h1 className="mt-5 font-display text-5xl font-light italic leading-[0.95] tracking-tight text-espresso sm:text-6xl">
+        <h1 className="mt-4 font-display text-5xl font-light leading-[0.95] tracking-tight text-espresso sm:text-6xl">
           {t("title")}
         </h1>
-        <p className="mt-6 max-w-sm font-display text-lg italic leading-relaxed text-espresso-2">
+        <p className="mt-6 max-w-sm text-base leading-relaxed text-espresso-2">
           {t("description")}
         </p>
 
@@ -39,7 +39,7 @@ export default async function LoginPage({
           <input type="hidden" name="locale" value={locale} />
           {next && <input type="hidden" name="next" value={next} />}
           <label className="flex flex-col gap-2">
-            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+            <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
               {t("emailLabel")}
             </span>
             <input
@@ -51,7 +51,7 @@ export default async function LoginPage({
             />
           </label>
           <label className="flex flex-col gap-2">
-            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+            <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
               {t("passwordLabel")}
             </span>
             <input
@@ -70,7 +70,17 @@ export default async function LoginPage({
           </button>
         </form>
 
-        <p className="mt-10 font-mono text-[10px] uppercase tracking-[0.3em] text-espresso/50">
+        <p className="mt-10 max-w-sm border-l-2 border-espresso/20 pl-4 text-sm leading-relaxed text-espresso-2">
+          {t("membersHint")}{" "}
+          <a
+            href="mailto:nevesbraga1@bluewin.ch"
+            className="text-terracotta transition hover:text-terracotta-2"
+          >
+            nevesbraga1@bluewin.ch
+          </a>
+        </p>
+
+        <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.3em] text-espresso/50">
           <Link href="/" className="hover:text-terracotta">
             ← {t("backHome")}
           </Link>

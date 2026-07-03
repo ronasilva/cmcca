@@ -4,6 +4,7 @@ import { Link } from "@/i18n/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SectionDivider } from "@/components/SectionDivider";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 
 export default async function Home({
   params,
@@ -19,21 +20,11 @@ export default async function Home({
     <div className="flex flex-col flex-1 text-espresso">
       <Header />
 
-      {/* IDENTITY — emblem left, description right (Mestre Braga's layout) */}
+      {/* IDENTITY — statement left, emblem right (mirrors the school section) */}
       <section className="mx-auto w-full max-w-6xl px-6 pb-14 pt-16 md:pt-20">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-center">
-          <div className="md:col-span-4">
-            <Image
-              src="/cmcca-logo.png"
-              alt="Emblema da CMC/CA — Associação de Capoeira Angola"
-              width={370}
-              height={373}
-              priority
-              className="h-auto w-44 max-w-full object-contain md:w-52"
-            />
-          </div>
-          <div className="md:col-span-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-terracotta">
+          <div className="md:col-span-7">
+            <p className="font-mono text-[12px] uppercase tracking-[0.35em] text-terracotta">
               {t("kicker")}
             </p>
             <h1 className="mt-4 font-display text-[clamp(3rem,7vw,6.5rem)] font-light leading-[0.95] tracking-tight text-espresso">
@@ -46,6 +37,16 @@ export default async function Home({
               {t("culturalIntro")}
             </p>
           </div>
+          <div className="md:col-span-4 md:col-start-9">
+            <Image
+              src="/cmcca-logo.png"
+              alt="Emblema da CMC/CA — Associação de Capoeira Angola"
+              width={370}
+              height={373}
+              priority
+              className="h-auto w-44 max-w-full object-contain md:w-full"
+            />
+          </div>
         </div>
       </section>
 
@@ -53,29 +54,51 @@ export default async function Home({
       <section className="relative w-full overflow-hidden border-t border-espresso/15">
         <video
           src="/two-zebras.mp4"
+          poster="/two-zebras-poster.jpg"
           autoPlay
           muted
           loop
           playsInline
           aria-hidden="true"
-          className="h-[58vh] min-h-80 w-full object-cover"
+          className="h-[58vh] min-h-80 w-full object-cover motion-reduce:hidden"
+        />
+        {/* Static frame for visitors with reduced-motion enabled */}
+        <Image
+          src="/two-zebras-poster.jpg"
+          alt=""
+          aria-hidden="true"
+          width={1600}
+          height={900}
+          className="hidden h-[58vh] min-h-80 w-full object-cover motion-reduce:block"
         />
         <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-background/40 via-transparent to-background/70" />
       </section>
       <div className="border-y border-espresso/15">
         <div className="mx-auto flex max-w-6xl items-center gap-3 px-6 py-4">
-          <span aria-hidden className="text-[10px] text-terracotta">◆</span>
-          <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-espresso-2">
+          <span aria-hidden className="text-[11px] text-terracotta">◆</span>
+          <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-espresso-2">
             {t("videoCaption")}
           </p>
         </div>
       </div>
 
-      {/* GRAVURAS DE MALTAS — historical engraving */}
+      {/* MEMÓRIA — the archival band: engraving + historic film as museum plates */}
       <section className="mx-auto w-full max-w-6xl px-6 py-16">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-center">
-          <div className="md:col-span-5">
-            <div className="overflow-hidden rounded-sm border border-espresso/15 bg-plate p-3">
+        <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-terracotta">
+          {t("memoriaEyebrow")}
+        </p>
+        <h2 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso md:text-4xl">
+          {t("memoriaTitle")}
+        </h2>
+        <p className="mt-4 text-base leading-relaxed text-espresso-2">
+          {t("memoriaIntro")}
+        </p>
+
+        {/* 1fr : 1.71fr makes both figures render at exactly the same height —
+            1.71 = (16/9) / (313/301), the ratio of the two aspect ratios. */}
+        <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-[1fr_1.71fr] md:items-start">
+          <figure>
+            <div className="overflow-hidden rounded-sm border border-espresso/15">
               <Image
                 src="/gravura-maltas.jpg"
                 alt={t("gravuraCaption")}
@@ -84,149 +107,91 @@ export default async function Home({
                 className="h-auto w-full object-contain"
               />
             </div>
-          </div>
-          <div className="md:col-span-6 md:col-start-7">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-              {t("gravuraTitle")}
-            </p>
-            <p className="mt-3 font-display text-xl leading-relaxed text-espresso-2">
+            <figcaption className="mt-3 font-display text-sm italic leading-relaxed text-espresso-2">
               {t("gravuraCaption")}
-            </p>
-          </div>
+            </figcaption>
+          </figure>
+          <figure>
+            <div className="overflow-hidden rounded-sm border border-espresso/15">
+              <YouTubeEmbed
+                videoId="8hngKFy3gaM"
+                title="Capoeira Angola Tradicional — Antiga na Bahia (TV France)"
+                poster="/video-bahia-poster.jpg"
+              />
+            </div>
+            <figcaption className="mt-3 font-display text-sm italic leading-relaxed text-espresso-2">
+              {t("historicVideoCaption")}
+            </figcaption>
+          </figure>
         </div>
-      </section>
 
-      {/* VÍDEO HISTÓRICO — traditional Capoeira Angola in old Bahia */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-16">
-        <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-          {t("historicVideoTitle")}
-        </p>
-        <div className="mt-4 overflow-hidden rounded-sm border border-espresso/15 bg-plate p-3">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/8hngKFy3gaM"
-            title="Capoeira Angola Tradicional — Antiga na Bahia (TV France)"
-            loading="lazy"
-            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            className="aspect-video w-full rounded-xs"
-          />
-        </div>
-        <p className="mt-3 font-display text-lg leading-relaxed text-espresso-2">
-          {t("historicVideoCaption")}
-        </p>
+        <Link
+          href="/historia"
+          className="mt-10 inline-block font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+        >
+          {t("memoriaCta")} →
+        </Link>
       </section>
 
       <SectionDivider />
 
-      {/* ÁFRICA BANTU — the school (logo left, text right) */}
+      {/* ÁFRICA BANTU — the school: description, schedule glance, CTA */}
       <section id="escola" className="mx-auto w-full max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-center">
-          <div className="md:col-span-4">
-            <Image
-              src="/africa-bantu-logo.png"
-              alt="Emblema do GECAAB — Grupo/Escola de Capoeira Angola África Bantu"
-              width={1200}
-              height={860}
-              className="h-auto w-52 max-w-full rounded-sm object-contain md:w-60"
-            />
-          </div>
-          <div className="md:col-span-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-terracotta">
-              {t("schoolTagline")}
+          <div className="md:col-span-7">
+            <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-terracotta">
+              {t("schoolEyebrow")}
             </p>
-            <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.3em] text-espresso-2">
+            <h2 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso md:text-4xl">
+              GECAAB / África Bantu
+            </h2>
+            <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.3em] text-espresso-2">
               Genève – Suisse
             </p>
-            <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
-              <li>
-                <Link
-                  href="/mestre"
-                  className="font-mono text-[11px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-                >
-                  {t("schoolCtaMestre")} →
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cours"
-                  className="font-mono text-[11px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-                >
-                  {t("schoolCtaCourses")} →
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/historia"
-                  className="font-mono text-[11px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-                >
-                  {t("schoolCtaHistory")} →
-                </Link>
-              </li>
-            </ul>
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-espresso-2">
+              {t("schoolBody")}
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <Link
+                href="/mestre"
+                className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+              >
+                {t("schoolCtaMestre")} →
+              </Link>
+              <Link
+                href="/cours"
+                className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+              >
+                {t("schoolCtaSchedule")} →
+              </Link>
+            </div>
+          </div>
+          <div className="md:col-span-4 md:col-start-9">
+            <div className="rounded-sm border border-espresso/15 bg-white p-6">
+              <Image
+                src="/africa-bantu-logo.png"
+                alt="Emblema do GECAAB — Grupo/Escola de Capoeira Angola África Bantu"
+                width={1200}
+                height={860}
+                className="h-auto w-full object-contain"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* NOTA — the manifesto, placed with the África Bantu mark */}
-      <SectionDivider label={tn("noteLabel")} />
-      <section className="mx-auto w-full max-w-3xl px-6 py-12">
-        <p className="border-l-2 border-terracotta pl-6 font-display text-2xl font-light italic leading-relaxed text-espresso">
+      {/* NOTA — same section grammar as the rest of the page */}
+      <SectionDivider />
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+        <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-terracotta">
+          {tn("noteLabel")}
+        </p>
+        <h2 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso md:text-4xl">
+          {tn("noteTitle")}
+        </h2>
+        <p className="mt-4 max-w-3xl text-base leading-relaxed text-espresso-2">
           {tn("noteBody")}
         </p>
-      </section>
-
-      <SectionDivider />
-
-      {/* CONTACT */}
-      <section id="contact" className="mx-auto w-full max-w-6xl px-6 py-16">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <h2 className="font-display text-4xl font-light italic leading-tight text-espresso">
-              {t("contactTitle")}
-            </h2>
-          </div>
-          <div className="md:col-span-7 md:col-start-6">
-            <dl className="grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
-              <div>
-                <dt className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-                  E-mail
-                </dt>
-                <dd className="mt-2 font-display text-lg italic text-espresso">
-                  <a
-                    href="mailto:nevesbraga1@bluewin.ch"
-                    className="hover:text-terracotta"
-                  >
-                    nevesbraga1@bluewin.ch
-                  </a>
-                </dd>
-              </div>
-              <div>
-                <dt className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-                  Tél.
-                </dt>
-                <dd className="mt-2 font-display text-lg italic text-espresso">
-                  +41 (0) 78 914 89 69
-                </dd>
-              </div>
-              <div className="sm:col-span-2">
-                <dt className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-                  Facebook
-                </dt>
-                <dd className="mt-2 font-display text-lg italic text-espresso">
-                  <a
-                    href="https://www.facebook.com/CapoeiraGeneveAfricaBantu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-terracotta"
-                  >
-                    @CapoeiraGeneveAfricaBantu
-                  </a>
-                </dd>
-              </div>
-            </dl>
-          </div>
-        </div>
       </section>
 
       <Footer />

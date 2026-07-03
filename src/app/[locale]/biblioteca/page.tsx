@@ -29,7 +29,7 @@ export default async function BibliotecaPage({
 
       {/* BOOKS — public bibliography */}
       <section className="mx-auto w-full max-w-6xl px-6 pb-16">
-        <p className="max-w-2xl font-display text-xl leading-relaxed text-espresso-2">
+        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
           {t("booksIntro")}
         </p>
         <ul className="mt-12 divide-y divide-terracotta/20 border-y border-terracotta/20">
@@ -38,7 +38,7 @@ export default async function BibliotecaPage({
               key={`${book.title}-${book.author}`}
               className="grid grid-cols-1 gap-2 py-6 sm:grid-cols-12 sm:items-baseline"
             >
-              <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta sm:col-span-1">
+              <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta sm:col-span-1">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <p className="font-display text-2xl font-light italic text-espresso sm:col-span-7">
@@ -57,10 +57,10 @@ export default async function BibliotecaPage({
       {/* VIDEO LIBRARY — members only */}
       <section className="mx-auto w-full max-w-6xl px-6 pb-24">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
-          <p className="max-w-2xl font-display text-xl leading-relaxed text-espresso-2">
+          <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
             {t("livesIntro")}
           </p>
-          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
             ● {t("livesLocked")}
           </span>
         </div>
@@ -70,17 +70,24 @@ export default async function BibliotecaPage({
             <li key={cat}>
               <div className="flex items-center justify-between gap-4 rounded-sm border border-espresso/15 bg-cream-2/40 px-6 py-8">
                 <div className="flex items-baseline gap-3">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                     N°&nbsp;{String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="font-display text-2xl font-light italic text-espresso">
                     {cat}
                   </span>
                 </div>
-                <span aria-hidden className="text-espresso-2">
-                  {/* lock glyph */}
-                  ⟡
-                </span>
+                <svg
+                  aria-hidden
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                  className="h-4 w-4 shrink-0 text-espresso-2"
+                >
+                  <rect x="3" y="7" width="10" height="7" rx="1" />
+                  <path d="M5.5 7V4.5a2.5 2.5 0 0 1 5 0V7" />
+                </svg>
               </div>
             </li>
           ))}
@@ -88,7 +95,7 @@ export default async function BibliotecaPage({
 
         <Link
           href="/login"
-          className="mt-10 inline-block font-mono text-[11px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+          className="mt-10 inline-block font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
         >
           {t("livesCta")} →
         </Link>
@@ -98,14 +105,14 @@ export default async function BibliotecaPage({
 
       {/* RECORDINGS — external reference */}
       <section className="mx-auto w-full max-w-6xl px-6 pb-24">
-        <p className="max-w-2xl font-display text-xl leading-relaxed text-espresso-2">
+        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
           {t("recordingsIntro")}
         </p>
         <a
           href="https://www.last.fm/music/Mestre+Braga+-+Grupo+de+Capoeira+Angola+Africa+Bantu"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-8 inline-block font-mono text-[11px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+          className="mt-8 inline-block font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
         >
           {t("recordingsLink")} ↗
         </a>

@@ -26,16 +26,16 @@ export default async function CoursPage({
 
       <PageHeader eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
 
-      <SectionDivider label={t("scheduleTitle")} />
+      <SectionDivider />
 
       {/* SCHEDULE */}
-      <section className="mx-auto w-full max-w-6xl px-6 py-20">
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
               N° 01 ·
             </p>
-            <h2 className="mt-3 font-display text-4xl font-light italic leading-tight text-espresso">
+            <h2 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso md:text-4xl">
               {t("scheduleTitle")}
             </h2>
           </div>
@@ -46,7 +46,7 @@ export default async function CoursPage({
                   key={s.day}
                   className="grid grid-cols-1 gap-2 py-6 sm:grid-cols-12 sm:items-baseline"
                 >
-                  <p className="font-display text-3xl font-light italic text-espresso sm:col-span-4">
+                  <p className="font-display text-2xl font-light italic text-espresso sm:col-span-4">
                     {s.day}
                   </p>
                   <p className="font-mono text-xs uppercase tracking-[0.25em] text-terracotta sm:col-span-3">
@@ -62,34 +62,42 @@ export default async function CoursPage({
         </div>
       </section>
 
-      <SectionDivider label={t("locationTitle")} />
+      <SectionDivider />
 
       {/* LOCATION */}
-      <section className="mx-auto w-full max-w-6xl px-6 py-20">
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
               N° 02 ·
             </p>
-            <h2 className="mt-3 font-display text-4xl font-light italic leading-tight text-espresso">
+            <h2 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso md:text-4xl">
               {t("locationTitle")}
             </h2>
           </div>
           <div className="md:col-span-8">
-            <p className="font-display text-3xl italic text-espresso">
+            <p className="font-display text-2xl font-light italic text-espresso">
               {t("locationName")}
             </p>
-            <p className="mt-3 max-w-xl text-lg text-espresso-2">
+            <p className="mt-3 max-w-xl text-base leading-relaxed text-espresso-2">
               {t("locationAddress")}
             </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Centre+ADEM%2C+10+rue+de+Montbrillant%2C+1201+Gen%C3%A8ve"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+            >
+              {t("mapCta")} ↗
+            </a>
             <p className="mt-6 max-w-xl text-sm text-espresso-2/80">
               {t("locationNote")}
             </p>
             <div className="mt-10">
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+              <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                 {t("dressCodeTitle")}
               </p>
-              <p className="mt-2 font-display text-lg italic text-espresso">
+              <p className="mt-2 font-display text-base italic text-espresso">
                 {t("dressCodeBody")}
               </p>
             </div>
@@ -97,26 +105,26 @@ export default async function CoursPage({
         </div>
       </section>
 
-      <SectionDivider label={t("ensinoTitle")} />
+      <SectionDivider />
 
       {/* TEACHING — two tracks (public overview, full programme in member area) */}
-      <section className="mx-auto w-full max-w-6xl px-6 py-20">
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
               N° 03 ·
             </p>
-            <h2 className="mt-3 font-display text-4xl font-light italic leading-tight text-espresso">
+            <h2 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso md:text-4xl">
               {t("ensinoTitle")}
             </h2>
           </div>
           <div className="md:col-span-8">
-            <p className="max-w-xl font-display text-xl leading-relaxed text-espresso-2">
+            <p className="max-w-xl text-base leading-relaxed text-espresso-2">
               {t("ensinoIntro")}
             </p>
             <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div className="rounded-sm border border-espresso/15 bg-cream-2/40 px-6 py-8">
-                <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+                <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                   01
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-light italic text-espresso">
@@ -125,7 +133,7 @@ export default async function CoursPage({
                 <p className="mt-3 text-base text-espresso-2">{t("track1Body")}</p>
               </div>
               <div className="rounded-sm border border-espresso/15 bg-cream-2/40 px-6 py-8">
-                <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+                <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                   02
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-light italic text-espresso">
@@ -136,51 +144,10 @@ export default async function CoursPage({
             </div>
             <Link
               href="/login"
-              className="mt-10 inline-block font-mono text-[11px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+              className="mt-10 inline-block font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
             >
               {t("ensinoCta")} →
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <SectionDivider label={t("pricesTitle")} />
-
-      {/* PRICES */}
-      <section className="mx-auto w-full max-w-6xl px-6 py-20">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-              N° 04 ·
-            </p>
-            <h2 className="mt-3 font-display text-4xl font-light italic leading-tight text-espresso">
-              {t("pricesTitle")}
-            </h2>
-            <p className="mt-3 font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
-              {t("pricesCurrency")}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:col-span-8">
-            <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-                {t("priceMembersTitle")}
-              </p>
-              <p className="mt-3 font-display text-2xl italic text-espresso">
-                {t("priceMembersBody")}
-              </p>
-              <p className="mt-2 text-sm text-espresso-2">{t("priceMembersAdem")}</p>
-            </div>
-            <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
-                {t("priceStudentsTitle")}
-              </p>
-              <ul className="mt-3 space-y-1 font-display text-lg italic text-espresso">
-                <li>{t("priceStudents1")}</li>
-                <li>{t("priceStudents3")}</li>
-                <li>{t("priceStudents10")}</li>
-              </ul>
-              <p className="mt-2 text-sm text-espresso-2">{t("priceStudentsAdem")}</p>
-            </div>
           </div>
         </div>
       </section>

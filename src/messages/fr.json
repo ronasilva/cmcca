@@ -13,7 +13,8 @@
     "gallery": "Galerie",
     "history": "Histoire",
     "contact": "Contact",
-    "memberArea": "Espace membre"
+    "memberArea": "Espace membre",
+    "skipToContent": "Aller au contenu"
   },
   "HomePage": {
     "kicker": "Capoeira Angola",
@@ -22,10 +23,14 @@
     "heroSubtitle": "Une association dédiée à l'enseignement et à la conservation de la mémoire de la Capoeira Angola — et la maison de l'école GECAAB / África Bantu de Mestre Braga, à Genève.",
     "culturalIntro": "Un héritage culturel afro-latino du Brésil, qui remonte à la présence des peuples bantous — du XVIᵉ au XIXᵉ siècle, l'époque coloniale.",
     "videoCaption": "N'golo, la danse de la zèbre — les deux zèbres de notre emblème",
-    "gravuraTitle": "Les maltas",
+    "memoriaEyebrow": "Archives",
+    "memoriaTitle": "La mémoire",
+    "memoriaIntro": "Documents et archives de la Capoeira Angola — des maltas du Rio de Janeiro du XIXᵉ siècle à la Bahia des anciens maîtres.",
+    "memoriaCta": "Voir la chronologie",
     "gravuraCaption": "Gravure des maltas — capoeiras du Rio de Janeiro du XIXᵉ siècle, dont le théâtre des exploits était la Lapa.",
-    "historicVideoTitle": "Document historique",
     "historicVideoCaption": "Capoeira Angola traditionnelle, dans la Bahia d'autrefois — reportage de la télévision française.",
+    "schoolEyebrow": "L'école",
+    "schoolCtaSchedule": "Horaires",
     "assocNumber": "N° 01 ·",
     "assocTitle": "L'association",
     "assocBody": "CMC/CA est l'association faîtière. Sa raison d'être est la transmission d'une connaissance de mémoire : informer sur les sources culturelles de la Capoeira Angola, née de la diaspora bantoue au Brésil, et soutenir sa pratique comme éducation, socialisation et bien-être physique et mental.",
@@ -40,9 +45,7 @@
     "libraryNumber": "N° 03 ·",
     "libraryTitle": "Esfera Intelectual — la bibliothèque",
     "libraryBody": "Une archive vivante de la mémoire : une bibliographie des œuvres essentielles sur les Bantous, le Brésil et la Capoeira Angola, et une vidéothèque sélectionnée, réservée aux membres.",
-    "libraryCta": "Entrer dans la bibliothèque",
-    "contactNumber": "N° 04 ·",
-    "contactTitle": "Contact"
+    "libraryCta": "Entrer dans la bibliothèque"
   },
   "AssociationPage": {
     "eyebrow": "La faîtière",
@@ -97,11 +100,12 @@
     "wednesdayHours": "20h00 – 21h00",
     "wednesdayLabel": "Avancés · Roda jusqu'à 22h00",
     "friday": "Vendredi",
-    "fridayHours": "19h30 – 21h00",
+    "fridayHours": "19h00 – 21h00",
     "fridayLabel": "Salle l'ilôt 13, près du parc des Cropettes",
     "locationTitle": "Lieu",
     "locationName": "Centre ADEM",
     "locationAddress": "10, rue de Montbrillant (derrière Cornavin), CH-1201 Genève",
+    "mapCta": "Voir sur la carte",
     "locationNote": "Le Centre ADEM dispose de douches et de vestiaires.",
     "dressCodeTitle": "Tenue",
     "dressCodeBody": "Pantalon noir et t-shirt blanc.",
@@ -111,17 +115,7 @@
     "track1Body": "La voie du corps : construire le mouvement, l'endurance et la résistance, par étapes.",
     "track2Title": "Le social du berimbau",
     "track2Body": "La voie de la musique et de la communauté : chants, berimbaus, la roda et ses protocoles.",
-    "ensinoCta": "Voir le programme dans l'espace membre",
-    "pricesTitle": "Tarifs",
-    "pricesCurrency": "CHF",
-    "priceMembersTitle": "Membre G/E.C.A.A.B.",
-    "priceMembersBody": "200.– par trimestre",
-    "priceMembersAdem": "+ 50.– annuel pour les membres ADEM",
-    "priceStudentsTitle": "Étudiants · Sans emploi",
-    "priceStudents1": "1 mois — 100.–",
-    "priceStudents3": "3 mois — 85.–/mois",
-    "priceStudents10": "10 mois — 75.–/mois",
-    "priceStudentsAdem": "+ 50.– annuel pour les membres ADEM"
+    "ensinoCta": "Voir le programme dans l'espace membre"
   },
   "MestrePage": {
     "eyebrow": "Mestre fondateur",
@@ -162,12 +156,16 @@
     "caption6": "Roda, février 2022",
     "caption7": "Roda, février 2022",
     "caption8": "Avril 2018",
-    "caption9": "Mai 2018"
+    "caption9": "Mai 2018",
+    "close": "Fermer",
+    "previous": "Précédente",
+    "next": "Suivante"
   },
   "HistoryPage": {
     "eyebrow": "Chronologie commentée par Mestre Braga",
     "title": "Histoire",
     "intro": "La capoeira est une culture des diasporas africaines au Brésil. Cette page rassemble une chronologie, des origines indigènes du mot « capoeira » jusqu'à la consolidation de la capoeira angola par Mestre Pastinha au XXᵉ siècle.",
+    "tocLabel": "Chapitres",
     "sections": [
       {
         "title": "L'origine du mot",
@@ -241,7 +239,8 @@
     "passwordLabel": "Mot de passe",
     "submit": "Se connecter",
     "invalidCredentials": "E-mail ou mot de passe invalide.",
-    "backHome": "Retour à l'accueil"
+    "backHome": "Retour à l'accueil",
+    "membersHint": "L'espace membre est réservé aux élèves et membres de l'école. Pour demander votre accès, parlez-nous au cours ou écrivez à"
   },
   "MemberArea": {
     "badge": "Réservé · Membres",
@@ -286,6 +285,8 @@
     "association": "CMC/CA",
     "school": "GECAAB · Capoeira Angola África Bantu",
     "copyright": "© {year} CMC/CA",
+    "classesSchedule": "Lun 20h–22h · Mer 20h–21h · Ven 19h–21h",
+    "classesPlace": "Centre ADEM, Genève",
     "tagline": "Genève · Rio de Janeiro · Aarhus"
   },
   "LanguageSwitcher": {

@@ -14,7 +14,7 @@ export function LanguageSwitcher() {
   return (
     <div
       aria-label="Language"
-      className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.15em]"
+      className="flex items-center gap-2 font-mono text-[12px] uppercase tracking-[0.15em]"
     >
       {routing.locales.map((loc, i) => (
         <span key={loc} className="flex items-center gap-2">

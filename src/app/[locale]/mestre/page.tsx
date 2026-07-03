@@ -51,17 +51,17 @@ export default async function MestrePage({
       </section>
       <div className="border-y border-espresso/15">
         <div className="mx-auto flex max-w-6xl items-center gap-3 px-6 py-4">
-          <span aria-hidden className="text-[10px] text-terracotta">
+          <span aria-hidden className="text-[11px] text-terracotta">
             ◆
           </span>
-          <p className="font-mono text-[10px] uppercase tracking-[0.35em] text-espresso-2">
+          <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-espresso-2">
             {t("videoCaption")}
           </p>
         </div>
       </div>
 
       {/* SUBTITLE + BIO */}
-      <section className="mx-auto w-full max-w-6xl px-6 py-20">
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
             <p className="font-display text-2xl italic leading-snug text-espresso-2">
@@ -69,7 +69,7 @@ export default async function MestrePage({
             </p>
           </div>
           <div className="md:col-span-8">
-            <p className="font-display text-xl leading-relaxed text-espresso">
+            <p className="text-base leading-relaxed text-espresso-2">
               {t("bio")}
             </p>
 
@@ -77,10 +77,10 @@ export default async function MestrePage({
             <dl className="mt-12 grid grid-cols-1 gap-x-8 gap-y-6 border-t border-espresso/15 pt-10 sm:grid-cols-2">
               {facts.map((f) => (
                 <div key={f.label}>
-                  <dt className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+                  <dt className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                     {f.label}
                   </dt>
-                  <dd className="mt-2 font-display text-lg italic leading-snug text-espresso">
+                  <dd className="mt-2 font-display text-base italic leading-snug text-espresso">
                     {f.value}
                   </dd>
                 </div>
@@ -89,10 +89,10 @@ export default async function MestrePage({
 
             {/* EMBLEM NOTE */}
             <figure className="mt-12 border-l-2 border-terracotta pl-6">
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+              <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                 {t("emblemTitle")}
               </p>
-              <p className="mt-3 font-display text-xl italic leading-relaxed text-espresso">
+              <p className="mt-3 text-base leading-relaxed text-espresso-2">
                 {t("emblemBody")}
               </p>
             </figure>
@@ -100,43 +100,43 @@ export default async function MestrePage({
         </div>
       </section>
 
-      <SectionDivider label={t("lineageTitle")} />
+      <SectionDivider />
 
       {/* LINEAGE */}
-      <section className="mx-auto w-full max-w-6xl px-6 py-20">
+      <section className="mx-auto w-full max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
               N° 01 ·
             </p>
-            <h2 className="mt-3 font-display text-4xl font-light italic leading-tight text-espresso">
+            <h2 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso md:text-4xl">
               {t("lineageTitle")}
             </h2>
           </div>
           <div className="md:col-span-8">
-            <p className="font-display text-2xl leading-relaxed text-espresso">
+            <p className="font-display text-xl italic leading-relaxed text-espresso">
               {t("lineageBody")}
             </p>
           </div>
         </div>
       </section>
 
-      <SectionDivider label={t("memoriasTitle")} />
+      <SectionDivider />
 
       {/* MEMÓRIAS */}
-      <section id="memorias" className="mx-auto w-full max-w-6xl px-6 py-20">
+      <section id="memorias" className="mx-auto w-full max-w-6xl px-6 py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
               N° 02 ·
             </p>
-            <h2 className="mt-3 font-display text-4xl font-light italic leading-tight text-espresso">
+            <h2 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso md:text-4xl">
               {t("memoriasTitle")}
             </h2>
           </div>
           <div className="md:col-span-8">
             <div className="border-l border-terracotta/40 pl-6">
-              <div className="space-y-6 font-display text-lg leading-relaxed text-espresso md:text-xl">
+              <div className="space-y-6 text-base leading-relaxed text-espresso-2">
                 {memoriasParagraphs.map((p, i) => (
                   <p key={i}>{p}</p>
                 ))}

@@ -59,7 +59,7 @@ function EtapaCard({ label, note }: { label: string; note: string }) {
       <p className="font-display text-xl font-light italic text-espresso">
         {label}
       </p>
-      <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
+      <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.25em] text-espresso-2">
         {note}
       </p>
     </div>
@@ -122,10 +122,10 @@ export default async function MembrosPage({
 
       {/* PAGE TITLE */}
       <section className="mx-auto w-full max-w-6xl px-6 pb-4 pt-20 md:pt-28">
-        <p className="font-mono text-[11px] uppercase tracking-[0.35em] text-terracotta">
+        <p className="font-mono text-[12px] uppercase tracking-[0.35em] text-terracotta">
           {t("badge")}
         </p>
-        <h1 className="mt-5 font-display text-[clamp(3.5rem,9vw,8rem)] font-light italic leading-[0.95] tracking-tight text-espresso">
+        <h1 className="mt-4 font-display text-[clamp(3rem,7vw,6.5rem)] font-light leading-[0.95] tracking-tight text-espresso">
           {t("title")}
         </h1>
       </section>
@@ -134,13 +134,13 @@ export default async function MembrosPage({
         {/* TEACHING — the two tracks, in stages */}
         <SectionDivider label={t("ensinoTitle")} />
         <section className="mx-auto w-full max-w-6xl px-6 pb-12">
-          <p className="max-w-2xl font-display text-xl leading-relaxed text-espresso-2">
+          <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
             {t("ensinoIntro")}
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+              <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                 01
               </p>
               <h2 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso">
@@ -155,7 +155,7 @@ export default async function MembrosPage({
             </div>
 
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+              <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                 02
               </p>
               <h2 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso">
@@ -174,7 +174,7 @@ export default async function MembrosPage({
         {/* VIDEO LIBRARY — Esfera Intelectual (Lives) */}
         <SectionDivider label={t("livesTitle")} />
         <section className="mx-auto w-full max-w-6xl px-6 pb-12">
-          <p className="max-w-2xl font-display text-xl leading-relaxed text-espresso-2">
+          <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
             {t("livesIntro")}
           </p>
           <ul className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -184,14 +184,14 @@ export default async function MembrosPage({
                 className="rounded-sm border border-espresso/15 bg-cream-2/40 px-6 py-8"
               >
                 <div className="flex items-baseline gap-3">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                     N°&nbsp;{String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="font-display text-2xl font-light italic text-espresso">
                     {cat}
                   </span>
                 </div>
-                <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
+                <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.25em] text-espresso-2">
                   {t("comingSoon")}
                 </p>
               </li>
@@ -202,7 +202,7 @@ export default async function MembrosPage({
         {/* CERTIFICATES */}
         <SectionDivider label={t("certsTitle")} />
         <section className="mx-auto w-full max-w-6xl px-6 pb-12">
-          <p className="max-w-2xl font-display text-xl leading-relaxed text-espresso-2">
+          <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
             {t("certsBody")}
           </p>
         </section>
@@ -211,7 +211,7 @@ export default async function MembrosPage({
         <SectionDivider label={t("mediaTitle")} />
         {!hasMedia && (
           <div className="mx-auto max-w-6xl px-6 pb-16">
-            <p className="font-display text-2xl italic text-espresso-2">
+            <p className="font-display text-xl italic text-espresso-2">
               {t("empty")}
             </p>
           </div>
@@ -219,7 +219,7 @@ export default async function MembrosPage({
 
         {videos.length > 0 && (
           <section className="mx-auto w-full max-w-6xl px-6 pb-12">
-            <p className="mb-8 font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+            <p className="mb-8 font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
               {t("videosTitle")} · {videos.length.toString().padStart(2, "0")}
             </p>
             <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -236,10 +236,10 @@ export default async function MembrosPage({
                       />
                     </div>
                     <figcaption className="mt-3 flex items-baseline gap-3">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+                      <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                         N°&nbsp;{String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="font-display text-base italic text-espresso">
+                      <span className="font-display text-sm italic text-espresso">
                         {prettyName(v.name)}
                       </span>
                     </figcaption>
@@ -252,7 +252,7 @@ export default async function MembrosPage({
 
         {photos.length > 0 && (
           <section className="mx-auto w-full max-w-6xl px-6 pb-24">
-            <p className="mb-8 font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+            <p className="mb-8 font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
               {t("photosTitle")} · {photos.length.toString().padStart(2, "0")}
             </p>
             <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -272,10 +272,10 @@ export default async function MembrosPage({
                       />
                     </div>
                     <figcaption className="mt-3 flex items-baseline gap-3">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+                      <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                         N°&nbsp;{String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="font-display text-base italic text-espresso">
+                      <span className="font-display text-sm italic text-espresso">
                         {prettyName(p.name)}
                       </span>
                     </figcaption>

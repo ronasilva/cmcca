@@ -13,7 +13,8 @@
     "gallery": "Galeria",
     "history": "História",
     "contact": "Contato",
-    "memberArea": "Área do membro"
+    "memberArea": "Área do membro",
+    "skipToContent": "Ir para o conteúdo"
   },
   "HomePage": {
     "kicker": "Capoeira Angola",
@@ -22,10 +23,14 @@
     "heroSubtitle": "Uma associação dedicada ao ensino e à conservação da memória da Capoeira Angola — e a casa da escola GECAAB / África Bantu do Mestre Braga, em Genebra.",
     "culturalIntro": "Uma importância cultural afro-latina do Brasil, que remonta à presença dos povos bantu — do século XVI ao XIX, a era colonial.",
     "videoCaption": "N'golo, a dança da zebra — as duas zebras do nosso emblema",
-    "gravuraTitle": "As maltas",
+    "memoriaEyebrow": "Arquivo",
+    "memoriaTitle": "A memória",
+    "memoriaIntro": "Documentos e registros da Capoeira Angola — das maltas do Rio de Janeiro do século XIX à Bahia dos mestres antigos.",
+    "memoriaCta": "Ver a cronologia",
     "gravuraCaption": "Gravura das maltas — capoeiras do Rio de Janeiro do século XIX, cujo teatro de façanhas era a Lapa.",
-    "historicVideoTitle": "Registro histórico",
     "historicVideoCaption": "Capoeira Angola tradicional, antiga na Bahia — reportagem da televisão francesa.",
+    "schoolEyebrow": "A escola",
+    "schoolCtaSchedule": "Horários",
     "assocNumber": "N° 01 ·",
     "assocTitle": "A associação",
     "assocBody": "A CMC/CA é a associação que abriga tudo. A sua razão de ser é a transmissão de um conhecimento de memória: informar sobre as fontes culturais da Capoeira Angola, nascida da diáspora bantu no Brasil, e apoiar a sua prática como educação, sociabilização e bem-estar físico e mental.",
@@ -40,9 +45,7 @@
     "libraryNumber": "N° 03 ·",
     "libraryTitle": "Esfera Intelectual — a biblioteca",
     "libraryBody": "Um arquivo vivo da memória: uma bibliografia das obras essenciais sobre os bantus, o Brasil e a Capoeira Angola, e uma videoteca selecionada, reservada aos membros.",
-    "libraryCta": "Entrar na biblioteca",
-    "contactNumber": "N° 04 ·",
-    "contactTitle": "Contato"
+    "libraryCta": "Entrar na biblioteca"
   },
   "AssociationPage": {
     "eyebrow": "A casa",
@@ -97,11 +100,12 @@
     "wednesdayHours": "20h00 – 21h00",
     "wednesdayLabel": "Avançados · Roda até 22h00",
     "friday": "Sexta-feira",
-    "fridayHours": "19h30 – 21h00",
+    "fridayHours": "19h00 – 21h00",
     "fridayLabel": "Salle l'ilôt 13, perto do Parc des Cropettes",
     "locationTitle": "Local",
     "locationName": "Centre ADEM",
     "locationAddress": "10, rue de Montbrillant (atrás da estação Cornavin), CH-1201 Genebra",
+    "mapCta": "Ver no mapa",
     "locationNote": "O Centre ADEM dispõe de chuveiros e vestiários.",
     "dressCodeTitle": "Vestimenta",
     "dressCodeBody": "Calça preta e camiseta branca.",
@@ -111,17 +115,7 @@
     "track1Body": "O caminho do corpo: construir o movimento, a resistência e o fôlego, por etapas.",
     "track2Title": "O social do berimbau",
     "track2Body": "O caminho da música e da comunidade: cantorias, berimbaus, a roda e os seus procedimentos.",
-    "ensinoCta": "Ver o programa na área do membro",
-    "pricesTitle": "Valores",
-    "pricesCurrency": "CHF",
-    "priceMembersTitle": "Sócios G/E.C.A.A.B.",
-    "priceMembersBody": "200,– por trimestre",
-    "priceMembersAdem": "+ 50,– anuais para sócios da ADEM",
-    "priceStudentsTitle": "Estudantes · Desempregados",
-    "priceStudents1": "1 mês — 100,–",
-    "priceStudents3": "3 meses — 85,–/mês",
-    "priceStudents10": "10 meses — 75,–/mês",
-    "priceStudentsAdem": "+ 50,– anuais para sócios da ADEM"
+    "ensinoCta": "Ver o programa na área do membro"
   },
   "MestrePage": {
     "eyebrow": "Mestre fundador",
@@ -162,12 +156,16 @@
     "caption6": "Roda, fevereiro 2022",
     "caption7": "Roda, fevereiro 2022",
     "caption8": "Abril 2018",
-    "caption9": "Maio 2018"
+    "caption9": "Maio 2018",
+    "close": "Fechar",
+    "previous": "Anterior",
+    "next": "Seguinte"
   },
   "HistoryPage": {
     "eyebrow": "Cronologia comentada por Mestre Braga",
     "title": "História",
     "intro": "A capoeira é uma cultura das diásporas africanas no Brasil. Esta página reúne uma cronologia, das origens indígenas do termo «capoeira» até a consolidação da capoeira angola por Mestre Pastinha no século XX.",
+    "tocLabel": "Capítulos",
     "sections": [
       {
         "title": "A origem da palavra",
@@ -241,7 +239,8 @@
     "passwordLabel": "Senha",
     "submit": "Entrar",
     "invalidCredentials": "E-mail ou senha inválidos.",
-    "backHome": "Voltar ao início"
+    "backHome": "Voltar ao início",
+    "membersHint": "A área do membro é reservada aos alunos e sócios da escola. Para pedir o seu acesso, fale conosco na aula ou escreva para"
   },
   "MemberArea": {
     "badge": "Reservado · Membros",
@@ -286,6 +285,8 @@
     "association": "CMC/CA",
     "school": "GECAAB · Capoeira Angola África Bantu",
     "copyright": "© {year} CMC/CA",
+    "classesSchedule": "Seg 20h–22h · Qua 20h–21h · Sex 19h–21h",
+    "classesPlace": "Centre ADEM, Genebra",
     "tagline": "Genebra · Rio de Janeiro · Aarhus"
   },
   "LanguageSwitcher": {
