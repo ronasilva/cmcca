@@ -26,12 +26,12 @@ export default async function AssociacaoPage({
       <PageHeader eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
 
       <section className="mx-auto w-full max-w-6xl px-6 pt-10">
-        <div className="flex justify-center rounded-sm bg-cream-2/40 px-6 py-12">
+        <div className="flex justify-center py-6">
           <Image
             src="/cmcca-logo.png"
             alt="Emblema da CMC/CA — Associação de Capoeira Angola"
-            width={500}
-            height={500}
+            width={370}
+            height={373}
             className="h-auto w-56 max-w-full object-contain"
           />
         </div>

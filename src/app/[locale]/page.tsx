@@ -26,8 +26,8 @@ export default async function Home({
             <Image
               src="/cmcca-logo.png"
               alt="Emblema da CMC/CA — Associação de Capoeira Angola"
-              width={400}
-              height={400}
+              width={370}
+              height={373}
               priority
               className="h-auto w-44 max-w-full object-contain md:w-52"
             />
@@ -96,6 +96,27 @@ export default async function Home({
         </div>
       </section>
 
+      {/* VÍDEO HISTÓRICO — traditional Capoeira Angola in old Bahia */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-16">
+        <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-terracotta">
+          {t("historicVideoTitle")}
+        </p>
+        <div className="mt-4 overflow-hidden rounded-sm border border-espresso/15 bg-plate p-3">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/8hngKFy3gaM"
+            title="Capoeira Angola Tradicional — Antiga na Bahia (TV France)"
+            loading="lazy"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+            className="aspect-video w-full rounded-xs"
+          />
+        </div>
+        <p className="mt-3 font-display text-lg leading-relaxed text-espresso-2">
+          {t("historicVideoCaption")}
+        </p>
+      </section>
+
       <SectionDivider />
 
       {/* ÁFRICA BANTU — the school (logo left, text right) */}
@@ -105,9 +126,9 @@ export default async function Home({
             <Image
               src="/africa-bantu-logo.png"
               alt="Emblema do GECAAB — Grupo/Escola de Capoeira Angola África Bantu"
-              width={452}
-              height={386}
-              className="h-auto w-44 max-w-full object-contain md:w-52"
+              width={1200}
+              height={860}
+              className="h-auto w-52 max-w-full rounded-sm object-contain md:w-60"
             />
           </div>
           <div className="md:col-span-8">
