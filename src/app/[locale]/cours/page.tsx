@@ -58,6 +58,9 @@ export default async function CoursPage({
                 </li>
               ))}
             </ul>
+            <p className="mt-6 font-display text-base italic leading-relaxed text-espresso">
+              {t("firstClassNote")}
+            </p>
           </div>
         </div>
       </section>
@@ -148,6 +151,15 @@ export default async function CoursPage({
             >
               {t("ensinoCta")} →
             </Link>
+            <p className="mt-12 max-w-xl border-t border-espresso/15 pt-6 text-base leading-relaxed text-espresso-2">
+              {t("feesNote")}{" "}
+              <a
+                href="mailto:nevesbraga1@bluewin.ch"
+                className="text-terracotta transition hover:text-terracotta-2"
+              >
+                nevesbraga1@bluewin.ch
+              </a>
+            </p>
           </div>
         </div>
       </section>
