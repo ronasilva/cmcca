@@ -66,7 +66,7 @@
   "LibraryPage": {
     "eyebrow": "Esfera Intelectual",
     "title": "Biblioteca",
-    "intro": "De ajuda à memória. Uma lista de leituras essenciais, e uma videoteca selecionada — a memória em imagens dos bantus, do Brasil e da Capoeira Angola — reservada aos membros.",
+    "intro": "De ajuda à memória. Uma lista de leituras essenciais, e uma videoteca selecionada — a memória em imagens dos bantus, do Brasil e da Capoeira Angola.",
     "booksTitle": "Livros",
     "booksIntro": "Uma bibliografia para fundamentar o estudo desse conhecimento.",
     "books": [
@@ -77,15 +77,13 @@
       { "title": "Mestre Bimba, a Crônica da Capoeiragem", "author": "Jair Moura" }
     ],
     "livesTitle": "Videoteca",
-    "livesIntro": "Lives e gravações selecionadas, organizadas por tema. Reservado aos membros.",
-    "livesLocked": "Reservado aos membros",
+    "livesIntro": "Lives e gravações selecionadas, organizadas por tema.",
     "liveCats": [
       "Sobre os bantus",
       "Sobre o Brasil",
       "Capoeiras",
       "Capoeira Angola"
     ],
-    "livesCta": "Entrar para assistir",
     "recordingsTitle": "Gravações",
     "recordingsIntro": "Gravações em áudio do grupo — um arquivo em construção.",
     "recordingsLink": "Ouvir no Last.fm"

@@ -66,7 +66,7 @@
   "LibraryPage": {
     "eyebrow": "Esfera Intelectual",
     "title": "Bibliothèque",
-    "intro": "Des aides à la mémoire. Une liste de lectures essentielles, et une vidéothèque sélectionnée — la mémoire en images des Bantous, du Brésil et de la Capoeira Angola — réservée aux membres.",
+    "intro": "Des aides à la mémoire. Une liste de lectures essentielles, et une vidéothèque sélectionnée — la mémoire en images des Bantous, du Brésil et de la Capoeira Angola.",
     "booksTitle": "Livres",
     "booksIntro": "Une bibliographie pour fonder l'étude de cette connaissance.",
     "books": [
@@ -77,15 +77,13 @@
       { "title": "Mestre Bimba, a Crônica da Capoeiragem", "author": "Jair Moura" }
     ],
     "livesTitle": "Vidéothèque",
-    "livesIntro": "Conférences et enregistrements sélectionnés, organisés par thème. Réservé aux membres.",
-    "livesLocked": "Réservé aux membres",
+    "livesIntro": "Conférences et enregistrements sélectionnés, organisés par thème.",
     "liveCats": [
       "Sur les Bantous",
       "Sur le Brésil",
       "Capoeiras",
       "Capoeira Angola"
     ],
-    "livesCta": "Se connecter pour regarder",
     "recordingsTitle": "Enregistrements",
     "recordingsIntro": "Enregistrements audio du groupe — une archive en cours.",
     "recordingsLink": "Écouter sur Last.fm"

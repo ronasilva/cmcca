@@ -1,11 +1,52 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionDivider } from "@/components/SectionDivider";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 
 type Book = { title: string; author: string };
+
+// Curated by Mestre Braga; grouped by the videoteca's four themes
+// (index into LibraryPage.liveCats). Titles are the works' own names.
+const VIDEOS = [
+  {
+    id: "ViVlEwPQL1Q",
+    cat: 0,
+    title: "Reino do Congo",
+    channel: "História em Meia Hora",
+  },
+  {
+    id: "ERJNIScowr8",
+    cat: 0,
+    title: "Sincretismo religioso em Angola e no Reino do Congo",
+    channel: "TV Raízes da Cultura",
+  },
+  {
+    id: "UgChVkbxgBc",
+    cat: 0,
+    title: "Os Ilundu não são orixás — Alberto Oliveira Pinto",
+    channel: "Lembra-te, Angola",
+  },
+  {
+    id: "otgt9vz9E-o",
+    cat: 1,
+    title: "A incrível epopeia do descobrimento do Brasil",
+    channel: "Viagens Cariocas",
+  },
+  {
+    id: "IyUg6ebRBvs",
+    cat: 2,
+    title: "Influência yoruba na formação social de capoeiras",
+    channel: "Live · CMC/CA",
+  },
+  {
+    id: "vnm8xUgT6WM",
+    cat: 3,
+    title: "Grupo/Escola de Capoeira Angola África Bantu",
+    channel: "Live · CMC/CA",
+  },
+];
 
 export default async function BibliotecaPage({
   params,
@@ -54,51 +95,53 @@ export default async function BibliotecaPage({
 
       <SectionDivider label={t("livesTitle")} />
 
-      {/* VIDEO LIBRARY — members only */}
+      {/* VIDEO LIBRARY — curated by Mestre Braga, grouped by theme */}
       <section className="mx-auto w-full max-w-6xl px-6 pb-24">
-        <div className="flex flex-wrap items-baseline justify-between gap-4">
-          <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
-            {t("livesIntro")}
-          </p>
-          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-            ● {t("livesLocked")}
-          </span>
-        </div>
+        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
+          {t("livesIntro")}
+        </p>
 
-        <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {liveCats.map((cat, i) => (
-            <li key={cat}>
-              <div className="flex items-center justify-between gap-4 rounded-sm border border-espresso/15 bg-cream-2/40 px-6 py-8">
+        <div className="mt-12 flex flex-col gap-14">
+          {liveCats.map((cat, i) => {
+            const videos = VIDEOS.filter((v) => v.cat === i);
+            if (videos.length === 0) return null;
+            return (
+              <div key={cat}>
                 <div className="flex items-baseline gap-3">
                   <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                     N°&nbsp;{String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="font-display text-2xl font-light italic text-espresso">
+                  <h3 className="font-display text-2xl font-light italic text-espresso">
                     {cat}
-                  </span>
+                  </h3>
                 </div>
-                <svg
-                  aria-hidden
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.2"
-                  className="h-4 w-4 shrink-0 text-espresso-2"
-                >
-                  <rect x="3" y="7" width="10" height="7" rx="1" />
-                  <path d="M5.5 7V4.5a2.5 2.5 0 0 1 5 0V7" />
-                </svg>
+                <ul className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
+                  {videos.map((v) => (
+                    <li key={v.id}>
+                      <figure>
+                        <div className="overflow-hidden rounded-sm border border-espresso/15">
+                          <YouTubeEmbed
+                            videoId={v.id}
+                            title={v.title}
+                            poster={`/images/videos/${v.id}.jpg`}
+                          />
+                        </div>
+                        <figcaption className="mt-3">
+                          <p className="font-display text-sm italic leading-snug text-espresso">
+                            {v.title}
+                          </p>
+                          <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.2em] text-espresso-2">
+                            {v.channel}
+                          </p>
+                        </figcaption>
+                      </figure>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </li>
-          ))}
-        </ul>
-
-        <Link
-          href="/login"
-          className="mt-10 inline-block font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-        >
-          {t("livesCta")} →
-        </Link>
+            );
+          })}
+        </div>
       </section>
 
       <SectionDivider label={t("recordingsTitle")} />
