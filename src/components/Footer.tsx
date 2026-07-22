@@ -35,7 +35,10 @@ export async function Footer() {
             <li>{t('classesPlace')}</li>
           </ul>
         </div>
-        <div className="sm:col-span-3">
+        <div
+          data-contact
+          className="-m-2 rounded-sm p-2 sm:col-span-3"
+        >
           <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
             {tn('contact')}
           </p>

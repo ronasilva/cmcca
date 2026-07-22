@@ -41,3 +41,26 @@ body {
   outline: 2px solid var(--terracotta);
   outline-offset: 3px;
 }
+
+/* Anchor jumps (e.g. the Contato nav link) travel visibly */
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* When the footer is the navigation target, flash the contact block */
+@keyframes contact-pulse {
+  0% {
+    background-color: color-mix(in oklab, var(--terracotta) 20%, transparent);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+#contact:target [data-contact] {
+  animation: contact-pulse 1.8s ease-out 1;
+}
