@@ -127,25 +127,36 @@ export default async function MembrosPage({
   const liveCats = t.raw("liveCats") as string[];
   const hasMedia = photos.length > 0 || videos.length > 0;
 
+  const supabaseConfigured = !!process.env.NEXT_PUBLIC_SUPABASE_URL;
+
   return (
     <div className="flex flex-col flex-1 text-espresso">
-      {/* SLIM "LOGGED IN" RIBBON */}
-      <div className="border-b border-espresso/15">
-        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2 text-xs">
-          <span className="font-mono uppercase tracking-[0.25em] text-espresso-2">
-            {t("connectedAs", { email: userEmail })}
-          </span>
-          <form action={signOut}>
-            <input type="hidden" name="locale" value={locale} />
-            <button
-              type="submit"
-              className="font-mono uppercase tracking-[0.25em] text-espresso-2 hover:text-terracotta"
-            >
-              {t("signOut")} →
-            </button>
-          </form>
+      {/* SLIM "LOGGED IN" RIBBON — or an honest notice in local preview */}
+      {supabaseConfigured ? (
+        <div className="border-b border-espresso/15">
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2 text-xs">
+            <span className="font-mono uppercase tracking-[0.25em] text-espresso-2">
+              {t("connectedAs", { email: userEmail })}
+            </span>
+            <form action={signOut}>
+              <input type="hidden" name="locale" value={locale} />
+              <button
+                type="submit"
+                className="font-mono uppercase tracking-[0.25em] text-espresso-2 hover:text-terracotta"
+              >
+                {t("signOut")} →
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
+      ) : (
+        <div className="border-b border-terracotta/40 bg-terracotta/10">
+          <p className="mx-auto max-w-6xl px-6 py-2 font-mono text-[11px] uppercase tracking-[0.25em] text-terracotta">
+            Pré-visualização de desenvolvimento — autenticação desativada
+            (Supabase não configurado)
+          </p>
+        </div>
+      )}
 
       <Header />
 

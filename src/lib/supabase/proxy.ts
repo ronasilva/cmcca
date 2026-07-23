@@ -20,7 +20,18 @@ export async function updateSession(
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL
   const publishableKey = process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
   if (!url || !publishableKey) {
-    // Supabase not yet configured — skip auth checks so the app still runs.
+    // No auth backend configured. In development the member area stays
+    // open for preview; anywhere else it fails CLOSED — an unconfigured
+    // deployment must never expose member content.
+    if (process.env.NODE_ENV !== 'development') {
+      const { locale, rest } = stripLocale(request.nextUrl.pathname)
+      if (rest.startsWith('/membros')) {
+        const redirectUrl = request.nextUrl.clone()
+        redirectUrl.pathname = `/${locale}/login`
+        redirectUrl.search = ''
+        return NextResponse.redirect(redirectUrl)
+      }
+    }
     return initialResponse
   }
 

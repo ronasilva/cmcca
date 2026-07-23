@@ -18,14 +18,18 @@ export async function login(formData: FormData) {
     ? rawLocale
     : routing.defaultLocale
 
-  // When Supabase isn't configured (e.g. local dev), there is no auth backend
-  // and the proxy leaves the member area open — so let sign-in pass straight
-  // through instead of crashing on a missing client.
+  // No auth backend configured: in development sign-in passes through for
+  // preview (the proxy leaves the member area open there); in production
+  // it fails closed — nobody can sign in without a real backend.
   if (
     !process.env.NEXT_PUBLIC_SUPABASE_URL ||
     !process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
   ) {
-    redirect({ href: isSafeRedirect(next) ? next : '/membros', locale })
+    if (process.env.NODE_ENV === 'development') {
+      redirect({ href: isSafeRedirect(next) ? next : '/membros', locale })
+    }
+    const params = new URLSearchParams({ error: 'invalid_credentials' })
+    redirect({ href: `/login?${params.toString()}`, locale })
   }
 
   const supabase = await createClient()
