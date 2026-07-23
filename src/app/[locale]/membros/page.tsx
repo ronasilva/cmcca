@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import {
   createAdminClient,
@@ -10,33 +11,9 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SectionDivider } from "@/components/SectionDivider";
 import { signOut } from "./actions";
+import { DOCUMENT_META, documentThumbPath } from "@/lib/documents";
 
 type Media = { name: string; url: string };
-
-// Display metadata for the Esfera Intelectual documents; files not
-// listed here fall back to a name derived from the filename.
-const DOCUMENT_META: Record<string, { title: string; author: string }> = {
-  "01-artigo-sobre-mestre-pastinha.pdf": {
-    title: "Artigo sobre Mestre Pastinha",
-    author: "Paulo Magalhães",
-  },
-  "02-manuscritos-do-mestre-pastinha.pdf": {
-    title: "Manuscritos do Mestre Pastinha",
-    author: "Vicente Ferreira Pastinha",
-  },
-  "03-capoeira-angola-mestre-pastinha.pdf": {
-    title: "Capoeira Angola",
-    author: "Mestre Pastinha",
-  },
-  "04-capoeira-angola-waldeloir-rego.pdf": {
-    title: "Capoeira Angola — ensaio sócio-etnográfico",
-    author: "Waldeloir Rego",
-  },
-  "05-a-negregada-instituicao.pdf": {
-    title: "A Negregada Instituição — os capoeiras no Rio de Janeiro",
-    author: "Carlos Eugênio Líbano Soares",
-  },
-};
 
 function prettyName(filename: string): string {
   return filename
@@ -81,6 +58,31 @@ async function listFolder(
     .filter((m): m is Media => m.url !== null);
 }
 
+// Signed URLs for the documents' cover thumbnails, keyed by PDF name.
+// Missing thumbnails are simply absent from the map.
+async function signDocumentThumbs(
+  documents: Media[]
+): Promise<Record<string, string>> {
+  if (documents.length === 0) return {};
+  let admin: ReturnType<typeof createAdminClient>;
+  try {
+    admin = createAdminClient();
+  } catch {
+    return {};
+  }
+  const { data } = await admin.storage
+    .from(STUDENT_MEDIA_BUCKET)
+    .createSignedUrls(
+      documents.map((d) => documentThumbPath(d.name)),
+      SIGNED_URL_TTL_SECONDS
+    );
+  const out: Record<string, string> = {};
+  data?.forEach((s, i) => {
+    if (!s.error && s.signedUrl) out[documents[i].name] = s.signedUrl;
+  });
+  return out;
+}
+
 function EtapaCard({ label, note }: { label: string; note: string }) {
   return (
     <div className="rounded-sm border border-espresso/15 bg-cream-2/40 px-6 py-6">
@@ -121,10 +123,10 @@ export default async function MembrosPage({
     listFolder("videos"),
     listFolder("documents"),
   ]);
+  const docThumbs = await signDocumentThumbs(documents);
 
   const track1Etapas = t.raw("track1Etapas") as string[];
   const track2Etapas = t.raw("track2Etapas") as string[];
-  const liveCats = t.raw("liveCats") as string[];
   const hasMedia = photos.length > 0 || videos.length > 0;
 
   const supabaseConfigured = !!process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -217,26 +219,9 @@ export default async function MembrosPage({
           <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
             {t("livesIntro")}
           </p>
-          <ul className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {liveCats.map((cat, i) => (
-              <li
-                key={cat}
-                className="rounded-sm border border-espresso/15 bg-cream-2/40 px-6 py-8"
-              >
-                <div className="flex items-baseline gap-3">
-                  <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-                    N°&nbsp;{String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="font-display text-2xl font-light italic text-espresso">
-                    {cat}
-                  </span>
-                </div>
-                <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.25em] text-espresso-2">
-                  {t("comingSoon")}
-                </p>
-              </li>
-            ))}
-          </ul>
+          <p className="mt-8 font-display text-xl font-light italic text-espresso-2">
+            {t("comingSoon")}
+          </p>
         </section>
 
         {/* LEITURAS — Esfera Intelectual documents, members only */}
@@ -251,27 +236,41 @@ export default async function MembrosPage({
                 {documents.map((d, i) => {
                   const meta = DOCUMENT_META[d.name];
                   return (
-                    <li
-                      key={d.name}
-                      className="grid grid-cols-1 gap-2 py-6 sm:grid-cols-12 sm:items-baseline"
-                    >
-                      <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta sm:col-span-1">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <p className="font-display text-xl font-light italic text-espresso sm:col-span-6">
-                        {meta?.title ?? prettyName(d.name)}
-                      </p>
-                      <p className="text-base text-espresso-2 sm:col-span-3">
-                        {meta?.author ?? ""}
-                      </p>
-                      <a
-                        href={d.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2 sm:col-span-2 sm:text-right"
+                    <li key={d.name} className="py-5">
+                      <Link
+                        href={`/membros/leituras/${encodeURIComponent(d.name)}`}
+                        className="group flex items-center gap-5 sm:gap-6"
                       >
-                        {t("readingsOpen")} ↗
-                      </a>
+                        {docThumbs[d.name] ? (
+                          <Image
+                            src={docThumbs[d.name]}
+                            alt=""
+                            width={140}
+                            height={190}
+                            unoptimized
+                            className="h-24 w-auto shrink-0 rounded-xs border border-espresso/15 bg-plate object-contain"
+                          />
+                        ) : (
+                          <span
+                            aria-hidden
+                            className="h-24 w-17.5 shrink-0 rounded-xs border border-espresso/15 bg-cream-2/40"
+                          />
+                        )}
+                        <span className="grid flex-1 grid-cols-1 gap-1 sm:grid-cols-12 sm:items-baseline sm:gap-2">
+                          <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta sm:col-span-1">
+                            {String(i + 1).padStart(2, "0")}
+                          </span>
+                          <span className="font-display text-xl font-light italic text-espresso sm:col-span-6">
+                            {meta?.title ?? prettyName(d.name)}
+                          </span>
+                          <span className="text-base text-espresso-2 sm:col-span-3">
+                            {meta?.author ?? ""}
+                          </span>
+                          <span className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition group-hover:text-terracotta-2 sm:col-span-2 sm:text-right">
+                            {t("readingsOpen")} →
+                          </span>
+                        </span>
+                      </Link>
                     </li>
                   );
                 })}
