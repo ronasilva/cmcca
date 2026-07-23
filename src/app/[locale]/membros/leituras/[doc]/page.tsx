@@ -45,23 +45,32 @@ export default async function LeituraPage({
     <div className="flex flex-col flex-1 text-espresso">
       <Header />
 
-      <section className="mx-auto w-full max-w-6xl flex-1 px-6 pb-16 pt-8">
-        <Link
-          href="/membros"
-          className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-        >
-          ← {t("readingsTitle")}
-        </Link>
-        <h1 className="mt-5 font-display text-3xl font-light italic leading-tight text-espresso md:text-4xl">
-          {meta?.title ?? name}
-        </h1>
-        {meta?.author && (
-          <p className="mt-2 text-base text-espresso-2">{meta.author}</p>
-        )}
+      <section className="mx-auto flex w-full max-w-360 flex-1 flex-col px-6 pb-10 pt-6">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2">
+          <div>
+            <Link
+              href="/membros"
+              className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+            >
+              ← {t("readingsTitle")}
+            </Link>
+            <h1 className="mt-3 font-display text-2xl font-light italic leading-tight text-espresso md:text-3xl">
+              {meta?.title ?? name}
+              {meta?.author && (
+                <span className="text-espresso-2"> · {meta.author}</span>
+              )}
+            </h1>
+          </div>
+          <p className="max-w-md font-mono text-[11px] uppercase leading-relaxed tracking-[0.12em] text-espresso-2">
+            {t("readingsNotice")}
+          </p>
+        </div>
+        {/* #toolbar=0 hides download/print in Chromium's viewer; the file
+            still reaches the browser — true prevention is impossible. */}
         <iframe
-          src={url}
+          src={`${url}#toolbar=0&navpanes=0`}
           title={meta?.title ?? name}
-          className="mt-8 h-[80vh] w-full rounded-sm border border-espresso/15 bg-plate"
+          className="mt-5 min-h-[70vh] w-full flex-1 rounded-sm border border-espresso/15 bg-plate"
         />
       </section>
 

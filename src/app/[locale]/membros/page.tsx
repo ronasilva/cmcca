@@ -232,6 +232,9 @@ export default async function MembrosPage({
               <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
                 {t("readingsIntro")}
               </p>
+              <p className="mt-3 max-w-2xl font-mono text-[11px] uppercase leading-relaxed tracking-[0.12em] text-espresso-2">
+                {t("readingsNotice")}
+              </p>
               <ul className="mt-10 divide-y divide-terracotta/20 border-y border-terracotta/20">
                 {documents.map((d, i) => {
                   const meta = DOCUMENT_META[d.name];
