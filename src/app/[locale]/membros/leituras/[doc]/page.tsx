@@ -61,7 +61,7 @@ export default async function LeituraPage({
               )}
             </h1>
           </div>
-          <p className="max-w-md font-mono text-[11px] uppercase leading-relaxed tracking-[0.12em] text-espresso-2">
+          <p className="max-w-md font-display text-sm italic leading-relaxed text-espresso-2">
             {t("readingsNotice")}
           </p>
         </div>

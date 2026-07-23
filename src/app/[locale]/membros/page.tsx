@@ -89,7 +89,7 @@ function EtapaCard({ label, note }: { label: string; note: string }) {
       <p className="font-display text-xl font-light italic text-espresso">
         {label}
       </p>
-      <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.25em] text-espresso-2">
+      <p className="mt-2 font-display text-sm italic leading-relaxed text-espresso-2">
         {note}
       </p>
     </div>
@@ -185,7 +185,7 @@ export default async function MembrosPage({
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                 01
               </p>
-              <h2 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso">
+              <h2 className="mt-3 font-display text-2xl font-light italic leading-tight text-espresso">
                 {t("track1Title")}
               </h2>
               <p className="mt-3 text-base text-espresso-2">{t("track1Desc")}</p>
@@ -200,7 +200,7 @@ export default async function MembrosPage({
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                 02
               </p>
-              <h2 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso">
+              <h2 className="mt-3 font-display text-2xl font-light italic leading-tight text-espresso">
                 {t("track2Title")}
               </h2>
               <p className="mt-3 text-base text-espresso-2">{t("track2Desc")}</p>
@@ -219,8 +219,8 @@ export default async function MembrosPage({
           <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
             {t("livesIntro")}
           </p>
-          <p className="mt-8 font-display text-xl font-light italic text-espresso-2">
-            {t("comingSoon")}
+          <p className="mt-8 font-display text-base italic leading-relaxed text-espresso-2">
+            {t("videotecaSoon")}
           </p>
         </section>
 
@@ -232,7 +232,7 @@ export default async function MembrosPage({
               <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
                 {t("readingsIntro")}
               </p>
-              <p className="mt-3 max-w-2xl font-mono text-[11px] uppercase leading-relaxed tracking-[0.12em] text-espresso-2">
+              <p className="mt-3 max-w-2xl font-display text-sm italic leading-relaxed text-espresso-2">
                 {t("readingsNotice")}
               </p>
               <ul className="mt-10 divide-y divide-terracotta/20 border-y border-terracotta/20">
@@ -294,7 +294,7 @@ export default async function MembrosPage({
         <SectionDivider label={t("mediaTitle")} />
         {!hasMedia && (
           <div className="mx-auto max-w-6xl px-6 pb-16">
-            <p className="font-display text-xl italic text-espresso-2">
+            <p className="font-display text-base italic leading-relaxed text-espresso-2">
               {t("empty")}
             </p>
           </div>
