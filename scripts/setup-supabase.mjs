@@ -30,7 +30,15 @@ async function ensureBucket() {
 
   const existing = buckets.find((b) => b.name === BUCKET)
   if (existing) {
-    console.log(`✓ Bucket '${BUCKET}' already exists (id: ${existing.id})`)
+    const { error } = await supabase.storage.updateBucket(BUCKET, {
+      public: false,
+      fileSizeLimit: MAX_FILE_SIZE,
+      allowedMimeTypes: MIME_TYPES,
+    })
+    if (error) throw error
+    console.log(
+      `✓ Bucket '${BUCKET}' exists — settings updated (private · max 50 MB/file · images+videos+PDF)`
+    )
     return
   }
 
