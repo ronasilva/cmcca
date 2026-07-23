@@ -115,14 +115,6 @@ export default async function BibliotecaPage({
             </li>
           ))}
         </ul>
-        <a
-          href="/estante-do-mestre.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-10 inline-block font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-        >
-          {t("estanteCta")} ↗
-        </a>
       </section>
 
       <SectionDivider label={t("livesTitle")} />
