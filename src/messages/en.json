@@ -76,6 +76,9 @@
       { "title": "Capoeira Angola", "author": "Mestre Pastinha" },
       { "title": "Mestre Bimba, a Crônica da Capoeiragem", "author": "Jair Moura" }
     ],
+    "estanteTitle": "The Mestre's bookshelf",
+    "estanteIntro": "Photographs from Mestre Braga's personal library — the works this knowledge is built on.",
+    "estanteCta": "See the full booklet (PDF)",
     "livesTitle": "Video library",
     "livesIntro": "Curated talks and recordings, organised by theme.",
     "liveCats": [
@@ -278,6 +281,9 @@
     ],
     "certsTitle": "Achievements & certificates",
     "certsBody": "Your progress and certificates will appear here.",
+    "readingsTitle": "Readings",
+    "readingsIntro": "Reference texts and books of the Intellectual Sphere, for members' personal study.",
+    "readingsOpen": "Open PDF",
     "mediaTitle": "Photos & videos",
     "photosTitle": "Photos",
     "videosTitle": "Videos",

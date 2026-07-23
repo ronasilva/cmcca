@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -91,6 +92,37 @@ export default async function BibliotecaPage({
             </li>
           ))}
         </ul>
+      </section>
+
+      <SectionDivider label={t("estanteTitle")} />
+
+      {/* A ESTANTE DO MESTRE — the mestre's photographed bookshelf */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-24">
+        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
+          {t("estanteIntro")}
+        </p>
+        <ul className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {Array.from({ length: 17 }, (_, i) => (
+            <li key={i}>
+              <Image
+                src={`/images/estante/estante-${String(i + 1).padStart(2, "0")}.jpg`}
+                alt=""
+                width={700}
+                height={933}
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                className="aspect-3/4 w-full rounded-sm border border-espresso/15 object-contain"
+              />
+            </li>
+          ))}
+        </ul>
+        <a
+          href="/estante-do-mestre.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-10 inline-block font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+        >
+          {t("estanteCta")} ↗
+        </a>
       </section>
 
       <SectionDivider label={t("livesTitle")} />

@@ -76,6 +76,9 @@
       { "title": "Capoeira Angola", "author": "Mestre Pastinha" },
       { "title": "Mestre Bimba, a Crônica da Capoeiragem", "author": "Jair Moura" }
     ],
+    "estanteTitle": "A estante do Mestre",
+    "estanteIntro": "Fotografias da biblioteca pessoal do Mestre Braga — as obras que fundam este conhecimento.",
+    "estanteCta": "Ver o caderno completo (PDF)",
     "livesTitle": "Videoteca",
     "livesIntro": "Lives e gravações selecionadas, organizadas por tema.",
     "liveCats": [
@@ -278,6 +281,9 @@
     ],
     "certsTitle": "Aproveitamentos & certificados",
     "certsBody": "O seu progresso e os seus certificados aparecerão aqui.",
+    "readingsTitle": "Leituras",
+    "readingsIntro": "Textos e livros de referência da Esfera Intelectual, para estudo pessoal dos membros.",
+    "readingsOpen": "Abrir PDF",
     "mediaTitle": "Fotos & vídeos",
     "photosTitle": "Fotos",
     "videosTitle": "Vídeos",

@@ -13,15 +13,43 @@ import { signOut } from "./actions";
 
 type Media = { name: string; url: string };
 
+// Display metadata for the Esfera Intelectual documents; files not
+// listed here fall back to a name derived from the filename.
+const DOCUMENT_META: Record<string, { title: string; author: string }> = {
+  "01-artigo-sobre-mestre-pastinha.pdf": {
+    title: "Artigo sobre Mestre Pastinha",
+    author: "Paulo Magalhães",
+  },
+  "02-manuscritos-do-mestre-pastinha.pdf": {
+    title: "Manuscritos do Mestre Pastinha",
+    author: "Vicente Ferreira Pastinha",
+  },
+  "03-capoeira-angola-mestre-pastinha.pdf": {
+    title: "Capoeira Angola",
+    author: "Mestre Pastinha",
+  },
+  "04-capoeira-angola-waldeloir-rego.pdf": {
+    title: "Capoeira Angola — ensaio sócio-etnográfico",
+    author: "Waldeloir Rego",
+  },
+  "05-a-negregada-instituicao.pdf": {
+    title: "A Negregada Instituição — os capoeiras no Rio de Janeiro",
+    author: "Carlos Eugênio Líbano Soares",
+  },
+};
+
 function prettyName(filename: string): string {
   return filename
     .replace(/\.[^.]+$/, "")
+    .replace(/^\d+[-_ ]*/, "")
     .replace(/[-_]+/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-async function listFolder(folder: "photos" | "videos"): Promise<Media[]> {
+async function listFolder(
+  folder: "photos" | "videos" | "documents"
+): Promise<Media[]> {
   // Degrade gracefully when Supabase isn't configured/reachable, so the
   // member-area layout still renders (with empty media) instead of erroring.
   let admin: ReturnType<typeof createAdminClient>;
@@ -88,9 +116,10 @@ export default async function MembrosPage({
     // Supabase not configured/reachable
   }
 
-  const [photos, videos] = await Promise.all([
+  const [photos, videos, documents] = await Promise.all([
     listFolder("photos"),
     listFolder("videos"),
+    listFolder("documents"),
   ]);
 
   const track1Etapas = t.raw("track1Etapas") as string[];
@@ -198,6 +227,47 @@ export default async function MembrosPage({
             ))}
           </ul>
         </section>
+
+        {/* LEITURAS — Esfera Intelectual documents, members only */}
+        {documents.length > 0 && (
+          <>
+            <SectionDivider label={t("readingsTitle")} />
+            <section className="mx-auto w-full max-w-6xl px-6 pb-12">
+              <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
+                {t("readingsIntro")}
+              </p>
+              <ul className="mt-10 divide-y divide-terracotta/20 border-y border-terracotta/20">
+                {documents.map((d, i) => {
+                  const meta = DOCUMENT_META[d.name];
+                  return (
+                    <li
+                      key={d.name}
+                      className="grid grid-cols-1 gap-2 py-6 sm:grid-cols-12 sm:items-baseline"
+                    >
+                      <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta sm:col-span-1">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <p className="font-display text-xl font-light italic text-espresso sm:col-span-6">
+                        {meta?.title ?? prettyName(d.name)}
+                      </p>
+                      <p className="text-base text-espresso-2 sm:col-span-3">
+                        {meta?.author ?? ""}
+                      </p>
+                      <a
+                        href={d.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2 sm:col-span-2 sm:text-right"
+                      >
+                        {t("readingsOpen")} ↗
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
+          </>
+        )}
 
         {/* CERTIFICATES */}
         <SectionDivider label={t("certsTitle")} />
