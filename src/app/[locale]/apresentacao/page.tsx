@@ -84,33 +84,45 @@ export default async function ApresentacaoPage({
 
             <fieldset className="flex flex-col gap-2">
               <legend className={labelClass}>{t("sinceLabel")}</legend>
-              <div className="mt-2 flex gap-6">
+              <div className="mt-2 flex flex-wrap gap-6">
                 <label className="flex flex-col gap-1">
                   <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-espresso-2">
                     {t("sinceDay")}
                   </span>
-                  <input
-                    type="number"
+                  <select
                     name="desdeDia"
-                    min={1}
-                    max={31}
-                    placeholder="—"
-                    className={`${inputClass} w-16`}
-                  />
+                    defaultValue=""
+                    className={`${inputClass} w-20 cursor-pointer`}
+                  >
+                    <option value="">—</option>
+                    {Array.from({ length: 31 }, (_, i) => (
+                      <option key={i + 1} value={i + 1}>
+                        {i + 1}
+                      </option>
+                    ))}
+                  </select>
                 </label>
                 <label className="flex flex-col gap-1">
                   <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-espresso-2">
                     {t("sinceMonth")}
                   </span>
-                  <input
-                    type="number"
+                  <select
                     name="desdeMes"
                     required
-                    min={1}
-                    max={12}
-                    placeholder="3"
-                    className={`${inputClass} w-16`}
-                  />
+                    defaultValue=""
+                    className={`${inputClass} w-40 cursor-pointer`}
+                  >
+                    <option value="" disabled>
+                      —
+                    </option>
+                    {Array.from({ length: 12 }, (_, i) => (
+                      <option key={i + 1} value={i + 1}>
+                        {new Intl.DateTimeFormat(locale, {
+                          month: "long",
+                        }).format(new Date(2000, i, 1))}
+                      </option>
+                    ))}
+                  </select>
                 </label>
                 <label className="flex flex-col gap-1">
                   <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-espresso-2">
@@ -122,7 +134,7 @@ export default async function ApresentacaoPage({
                     required
                     min={1950}
                     max={2100}
-                    placeholder="2020"
+                    placeholder="2015"
                     className={`${inputClass} w-24`}
                   />
                 </label>
