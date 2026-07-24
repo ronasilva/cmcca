@@ -153,8 +153,19 @@ export function MobileMenu({
                 <Link
                   href="/membros"
                   onClick={() => setOpen(false)}
-                  className="font-mono text-[11px] uppercase tracking-[0.18em] text-espresso-2"
+                  className="flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.18em] text-espresso-2"
                 >
+                  <svg
+                    aria-hidden
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.2"
+                    className="h-3.5 w-3.5 shrink-0"
+                  >
+                    <circle cx="8" cy="5" r="2.8" />
+                    <path d="M2.5 14a5.5 5.5 0 0 1 11 0" />
+                  </svg>
                   {userEmail}
                 </Link>
                 <form action={signOutAction}>

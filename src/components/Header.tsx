@@ -99,8 +99,19 @@ export async function Header() {
               <>
                 <Link
                   href="/membros"
-                  className="hidden whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-espresso md:inline"
+                  className="hidden items-center gap-2 whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-espresso md:flex"
                 >
+                  <svg
+                    aria-hidden
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.2"
+                    className="h-3.5 w-3.5 shrink-0"
+                  >
+                    <circle cx="8" cy="5" r="2.8" />
+                    <path d="M2.5 14a5.5 5.5 0 0 1 11 0" />
+                  </svg>
                   {userLabel}
                 </Link>
                 <form action={signOut}>
