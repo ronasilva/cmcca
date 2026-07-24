@@ -99,7 +99,7 @@ export async function Header() {
               <>
                 <Link
                   href="/membros"
-                  className="hidden items-center gap-2 whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-espresso md:flex"
+                  className="flex items-center gap-2 whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-espresso"
                 >
                   <svg
                     aria-hidden
