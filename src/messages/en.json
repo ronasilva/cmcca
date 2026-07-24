@@ -242,9 +242,9 @@
     "passwordLabel": "Password",
     "submit": "Sign in",
     "invalidCredentials": "Invalid email or password.",
-    "pendingApproval": "Your introduction is still under review — access is unlocked after the Mestre's approval.",
+    "pendingApproval": "Your introduction is still under evaluation — access is unlocked after approval.",
     "backHome": "Back to home",
-    "membersHint": "The member area is reserved for the school's students and members. To request access, fill in the introduction form — the Mestre approves each request personally.",
+    "membersHint": "The member area is reserved for the school's students and members. To request access, fill in the introduction form — every request is evaluated and approved.",
     "applyCta": "Introduce yourself here"
   },
   "MemberArea": {
@@ -305,7 +305,7 @@
     "editorTitle": "Publisher",
     "editorBody": "This site is published by CMC/CA — an association dedicated to the memory and knowledge of Capoeira Angola, based in Geneva, Switzerland. Contact: mestrebraga1@gmail.com.",
     "dataTitle": "Personal data",
-    "dataBody": "The public site collects no personal data and uses no tracking or analytics cookies. The member area requires an account (email and password) and uses only the session cookies needed for access. Accounts and reserved files are managed by a secure authentication and storage service, reachable through temporary links. Those who send an introduction form provide their name, contact details, photo and background; the form is reviewed by the Mestre and, once accepted, is kept as part of the association's member registry. To consult or delete your data, write to the contact below.",
+    "dataBody": "The public site collects no personal data and uses no tracking or analytics cookies. The member area requires an account (email and password) and uses only the session cookies needed for access. Accounts and reserved files are managed by a secure authentication and storage service, reachable through temporary links. Those who send an introduction form provide their name, contact details, photo and background; the form is evaluated and, once accepted, is kept as part of the association's member registry. To consult or delete your data, write to the contact below.",
     "thirdTitle": "Third-party content",
     "thirdBody": "Videos are embedded from YouTube in privacy-enhanced mode; when you play them, YouTube may process data under its own terms.",
     "rightsTitle": "Your rights",
@@ -317,7 +317,7 @@
   "ApplicationPage": {
     "eyebrow": "Introduce yourself",
     "title": "Introduction form",
-    "intro": "To request access to the member area, introduce yourself to the Mestre. Every form is read and approved personally — after approval you sign in with the email and password you choose here.",
+    "intro": "To request access to the member area, fill in your introduction form. Every form is evaluated and approved — after approval you sign in with the email and password you choose here.",
     "nameLabel": "Full name",
     "emailLabel": "Email",
     "whereLabel": "Where you train (city and group)",
@@ -336,7 +336,7 @@
     "photoCameraError": "Could not access the camera — choose a file instead.",
     "messageLabel": "Message (optional)",
     "submit": "Send form",
-    "success": "Form sent. The Mestre will read your introduction — once approved, your access is unlocked and you can sign in to the member area.",
+    "success": "Form sent. Your introduction will be evaluated — once approved, your access is unlocked and you can sign in to the member area.",
     "passwordLabel": "Password for your account",
     "passwordConfirmLabel": "Confirm password",
     "passwordHint": "At least 8 characters — it becomes your login password after approval.",

@@ -66,10 +66,16 @@ export function PhotoField({ name, strings }: { name: string; strings: Strings }
   const capture = () => {
     const video = videoRef.current
     if (!video || video.videoWidth === 0) return
+    // Center-crop to a square so the stored photo matches exactly what
+    // the square viewfinder shows.
+    const side = Math.min(video.videoWidth, video.videoHeight)
+    const out = Math.min(side, 1200)
+    const sx = (video.videoWidth - side) / 2
+    const sy = (video.videoHeight - side) / 2
     const canvas = document.createElement('canvas')
-    canvas.width = video.videoWidth
-    canvas.height = video.videoHeight
-    canvas.getContext('2d')?.drawImage(video, 0, 0)
+    canvas.width = out
+    canvas.height = out
+    canvas.getContext('2d')?.drawImage(video, sx, sy, side, side, 0, 0, out, out)
     canvas.toBlob(
       (blob) => {
         if (!blob || !inputRef.current) return
@@ -142,7 +148,7 @@ export function PhotoField({ name, strings }: { name: string; strings: Strings }
             ref={videoRef}
             playsInline
             muted
-            className="w-full rounded-sm border border-espresso/15 bg-background"
+            className="aspect-square w-full max-w-xs rounded-sm border border-espresso/15 bg-background object-cover"
           />
           <div className="flex gap-4">
             <button type="button" onClick={capture} className={buttonClass}>

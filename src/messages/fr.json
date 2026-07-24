@@ -242,9 +242,9 @@
     "passwordLabel": "Mot de passe",
     "submit": "Se connecter",
     "invalidCredentials": "E-mail ou mot de passe invalide.",
-    "pendingApproval": "Votre fiche est encore en cours d'examen — l'accès est débloqué après l'approbation du Mestre.",
+    "pendingApproval": "Votre fiche est encore en cours d'évaluation — l'accès est débloqué après approbation.",
     "backHome": "Retour à l'accueil",
-    "membersHint": "L'espace membre est réservé aux élèves et membres de l'école. Pour demander l'accès, remplissez la fiche de présentation — le Mestre approuve chaque demande personnellement.",
+    "membersHint": "L'espace membre est réservé aux élèves et membres de l'école. Pour demander l'accès, remplissez la fiche de présentation — chaque demande est évaluée et approuvée.",
     "applyCta": "Présentez-vous ici"
   },
   "MemberArea": {
@@ -305,7 +305,7 @@
     "editorTitle": "Éditeur",
     "editorBody": "Ce site est édité par la CMC/CA — association dédiée à la mémoire et à la connaissance de la Capoeira Angola, établie à Genève, Suisse. Contact : mestrebraga1@gmail.com.",
     "dataTitle": "Données personnelles",
-    "dataBody": "Le site public ne collecte aucune donnée personnelle et n'utilise ni cookies de suivi ni outils d'analyse. L'espace membre requiert un compte (e-mail et mot de passe) et n'utilise que les cookies de session nécessaires à l'accès. Les comptes et les fichiers réservés sont gérés par un service sécurisé d'authentification et de stockage, accessibles par des liens temporaires. Les personnes qui envoient une fiche de présentation fournissent nom, contact, photo et parcours ; la fiche est examinée par le Mestre et, une fois acceptée, est conservée dans le registre des membres de l'association. Pour consulter ou supprimer vos données, écrivez au contact indiqué ci-dessous.",
+    "dataBody": "Le site public ne collecte aucune donnée personnelle et n'utilise ni cookies de suivi ni outils d'analyse. L'espace membre requiert un compte (e-mail et mot de passe) et n'utilise que les cookies de session nécessaires à l'accès. Les comptes et les fichiers réservés sont gérés par un service sécurisé d'authentification et de stockage, accessibles par des liens temporaires. Les personnes qui envoient une fiche de présentation fournissent nom, contact, photo et parcours ; la fiche est évaluée et, une fois acceptée, est conservée dans le registre des membres de l'association. Pour consulter ou supprimer vos données, écrivez au contact indiqué ci-dessous.",
     "thirdTitle": "Contenus de tiers",
     "thirdBody": "Les vidéos sont intégrées depuis YouTube en mode de confidentialité renforcée ; lors de leur lecture, YouTube peut traiter des données selon ses propres conditions.",
     "rightsTitle": "Vos droits",
@@ -317,7 +317,7 @@
   "ApplicationPage": {
     "eyebrow": "Présentez-vous",
     "title": "Fiche de présentation",
-    "intro": "Pour demander l'accès à l'espace membre, présentez-vous au Mestre. Chaque fiche est lue et approuvée personnellement — après approbation, vous vous connectez avec l'e-mail et le mot de passe choisis ici.",
+    "intro": "Pour demander l'accès à l'espace membre, remplissez votre fiche de présentation. Chaque fiche est évaluée et approuvée — après approbation, vous vous connectez avec l'e-mail et le mot de passe choisis ici.",
     "nameLabel": "Nom complet",
     "emailLabel": "E-mail",
     "whereLabel": "Où vous entraînez-vous (ville et groupe)",
@@ -336,7 +336,7 @@
     "photoCameraError": "Impossible d'accéder à la caméra — choisissez un fichier.",
     "messageLabel": "Message (facultatif)",
     "submit": "Envoyer la fiche",
-    "success": "Fiche envoyée. Le Mestre lira votre présentation — après approbation, votre accès est débloqué et vous pourrez entrer dans l'espace membre.",
+    "success": "Fiche envoyée. Votre présentation sera évaluée — après approbation, votre accès est débloqué et vous pourrez entrer dans l'espace membre.",
     "passwordLabel": "Mot de passe pour votre compte",
     "passwordConfirmLabel": "Confirmer le mot de passe",
     "passwordHint": "Au moins 8 caractères — ce sera votre mot de passe après l'approbation.",

@@ -131,7 +131,6 @@ export default async function FichasPage({
                 <div className="flex-1">
                   <p className="font-display text-2xl font-light italic text-espresso">
                     {f.name}
-                    <span className="text-espresso-2"> · {f.graduation}</span>
                   </p>
                   <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.25em]">
                     {f.approved ? (
@@ -140,28 +139,52 @@ export default async function FichasPage({
                       <span className="text-terracotta">● Pendente</span>
                     )}
                   </p>
-                  <dl className="mt-3 space-y-1 text-base text-espresso-2">
+                  <dl className="mt-4 grid grid-cols-1 gap-x-8 gap-y-2 text-base sm:grid-cols-2">
                     <div>
-                      <a
-                        href={`mailto:${f.email}`}
-                        className="text-terracotta hover:text-terracotta-2"
-                      >
-                        {f.email}
-                      </a>
+                      <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
+                        Graduação
+                      </dt>
+                      <dd className="font-display italic text-espresso">
+                        {f.graduation || "—"}
+                      </dd>
                     </div>
                     <div>
-                      {f.where} · desde {formatSince(f.since)}
+                      <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
+                        E-mail
+                      </dt>
+                      <dd>
+                        <a
+                          href={`mailto:${f.email}`}
+                          className="text-terracotta hover:text-terracotta-2"
+                        >
+                          {f.email}
+                        </a>
+                      </dd>
                     </div>
-                    {f.message && (
-                      <div className="mt-2 font-display italic text-espresso">
-                        “{f.message}”
-                      </div>
-                    )}
-                    <div className="mt-2 font-mono text-[11px] uppercase tracking-[0.2em]">
-                      Recebida em{" "}
-                      {new Date(f.submittedAt).toLocaleDateString("pt-BR")}
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
+                        Onde treina
+                      </dt>
+                      <dd className="text-espresso-2">{f.where || "—"}</dd>
+                    </div>
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
+                        Treina desde
+                      </dt>
+                      <dd className="text-espresso-2">
+                        {f.since ? formatSince(f.since) : "—"}
+                      </dd>
                     </div>
                   </dl>
+                  {f.message && (
+                    <p className="mt-4 font-display italic text-espresso">
+                      “{f.message}”
+                    </p>
+                  )}
+                  <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-espresso-2">
+                    Recebida em{" "}
+                    {new Date(f.submittedAt).toLocaleDateString("pt-BR")}
+                  </p>
                 </div>
                 <div className="flex shrink-0 flex-col items-end gap-4 self-start">
                   {!f.approved && f.userId && (
