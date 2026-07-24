@@ -12,7 +12,7 @@ import { Footer } from "@/components/Footer";
 import { SectionDivider } from "@/components/SectionDivider";
 import { DOCUMENT_META, documentThumbPath } from "@/lib/documents";
 import { isAdminUser } from "@/lib/admins";
-import { statusOf } from "@/lib/fichas";
+import { statusOf, formatSince, type FichaStatus } from "@/lib/fichas";
 
 type Media = { name: string; url: string };
 
@@ -84,6 +84,58 @@ async function signDocumentThumbs(
   return out;
 }
 
+type MemberFicha = {
+  name: string;
+  graduation: string;
+  where: string;
+  since: string;
+  status?: FichaStatus;
+  approved?: boolean;
+  photoUrl: string | null;
+};
+
+// The signed-in member's own ficha, for the carteirinha card.
+async function findMemberFicha(userId: string): Promise<MemberFicha | null> {
+  if (!userId) return null;
+  let admin: ReturnType<typeof createAdminClient>;
+  try {
+    admin = createAdminClient();
+  } catch {
+    return null;
+  }
+  const { data: folders } = await admin.storage
+    .from(STUDENT_MEDIA_BUCKET)
+    .list("applications", { limit: 100 });
+  for (const folder of (folders ?? []).filter((f) => f.id === null)) {
+    const { data: blob } = await admin.storage
+      .from(STUDENT_MEDIA_BUCKET)
+      .download(`applications/${folder.name}/ficha.json`);
+    if (!blob) continue;
+    try {
+      const ficha = JSON.parse(await blob.text());
+      if (ficha.userId !== userId) continue;
+      const { data: files } = await admin.storage
+        .from(STUDENT_MEDIA_BUCKET)
+        .list(`applications/${folder.name}`, { limit: 10 });
+      const photoFile = (files ?? []).find((f) => f.name.startsWith("foto"));
+      let photoUrl: string | null = null;
+      if (photoFile) {
+        const { data: signed } = await admin.storage
+          .from(STUDENT_MEDIA_BUCKET)
+          .createSignedUrl(
+            `applications/${folder.name}/${photoFile.name}`,
+            SIGNED_URL_TTL_SECONDS
+          );
+        photoUrl = signed?.signedUrl ?? null;
+      }
+      return { ...ficha, photoUrl };
+    } catch {
+      continue;
+    }
+  }
+  return null;
+}
+
 // Pending introduction forms, for the admin block at the top.
 async function countPendingApplications(): Promise<number> {
   let admin: ReturnType<typeof createAdminClient>;
@@ -138,15 +190,18 @@ export default async function MembrosPage({
   // Access control is enforced in the proxy; here the user is only used for the
   // "signed in as" label. Degrade gracefully if Supabase isn't configured.
   let isAdmin = false;
+  let userId = "";
   try {
     const supabase = await createClient();
     const {
       data: { user },
     } = await supabase.auth.getUser();
     isAdmin = isAdminUser(user);
+    userId = user?.id ?? "";
   } catch {
     // Supabase not configured/reachable
   }
+  const card = await findMemberFicha(userId);
 
   const [photos, videos, documents] = await Promise.all([
     listFolder("photos"),
@@ -177,14 +232,70 @@ export default async function MembrosPage({
 
       <Header />
 
-      {/* PAGE TITLE */}
+      {/* PAGE TITLE — carteirinha do membro à direita */}
       <section className="mx-auto w-full max-w-6xl px-6 pb-4 pt-20 md:pt-28">
-        <p className="font-mono text-[12px] uppercase tracking-[0.35em] text-terracotta">
-          {t("badge")}
-        </p>
-        <h1 className="mt-4 font-display text-[clamp(3rem,7vw,6.5rem)] font-light leading-[0.95] tracking-tight text-espresso">
-          {t("title")}
-        </h1>
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-12 md:items-center">
+          <div className="md:col-span-7">
+            <p className="font-mono text-[12px] uppercase tracking-[0.35em] text-terracotta">
+              {t("badge")}
+            </p>
+            <h1 className="mt-4 font-display text-[clamp(3rem,7vw,6.5rem)] font-light leading-[0.95] tracking-tight text-espresso">
+              {t("title")}
+            </h1>
+          </div>
+          {card && (
+            <div className="md:col-span-4 md:col-start-9">
+              <div className="relative max-w-sm overflow-hidden rounded-sm border border-espresso/15 bg-cream-2/40 p-5">
+                <Image
+                  src="/cmcca-logo.png"
+                  alt=""
+                  width={370}
+                  height={373}
+                  className="absolute right-4 top-4 h-9 w-9 object-contain opacity-90"
+                />
+                <div className="flex items-center gap-4 pr-12">
+                  {card.photoUrl ? (
+                    <Image
+                      src={card.photoUrl}
+                      alt={card.name}
+                      width={160}
+                      height={160}
+                      unoptimized
+                      className="h-20 w-20 shrink-0 rounded-sm border border-espresso/15 object-cover"
+                    />
+                  ) : (
+                    <div className="h-20 w-20 shrink-0 rounded-sm border border-espresso/15" />
+                  )}
+                  <div>
+                    <p className="font-display text-xl font-light italic leading-tight text-espresso">
+                      {card.name}
+                    </p>
+                    <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
+                      {card.graduation}
+                    </p>
+                  </div>
+                </div>
+                <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-1 text-sm">
+                  <div>
+                    <dt className="font-mono text-[9px] uppercase tracking-[0.2em] text-espresso-2">
+                      {t("cardWhere")}
+                    </dt>
+                    <dd className="text-espresso">{card.where}</dd>
+                  </div>
+                  <div>
+                    <dt className="font-mono text-[9px] uppercase tracking-[0.2em] text-espresso-2">
+                      {t("cardSince")}
+                    </dt>
+                    <dd className="text-espresso">{formatSince(card.since)}</dd>
+                  </div>
+                </dl>
+                <p className="mt-4 border-t border-espresso/15 pt-3 font-mono text-[9px] uppercase tracking-[0.25em] text-espresso-2">
+                  ● {tf("statusMember")} · CMC/CA — Capoeira Angola
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
       </section>
 
       <main className="flex-1">

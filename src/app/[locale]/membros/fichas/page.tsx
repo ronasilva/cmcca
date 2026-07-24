@@ -19,18 +19,9 @@ import {
   setAdminRole,
   deleteApplication,
 } from "./actions";
-import { statusOf, type FichaStatus } from "@/lib/fichas";
+import { statusOf, formatSince, type FichaStatus } from "@/lib/fichas";
 
 // Internal review tool for the mestre and the site admin.
-
-// Partial date (YYYY, YYYY-MM or YYYY-MM-DD) → dd/mm/yyyy at the
-// precision that was provided.
-function formatSince(s: string): string {
-  const [y, m, d] = s.split("-");
-  if (d) return `${d}/${m}/${y}`;
-  if (m) return `${m}/${y}`;
-  return y;
-}
 
 type Ficha = {
   id: string;
