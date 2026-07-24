@@ -3,7 +3,35 @@
 import { redirect } from '@/i18n/navigation'
 import { hasLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient, STUDENT_MEDIA_BUCKET } from '@/lib/supabase/admin'
 import { routing } from '@/i18n/routing'
+
+// Accounts created before names were stamped into auth (or via the
+// dashboard) self-heal at login: find the person's ficha in the
+// registry and copy its name into user_metadata, once.
+async function backfillNameFromFicha(userId: string): Promise<void> {
+  try {
+    const admin = createAdminClient()
+    const { data: folders } = await admin.storage
+      .from(STUDENT_MEDIA_BUCKET)
+      .list('applications', { limit: 100 })
+    for (const folder of (folders ?? []).filter((f) => f.id === null)) {
+      const { data: blob } = await admin.storage
+        .from(STUDENT_MEDIA_BUCKET)
+        .download(`applications/${folder.name}/ficha.json`)
+      if (!blob) continue
+      const ficha = JSON.parse(await blob.text())
+      if (ficha.userId === userId && ficha.name) {
+        await admin.auth.admin.updateUserById(userId, {
+          user_metadata: { name: ficha.name },
+        })
+        return
+      }
+    }
+  } catch {
+    // best effort — the header falls back to the email
+  }
+}
 
 function isSafeRedirect(path: string | null | undefined): path is string {
   return !!path && path.startsWith('/') && !path.startsWith('//')
@@ -53,6 +81,10 @@ export async function login(formData: FormData) {
         ? 'deactivated'
         : 'pending'
     redirect({ href: `/login?error=${kind}`, locale })
+  }
+
+  if (data?.user && !data.user.user_metadata?.name) {
+    await backfillNameFromFicha(data.user.id)
   }
 
   redirect({ href: isSafeRedirect(next) ? next : '/membros', locale })

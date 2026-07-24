@@ -11,7 +11,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SectionDivider } from "@/components/SectionDivider";
 import { DOCUMENT_META, documentThumbPath } from "@/lib/documents";
-import { isAdminEmail } from "@/lib/admins";
+import { isAdminUser } from "@/lib/admins";
 import { statusOf } from "@/lib/fichas";
 
 type Media = { name: string; url: string };
@@ -137,13 +137,13 @@ export default async function MembrosPage({
 
   // Access control is enforced in the proxy; here the user is only used for the
   // "signed in as" label. Degrade gracefully if Supabase isn't configured.
-  let userEmail = "";
+  let isAdmin = false;
   try {
     const supabase = await createClient();
     const {
       data: { user },
     } = await supabase.auth.getUser();
-    userEmail = user?.email ?? "";
+    isAdmin = isAdminUser(user);
   } catch {
     // Supabase not configured/reachable
   }
@@ -155,7 +155,6 @@ export default async function MembrosPage({
   ]);
   const docThumbs = await signDocumentThumbs(documents);
 
-  const isAdmin = isAdminEmail(userEmail);
   const pendingFichas = isAdmin ? await countPendingApplications() : 0;
 
   const track1Etapas = t.raw("track1Etapas") as string[];

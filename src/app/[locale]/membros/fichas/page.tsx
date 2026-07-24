@@ -8,7 +8,7 @@ import {
   STUDENT_MEDIA_BUCKET,
   SIGNED_URL_TTL_SECONDS,
 } from "@/lib/supabase/admin";
-import { isAdminEmail } from "@/lib/admins";
+import { isAdminUser } from "@/lib/admins";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
@@ -16,6 +16,7 @@ import {
   approveApplication,
   deactivateMember,
   reactivateMember,
+  setAdminRole,
   deleteApplication,
 } from "./actions";
 import { statusOf, type FichaStatus } from "@/lib/fichas";
@@ -45,6 +46,7 @@ type Ficha = {
   userId?: string;
   approved?: boolean;
   status?: FichaStatus;
+  admin?: boolean;
 };
 
 async function listApplications(): Promise<Ficha[]> {
@@ -99,7 +101,7 @@ export default async function FichasPage({
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  if (!isAdminEmail(user?.email)) notFound();
+  if (!isAdminUser(user)) notFound();
 
   const fichas = await listApplications();
 
@@ -162,6 +164,11 @@ export default async function FichasPage({
                     ) : (
                       <span className="text-terracotta">
                         ● {t("statusPending")}
+                      </span>
+                    )}
+                    {f.admin && (
+                      <span className="ml-3 rounded-xs border border-terracotta/50 px-1.5 py-0.5 text-[10px] text-terracotta">
+                        {t("badgeAdmin")}
                       </span>
                     )}
                   </p>
@@ -244,15 +251,31 @@ export default async function FichasPage({
                     </form>
                   )}
                   {statusOf(f) === "member" && f.userId && (
-                    <form action={deactivateMember}>
-                      <input type="hidden" name="id" value={f.id} />
-                      <button
-                        type="submit"
-                        className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-terracotta"
-                      >
-                        {t("deactivate")} ⏻
-                      </button>
-                    </form>
+                    <>
+                      <form action={setAdminRole}>
+                        <input type="hidden" name="id" value={f.id} />
+                        <input
+                          type="hidden"
+                          name="makeAdmin"
+                          value={f.admin ? "0" : "1"}
+                        />
+                        <button
+                          type="submit"
+                          className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-terracotta"
+                        >
+                          {f.admin ? t("removeAdmin") : t("makeAdmin")} ◆
+                        </button>
+                      </form>
+                      <form action={deactivateMember}>
+                        <input type="hidden" name="id" value={f.id} />
+                        <button
+                          type="submit"
+                          className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-terracotta"
+                        >
+                          {t("deactivate")} ⏻
+                        </button>
+                      </form>
+                    </>
                   )}
                   {statusOf(f) === "deactivated" && f.userId && (
                     <form action={reactivateMember}>

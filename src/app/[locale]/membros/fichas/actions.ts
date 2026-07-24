@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient, STUDENT_MEDIA_BUCKET } from '@/lib/supabase/admin'
-import { isAdminEmail } from '@/lib/admins'
+import { isAdminUser } from '@/lib/admins'
 
 import { statusOf, type FichaStatus } from '@/lib/fichas'
 
@@ -23,7 +23,7 @@ async function requireAdmin(): Promise<boolean> {
   const {
     data: { user },
   } = await supabase.auth.getUser()
-  return isAdminEmail(user?.email)
+  return isAdminUser(user)
 }
 
 async function readFicha(id: string): Promise<StoredFicha | null> {
@@ -63,8 +63,13 @@ async function setStatus(
   if (!ficha?.userId || !from.includes(statusOf(ficha))) return
 
   const admin = createAdminClient()
+  const { data: existing } = await admin.auth.admin.getUserById(ficha.userId)
   const { error } = await admin.auth.admin.updateUserById(ficha.userId, {
-    app_metadata: { approved: to === 'member', status: to },
+    app_metadata: {
+      ...existing?.user?.app_metadata,
+      approved: to === 'member',
+      status: to,
+    },
   })
   if (error) return
 
@@ -86,6 +91,38 @@ export async function deactivateMember(formData: FormData) {
 // Deactivated -> member: welcome back.
 export async function reactivateMember(formData: FormData) {
   await setStatus(formData, ['deactivated'], 'member')
+}
+
+// Grant or revoke the admin role on an active member. Admins cannot
+// demote themselves (prevents locking everyone out). The flag is
+// mirrored on the ficha for display.
+export async function setAdminRole(formData: FormData) {
+  const id = String(formData.get('id') ?? '')
+  const makeAdmin = String(formData.get('makeAdmin') ?? '') === '1'
+  if (!/^[0-9a-f-]{36}$/.test(id)) return
+
+  const supabase = await createClient()
+  const {
+    data: { user: actor },
+  } = await supabase.auth.getUser()
+  if (!isAdminUser(actor)) return
+
+  const ficha = await readFicha(id)
+  if (!ficha?.userId || statusOf(ficha) !== 'member') return
+  if (!makeAdmin && actor?.id === ficha.userId) return // no self-demotion
+
+  const admin = createAdminClient()
+  const { data: existing } = await admin.auth.admin.getUserById(ficha.userId)
+  const { error } = await admin.auth.admin.updateUserById(ficha.userId, {
+    app_metadata: {
+      ...existing?.user?.app_metadata,
+      role: makeAdmin ? 'admin' : null,
+    },
+  })
+  if (error) return
+
+  await writeFicha(id, { ...ficha, admin: makeAdmin })
+  revalidatePath('/membros/fichas')
 }
 
 // Spam/mistake removal — allowed ONLY while still pending. Removes the
