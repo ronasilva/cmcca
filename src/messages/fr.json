@@ -243,7 +243,8 @@
     "submit": "Se connecter",
     "invalidCredentials": "E-mail ou mot de passe invalide.",
     "backHome": "Retour à l'accueil",
-    "membersHint": "L'espace membre est réservé aux élèves et membres de l'école. Pour demander votre accès, parlez-nous au cours ou écrivez à"
+    "membersHint": "L'espace membre est réservé aux élèves et membres de l'école. Pour demander votre accès, parlez-nous au cours ou écrivez à",
+    "applyCta": "Ou présentez-vous ici"
   },
   "MemberArea": {
     "badge": "Réservé · Membres",
@@ -303,12 +304,31 @@
     "editorTitle": "Éditeur",
     "editorBody": "Ce site est édité par la CMC/CA — association dédiée à la mémoire et à la connaissance de la Capoeira Angola, établie à Genève, Suisse. Contact : mestrebraga1@gmail.com.",
     "dataTitle": "Données personnelles",
-    "dataBody": "Le site public ne collecte aucune donnée personnelle et n'utilise ni cookies de suivi ni outils d'analyse. L'espace membre requiert un compte (e-mail et mot de passe) et n'utilise que les cookies de session nécessaires à l'accès. Les comptes et les fichiers réservés sont gérés par un service sécurisé d'authentification et de stockage, accessibles par des liens temporaires.",
+    "dataBody": "Le site public ne collecte aucune donnée personnelle et n'utilise ni cookies de suivi ni outils d'analyse. L'espace membre requiert un compte (e-mail et mot de passe) et n'utilise que les cookies de session nécessaires à l'accès. Les comptes et les fichiers réservés sont gérés par un service sécurisé d'authentification et de stockage, accessibles par des liens temporaires. Les personnes qui envoient une fiche de présentation fournissent nom, contact, photo et parcours ; ces données servent uniquement à l'examen de la demande et sont supprimées après traitement.",
     "thirdTitle": "Contenus de tiers",
     "thirdBody": "Les vidéos sont intégrées depuis YouTube en mode de confidentialité renforcée ; lors de leur lecture, YouTube peut traiter des données selon ses propres conditions.",
     "rightsTitle": "Vos droits",
     "rightsBody": "Pour accéder à vos données, les corriger ou les supprimer, écrivez à mestrebraga1@gmail.com.",
     "contentTitle": "Contenus",
     "contentBody": "Sauf mention contraire, les contenus de ce site appartiennent à l'association. Les documents du fonds, réservés aux membres, sont destinés exclusivement à la lecture et à l'étude personnelle."
+  },
+
+  "ApplicationPage": {
+    "eyebrow": "Présentez-vous",
+    "title": "Fiche de présentation",
+    "intro": "Pour demander l'accès à l'espace membre, présentez-vous au Mestre. Chaque fiche est lue et approuvée personnellement — après approbation, vous recevez vos accès par e-mail.",
+    "nameLabel": "Nom complet",
+    "emailLabel": "E-mail",
+    "whereLabel": "Où vous entraînez-vous (ville et groupe)",
+    "sinceLabel": "Vous vous entraînez depuis (année)",
+    "gradLabel": "Graduation",
+    "photoLabel": "Photo (obligatoire)",
+    "photoHint": "Sur téléphone, vous pouvez prendre la photo directement.",
+    "messageLabel": "Message (facultatif)",
+    "submit": "Envoyer la fiche",
+    "success": "Fiche envoyée. Le Mestre lira votre présentation — vous recevrez une réponse par e-mail.",
+    "errorInvalid": "Vérifiez les champs obligatoires et réessayez.",
+    "errorPhoto": "La photo est obligatoire (image jusqu'à 6 Mo).",
+    "errorServer": "Envoi impossible pour le moment. Réessayez plus tard."
   }
 }

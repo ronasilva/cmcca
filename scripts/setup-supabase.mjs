@@ -18,7 +18,7 @@ if (!url || !secretKey) {
 
 const BUCKET = 'student-media'
 const MAX_FILE_SIZE = 50 * 1024 * 1024 // 50 MB per file (Supabase free-tier cap)
-const MIME_TYPES = ['image/*', 'video/*', 'application/pdf']
+const MIME_TYPES = ['image/*', 'video/*', 'application/pdf', 'application/json']
 
 const supabase = createClient(url, secretKey, {
   auth: { persistSession: false, autoRefreshToken: false },

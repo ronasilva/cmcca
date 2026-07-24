@@ -243,7 +243,8 @@
     "submit": "Sign in",
     "invalidCredentials": "Invalid email or password.",
     "backHome": "Back to home",
-    "membersHint": "The member area is reserved for the school's students and members. To request access, ask at class or write to"
+    "membersHint": "The member area is reserved for the school's students and members. To request access, ask at class or write to",
+    "applyCta": "Or introduce yourself here"
   },
   "MemberArea": {
     "badge": "Members only",
@@ -303,12 +304,31 @@
     "editorTitle": "Publisher",
     "editorBody": "This site is published by CMC/CA — an association dedicated to the memory and knowledge of Capoeira Angola, based in Geneva, Switzerland. Contact: mestrebraga1@gmail.com.",
     "dataTitle": "Personal data",
-    "dataBody": "The public site collects no personal data and uses no tracking or analytics cookies. The member area requires an account (email and password) and uses only the session cookies needed for access. Accounts and reserved files are managed by a secure authentication and storage service, reachable through temporary links.",
+    "dataBody": "The public site collects no personal data and uses no tracking or analytics cookies. The member area requires an account (email and password) and uses only the session cookies needed for access. Accounts and reserved files are managed by a secure authentication and storage service, reachable through temporary links. Those who send an introduction form provide their name, contact details, photo and background; this data serves only to assess the request and is deleted once processed.",
     "thirdTitle": "Third-party content",
     "thirdBody": "Videos are embedded from YouTube in privacy-enhanced mode; when you play them, YouTube may process data under its own terms.",
     "rightsTitle": "Your rights",
     "rightsBody": "To access, correct or delete your data, write to mestrebraga1@gmail.com.",
     "contentTitle": "Content",
     "contentBody": "Unless stated otherwise, the content of this site belongs to the association. The collection materials, reserved for members, are intended exclusively for reading and personal study."
+  },
+
+  "ApplicationPage": {
+    "eyebrow": "Introduce yourself",
+    "title": "Introduction form",
+    "intro": "To request access to the member area, introduce yourself to the Mestre. Every form is read and approved personally — after approval you receive your access details by email.",
+    "nameLabel": "Full name",
+    "emailLabel": "Email",
+    "whereLabel": "Where you train (city and group)",
+    "sinceLabel": "Training since (year)",
+    "gradLabel": "Graduation",
+    "photoLabel": "Photo (required)",
+    "photoHint": "On a phone you can take the photo on the spot.",
+    "messageLabel": "Message (optional)",
+    "submit": "Send form",
+    "success": "Form sent. The Mestre will read your introduction — you will receive an answer by email.",
+    "errorInvalid": "Check the required fields and try again.",
+    "errorPhoto": "The photo is required (image up to 6 MB).",
+    "errorServer": "Could not send right now. Please try again later."
   }
 }

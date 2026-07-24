@@ -78,6 +78,14 @@ export default async function LoginPage({
           >
             mestrebraga1@gmail.com
           </a>
+          <span className="mt-2 block">
+            <Link
+              href="/apresentacao"
+              className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+            >
+              {t("applyCta")} →
+            </Link>
+          </span>
         </p>
 
         <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.3em] text-espresso/50">

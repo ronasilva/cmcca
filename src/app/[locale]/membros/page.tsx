@@ -12,6 +12,7 @@ import { Footer } from "@/components/Footer";
 import { SectionDivider } from "@/components/SectionDivider";
 import { signOut } from "./actions";
 import { DOCUMENT_META, documentThumbPath } from "@/lib/documents";
+import { isAdminEmail } from "@/lib/admins";
 
 type Media = { name: string; url: string };
 
@@ -139,6 +140,14 @@ export default async function MembrosPage({
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2 text-xs">
             <span className="font-mono uppercase tracking-[0.25em] text-espresso-2">
               {t("connectedAs", { email: userEmail })}
+              {isAdminEmail(userEmail) && (
+                <Link
+                  href="/membros/fichas"
+                  className="ml-4 text-terracotta hover:text-terracotta-2"
+                >
+                  Fichas →
+                </Link>
+              )}
             </span>
             <form action={signOut}>
               <input type="hidden" name="locale" value={locale} />
