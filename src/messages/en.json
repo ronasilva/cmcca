@@ -388,11 +388,11 @@
     "intro": "Send your question about Capoeira Angola, the Bantu, Brazil — the memory this house preserves. Selected questions are answered and published on this page.",
     "answersEmpty": "The first answers will be published here.",
     "formTitle": "Ask your question",
-    "nameLabel": "Name (optional)",
+    "nameLabel": "Name",
     "questionLabel": "Your question",
     "submit": "Send question",
     "success": "Question sent. Selected questions are answered and published on this page.",
-    "errorInvalid": "Write your question and try again.",
+    "errorInvalid": "Write your name and your question and try again.",
     "errorServer": "Could not send right now. Please try again later."
   },
   "QuestionsAdmin": {

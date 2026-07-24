@@ -98,6 +98,7 @@ export default async function PerguntasPage({
               <input
                 type="text"
                 name="nome"
+                required
                 maxLength={80}
                 className={inputClass}
               />

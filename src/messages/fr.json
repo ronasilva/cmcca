@@ -388,11 +388,11 @@
     "intro": "Envoyez votre question sur la Capoeira Angola, les Bantous, le Brésil — la mémoire que cette maison préserve. Les questions retenues reçoivent une réponse publiée sur cette page.",
     "answersEmpty": "Les premières réponses seront publiées ici.",
     "formTitle": "Posez votre question",
-    "nameLabel": "Nom (facultatif)",
+    "nameLabel": "Nom",
     "questionLabel": "Votre question",
     "submit": "Envoyer la question",
     "success": "Question envoyée. Les questions retenues reçoivent une réponse publiée sur cette page.",
-    "errorInvalid": "Écrivez votre question et réessayez.",
+    "errorInvalid": "Écrivez votre nom et votre question, puis réessayez.",
     "errorServer": "Envoi impossible pour le moment. Réessayez plus tard."
   },
   "QuestionsAdmin": {

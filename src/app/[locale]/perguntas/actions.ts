@@ -21,7 +21,7 @@ export async function submitQuestion(formData: FormData) {
     .slice(0, 80)
   const question = String(formData.get('pergunta') ?? '').trim()
 
-  if (question.length < 10 || question.length > 2000) {
+  if (!name || question.length < 10 || question.length > 2000) {
     redirect({ href: '/perguntas?erro=campos', locale })
   }
 
