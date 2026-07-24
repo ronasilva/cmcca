@@ -34,6 +34,11 @@ export default async function LoginPage({
             {t("invalidCredentials")}
           </div>
         )}
+        {error === "pending" && (
+          <div className="mt-6 border-l-2 border-terracotta bg-cream-2/60 px-4 py-3 text-sm text-espresso">
+            {t("pendingApproval")}
+          </div>
+        )}
 
         <form action={login} className="mt-10 flex flex-col gap-5">
           <input type="hidden" name="locale" value={locale} />
@@ -71,13 +76,7 @@ export default async function LoginPage({
         </form>
 
         <p className="mt-10 max-w-sm border-l-2 border-espresso/20 pl-4 text-sm leading-relaxed text-espresso-2">
-          {t("membersHint")}{" "}
-          <a
-            href="mailto:mestrebraga1@gmail.com"
-            className="text-terracotta transition hover:text-terracotta-2"
-          >
-            mestrebraga1@gmail.com
-          </a>
+          {t("membersHint")}
           <span className="mt-2 block">
             <Link
               href="/apresentacao"

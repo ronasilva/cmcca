@@ -55,9 +55,13 @@ export default async function ApresentacaoPage({
               <div className="border-l-2 border-terracotta bg-cream-2/60 px-4 py-3 text-sm text-espresso">
                 {erro === "foto"
                   ? t("errorPhoto")
-                  : erro === "servidor"
-                    ? t("errorServer")
-                    : t("errorInvalid")}
+                  : erro === "senha"
+                    ? t("errorPassword")
+                    : erro === "email"
+                      ? t("errorEmail")
+                      : erro === "servidor"
+                        ? t("errorServer")
+                        : t("errorInvalid")}
               </div>
             )}
 
@@ -73,6 +77,33 @@ export default async function ApresentacaoPage({
                 name="email"
                 required
                 autoComplete="email"
+                className={inputClass}
+              />
+            </label>
+
+            <label className="flex flex-col gap-2">
+              <span className={labelClass}>{t("passwordLabel")}</span>
+              <input
+                type="password"
+                name="senha"
+                required
+                minLength={8}
+                autoComplete="new-password"
+                className={inputClass}
+              />
+              <span className="font-display text-sm italic text-espresso-2">
+                {t("passwordHint")}
+              </span>
+            </label>
+
+            <label className="flex flex-col gap-2">
+              <span className={labelClass}>{t("passwordConfirmLabel")}</span>
+              <input
+                type="password"
+                name="senha2"
+                required
+                minLength={8}
+                autoComplete="new-password"
                 className={inputClass}
               />
             </label>

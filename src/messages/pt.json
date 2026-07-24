@@ -242,9 +242,10 @@
     "passwordLabel": "Senha",
     "submit": "Entrar",
     "invalidCredentials": "E-mail ou senha inválidos.",
+    "pendingApproval": "A sua ficha ainda está em apreciação — o acesso é liberado depois da aprovação do Mestre.",
     "backHome": "Voltar ao início",
-    "membersHint": "A área do membro é reservada aos alunos e sócios da escola. Para pedir o seu acesso, fale conosco na aula ou escreva para",
-    "applyCta": "Ou apresente-se aqui"
+    "membersHint": "A área do membro é reservada aos alunos e sócios da escola. Para pedir o seu acesso, preencha a ficha de apresentação — o Mestre aprova cada pedido pessoalmente.",
+    "applyCta": "Apresente-se aqui"
   },
   "MemberArea": {
     "badge": "Reservado · Membros",
@@ -316,7 +317,7 @@
   "ApplicationPage": {
     "eyebrow": "Apresente-se",
     "title": "Ficha de apresentação",
-    "intro": "Para pedir acesso à área do membro, apresente-se ao Mestre. Cada ficha é lida e aprovada pessoalmente — depois da aprovação, você recebe os seus dados de acesso por e-mail.",
+    "intro": "Para pedir acesso à área do membro, apresente-se ao Mestre. Cada ficha é lida e aprovada pessoalmente — depois da aprovação, você entra com o e-mail e a senha escolhidos aqui.",
     "nameLabel": "Nome completo",
     "emailLabel": "E-mail",
     "whereLabel": "Onde treina (cidade e grupo)",
@@ -335,7 +336,12 @@
     "photoCameraError": "Não foi possível acessar a câmera — escolha um arquivo.",
     "messageLabel": "Mensagem (opcional)",
     "submit": "Enviar ficha",
-    "success": "Ficha enviada. O Mestre vai ler a sua apresentação — você receberá uma resposta por e-mail.",
+    "success": "Ficha enviada. O Mestre vai ler a sua apresentação — depois da aprovação, o seu acesso é liberado e você poderá entrar na área do membro.",
+    "passwordLabel": "Senha para a sua conta",
+    "passwordConfirmLabel": "Confirmar a senha",
+    "passwordHint": "Mínimo de 8 caracteres — será a sua senha de acesso depois da aprovação.",
+    "errorPassword": "As senhas não coincidem ou têm menos de 8 caracteres.",
+    "errorEmail": "Já existe uma conta com este e-mail.",
     "errorInvalid": "Verifique os campos obrigatórios e tente novamente.",
     "errorPhoto": "A foto é obrigatória (imagem de até 6 MB).",
     "errorServer": "Não foi possível enviar agora. Tente novamente mais tarde."

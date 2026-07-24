@@ -33,12 +33,22 @@ export async function login(formData: FormData) {
   }
 
   const supabase = await createClient()
-  const { error } = await supabase.auth.signInWithPassword({ email, password })
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
+  })
 
   if (error) {
     const params = new URLSearchParams({ error: 'invalid_credentials' })
     if (isSafeRedirect(next)) params.set('next', next)
     redirect({ href: `/login?${params.toString()}`, locale })
+  }
+
+  // Ficha accounts stay locked until the mestre approves — don't keep a
+  // session for them, just explain the state.
+  if (data?.user?.app_metadata?.approved === false) {
+    await supabase.auth.signOut()
+    redirect({ href: '/login?error=pending', locale })
   }
 
   redirect({ href: isSafeRedirect(next) ? next : '/membros', locale })

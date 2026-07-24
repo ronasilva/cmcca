@@ -242,9 +242,10 @@
     "passwordLabel": "Mot de passe",
     "submit": "Se connecter",
     "invalidCredentials": "E-mail ou mot de passe invalide.",
+    "pendingApproval": "Votre fiche est encore en cours d'examen — l'accès est débloqué après l'approbation du Mestre.",
     "backHome": "Retour à l'accueil",
-    "membersHint": "L'espace membre est réservé aux élèves et membres de l'école. Pour demander votre accès, parlez-nous au cours ou écrivez à",
-    "applyCta": "Ou présentez-vous ici"
+    "membersHint": "L'espace membre est réservé aux élèves et membres de l'école. Pour demander l'accès, remplissez la fiche de présentation — le Mestre approuve chaque demande personnellement.",
+    "applyCta": "Présentez-vous ici"
   },
   "MemberArea": {
     "badge": "Réservé · Membres",
@@ -316,7 +317,7 @@
   "ApplicationPage": {
     "eyebrow": "Présentez-vous",
     "title": "Fiche de présentation",
-    "intro": "Pour demander l'accès à l'espace membre, présentez-vous au Mestre. Chaque fiche est lue et approuvée personnellement — après approbation, vous recevez vos accès par e-mail.",
+    "intro": "Pour demander l'accès à l'espace membre, présentez-vous au Mestre. Chaque fiche est lue et approuvée personnellement — après approbation, vous vous connectez avec l'e-mail et le mot de passe choisis ici.",
     "nameLabel": "Nom complet",
     "emailLabel": "E-mail",
     "whereLabel": "Où vous entraînez-vous (ville et groupe)",
@@ -335,7 +336,12 @@
     "photoCameraError": "Impossible d'accéder à la caméra — choisissez un fichier.",
     "messageLabel": "Message (facultatif)",
     "submit": "Envoyer la fiche",
-    "success": "Fiche envoyée. Le Mestre lira votre présentation — vous recevrez une réponse par e-mail.",
+    "success": "Fiche envoyée. Le Mestre lira votre présentation — après approbation, votre accès est débloqué et vous pourrez entrer dans l'espace membre.",
+    "passwordLabel": "Mot de passe pour votre compte",
+    "passwordConfirmLabel": "Confirmer le mot de passe",
+    "passwordHint": "Au moins 8 caractères — ce sera votre mot de passe après l'approbation.",
+    "errorPassword": "Les mots de passe ne correspondent pas ou font moins de 8 caractères.",
+    "errorEmail": "Un compte existe déjà avec cet e-mail.",
     "errorInvalid": "Vérifiez les champs obligatoires et réessayez.",
     "errorPhoto": "La photo est obligatoire (image jusqu'à 6 Mo).",
     "errorServer": "Envoi impossible pour le moment. Réessayez plus tard."

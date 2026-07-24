@@ -242,9 +242,10 @@
     "passwordLabel": "Password",
     "submit": "Sign in",
     "invalidCredentials": "Invalid email or password.",
+    "pendingApproval": "Your introduction is still under review — access is unlocked after the Mestre's approval.",
     "backHome": "Back to home",
-    "membersHint": "The member area is reserved for the school's students and members. To request access, ask at class or write to",
-    "applyCta": "Or introduce yourself here"
+    "membersHint": "The member area is reserved for the school's students and members. To request access, fill in the introduction form — the Mestre approves each request personally.",
+    "applyCta": "Introduce yourself here"
   },
   "MemberArea": {
     "badge": "Members only",
@@ -316,7 +317,7 @@
   "ApplicationPage": {
     "eyebrow": "Introduce yourself",
     "title": "Introduction form",
-    "intro": "To request access to the member area, introduce yourself to the Mestre. Every form is read and approved personally — after approval you receive your access details by email.",
+    "intro": "To request access to the member area, introduce yourself to the Mestre. Every form is read and approved personally — after approval you sign in with the email and password you choose here.",
     "nameLabel": "Full name",
     "emailLabel": "Email",
     "whereLabel": "Where you train (city and group)",
@@ -335,7 +336,12 @@
     "photoCameraError": "Could not access the camera — choose a file instead.",
     "messageLabel": "Message (optional)",
     "submit": "Send form",
-    "success": "Form sent. The Mestre will read your introduction — you will receive an answer by email.",
+    "success": "Form sent. The Mestre will read your introduction — once approved, your access is unlocked and you can sign in to the member area.",
+    "passwordLabel": "Password for your account",
+    "passwordConfirmLabel": "Confirm password",
+    "passwordHint": "At least 8 characters — it becomes your login password after approval.",
+    "errorPassword": "The passwords do not match or are shorter than 8 characters.",
+    "errorEmail": "An account with this email already exists.",
     "errorInvalid": "Check the required fields and try again.",
     "errorPhoto": "The photo is required (image up to 6 MB).",
     "errorServer": "Could not send right now. Please try again later."

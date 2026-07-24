@@ -11,7 +11,7 @@ import { isAdminEmail } from "@/lib/admins";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
-import { deleteApplication } from "./actions";
+import { approveApplication, deleteApplication } from "./actions";
 
 // Internal review tool for the mestre and the site admin — not part of
 // the public site, so it speaks Portuguese only.
@@ -35,6 +35,8 @@ type Ficha = {
   message: string;
   submittedAt: string;
   photoUrl: string | null;
+  userId?: string;
+  approved?: boolean;
 };
 
 async function listApplications(): Promise<Ficha[]> {
@@ -99,7 +101,7 @@ export default async function FichasPage({
       <PageHeader
         eyebrow="Revisão · Interno"
         title="Fichas"
-        intro="Fichas de apresentação recebidas — o registro da associação. Aprovar = criar a conta do membro; a ficha fica guardada. Apague apenas fichas de spam ou enviadas por engano."
+        intro="Fichas de apresentação recebidas — o registro da associação. Aprovar libera o acesso do membro à área reservada; a ficha fica guardada. Apague apenas spam ou envios por engano."
       />
 
       <section className="mx-auto w-full max-w-6xl px-6 pb-20 pt-6">
@@ -131,6 +133,13 @@ export default async function FichasPage({
                     {f.name}
                     <span className="text-espresso-2"> · {f.graduation}</span>
                   </p>
+                  <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.25em]">
+                    {f.approved ? (
+                      <span className="text-espresso-2">● Membro</span>
+                    ) : (
+                      <span className="text-terracotta">● Pendente</span>
+                    )}
+                  </p>
                   <dl className="mt-3 space-y-1 text-base text-espresso-2">
                     <div>
                       <a
@@ -154,15 +163,28 @@ export default async function FichasPage({
                     </div>
                   </dl>
                 </div>
-                <form action={deleteApplication} className="self-start">
-                  <input type="hidden" name="id" value={f.id} />
-                  <button
-                    type="submit"
-                    className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-terracotta"
-                  >
-                    Apagar (spam/engano) ✕
-                  </button>
-                </form>
+                <div className="flex shrink-0 flex-col items-end gap-4 self-start">
+                  {!f.approved && f.userId && (
+                    <form action={approveApplication}>
+                      <input type="hidden" name="id" value={f.id} />
+                      <button
+                        type="submit"
+                        className="rounded-sm border border-terracotta px-5 py-2 font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:bg-terracotta hover:text-background"
+                      >
+                        Aprovar →
+                      </button>
+                    </form>
+                  )}
+                  <form action={deleteApplication}>
+                    <input type="hidden" name="id" value={f.id} />
+                    <button
+                      type="submit"
+                      className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-terracotta"
+                    >
+                      Apagar (spam/engano) ✕
+                    </button>
+                  </form>
+                </div>
               </li>
             ))}
           </ul>

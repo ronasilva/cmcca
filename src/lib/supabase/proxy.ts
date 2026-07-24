@@ -64,15 +64,21 @@ export async function updateSession(
   const isProtected = rest.startsWith('/membros')
   const isAuthRoute = rest === '/login' || rest.startsWith('/login/')
 
-  if (isProtected && !user) {
+  // Accounts created via the ficha carry approved:false until the mestre
+  // approves; they must not reach the member area. (Pre-existing accounts
+  // have no flag and pass.)
+  const pending = user?.app_metadata?.approved === false
+
+  if (isProtected && (!user || pending)) {
     const redirectUrl = request.nextUrl.clone()
     redirectUrl.pathname = `/${locale}/login`
     redirectUrl.search = ''
-    redirectUrl.searchParams.set('next', rest)
+    if (pending) redirectUrl.searchParams.set('error', 'pending')
+    else redirectUrl.searchParams.set('next', rest)
     return NextResponse.redirect(redirectUrl)
   }
 
-  if (isAuthRoute && user) {
+  if (isAuthRoute && user && !pending) {
     const redirectUrl = request.nextUrl.clone()
     redirectUrl.pathname = `/${locale}/membros`
     redirectUrl.search = ''
