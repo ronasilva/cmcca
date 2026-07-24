@@ -87,6 +87,7 @@ async function signDocumentThumbs(
 
 type MemberFicha = {
   name: string;
+  email?: string;
   graduation: string;
   where: string;
   since: string;
@@ -250,11 +251,14 @@ export default async function MembrosPage({
           {card && (
             <div className="md:col-span-4 md:col-start-9">
               <div className="relative max-w-sm overflow-hidden rounded-sm border border-espresso/15 bg-cream-2/40 p-5">
+                {/* width/height at display size: Safari must never fall back to the
+                    image's natural 370px if the stylesheet is stale */}
                 <Image
                   src="/cmcca-logo.png"
                   alt=""
-                  width={370}
-                  height={373}
+                  width={36}
+                  height={36}
+                  style={{ width: 36, height: 36 }}
                   className="absolute right-4 top-4 h-9 w-9 object-contain opacity-90"
                 />
                 <div className="flex items-center gap-4 pr-12">
@@ -292,6 +296,14 @@ export default async function MembrosPage({
                     </dt>
                     <dd className="text-espresso">{formatSince(card.since)}</dd>
                   </div>
+                  {card.email && (
+                    <div className="col-span-2">
+                      <dt className="font-mono text-[9px] uppercase tracking-[0.2em] text-espresso-2">
+                        {t("cardEmail")}
+                      </dt>
+                      <dd className="break-all text-espresso">{card.email}</dd>
+                    </div>
+                  )}
                 </dl>
                 <p className="mt-4 border-t border-espresso/15 pt-3 font-mono text-[9px] uppercase tracking-[0.25em] text-espresso-2">
                   ● {tf("statusMember")} · CMC/CA — Capoeira Angola
