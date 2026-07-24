@@ -4,7 +4,6 @@
     "description": "CMC/CA, association dedicated to the memory and knowledge of Capoeira Angola, home of the GECAAB / África Bantu school of Mestre Braga in Geneva. History, library, classes and members-only content."
   },
   "Nav": {
-    "home": "Home",
     "association": "Association",
     "school": "School",
     "mestre": "Mestre Braga",
@@ -22,7 +21,6 @@
     "kicker": "Capoeira Angola",
     "mission": "The memory and knowledge of the capoeiras in Capoeira Angola",
     "heroTitle": "CMC/CA",
-    "heroSubtitle": "An association dedicated to teaching and conserving the memory of Capoeira Angola — and the home of the GECAAB / África Bantu school of Mestre Braga, in Geneva.",
     "culturalIntro": "An Afro-Latin cultural heritage of Brazil, reaching back to the presence of the Bantu peoples — from the 16th to the 19th century, the colonial era.",
     "videoCaption": "N'golo, the zebra dance — the two zebras of our emblem",
     "memoriaEyebrow": "Documents",
@@ -33,21 +31,8 @@
     "historicVideoCaption": "Traditional Capoeira Angola, in the old Bahia — a French television report.",
     "schoolEyebrow": "The school",
     "schoolCtaSchedule": "Schedule",
-    "assocNumber": "N° 01 ·",
-    "assocTitle": "The association",
-    "assocBody": "CMC/CA is the umbrella association. Its purpose is the transmission of a knowledge of memory: informing about the cultural sources of Capoeira Angola, born of the Bantu diaspora in Brazil, and supporting its practice as education, socialisation and physical and mental wellbeing.",
-    "assocCta": "About the association",
-    "schoolNumber": "N° 02 ·",
-    "schoolTitle": "The school — GECAAB / África Bantu",
     "schoolBody": "Inside the association lives the Group/School of Capoeira Angola África Bantu, founded by Mestre Braga in Rio de Janeiro in 1993/4 and established in Geneva, a member of the Ateliers d'Ethnomusicologie (ADEM).",
-    "schoolTagline": "Association África Bantu — for teaching with a conservation purpose.",
-    "schoolCtaMestre": "Mestre Braga",
-    "schoolCtaCourses": "Classes",
-    "schoolCtaHistory": "History",
-    "libraryNumber": "N° 03 ·",
-    "libraryTitle": "Esfera Intelectual — the library",
-    "libraryBody": "A living memory archive: a bibliography of essential works on the Bantu, Brazil and Capoeira Angola, and a curated video library reserved for members.",
-    "libraryCta": "Enter the library"
+    "schoolCtaMestre": "Mestre Braga"
   },
   "AssociationPage": {
     "eyebrow": "The umbrella",
@@ -70,11 +55,26 @@
     "booksTitle": "Books",
     "booksIntro": "A bibliography to ground the study of this knowledge.",
     "books": [
-      { "title": "Bantus e Malês", "author": "Nei Lopes" },
-      { "title": "Negregada Instituição", "author": "Carlos Eugênio Líbano Soares" },
-      { "title": "Capoeira Angola", "author": "Waldeloir Rego" },
-      { "title": "Capoeira Angola", "author": "Mestre Pastinha" },
-      { "title": "Mestre Bimba, a Crônica da Capoeiragem", "author": "Jair Moura" }
+      {
+        "title": "Bantus e Malês",
+        "author": "Nei Lopes"
+      },
+      {
+        "title": "Negregada Instituição",
+        "author": "Carlos Eugênio Líbano Soares"
+      },
+      {
+        "title": "Capoeira Angola",
+        "author": "Waldeloir Rego"
+      },
+      {
+        "title": "Capoeira Angola",
+        "author": "Mestre Pastinha"
+      },
+      {
+        "title": "Mestre Bimba, a Crônica da Capoeiragem",
+        "author": "Jair Moura"
+      }
     ],
     "estanteTitle": "The Mestre's bookshelf",
     "estanteIntro": "Photographs from Mestre Braga's personal library — the works this knowledge is built on.",
@@ -129,7 +129,6 @@
     "videoCaption": "The berimbau — the instrument that leads the roda",
     "lineageTitle": "Lineage",
     "lineageBody": "Mestre Pastinha (Bahia) · Mestre Moraes · Mestre Braga · Mestre Edson (Rio) · Contramestre Andréas (Aarhus).",
-    "fichaTitle": "In brief",
     "fullNameLabel": "Full name",
     "fullName": "Antonio Neves Braga",
     "bornLabel": "Born",
@@ -257,7 +256,6 @@
     "track1Desc": "The body path: movement, endurance and resistance.",
     "track2Title": "The social of the berimbau",
     "track2Desc": "The music and community path of the roda.",
-    "etapaLabel": "Stage",
     "track1Etapas": [
       "Stage 1",
       "Stage 2",
@@ -299,13 +297,6 @@
     "tagline": "Geneva · Rio de Janeiro · Aarhus · Copenhagen · Metz · Barcelona",
     "legal": "Legal note"
   },
-  "LanguageSwitcher": {
-    "label": "Language",
-    "fr": "Français",
-    "pt": "Português",
-    "en": "English"
-  },
-
   "LegalPage": {
     "eyebrow": "Impressum and privacy",
     "title": "Legal note",

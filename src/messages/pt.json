@@ -4,7 +4,6 @@
     "description": "CMC/CA, associação dedicada à memória e ao conhecimento da Capoeira Angola, casa da escola GECAAB / África Bantu do Mestre Braga em Genebra. História, biblioteca, aulas e conteúdo reservado aos membros."
   },
   "Nav": {
-    "home": "Início",
     "association": "Associação",
     "school": "Escola",
     "mestre": "Mestre Braga",
@@ -22,7 +21,6 @@
     "kicker": "Capoeira Angola",
     "mission": "Conhecimento de Memória dos Capoeiras em Capoeira Angola",
     "heroTitle": "CMC/CA",
-    "heroSubtitle": "Uma associação dedicada ao ensino e à conservação da memória da Capoeira Angola — e a casa da escola GECAAB / África Bantu do Mestre Braga, em Genebra.",
     "culturalIntro": "Uma importância cultural afro-latina do Brasil, que remonta à presença dos povos bantu — do século XVI ao XIX, a era colonial.",
     "videoCaption": "N'golo, a dança da zebra — as duas zebras do nosso emblema",
     "memoriaEyebrow": "Documentos",
@@ -33,21 +31,8 @@
     "historicVideoCaption": "Capoeira Angola tradicional, antiga na Bahia — reportagem da televisão francesa.",
     "schoolEyebrow": "A escola",
     "schoolCtaSchedule": "Horários",
-    "assocNumber": "N° 01 ·",
-    "assocTitle": "A associação",
-    "assocBody": "A CMC/CA é a associação que abriga tudo. A sua razão de ser é a transmissão de um conhecimento de memória: informar sobre as fontes culturais da Capoeira Angola, nascida da diáspora bantu no Brasil, e apoiar a sua prática como educação, sociabilização e bem-estar físico e mental.",
-    "assocCta": "Sobre a associação",
-    "schoolNumber": "N° 02 ·",
-    "schoolTitle": "A escola — GECAAB / África Bantu",
     "schoolBody": "Dentro da associação vive o Grupo/Escola de Capoeira Angola África Bantu, fundado pelo Mestre Braga no Rio de Janeiro em 1993/4 e estabelecido em Genebra, membro dos Ateliers d'Ethnomusicologie (ADEM).",
-    "schoolTagline": "Associação África Bantu — para o ensino de objetivo conservador.",
-    "schoolCtaMestre": "Mestre Braga",
-    "schoolCtaCourses": "Aulas",
-    "schoolCtaHistory": "História",
-    "libraryNumber": "N° 03 ·",
-    "libraryTitle": "Esfera Intelectual — a biblioteca",
-    "libraryBody": "Um arquivo vivo da memória: uma bibliografia das obras essenciais sobre os bantus, o Brasil e a Capoeira Angola, e uma videoteca selecionada, reservada aos membros.",
-    "libraryCta": "Entrar na biblioteca"
+    "schoolCtaMestre": "Mestre Braga"
   },
   "AssociationPage": {
     "eyebrow": "A casa",
@@ -70,11 +55,26 @@
     "booksTitle": "Livros",
     "booksIntro": "Uma bibliografia para fundamentar o estudo desse conhecimento.",
     "books": [
-      { "title": "Bantus e Malês", "author": "Nei Lopes" },
-      { "title": "Negregada Instituição", "author": "Carlos Eugênio Líbano Soares" },
-      { "title": "Capoeira Angola", "author": "Waldeloir Rego" },
-      { "title": "Capoeira Angola", "author": "Mestre Pastinha" },
-      { "title": "Mestre Bimba, a Crônica da Capoeiragem", "author": "Jair Moura" }
+      {
+        "title": "Bantus e Malês",
+        "author": "Nei Lopes"
+      },
+      {
+        "title": "Negregada Instituição",
+        "author": "Carlos Eugênio Líbano Soares"
+      },
+      {
+        "title": "Capoeira Angola",
+        "author": "Waldeloir Rego"
+      },
+      {
+        "title": "Capoeira Angola",
+        "author": "Mestre Pastinha"
+      },
+      {
+        "title": "Mestre Bimba, a Crônica da Capoeiragem",
+        "author": "Jair Moura"
+      }
     ],
     "estanteTitle": "A estante do Mestre",
     "estanteIntro": "Fotografias da biblioteca pessoal do Mestre Braga — as obras que fundam este conhecimento.",
@@ -129,7 +129,6 @@
     "videoCaption": "O berimbau — o instrumento que conduz a roda",
     "lineageTitle": "Linhagem",
     "lineageBody": "Mestre Pastinha (Bahia) · Mestre Moraes · Mestre Braga · Mestre Edson (Rio) · Contramestre Andréas (Aarhus).",
-    "fichaTitle": "Em resumo",
     "fullNameLabel": "Nome completo",
     "fullName": "Antonio Neves Braga",
     "bornLabel": "Nascimento",
@@ -257,7 +256,6 @@
     "track1Desc": "O caminho do corpo: movimento, resistência e fôlego.",
     "track2Title": "O social do berimbau",
     "track2Desc": "O caminho da música e da comunidade da roda.",
-    "etapaLabel": "Etapa",
     "track1Etapas": [
       "Etapa 1",
       "Etapa 2",
@@ -299,13 +297,6 @@
     "tagline": "Genebra · Rio de Janeiro · Aarhus · Copenhague · Metz · Barcelona",
     "legal": "Nota legal"
   },
-  "LanguageSwitcher": {
-    "label": "Idioma",
-    "fr": "Français",
-    "pt": "Português",
-    "en": "English"
-  },
-
   "LegalPage": {
     "eyebrow": "Impressum e privacidade",
     "title": "Nota legal",
