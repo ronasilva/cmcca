@@ -2,6 +2,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
+import { PhotoField } from "@/components/PhotoField";
 import { submitApplication } from "./actions";
 
 const GRADUATIONS = ["aluno", "contra-mestre", "mestre"] as const;
@@ -154,20 +155,20 @@ export default async function ApresentacaoPage({
               </div>
             </fieldset>
 
-            <label className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2">
               <span className={labelClass}>{t("photoLabel")}</span>
-              <input
-                type="file"
+              <PhotoField
                 name="foto"
-                accept="image/*"
-                capture="user"
-                required
-                className="text-sm text-espresso-2 file:mr-4 file:cursor-pointer file:rounded-sm file:border file:border-espresso/30 file:bg-transparent file:px-4 file:py-2 file:font-mono file:text-[11px] file:uppercase file:tracking-[0.18em] file:text-espresso hover:file:border-terracotta hover:file:text-terracotta"
+                strings={{
+                  take: t("photoTake"),
+                  upload: t("photoUpload"),
+                  capture: t("photoCapture"),
+                  cancel: t("photoCancel"),
+                  retake: t("photoRetake"),
+                  error: t("photoCameraError"),
+                }}
               />
-              <span className="font-display text-sm italic text-espresso-2">
-                {t("photoHint")}
-              </span>
-            </label>
+            </div>
 
             <label className="flex flex-col gap-2">
               <span className={labelClass}>{t("messageLabel")}</span>
