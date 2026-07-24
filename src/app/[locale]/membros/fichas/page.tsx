@@ -99,7 +99,7 @@ export default async function FichasPage({
       <PageHeader
         eyebrow="Revisão · Interno"
         title="Fichas"
-        intro="Fichas de apresentação recebidas. Depois de aprovar (criar a conta) ou recusar, remova a ficha — os dados não devem ficar guardados."
+        intro="Fichas de apresentação recebidas — o registro da associação. Aprovar = criar a conta do membro; a ficha fica guardada. Apague apenas fichas de spam ou enviadas por engano."
       />
 
       <section className="mx-auto w-full max-w-6xl px-6 pb-20 pt-6">
@@ -160,7 +160,7 @@ export default async function FichasPage({
                     type="submit"
                     className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-terracotta"
                   >
-                    Remover ficha ✕
+                    Apagar (spam/engano) ✕
                   </button>
                 </form>
               </li>
