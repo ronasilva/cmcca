@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
 import {
   createAdminClient,
@@ -97,6 +98,15 @@ export default async function FichasPage({
   return (
     <div className="flex flex-col flex-1 text-espresso">
       <Header />
+
+      <div className="mx-auto w-full max-w-6xl px-6 pt-8">
+        <Link
+          href="/membros"
+          className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+        >
+          ← Área do membro
+        </Link>
+      </div>
 
       <PageHeader
         eyebrow="Revisão · Interno"
