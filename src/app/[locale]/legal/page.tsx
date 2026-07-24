@@ -26,23 +26,18 @@ export default async function LegalPage({
 
       <PageHeader eyebrow={t("eyebrow")} title={t("title")} />
 
-      <section className="mx-auto w-full max-w-6xl px-6 pb-8 pt-10">
-        <div className="divide-y divide-espresso/15 border-t border-espresso/15">
-          {blocks.map((b) => (
-            <div
-              key={b.title}
-              className="grid grid-cols-1 gap-4 py-10 md:grid-cols-12"
-            >
-              <div className="md:col-span-4">
-                <h2 className="font-display text-2xl font-light italic leading-tight text-espresso">
-                  {b.title}
-                </h2>
-              </div>
-              <div className="md:col-span-7 md:col-start-6">
-                <p className="text-base leading-relaxed text-espresso-2">
-                  {b.body}
-                </p>
-              </div>
+      {/* Document layout: one narrow column of continuous prose — a legal
+          note reads as a document, not an editorial spread. */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-12 pt-6">
+        <div className="max-w-3xl">
+          {blocks.map((b, i) => (
+            <div key={b.title} className={i === 0 ? "" : "mt-10"}>
+              <h2 className="font-display text-xl font-light italic leading-tight text-espresso">
+                {b.title}
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-espresso-2">
+                {b.body}
+              </p>
             </div>
           ))}
         </div>
