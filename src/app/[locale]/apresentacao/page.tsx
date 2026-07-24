@@ -81,18 +81,55 @@ export default async function ApresentacaoPage({
               <input type="text" name="onde" required className={inputClass} />
             </label>
 
-            <label className="flex flex-col gap-2">
-              <span className={labelClass}>{t("sinceLabel")}</span>
-              <input
-                type="number"
-                name="desde"
-                required
-                min={1950}
-                max={2100}
-                placeholder="2020"
-                className={`${inputClass} w-32`}
-              />
-            </label>
+            <fieldset className="flex flex-col gap-2">
+              <legend className={labelClass}>{t("sinceLabel")}</legend>
+              <div className="mt-2 flex gap-6">
+                <label className="flex flex-col gap-1">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-espresso-2">
+                    {t("sinceDay")}
+                  </span>
+                  <input
+                    type="number"
+                    name="desdeDia"
+                    min={1}
+                    max={31}
+                    placeholder="—"
+                    className={`${inputClass} w-16`}
+                  />
+                </label>
+                <label className="flex flex-col gap-1">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-espresso-2">
+                    {t("sinceMonth")}
+                  </span>
+                  <input
+                    type="number"
+                    name="desdeMes"
+                    required
+                    min={1}
+                    max={12}
+                    placeholder="3"
+                    className={`${inputClass} w-16`}
+                  />
+                </label>
+                <label className="flex flex-col gap-1">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-espresso-2">
+                    {t("sinceYear")}
+                  </span>
+                  <input
+                    type="number"
+                    name="desdeAno"
+                    required
+                    min={1950}
+                    max={2100}
+                    placeholder="2020"
+                    className={`${inputClass} w-24`}
+                  />
+                </label>
+              </div>
+              <span className="font-display text-sm italic text-espresso-2">
+                {t("sinceHint")}
+              </span>
+            </fieldset>
 
             <fieldset className="flex flex-col gap-3">
               <legend className={labelClass}>{t("gradLabel")}</legend>

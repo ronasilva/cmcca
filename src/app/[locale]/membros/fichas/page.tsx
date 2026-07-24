@@ -16,6 +16,15 @@ import { deleteApplication } from "./actions";
 // Internal review tool for the mestre and the site admin — not part of
 // the public site, so it speaks Portuguese only.
 
+// Partial date (YYYY, YYYY-MM or YYYY-MM-DD) → dd/mm/yyyy at the
+// precision that was provided.
+function formatSince(s: string): string {
+  const [y, m, d] = s.split("-");
+  if (d) return `${d}/${m}/${y}`;
+  if (m) return `${m}/${y}`;
+  return y;
+}
+
 type Ficha = {
   id: string;
   name: string;
@@ -132,7 +141,7 @@ export default async function FichasPage({
                       </a>
                     </div>
                     <div>
-                      {f.where} · desde {f.since}
+                      {f.where} · desde {formatSince(f.since)}
                     </div>
                     {f.message && (
                       <div className="mt-2 font-display italic text-espresso">

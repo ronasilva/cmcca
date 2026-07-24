@@ -22,16 +22,34 @@ export async function submitApplication(formData: FormData) {
   const name = String(formData.get('nome') ?? '').trim()
   const email = String(formData.get('email') ?? '').trim()
   const where = String(formData.get('onde') ?? '').trim()
-  const since = String(formData.get('desde') ?? '').trim()
   const graduation = String(formData.get('graduacao') ?? '')
   const message = String(formData.get('mensagem') ?? '').trim()
+
+  // Partial date: month and year are required; the exact day is optional
+  // (not everyone remembers it). Stored as YYYY-MM or YYYY-MM-DD.
+  const year = String(formData.get('desdeAno') ?? '').trim()
+  const month = String(formData.get('desdeMes') ?? '').trim()
+  const day = String(formData.get('desdeDia') ?? '').trim()
+  const monthNum = Number(month)
+  const dayNum = day ? Number(day) : null
+  const dateValid =
+    /^\d{4}$/.test(year) &&
+    month !== '' &&
+    monthNum >= 1 &&
+    monthNum <= 12 &&
+    (dayNum === null || (dayNum >= 1 && dayNum <= 31))
+  const since = !dateValid
+    ? ''
+    : dayNum === null
+      ? `${year}-${String(monthNum).padStart(2, '0')}`
+      : `${year}-${String(monthNum).padStart(2, '0')}-${String(dayNum).padStart(2, '0')}`
 
   if (
     !name ||
     !email ||
     !email.includes('@') ||
     !where ||
-    !/^\d{4}$/.test(since) ||
+    !since ||
     !GRADUATIONS.includes(graduation as (typeof GRADUATIONS)[number])
   ) {
     redirect({ href: '/apresentacao?erro=campos', locale })
