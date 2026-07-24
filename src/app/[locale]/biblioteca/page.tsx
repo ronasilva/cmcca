@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Link } from "@/i18n/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -183,6 +184,21 @@ export default async function BibliotecaPage({
         >
           {t("recordingsLink")} ↗
         </a>
+      </section>
+
+      <SectionDivider label={t("perguntasTitle")} />
+
+      {/* PERGUNTE AO MESTRE — invitation to the public Q&A */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-24">
+        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
+          {t("perguntasIntro")}
+        </p>
+        <Link
+          href="/perguntas"
+          className="mt-8 inline-block font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+        >
+          {t("perguntasCta")} →
+        </Link>
       </section>
 
       <Footer />

@@ -88,7 +88,10 @@
     ],
     "recordingsTitle": "Gravações",
     "recordingsIntro": "Gravações em áudio do grupo — um arquivo em construção.",
-    "recordingsLink": "Ouvir no Last.fm"
+    "recordingsLink": "Ouvir no Last.fm",
+    "perguntasTitle": "Pergunte ao Mestre",
+    "perguntasIntro": "Uma pergunta sobre a Capoeira Angola, os bantus, o Brasil? As respostas do Mestre às perguntas selecionadas são publicadas.",
+    "perguntasCta": "Perguntar e ler as respostas"
   },
   "CoursPage": {
     "eyebrow": "Aulas semanais",
@@ -315,7 +318,6 @@
     "contentTitle": "Conteúdos",
     "contentBody": "Salvo indicação em contrário, os conteúdos deste sítio pertencem à associação. Os materiais do acervo, reservados aos membros, destinam-se exclusivamente à leitura e ao estudo pessoal."
   },
-
   "ApplicationPage": {
     "eyebrow": "Apresente-se",
     "title": "Ficha de apresentação",
@@ -350,7 +352,6 @@
     "errorPhoto": "A foto é obrigatória (imagem de até 6 MB).",
     "errorServer": "Não foi possível enviar agora. Tente novamente mais tarde."
   },
-
   "FichasAdmin": {
     "eyebrow": "Revisão · Interno",
     "title": "Fichas",
@@ -376,6 +377,36 @@
     "blockTitle": "Fichas de apresentação",
     "pendingCount": "{count, plural, one {# pendente} other {# pendentes}}",
     "nonePending": "Nenhuma pendente · registro da associação",
-    "review": "Rever"
+    "review": "Rever",
+    "perguntasBlockTitle": "Perguntas ao Mestre",
+    "unansweredCount": "{count, plural, one {# sem resposta} other {# sem resposta}}",
+    "noneUnanswered": "Nenhuma pendente · curadoria das respostas"
+  },
+  "QuestionsPage": {
+    "eyebrow": "Esfera Intelectual",
+    "title": "Pergunte ao Mestre",
+    "intro": "Envie a sua pergunta sobre a Capoeira Angola, os bantus, o Brasil — a memória que esta casa conserva. As perguntas selecionadas são respondidas e publicadas nesta página.",
+    "answersEmpty": "As primeiras respostas serão publicadas aqui.",
+    "formTitle": "Faça a sua pergunta",
+    "nameLabel": "Nome (opcional)",
+    "questionLabel": "A sua pergunta",
+    "submit": "Enviar pergunta",
+    "success": "Pergunta enviada. As perguntas selecionadas são respondidas e publicadas nesta página.",
+    "errorInvalid": "Escreva a sua pergunta e tente novamente.",
+    "errorServer": "Não foi possível enviar agora. Tente novamente mais tarde."
+  },
+  "QuestionsAdmin": {
+    "eyebrow": "Curadoria · Interno",
+    "title": "Perguntas",
+    "intro": "Perguntas recebidas do público. Responda e publique as que merecem resposta; apague o resto. As publicadas aparecem na página Pergunte ao Mestre.",
+    "empty": "Nenhuma pergunta recebida.",
+    "answerLabel": "Resposta do Mestre",
+    "publish": "Guardar e publicar",
+    "unpublish": "Despublicar",
+    "delete": "Apagar",
+    "publishedBadge": "Publicada",
+    "pendingBadge": "Sem resposta",
+    "receivedOn": "Recebida em",
+    "anonymous": "Sem nome"
   }
 }

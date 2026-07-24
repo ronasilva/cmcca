@@ -13,6 +13,7 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { DOCUMENT_META, documentThumbPath } from "@/lib/documents";
 import { isAdminUser } from "@/lib/admins";
 import { statusOf, formatSince, type FichaStatus } from "@/lib/fichas";
+import { listQuestions } from "@/lib/questions";
 
 type Media = { name: string; url: string };
 
@@ -211,6 +212,9 @@ export default async function MembrosPage({
   const docThumbs = await signDocumentThumbs(documents);
 
   const pendingFichas = isAdmin ? await countPendingApplications() : 0;
+  const unansweredQuestions = isAdmin
+    ? (await listQuestions()).filter((q) => q.published !== true).length
+    : 0;
 
   const track1Etapas = t.raw("track1Etapas") as string[];
   const track2Etapas = t.raw("track2Etapas") as string[];
@@ -301,7 +305,7 @@ export default async function MembrosPage({
       <main className="flex-1">
         {/* ADMIN — fichas first: the association's inbox */}
         {isAdmin && (
-          <section className="mx-auto w-full max-w-6xl px-6 pb-6">
+          <section className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-4 px-6 pb-6 lg:grid-cols-2">
             <Link
               href="/membros/fichas"
               className="group flex flex-wrap items-center justify-between gap-4 rounded-sm border border-terracotta/50 bg-cream-2/40 px-6 py-6 transition hover:border-terracotta"
@@ -318,6 +322,30 @@ export default async function MembrosPage({
                   ) : (
                     <span className="text-espresso-2">
                       {tf("nonePending")}
+                    </span>
+                  )}
+                </span>
+              </span>
+              <span className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition group-hover:text-terracotta-2">
+                {tf("review")} →
+              </span>
+            </Link>
+            <Link
+              href="/membros/perguntas"
+              className="group flex flex-wrap items-center justify-between gap-4 rounded-sm border border-terracotta/50 bg-cream-2/40 px-6 py-6 transition hover:border-terracotta"
+            >
+              <span>
+                <span className="font-display text-2xl font-light italic text-espresso">
+                  {tf("perguntasBlockTitle")}
+                </span>
+                <span className="mt-1 block font-mono text-[11px] uppercase tracking-[0.25em]">
+                  {unansweredQuestions > 0 ? (
+                    <span className="text-terracotta">
+                      ● {tf("unansweredCount", { count: unansweredQuestions })}
+                    </span>
+                  ) : (
+                    <span className="text-espresso-2">
+                      {tf("noneUnanswered")}
                     </span>
                   )}
                 </span>

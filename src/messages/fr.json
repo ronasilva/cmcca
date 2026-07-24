@@ -88,7 +88,10 @@
     ],
     "recordingsTitle": "Enregistrements",
     "recordingsIntro": "Enregistrements audio du groupe — une archive en cours.",
-    "recordingsLink": "Écouter sur Last.fm"
+    "recordingsLink": "Écouter sur Last.fm",
+    "perguntasTitle": "Demandez au Mestre",
+    "perguntasIntro": "Une question sur la Capoeira Angola, les Bantous, le Brésil ? Les réponses du Mestre aux questions retenues sont publiées.",
+    "perguntasCta": "Poser une question et lire les réponses"
   },
   "CoursPage": {
     "eyebrow": "Cours hebdomadaires",
@@ -315,7 +318,6 @@
     "contentTitle": "Contenus",
     "contentBody": "Sauf mention contraire, les contenus de ce site appartiennent à l'association. Les documents du fonds, réservés aux membres, sont destinés exclusivement à la lecture et à l'étude personnelle."
   },
-
   "ApplicationPage": {
     "eyebrow": "Présentez-vous",
     "title": "Fiche de présentation",
@@ -350,7 +352,6 @@
     "errorPhoto": "La photo est obligatoire (image jusqu'à 6 Mo).",
     "errorServer": "Envoi impossible pour le moment. Réessayez plus tard."
   },
-
   "FichasAdmin": {
     "eyebrow": "Révision · Interne",
     "title": "Fiches",
@@ -376,6 +377,36 @@
     "blockTitle": "Fiches de présentation",
     "pendingCount": "{count, plural, one {# en attente} other {# en attente}}",
     "nonePending": "Aucune en attente · registre de l'association",
-    "review": "Examiner"
+    "review": "Examiner",
+    "perguntasBlockTitle": "Demandez au Mestre",
+    "unansweredCount": "{count, plural, one {# sans réponse} other {# sans réponse}}",
+    "noneUnanswered": "Aucune en attente · curation des réponses"
+  },
+  "QuestionsPage": {
+    "eyebrow": "Sphère intellectuelle",
+    "title": "Demandez au Mestre",
+    "intro": "Envoyez votre question sur la Capoeira Angola, les Bantous, le Brésil — la mémoire que cette maison préserve. Les questions retenues reçoivent une réponse publiée sur cette page.",
+    "answersEmpty": "Les premières réponses seront publiées ici.",
+    "formTitle": "Posez votre question",
+    "nameLabel": "Nom (facultatif)",
+    "questionLabel": "Votre question",
+    "submit": "Envoyer la question",
+    "success": "Question envoyée. Les questions retenues reçoivent une réponse publiée sur cette page.",
+    "errorInvalid": "Écrivez votre question et réessayez.",
+    "errorServer": "Envoi impossible pour le moment. Réessayez plus tard."
+  },
+  "QuestionsAdmin": {
+    "eyebrow": "Curation · Interne",
+    "title": "Questions",
+    "intro": "Questions reçues du public. Répondez et publiez celles qui le méritent ; supprimez le reste. Les questions publiées apparaissent sur la page Demandez au Mestre.",
+    "empty": "Aucune question reçue.",
+    "answerLabel": "Réponse du Mestre",
+    "publish": "Enregistrer et publier",
+    "unpublish": "Dépublier",
+    "delete": "Supprimer",
+    "publishedBadge": "Publiée",
+    "pendingBadge": "Sans réponse",
+    "receivedOn": "Reçue le",
+    "anonymous": "Sans nom"
   }
 }
