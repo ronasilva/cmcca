@@ -68,6 +68,12 @@ export async function Footer() {
           <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-espresso-2">
             {t('copyright', { year: new Date().getFullYear() })}
           </p>
+          <Link
+            href="/legal"
+            className="font-mono text-[11px] uppercase tracking-[0.3em] text-espresso-2 transition hover:text-terracotta"
+          >
+            {t('legal')}
+          </Link>
         </div>
       </div>
     </footer>

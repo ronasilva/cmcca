@@ -296,12 +296,28 @@
     "copyright": "© {year} CMC/CA",
     "classesSchedule": "Seg 20h–22h · Qua 20h–21h · Sex 19h–21h",
     "classesPlace": "Centre ADEM, Genebra",
-    "tagline": "Genebra · Rio de Janeiro · Aarhus · Copenhague · Metz · Barcelona"
+    "tagline": "Genebra · Rio de Janeiro · Aarhus · Copenhague · Metz · Barcelona",
+    "legal": "Nota legal"
   },
   "LanguageSwitcher": {
     "label": "Idioma",
     "fr": "Français",
     "pt": "Português",
     "en": "English"
+  },
+
+  "LegalPage": {
+    "eyebrow": "Impressum e privacidade",
+    "title": "Nota legal",
+    "editorTitle": "Responsável",
+    "editorBody": "Este sítio é editado pela CMC/CA — associação dedicada à memória e ao conhecimento da Capoeira Angola, sediada em Genebra, Suíça. Contato: mestrebraga1@gmail.com.",
+    "dataTitle": "Dados pessoais",
+    "dataBody": "O sítio público não recolhe dados pessoais nem utiliza cookies de rastreamento ou de análise. A área do membro requer uma conta (e-mail e senha) e usa apenas os cookies de sessão necessários ao acesso. As contas e os arquivos reservados são geridos por um serviço seguro de autenticação e armazenamento, acessíveis por ligações temporárias.",
+    "thirdTitle": "Conteúdos de terceiros",
+    "thirdBody": "Os vídeos são incorporados do YouTube em modo de privacidade reforçada; ao reproduzi-los, o YouTube pode tratar dados segundo as suas próprias condições.",
+    "rightsTitle": "Os seus direitos",
+    "rightsBody": "Para acessar, corrigir ou eliminar os seus dados, escreva para mestrebraga1@gmail.com.",
+    "contentTitle": "Conteúdos",
+    "contentBody": "Salvo indicação em contrário, os conteúdos deste sítio pertencem à associação. Os materiais do acervo, reservados aos membros, destinam-se exclusivamente à leitura e ao estudo pessoal."
   }
 }
