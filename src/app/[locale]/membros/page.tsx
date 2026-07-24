@@ -84,6 +84,34 @@ async function signDocumentThumbs(
   return out;
 }
 
+// Pending introduction forms, for the admin block at the top.
+async function countPendingApplications(): Promise<number> {
+  let admin: ReturnType<typeof createAdminClient>;
+  try {
+    admin = createAdminClient();
+  } catch {
+    return 0;
+  }
+  const { data: folders } = await admin.storage
+    .from(STUDENT_MEDIA_BUCKET)
+    .list("applications", { limit: 100 });
+  let pending = 0;
+  for (const folder of (folders ?? []).filter((f) => f.id === null)) {
+    const { data: blob } = await admin.storage
+      .from(STUDENT_MEDIA_BUCKET)
+      .download(`applications/${folder.name}/ficha.json`);
+    if (!blob) continue;
+    try {
+      const ficha = JSON.parse(await blob.text());
+      if (ficha.approved !== true) pending++;
+    } catch {
+      // unreadable ficha still needs review
+      pending++;
+    }
+  }
+  return pending;
+}
+
 function EtapaCard({ label, note }: { label: string; note: string }) {
   return (
     <div className="rounded-sm border border-espresso/15 bg-cream-2/40 px-6 py-6">
@@ -126,6 +154,9 @@ export default async function MembrosPage({
   ]);
   const docThumbs = await signDocumentThumbs(documents);
 
+  const isAdmin = isAdminEmail(userEmail);
+  const pendingFichas = isAdmin ? await countPendingApplications() : 0;
+
   const track1Etapas = t.raw("track1Etapas") as string[];
   const track2Etapas = t.raw("track2Etapas") as string[];
   const hasMedia = photos.length > 0 || videos.length > 0;
@@ -140,14 +171,6 @@ export default async function MembrosPage({
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2 text-xs">
             <span className="font-mono uppercase tracking-[0.25em] text-espresso-2">
               {t("connectedAs", { email: userEmail })}
-              {isAdminEmail(userEmail) && (
-                <Link
-                  href="/membros/fichas"
-                  className="ml-4 text-terracotta hover:text-terracotta-2"
-                >
-                  Fichas →
-                </Link>
-              )}
             </span>
             <form action={signOut}>
               <input type="hidden" name="locale" value={locale} />
@@ -182,6 +205,36 @@ export default async function MembrosPage({
       </section>
 
       <main className="flex-1">
+        {/* ADMIN — fichas first: the association's inbox (PT-only, internal) */}
+        {isAdmin && (
+          <section className="mx-auto w-full max-w-6xl px-6 pb-6">
+            <Link
+              href="/membros/fichas"
+              className="group flex flex-wrap items-center justify-between gap-4 rounded-sm border border-terracotta/50 bg-cream-2/40 px-6 py-6 transition hover:border-terracotta"
+            >
+              <span>
+                <span className="font-display text-2xl font-light italic text-espresso">
+                  Fichas de apresentação
+                </span>
+                <span className="mt-1 block font-mono text-[11px] uppercase tracking-[0.25em]">
+                  {pendingFichas > 0 ? (
+                    <span className="text-terracotta">
+                      ● {pendingFichas} pendente{pendingFichas > 1 ? "s" : ""}
+                    </span>
+                  ) : (
+                    <span className="text-espresso-2">
+                      Nenhuma pendente · registro da associação
+                    </span>
+                  )}
+                </span>
+              </span>
+              <span className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition group-hover:text-terracotta-2">
+                Rever →
+              </span>
+            </Link>
+          </section>
+        )}
+
         {/* TEACHING — the two tracks, in stages */}
         <SectionDivider label={t("ensinoTitle")} />
         <section className="mx-auto w-full max-w-6xl px-6 pb-12">
