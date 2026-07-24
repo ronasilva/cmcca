@@ -11,13 +11,26 @@ type Props = {
   memberLabel: string
   menuLabel: string
   closeLabel: string
+  userEmail?: string
+  signOutLabel?: string
+  locale?: string
+  signOutAction?: (formData: FormData) => Promise<void>
 }
 
 /**
  * Full-screen menu for small screens: every destination visible at once,
  * numbered in the site's editorial register. Desktop keeps the nav rail.
  */
-export function MobileMenu({ links, memberLabel, menuLabel, closeLabel }: Props) {
+export function MobileMenu({
+  links,
+  memberLabel,
+  menuLabel,
+  closeLabel,
+  userEmail,
+  signOutLabel,
+  locale,
+  signOutAction,
+}: Props) {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
 
@@ -135,13 +148,34 @@ export function MobileMenu({ links, memberLabel, menuLabel, closeLabel }: Props)
           </nav>
 
           <div className="border-t border-espresso/15 px-6 py-5">
-            <Link
-              href="/login"
-              onClick={() => setOpen(false)}
-              className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-            >
-              {memberLabel} →
-            </Link>
+            {userEmail && signOutAction ? (
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <Link
+                  href="/membros"
+                  onClick={() => setOpen(false)}
+                  className="font-mono text-[11px] uppercase tracking-[0.18em] text-espresso-2"
+                >
+                  {userEmail}
+                </Link>
+                <form action={signOutAction}>
+                  <input type="hidden" name="locale" value={locale} />
+                  <button
+                    type="submit"
+                    className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+                  >
+                    {signOutLabel} →
+                  </button>
+                </form>
+              </div>
+            ) : (
+              <Link
+                href="/login"
+                onClick={() => setOpen(false)}
+                className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+              >
+                {memberLabel} →
+              </Link>
+            )}
           </div>
         </div>,
         document.body

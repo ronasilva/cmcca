@@ -60,7 +60,7 @@ async function listApplications(): Promise<Ficha[]> {
       .from(STUDENT_MEDIA_BUCKET)
       .download(`applications/${id}/ficha.json`);
     if (!blob) continue;
-    let ficha: Omit<Ficha, "id" | "photoUrl">;
+    let ficha: Omit<Ficha, "id" | "photoUrl" | "certUrl">;
     try {
       ficha = JSON.parse(await blob.text());
     } catch {
@@ -80,7 +80,7 @@ async function listApplications(): Promise<Ficha[]> {
     };
     const photoUrl = await signFile("foto");
     const certUrl = await signFile("certificado");
-    out.push({ id, photoUrl, certUrl, ...ficha });
+    out.push({ ...ficha, id, photoUrl, certUrl });
   }
   return out.sort((a, b) => a.submittedAt.localeCompare(b.submittedAt));
 }

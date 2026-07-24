@@ -251,7 +251,6 @@
   "MemberArea": {
     "badge": "Members only",
     "title": "Member area",
-    "connectedAs": "Signed in as {email}",
     "signOut": "Sign out",
     "ensinoTitle": "The teaching",
     "ensinoIntro": "Two parallel paths, in stages, leading to certificates.",

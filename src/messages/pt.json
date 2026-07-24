@@ -251,7 +251,6 @@
   "MemberArea": {
     "badge": "Reservado · Membros",
     "title": "Área do membro",
-    "connectedAs": "Conectado como {email}",
     "signOut": "Sair",
     "ensinoTitle": "O ensino",
     "ensinoIntro": "Dois caminhos paralelos, por etapas, que levam aos certificados.",

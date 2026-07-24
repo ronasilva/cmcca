@@ -10,7 +10,6 @@ import {
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SectionDivider } from "@/components/SectionDivider";
-import { signOut } from "./actions";
 import { DOCUMENT_META, documentThumbPath } from "@/lib/documents";
 import { isAdminEmail } from "@/lib/admins";
 import { statusOf } from "@/lib/fichas";
@@ -167,25 +166,8 @@ export default async function MembrosPage({
 
   return (
     <div className="flex flex-col flex-1 text-espresso">
-      {/* SLIM "LOGGED IN" RIBBON — or an honest notice in local preview */}
-      {supabaseConfigured ? (
-        <div className="border-b border-espresso/15">
-          <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2 text-xs">
-            <span className="font-mono uppercase tracking-[0.25em] text-espresso-2">
-              {t("connectedAs", { email: userEmail })}
-            </span>
-            <form action={signOut}>
-              <input type="hidden" name="locale" value={locale} />
-              <button
-                type="submit"
-                className="font-mono uppercase tracking-[0.25em] text-espresso-2 hover:text-terracotta"
-              >
-                {t("signOut")} →
-              </button>
-            </form>
-          </div>
-        </div>
-      ) : (
+      {/* Session lives in the header rail; only warn in local preview */}
+      {!supabaseConfigured && (
         <div className="border-b border-terracotta/40 bg-terracotta/10">
           <p className="mx-auto max-w-6xl px-6 py-2 font-mono text-[11px] uppercase tracking-[0.25em] text-terracotta">
             Pré-visualização de desenvolvimento — autenticação desativada

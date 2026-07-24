@@ -1,6 +1,8 @@
 import Image from 'next/image'
-import { getTranslations } from 'next-intl/server'
+import { getLocale, getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
+import { createClient } from '@/lib/supabase/server'
+import { signOut } from '@/app/[locale]/membros/actions'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { MobileMenu } from './MobileMenu'
 import { NavLinks } from './NavLinks'
@@ -8,6 +10,20 @@ import { RailBrand } from './RailBrand'
 
 export async function Header() {
   const t = await getTranslations('Nav')
+  const tm = await getTranslations('MemberArea')
+  const locale = await getLocale()
+
+  // Session state for the rail: who's signed in, if anyone.
+  let userEmail = ''
+  try {
+    const supabase = await createClient()
+    const {
+      data: { user },
+    } = await supabase.auth.getUser()
+    userEmail = user?.email ?? ''
+  } catch {
+    // Supabase not configured/reachable
+  }
 
   const links = [
     { href: '/associacao', label: t('association') },
@@ -68,17 +84,41 @@ export async function Header() {
             memberLabel={t('memberArea')}
             menuLabel={t('menu')}
             closeLabel={t('close')}
+            userEmail={userEmail || undefined}
+            signOutLabel={tm('signOut')}
+            locale={locale}
+            signOutAction={signOut}
           />
           <div className="hidden md:block">
             <NavLinks links={[...links]} />
           </div>
           <div className="ml-auto flex shrink-0 items-center gap-5 pl-2">
-            <Link
-              href="/login"
-              className="whitespace-nowrap font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-            >
-              {t('memberArea')} →
-            </Link>
+            {userEmail ? (
+              <>
+                <Link
+                  href="/membros"
+                  className="hidden whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-espresso md:inline"
+                >
+                  {userEmail}
+                </Link>
+                <form action={signOut}>
+                  <input type="hidden" name="locale" value={locale} />
+                  <button
+                    type="submit"
+                    className="whitespace-nowrap font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+                  >
+                    {tm('signOut')} →
+                  </button>
+                </form>
+              </>
+            ) : (
+              <Link
+                href="/login"
+                className="whitespace-nowrap font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+              >
+                {t('memberArea')} →
+              </Link>
+            )}
           </div>
         </div>
       </div>
