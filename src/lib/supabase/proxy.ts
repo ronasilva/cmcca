@@ -73,8 +73,11 @@ export async function updateSession(
     const redirectUrl = request.nextUrl.clone()
     redirectUrl.pathname = `/${locale}/login`
     redirectUrl.search = ''
-    if (pending) redirectUrl.searchParams.set('error', 'pending')
-    else redirectUrl.searchParams.set('next', rest)
+    if (pending) {
+      const kind =
+        user?.app_metadata?.status === 'deactivated' ? 'deactivated' : 'pending'
+      redirectUrl.searchParams.set('error', kind)
+    } else redirectUrl.searchParams.set('next', rest)
     return NextResponse.redirect(redirectUrl)
   }
 

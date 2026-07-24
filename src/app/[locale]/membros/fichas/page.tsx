@@ -12,7 +12,13 @@ import { isAdminEmail } from "@/lib/admins";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
-import { approveApplication, deleteApplication } from "./actions";
+import {
+  approveApplication,
+  deactivateMember,
+  reactivateMember,
+  deleteApplication,
+} from "./actions";
+import { statusOf, type FichaStatus } from "@/lib/fichas";
 
 // Internal review tool for the mestre and the site admin.
 
@@ -38,6 +44,7 @@ type Ficha = {
   certUrl: string | null;
   userId?: string;
   approved?: boolean;
+  status?: FichaStatus;
 };
 
 async function listApplications(): Promise<Ficha[]> {
@@ -144,10 +151,18 @@ export default async function FichasPage({
                     {f.name}
                   </p>
                   <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.25em]">
-                    {f.approved ? (
-                      <span className="text-espresso-2">● {t("statusMember")}</span>
+                    {statusOf(f) === "member" ? (
+                      <span className="text-espresso-2">
+                        ● {t("statusMember")}
+                      </span>
+                    ) : statusOf(f) === "deactivated" ? (
+                      <span className="text-espresso-2/60">
+                        ○ {t("statusDeactivated")}
+                      </span>
                     ) : (
-                      <span className="text-terracotta">● {t("statusPending")}</span>
+                      <span className="text-terracotta">
+                        ● {t("statusPending")}
+                      </span>
                     )}
                   </p>
                   <dl className="mt-4 grid grid-cols-1 gap-x-8 gap-y-2 text-base sm:grid-cols-2">
@@ -217,7 +232,7 @@ export default async function FichasPage({
                   </p>
                 </div>
                 <div className="flex shrink-0 flex-col items-end gap-4 self-start">
-                  {!f.approved && f.userId && (
+                  {statusOf(f) === "pending" && f.userId && (
                     <form action={approveApplication}>
                       <input type="hidden" name="id" value={f.id} />
                       <button
@@ -228,15 +243,39 @@ export default async function FichasPage({
                       </button>
                     </form>
                   )}
-                  <form action={deleteApplication}>
-                    <input type="hidden" name="id" value={f.id} />
-                    <button
-                      type="submit"
-                      className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-terracotta"
-                    >
-                      {t("delete")} ✕
-                    </button>
-                  </form>
+                  {statusOf(f) === "member" && f.userId && (
+                    <form action={deactivateMember}>
+                      <input type="hidden" name="id" value={f.id} />
+                      <button
+                        type="submit"
+                        className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-terracotta"
+                      >
+                        {t("deactivate")} ⏻
+                      </button>
+                    </form>
+                  )}
+                  {statusOf(f) === "deactivated" && f.userId && (
+                    <form action={reactivateMember}>
+                      <input type="hidden" name="id" value={f.id} />
+                      <button
+                        type="submit"
+                        className="rounded-sm border border-terracotta px-5 py-2 font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:bg-terracotta hover:text-background"
+                      >
+                        {t("reactivate")} →
+                      </button>
+                    </form>
+                  )}
+                  {statusOf(f) === "pending" && (
+                    <form action={deleteApplication}>
+                      <input type="hidden" name="id" value={f.id} />
+                      <button
+                        type="submit"
+                        className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-terracotta"
+                      >
+                        {t("delete")} ✕
+                      </button>
+                    </form>
+                  )}
                 </div>
               </li>
             ))}

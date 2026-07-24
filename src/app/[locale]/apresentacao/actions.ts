@@ -95,7 +95,7 @@ export async function submitApplication(formData: FormData) {
         email,
         password,
         email_confirm: true,
-        app_metadata: { approved: false },
+        app_metadata: { approved: false, status: 'pending' },
       })
     if (userError) {
       outcome = userError.message.toLowerCase().includes('registered')
@@ -138,6 +138,7 @@ export async function submitApplication(formData: FormData) {
         locale,
         userId: created.user.id,
         approved: false,
+        status: 'pending',
         submittedAt: new Date().toISOString(),
       }
       const { error: jsonError } = await admin.storage

@@ -39,6 +39,11 @@ export default async function LoginPage({
             {t("pendingApproval")}
           </div>
         )}
+        {error === "deactivated" && (
+          <div className="mt-6 border-l-2 border-terracotta bg-cream-2/60 px-4 py-3 text-sm text-espresso">
+            {t("deactivatedAccess")}
+          </div>
+        )}
 
         <form action={login} className="mt-10 flex flex-col gap-5">
           <input type="hidden" name="locale" value={locale} />

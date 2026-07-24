@@ -243,6 +243,7 @@
     "submit": "Entrar",
     "invalidCredentials": "E-mail ou senha inválidos.",
     "pendingApproval": "A sua ficha ainda está em avaliação — o acesso é liberado depois da aprovação.",
+    "deactivatedAccess": "Este acesso está desativado. Para reativá-lo, fale com a associação.",
     "backHome": "Voltar ao início",
     "membersHint": "A área do membro é reservada aos alunos e sócios da escola. Para pedir o seu acesso, preencha a ficha de apresentação — cada pedido é avaliado e aprovado.",
     "applyCta": "Apresente-se aqui"
@@ -352,10 +353,13 @@
   "FichasAdmin": {
     "eyebrow": "Revisão · Interno",
     "title": "Fichas",
-    "intro": "Fichas de apresentação recebidas — o registro da associação. Aprovar libera o acesso do membro à área reservada; a ficha fica guardada. Apague apenas spam ou envios por engano.",
+    "intro": "Fichas de apresentação — o registro da associação. Aprovar libera o acesso; desativar suspende o acesso sem apagar o registro (quem sai pode voltar); apagar existe apenas para spam ainda pendente.",
     "empty": "Nenhuma ficha pendente.",
     "statusPending": "Pendente",
     "statusMember": "Membro",
+    "statusDeactivated": "Desativado",
+    "deactivate": "Desativar",
+    "reactivate": "Reativar",
     "labelGraduation": "Graduação",
     "labelEmail": "E-mail",
     "labelWhere": "Onde treina",

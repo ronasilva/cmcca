@@ -243,6 +243,7 @@
     "submit": "Sign in",
     "invalidCredentials": "Invalid email or password.",
     "pendingApproval": "Your introduction is still under evaluation — access is unlocked after approval.",
+    "deactivatedAccess": "This access is deactivated. To reactivate it, contact the association.",
     "backHome": "Back to home",
     "membersHint": "The member area is reserved for the school's students and members. To request access, fill in the introduction form — every request is evaluated and approved.",
     "applyCta": "Introduce yourself here"
@@ -352,10 +353,13 @@
   "FichasAdmin": {
     "eyebrow": "Review · Internal",
     "title": "Introduction forms",
-    "intro": "Received introduction forms — the association's registry. Approving unlocks the member's access to the reserved area; the form is kept. Delete only spam or mistaken submissions.",
+    "intro": "Introduction forms — the association's registry. Approving unlocks access; deactivating suspends access without erasing the record (people leave and return); deletion exists only for still-pending spam.",
     "empty": "No pending forms.",
     "statusPending": "Pending",
     "statusMember": "Member",
+    "statusDeactivated": "Deactivated",
+    "deactivate": "Deactivate",
+    "reactivate": "Reactivate",
     "labelGraduation": "Graduation",
     "labelEmail": "Email",
     "labelWhere": "Where they train",

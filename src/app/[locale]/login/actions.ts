@@ -48,7 +48,11 @@ export async function login(formData: FormData) {
   // session for them, just explain the state.
   if (data?.user?.app_metadata?.approved === false) {
     await supabase.auth.signOut()
-    redirect({ href: '/login?error=pending', locale })
+    const kind =
+      data.user.app_metadata?.status === 'deactivated'
+        ? 'deactivated'
+        : 'pending'
+    redirect({ href: `/login?error=${kind}`, locale })
   }
 
   redirect({ href: isSafeRedirect(next) ? next : '/membros', locale })

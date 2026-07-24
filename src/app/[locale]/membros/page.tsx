@@ -13,6 +13,7 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { signOut } from "./actions";
 import { DOCUMENT_META, documentThumbPath } from "@/lib/documents";
 import { isAdminEmail } from "@/lib/admins";
+import { statusOf } from "@/lib/fichas";
 
 type Media = { name: string; url: string };
 
@@ -103,7 +104,7 @@ async function countPendingApplications(): Promise<number> {
     if (!blob) continue;
     try {
       const ficha = JSON.parse(await blob.text());
-      if (ficha.approved !== true) pending++;
+      if (statusOf(ficha) === "pending") pending++;
     } catch {
       // unreadable ficha still needs review
       pending++;

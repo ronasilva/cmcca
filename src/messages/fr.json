@@ -243,6 +243,7 @@
     "submit": "Se connecter",
     "invalidCredentials": "E-mail ou mot de passe invalide.",
     "pendingApproval": "Votre fiche est encore en cours d'évaluation — l'accès est débloqué après approbation.",
+    "deactivatedAccess": "Cet accès est désactivé. Pour le réactiver, contactez l'association.",
     "backHome": "Retour à l'accueil",
     "membersHint": "L'espace membre est réservé aux élèves et membres de l'école. Pour demander l'accès, remplissez la fiche de présentation — chaque demande est évaluée et approuvée.",
     "applyCta": "Présentez-vous ici"
@@ -352,10 +353,13 @@
   "FichasAdmin": {
     "eyebrow": "Révision · Interne",
     "title": "Fiches",
-    "intro": "Fiches de présentation reçues — le registre de l'association. Approuver débloque l'accès du membre à l'espace réservé ; la fiche est conservée. Supprimez uniquement le spam ou les envois par erreur.",
+    "intro": "Fiches de présentation — le registre de l'association. Approuver débloque l'accès ; désactiver suspend l'accès sans effacer le registre (on part, on revient) ; la suppression n'existe que pour le spam encore en attente.",
     "empty": "Aucune fiche en attente.",
     "statusPending": "En attente",
     "statusMember": "Membre",
+    "statusDeactivated": "Désactivé",
+    "deactivate": "Désactiver",
+    "reactivate": "Réactiver",
     "labelGraduation": "Graduation",
     "labelEmail": "E-mail",
     "labelWhere": "Lieu d'entraînement",
