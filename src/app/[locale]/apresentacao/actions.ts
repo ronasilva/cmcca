@@ -7,6 +7,7 @@ import { createAdminClient, STUDENT_MEDIA_BUCKET } from '@/lib/supabase/admin'
 
 const GRADUATIONS = ['aluno', 'contra-mestre', 'mestre'] as const
 const MAX_PHOTO_BYTES = 6 * 1024 * 1024
+const MAX_CERT_BYTES = 10 * 1024 * 1024
 
 export async function submitApplication(formData: FormData) {
   const rawLocale = String(formData.get('locale') ?? routing.defaultLocale)
@@ -71,6 +72,16 @@ export async function submitApplication(formData: FormData) {
     redirect({ href: '/apresentacao?erro=foto', locale })
   }
 
+  // Optional certificate (e.g. graduation diploma): image or PDF
+  const certRaw = formData.get('certificado')
+  const cert =
+    certRaw instanceof File &&
+    certRaw.size > 0 &&
+    certRaw.size <= MAX_CERT_BYTES &&
+    (certRaw.type.startsWith('image/') || certRaw.type === 'application/pdf')
+      ? certRaw
+      : null
+
   const file = photo as File
   let outcome = 'enviado=1'
   try {
@@ -103,6 +114,19 @@ export async function submitApplication(formData: FormData) {
           contentType: file.type,
         })
       if (photoError) throw photoError
+
+      if (cert) {
+        const certExt =
+          cert.type === 'application/pdf'
+            ? 'pdf'
+            : (cert.type.split('/')[1] ?? 'jpg').replace('jpeg', 'jpg')
+        const { error: certError } = await admin.storage
+          .from(STUDENT_MEDIA_BUCKET)
+          .upload(`applications/${id}/certificado.${certExt}`, cert, {
+            contentType: cert.type,
+          })
+        if (certError) throw certError
+      }
 
       const ficha = {
         name,

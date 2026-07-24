@@ -334,6 +334,8 @@
     "photoCancel": "Cancelar",
     "photoRetake": "Tirar outra",
     "photoCameraError": "Não foi possível acessar a câmera — escolha um arquivo.",
+    "certLabel": "Certificado (opcional)",
+    "certHint": "Imagem ou PDF, até 10 MB — por exemplo o diploma de graduação.",
     "messageLabel": "Mensagem (opcional)",
     "submit": "Enviar ficha",
     "success": "Ficha enviada. A sua apresentação será avaliada — depois da aprovação, o seu acesso é liberado e você poderá entrar na área do membro.",
@@ -345,5 +347,27 @@
     "errorInvalid": "Verifique os campos obrigatórios e tente novamente.",
     "errorPhoto": "A foto é obrigatória (imagem de até 6 MB).",
     "errorServer": "Não foi possível enviar agora. Tente novamente mais tarde."
+  },
+
+  "FichasAdmin": {
+    "eyebrow": "Revisão · Interno",
+    "title": "Fichas",
+    "intro": "Fichas de apresentação recebidas — o registro da associação. Aprovar libera o acesso do membro à área reservada; a ficha fica guardada. Apague apenas spam ou envios por engano.",
+    "empty": "Nenhuma ficha pendente.",
+    "statusPending": "Pendente",
+    "statusMember": "Membro",
+    "labelGraduation": "Graduação",
+    "labelEmail": "E-mail",
+    "labelWhere": "Onde treina",
+    "labelSince": "Treina desde",
+    "labelCert": "Certificado",
+    "viewCert": "Ver certificado",
+    "receivedOn": "Recebida em",
+    "approve": "Aprovar",
+    "delete": "Apagar (spam/engano)",
+    "blockTitle": "Fichas de apresentação",
+    "pendingCount": "{count, plural, one {# pendente} other {# pendentes}}",
+    "nonePending": "Nenhuma pendente · registro da associação",
+    "review": "Rever"
   }
 }

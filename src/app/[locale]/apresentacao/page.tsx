@@ -214,6 +214,19 @@ export default async function ApresentacaoPage({
             </div>
 
             <label className="flex flex-col gap-2">
+              <span className={labelClass}>{t("certLabel")}</span>
+              <input
+                type="file"
+                name="certificado"
+                accept="image/*,application/pdf"
+                className="text-sm text-espresso-2 file:mr-4 file:cursor-pointer file:rounded-sm file:border file:border-espresso/30 file:bg-transparent file:px-4 file:py-2 file:font-mono file:text-[11px] file:uppercase file:tracking-[0.18em] file:text-espresso hover:file:border-terracotta hover:file:text-terracotta"
+              />
+              <span className="font-display text-sm italic text-espresso-2">
+                {t("certHint")}
+              </span>
+            </label>
+
+            <label className="flex flex-col gap-2">
               <span className={labelClass}>{t("messageLabel")}</span>
               <textarea
                 name="mensagem"

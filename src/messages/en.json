@@ -334,6 +334,8 @@
     "photoCancel": "Cancel",
     "photoRetake": "Take another",
     "photoCameraError": "Could not access the camera — choose a file instead.",
+    "certLabel": "Certificate (optional)",
+    "certHint": "Image or PDF, up to 10 MB — for example your graduation diploma.",
     "messageLabel": "Message (optional)",
     "submit": "Send form",
     "success": "Form sent. Your introduction will be evaluated — once approved, your access is unlocked and you can sign in to the member area.",
@@ -345,5 +347,27 @@
     "errorInvalid": "Check the required fields and try again.",
     "errorPhoto": "The photo is required (image up to 6 MB).",
     "errorServer": "Could not send right now. Please try again later."
+  },
+
+  "FichasAdmin": {
+    "eyebrow": "Review · Internal",
+    "title": "Introduction forms",
+    "intro": "Received introduction forms — the association's registry. Approving unlocks the member's access to the reserved area; the form is kept. Delete only spam or mistaken submissions.",
+    "empty": "No pending forms.",
+    "statusPending": "Pending",
+    "statusMember": "Member",
+    "labelGraduation": "Graduation",
+    "labelEmail": "Email",
+    "labelWhere": "Where they train",
+    "labelSince": "Training since",
+    "labelCert": "Certificate",
+    "viewCert": "View certificate",
+    "receivedOn": "Received on",
+    "approve": "Approve",
+    "delete": "Delete (spam/mistake)",
+    "blockTitle": "Introduction forms",
+    "pendingCount": "{count, plural, one {# pending} other {# pending}}",
+    "nonePending": "None pending · the association's registry",
+    "review": "Review"
   }
 }

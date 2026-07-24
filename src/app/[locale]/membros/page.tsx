@@ -133,6 +133,7 @@ export default async function MembrosPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("MemberArea");
+  const tf = await getTranslations("FichasAdmin");
 
   // Access control is enforced in the proxy; here the user is only used for the
   // "signed in as" label. Degrade gracefully if Supabase isn't configured.
@@ -205,7 +206,7 @@ export default async function MembrosPage({
       </section>
 
       <main className="flex-1">
-        {/* ADMIN — fichas first: the association's inbox (PT-only, internal) */}
+        {/* ADMIN — fichas first: the association's inbox */}
         {isAdmin && (
           <section className="mx-auto w-full max-w-6xl px-6 pb-6">
             <Link
@@ -214,22 +215,22 @@ export default async function MembrosPage({
             >
               <span>
                 <span className="font-display text-2xl font-light italic text-espresso">
-                  Fichas de apresentação
+                  {tf("blockTitle")}
                 </span>
                 <span className="mt-1 block font-mono text-[11px] uppercase tracking-[0.25em]">
                   {pendingFichas > 0 ? (
                     <span className="text-terracotta">
-                      ● {pendingFichas} pendente{pendingFichas > 1 ? "s" : ""}
+                      ● {tf("pendingCount", { count: pendingFichas })}
                     </span>
                   ) : (
                     <span className="text-espresso-2">
-                      Nenhuma pendente · registro da associação
+                      {tf("nonePending")}
                     </span>
                   )}
                 </span>
               </span>
               <span className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition group-hover:text-terracotta-2">
-                Rever →
+                {tf("review")} →
               </span>
             </Link>
           </section>

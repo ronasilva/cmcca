@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   experimental: {
     serverActions: {
       // The introduction form uploads a required photo (default limit: 1 MB)
-      bodySizeLimit: "8mb",
+      bodySizeLimit: "20mb",
     },
   },
   images: {

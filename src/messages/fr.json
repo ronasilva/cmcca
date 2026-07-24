@@ -334,6 +334,8 @@
     "photoCancel": "Annuler",
     "photoRetake": "Reprendre",
     "photoCameraError": "Impossible d'accéder à la caméra — choisissez un fichier.",
+    "certLabel": "Certificat (facultatif)",
+    "certHint": "Image ou PDF, jusqu'à 10 Mo — par exemple votre diplôme de graduation.",
     "messageLabel": "Message (facultatif)",
     "submit": "Envoyer la fiche",
     "success": "Fiche envoyée. Votre présentation sera évaluée — après approbation, votre accès est débloqué et vous pourrez entrer dans l'espace membre.",
@@ -345,5 +347,27 @@
     "errorInvalid": "Vérifiez les champs obligatoires et réessayez.",
     "errorPhoto": "La photo est obligatoire (image jusqu'à 6 Mo).",
     "errorServer": "Envoi impossible pour le moment. Réessayez plus tard."
+  },
+
+  "FichasAdmin": {
+    "eyebrow": "Révision · Interne",
+    "title": "Fiches",
+    "intro": "Fiches de présentation reçues — le registre de l'association. Approuver débloque l'accès du membre à l'espace réservé ; la fiche est conservée. Supprimez uniquement le spam ou les envois par erreur.",
+    "empty": "Aucune fiche en attente.",
+    "statusPending": "En attente",
+    "statusMember": "Membre",
+    "labelGraduation": "Graduation",
+    "labelEmail": "E-mail",
+    "labelWhere": "Lieu d'entraînement",
+    "labelSince": "S'entraîne depuis",
+    "labelCert": "Certificat",
+    "viewCert": "Voir le certificat",
+    "receivedOn": "Reçue le",
+    "approve": "Approuver",
+    "delete": "Supprimer (spam/erreur)",
+    "blockTitle": "Fiches de présentation",
+    "pendingCount": "{count, plural, one {# en attente} other {# en attente}}",
+    "nonePending": "Aucune en attente · registre de l'association",
+    "review": "Examiner"
   }
 }

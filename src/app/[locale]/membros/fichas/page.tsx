@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { createClient } from "@/lib/supabase/server";
@@ -14,8 +14,7 @@ import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { approveApplication, deleteApplication } from "./actions";
 
-// Internal review tool for the mestre and the site admin — not part of
-// the public site, so it speaks Portuguese only.
+// Internal review tool for the mestre and the site admin.
 
 // Partial date (YYYY, YYYY-MM or YYYY-MM-DD) → dd/mm/yyyy at the
 // precision that was provided.
@@ -36,6 +35,7 @@ type Ficha = {
   message: string;
   submittedAt: string;
   photoUrl: string | null;
+  certUrl: string | null;
   userId?: string;
   approved?: boolean;
 };
@@ -63,18 +63,17 @@ async function listApplications(): Promise<Ficha[]> {
     const { data: files } = await admin.storage
       .from(STUDENT_MEDIA_BUCKET)
       .list(`applications/${id}`, { limit: 10 });
-    const photoFile = (files ?? []).find((f) => f.name.startsWith("foto"));
-    let photoUrl: string | null = null;
-    if (photoFile) {
+    const signFile = async (prefix: string): Promise<string | null> => {
+      const f = (files ?? []).find((x) => x.name.startsWith(prefix));
+      if (!f) return null;
       const { data: signed } = await admin.storage
         .from(STUDENT_MEDIA_BUCKET)
-        .createSignedUrl(
-          `applications/${id}/${photoFile.name}`,
-          SIGNED_URL_TTL_SECONDS
-        );
-      photoUrl = signed?.signedUrl ?? null;
-    }
-    out.push({ id, photoUrl, ...ficha });
+        .createSignedUrl(`applications/${id}/${f.name}`, SIGNED_URL_TTL_SECONDS);
+      return signed?.signedUrl ?? null;
+    };
+    const photoUrl = await signFile("foto");
+    const certUrl = await signFile("certificado");
+    out.push({ id, photoUrl, certUrl, ...ficha });
   }
   return out.sort((a, b) => a.submittedAt.localeCompare(b.submittedAt));
 }
@@ -86,6 +85,8 @@ export default async function FichasPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations("FichasAdmin");
+  const tn = await getTranslations("Nav");
 
   const supabase = await createClient();
   const {
@@ -104,20 +105,20 @@ export default async function FichasPage({
           href="/membros"
           className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
         >
-          ← Área do membro
+          ← {tn("memberArea")}
         </Link>
       </div>
 
       <PageHeader
-        eyebrow="Revisão · Interno"
-        title="Fichas"
-        intro="Fichas de apresentação recebidas — o registro da associação. Aprovar libera o acesso do membro à área reservada; a ficha fica guardada. Apague apenas spam ou envios por engano."
+        eyebrow={t("eyebrow")}
+        title={t("title")}
+        intro={t("intro")}
       />
 
       <section className="mx-auto w-full max-w-6xl px-6 pb-20 pt-6">
         {fichas.length === 0 ? (
           <p className="font-display text-base italic leading-relaxed text-espresso-2">
-            Nenhuma ficha pendente.
+            {t("empty")}
           </p>
         ) : (
           <ul className="flex flex-col gap-8">
@@ -144,15 +145,15 @@ export default async function FichasPage({
                   </p>
                   <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.25em]">
                     {f.approved ? (
-                      <span className="text-espresso-2">● Membro</span>
+                      <span className="text-espresso-2">● {t("statusMember")}</span>
                     ) : (
-                      <span className="text-terracotta">● Pendente</span>
+                      <span className="text-terracotta">● {t("statusPending")}</span>
                     )}
                   </p>
                   <dl className="mt-4 grid grid-cols-1 gap-x-8 gap-y-2 text-base sm:grid-cols-2">
                     <div>
                       <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
-                        Graduação
+                        {t("labelGraduation")}
                       </dt>
                       <dd className="font-display italic text-espresso">
                         {f.graduation || "—"}
@@ -160,7 +161,7 @@ export default async function FichasPage({
                     </div>
                     <div>
                       <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
-                        E-mail
+                        {t("labelEmail")}
                       </dt>
                       <dd>
                         <a
@@ -173,16 +174,35 @@ export default async function FichasPage({
                     </div>
                     <div>
                       <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
-                        Onde treina
+                        {t("labelWhere")}
                       </dt>
                       <dd className="text-espresso-2">{f.where || "—"}</dd>
                     </div>
                     <div>
                       <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
-                        Treina desde
+                        {t("labelSince")}
                       </dt>
                       <dd className="text-espresso-2">
                         {f.since ? formatSince(f.since) : "—"}
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
+                        {t("labelCert")}
+                      </dt>
+                      <dd>
+                        {f.certUrl ? (
+                          <a
+                            href={f.certUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-terracotta hover:text-terracotta-2"
+                          >
+                            {t("viewCert")} ↗
+                          </a>
+                        ) : (
+                          <span className="text-espresso-2">—</span>
+                        )}
                       </dd>
                     </div>
                   </dl>
@@ -192,8 +212,8 @@ export default async function FichasPage({
                     </p>
                   )}
                   <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-espresso-2">
-                    Recebida em{" "}
-                    {new Date(f.submittedAt).toLocaleDateString("pt-BR")}
+                    {t("receivedOn")}{" "}
+                    {new Date(f.submittedAt).toLocaleDateString(locale)}
                   </p>
                 </div>
                 <div className="flex shrink-0 flex-col items-end gap-4 self-start">
@@ -204,7 +224,7 @@ export default async function FichasPage({
                         type="submit"
                         className="rounded-sm border border-terracotta px-5 py-2 font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:bg-terracotta hover:text-background"
                       >
-                        Aprovar →
+                        {t("approve")} →
                       </button>
                     </form>
                   )}
@@ -214,7 +234,7 @@ export default async function FichasPage({
                       type="submit"
                       className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-terracotta"
                     >
-                      Apagar (spam/engano) ✕
+                      {t("delete")} ✕
                     </button>
                   </form>
                 </div>
