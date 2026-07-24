@@ -95,6 +95,7 @@ export async function submitApplication(formData: FormData) {
         email,
         password,
         email_confirm: true,
+        user_metadata: { name },
         app_metadata: { approved: false, status: 'pending' },
       })
     if (userError) {

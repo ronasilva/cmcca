@@ -13,14 +13,16 @@ export async function Header() {
   const tm = await getTranslations('MemberArea')
   const locale = await getLocale()
 
-  // Session state for the rail: who's signed in, if anyone.
-  let userEmail = ''
+  // Session state for the rail: who's signed in, if anyone. Prefer the
+  // person's name (stamped from the ficha); fall back to the email for
+  // accounts created before that existed.
+  let userLabel = ''
   try {
     const supabase = await createClient()
     const {
       data: { user },
     } = await supabase.auth.getUser()
-    userEmail = user?.email ?? ''
+    userLabel = (user?.user_metadata?.name as string) || user?.email || ''
   } catch {
     // Supabase not configured/reachable
   }
@@ -84,7 +86,7 @@ export async function Header() {
             memberLabel={t('memberArea')}
             menuLabel={t('menu')}
             closeLabel={t('close')}
-            userEmail={userEmail || undefined}
+            userEmail={userLabel || undefined}
             signOutLabel={tm('signOut')}
             locale={locale}
             signOutAction={signOut}
@@ -93,13 +95,13 @@ export async function Header() {
             <NavLinks links={[...links]} />
           </div>
           <div className="ml-auto flex shrink-0 items-center gap-5 pl-2">
-            {userEmail ? (
+            {userLabel ? (
               <>
                 <Link
                   href="/membros"
                   className="hidden whitespace-nowrap font-mono text-[11px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-espresso md:inline"
                 >
-                  {userEmail}
+                  {userLabel}
                 </Link>
                 <form action={signOut}>
                   <input type="hidden" name="locale" value={locale} />
