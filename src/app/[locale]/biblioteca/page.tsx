@@ -68,6 +68,21 @@ export default async function BibliotecaPage({
 
       <PageHeader eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
 
+      <SectionDivider label={t("perguntasTitle")} />
+
+      {/* PERGUNTE AO MESTRE — invitation to the public Q&A */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-16">
+        <p className="max-w-2xl font-display text-2xl font-light italic leading-relaxed text-espresso">
+          {t("perguntasIntro")}
+        </p>
+        <Link
+          href="/perguntas"
+          className="mt-6 inline-block font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+        >
+          {t("perguntasCta")} →
+        </Link>
+      </section>
+
       <SectionDivider label={t("booksTitle")} />
 
       {/* BOOKS — public bibliography */}
@@ -184,21 +199,6 @@ export default async function BibliotecaPage({
         >
           {t("recordingsLink")} ↗
         </a>
-      </section>
-
-      <SectionDivider label={t("perguntasTitle")} />
-
-      {/* PERGUNTE AO MESTRE — invitation to the public Q&A */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-24">
-        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
-          {t("perguntasIntro")}
-        </p>
-        <Link
-          href="/perguntas"
-          className="mt-8 inline-block font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-        >
-          {t("perguntasCta")} →
-        </Link>
       </section>
 
       <Footer />
