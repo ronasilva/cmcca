@@ -154,10 +154,10 @@ export default async function CoursPage({
             <p className="mt-12 max-w-xl border-t border-espresso/15 pt-6 text-base leading-relaxed text-espresso-2">
               {t("feesNote")}{" "}
               <a
-                href="mailto:nevesbraga1@bluewin.ch"
+                href="mailto:mestrebraga1@gmail.com"
                 className="text-terracotta transition hover:text-terracotta-2"
               >
-                nevesbraga1@bluewin.ch
+                mestrebraga1@gmail.com
               </a>
             </p>
           </div>

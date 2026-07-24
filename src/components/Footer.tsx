@@ -44,8 +44,8 @@ export async function Footer() {
           </p>
           <ul className="mt-3 space-y-1 font-display text-base italic text-espresso">
             <li>
-              <a href="mailto:nevesbraga1@bluewin.ch" className="hover:text-terracotta">
-                nevesbraga1@bluewin.ch
+              <a href="mailto:mestrebraga1@gmail.com" className="hover:text-terracotta">
+                mestrebraga1@gmail.com
               </a>
             </li>
             <li>+41 (0) 78 914 89 69</li>

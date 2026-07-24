@@ -73,10 +73,10 @@ export default async function LoginPage({
         <p className="mt-10 max-w-sm border-l-2 border-espresso/20 pl-4 text-sm leading-relaxed text-espresso-2">
           {t("membersHint")}{" "}
           <a
-            href="mailto:nevesbraga1@bluewin.ch"
+            href="mailto:mestrebraga1@gmail.com"
             className="text-terracotta transition hover:text-terracotta-2"
           >
-            nevesbraga1@bluewin.ch
+            mestrebraga1@gmail.com
           </a>
         </p>
 
