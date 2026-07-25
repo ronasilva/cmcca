@@ -13,16 +13,20 @@ export async function Header() {
   const tm = await getTranslations('MemberArea')
   const locale = await getLocale()
 
-  // Session state for the rail: who's signed in, if anyone. Prefer the
-  // person's name (stamped from the ficha); fall back to the email for
-  // accounts created before that existed.
+  // Session state for the rail: who's signed in, if anyone. In capoeira the
+  // apelido is how people are known, so it wins over the civil name; the
+  // email is the last resort for accounts created before either existed.
   let userLabel = ''
   try {
     const supabase = await createClient()
     const {
       data: { user },
     } = await supabase.auth.getUser()
-    userLabel = (user?.user_metadata?.name as string) || user?.email || ''
+    userLabel =
+      (user?.user_metadata?.apelido as string) ||
+      (user?.user_metadata?.name as string) ||
+      user?.email ||
+      ''
   } catch {
     // Supabase not configured/reachable
   }

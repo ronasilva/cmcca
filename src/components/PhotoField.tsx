@@ -13,12 +13,21 @@ type Strings = {
 }
 
 /**
- * Required photo field with two equal options: "take a photo now"
- * (in-page camera via getUserMedia — works on laptops and phones) and
- * "upload a file" (picker/gallery). Both attach to the same hidden file
- * input, so the server action sees a normal upload either way.
+ * Photo field with two equal options: "take a photo now" (in-page camera via
+ * getUserMedia — works on laptops and phones) and "upload a file"
+ * (picker/gallery). Both attach to the same hidden file input, so the server
+ * action sees a normal upload either way. `required={false}` makes it
+ * optional (e.g. profile editing, where empty keeps the current photo).
  */
-export function PhotoField({ name, strings }: { name: string; strings: Strings }) {
+export function PhotoField({
+  name,
+  strings,
+  required = true,
+}: {
+  name: string
+  strings: Strings
+  required?: boolean
+}) {
   const inputRef = useRef<HTMLInputElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const streamRef = useRef<MediaStream | null>(null)
@@ -116,7 +125,7 @@ export function PhotoField({ name, strings }: { name: string; strings: Strings }
         type="file"
         name={name}
         accept="image/*"
-        required
+        required={required}
         onChange={onFileChange}
         tabIndex={-1}
         className="sr-only"

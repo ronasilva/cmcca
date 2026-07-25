@@ -258,6 +258,7 @@
     "cardWhere": "Where you train",
     "cardSince": "Since",
     "cardEmail": "Email",
+    "editProfile": "Edit profile",
     "ensinoTitle": "The teaching",
     "ensinoIntro": "Two parallel paths, in stages, leading to certificates.",
     "track1Title": "Rational development for resistance",
@@ -324,6 +325,8 @@
     "title": "Introduction form",
     "intro": "To request access to the member area, fill in your introduction form. Every form is evaluated and approved — after approval you sign in with the email and password you choose here.",
     "nameLabel": "Full name",
+    "apelidoLabel": "Capoeira nickname (optional)",
+    "apelidoHint": "How people know you in the roda, if you have one.",
     "emailLabel": "Email",
     "whereLabel": "Where you train (city and group)",
     "sinceLabel": "Training since",
@@ -409,5 +412,24 @@
     "pendingBadge": "Unanswered",
     "receivedOn": "Received on",
     "anonymous": "No name"
+  },
+  "ProfilePage": {
+    "eyebrow": "Your record",
+    "title": "Edit profile",
+    "intro": "Update your details in the association's registry. The login e-mail cannot be changed — if you need that, contact the association.",
+    "emailLabel": "Login e-mail",
+    "photoLabel": "Photo — leave empty to keep the current one",
+    "certLabel": "Certificate (optional — replaces the current one)",
+    "passwordTitle": "Change password",
+    "newPasswordLabel": "New password (optional)",
+    "confirmPasswordLabel": "Confirm new password",
+    "passwordHint": "At least 8 characters. Leave empty to keep your current password.",
+    "save": "Save changes",
+    "success": "Details updated.",
+    "noFicha": "Your account has no record in the registry yet — you can still change your password below.",
+    "errorInvalid": "Check the required fields and try again.",
+    "errorPassword": "The passwords don't match or are shorter than 8 characters.",
+    "errorPhoto": "The photo must be an image up to 6 MB.",
+    "errorServer": "Could not save. Please try again."
   }
 }

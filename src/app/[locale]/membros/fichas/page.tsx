@@ -26,6 +26,7 @@ import { statusOf, formatSince, type FichaStatus } from "@/lib/fichas";
 type Ficha = {
   id: string;
   name: string;
+  apelido?: string;
   email: string;
   where: string;
   since: string;
@@ -142,6 +143,9 @@ export default async function FichasPage({
                 <div className="flex-1">
                   <p className="font-display text-2xl font-light italic text-espresso">
                     {f.name}
+                    {f.apelido && (
+                      <span className="text-espresso-2"> · “{f.apelido}”</span>
+                    )}
                   </p>
                   <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.25em]">
                     {statusOf(f) === "member" ? (

@@ -258,6 +258,7 @@
     "cardWhere": "Où vous vous entraînez",
     "cardSince": "Depuis",
     "cardEmail": "E-mail",
+    "editProfile": "Modifier le profil",
     "ensinoTitle": "L'enseignement",
     "ensinoIntro": "Deux voies parallèles, par étapes, menant aux certificats.",
     "track1Title": "Développement rationnel pour la résistance",
@@ -324,6 +325,8 @@
     "title": "Fiche de présentation",
     "intro": "Pour demander l'accès à l'espace membre, remplissez votre fiche de présentation. Chaque fiche est évaluée et approuvée — après approbation, vous vous connectez avec l'e-mail et le mot de passe choisis ici.",
     "nameLabel": "Nom complet",
+    "apelidoLabel": "Surnom de capoeira (facultatif)",
+    "apelidoHint": "Comment on vous connaît dans la roda, si vous en avez un.",
     "emailLabel": "E-mail",
     "whereLabel": "Où vous entraînez-vous (ville et groupe)",
     "sinceLabel": "Vous vous entraînez depuis",
@@ -409,5 +412,24 @@
     "pendingBadge": "Sans réponse",
     "receivedOn": "Reçue le",
     "anonymous": "Sans nom"
+  },
+  "ProfilePage": {
+    "eyebrow": "Votre fiche",
+    "title": "Modifier le profil",
+    "intro": "Mettez à jour vos informations dans le registre de l'association. L'e-mail de connexion ne peut pas être modifié — si besoin, contactez l'association.",
+    "emailLabel": "E-mail de connexion",
+    "photoLabel": "Photographie — laisser vide pour conserver l'actuelle",
+    "certLabel": "Certificat (facultatif — remplace l'actuel)",
+    "passwordTitle": "Changer le mot de passe",
+    "newPasswordLabel": "Nouveau mot de passe (facultatif)",
+    "confirmPasswordLabel": "Confirmer le nouveau mot de passe",
+    "passwordHint": "Au moins 8 caractères. Laisser vide pour conserver le mot de passe actuel.",
+    "save": "Enregistrer les modifications",
+    "success": "Informations mises à jour.",
+    "noFicha": "Votre compte n'a pas encore de fiche dans le registre — vous pouvez tout de même changer votre mot de passe ci-dessous.",
+    "errorInvalid": "Vérifiez les champs obligatoires et réessayez.",
+    "errorPassword": "Les mots de passe ne correspondent pas ou font moins de 8 caractères.",
+    "errorPhoto": "La photographie doit être une image de 6 Mo maximum.",
+    "errorServer": "Impossible d'enregistrer. Réessayez."
   }
 }

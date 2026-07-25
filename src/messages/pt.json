@@ -258,6 +258,7 @@
     "cardWhere": "Onde treina",
     "cardSince": "Desde",
     "cardEmail": "E-mail",
+    "editProfile": "Editar perfil",
     "ensinoTitle": "O ensino",
     "ensinoIntro": "Dois caminhos paralelos, por etapas, que levam aos certificados.",
     "track1Title": "Desenvolvimento racional para resistência",
@@ -324,6 +325,8 @@
     "title": "Ficha de apresentação",
     "intro": "Para pedir acesso à área do membro, preencha a sua ficha de apresentação. Cada ficha é avaliada e aprovada — depois da aprovação, você entra com o e-mail e a senha escolhidos aqui.",
     "nameLabel": "Nome completo",
+    "apelidoLabel": "Apelido na capoeira (opcional)",
+    "apelidoHint": "Como as pessoas o conhecem na roda, se tiver.",
     "emailLabel": "E-mail",
     "whereLabel": "Onde treina (cidade e grupo)",
     "sinceLabel": "Treina desde",
@@ -409,5 +412,24 @@
     "pendingBadge": "Sem resposta",
     "receivedOn": "Recebida em",
     "anonymous": "Sem nome"
+  },
+  "ProfilePage": {
+    "eyebrow": "A sua ficha",
+    "title": "Editar perfil",
+    "intro": "Atualize os seus dados no registo da associação. O e-mail de acesso não pode ser alterado — se precisar, fale com a associação.",
+    "emailLabel": "E-mail de acesso",
+    "photoLabel": "Fotografia — deixe vazio para manter a atual",
+    "certLabel": "Certificado (opcional — substitui o atual)",
+    "passwordTitle": "Alterar senha",
+    "newPasswordLabel": "Nova senha (opcional)",
+    "confirmPasswordLabel": "Confirmar nova senha",
+    "passwordHint": "Mínimo de 8 caracteres. Deixe vazio para manter a senha atual.",
+    "save": "Guardar alterações",
+    "success": "Dados atualizados.",
+    "noFicha": "A sua conta ainda não tem ficha no registo — pode, mesmo assim, alterar a senha abaixo.",
+    "errorInvalid": "Verifique os campos obrigatórios e tente novamente.",
+    "errorPassword": "As senhas não coincidem ou têm menos de 8 caracteres.",
+    "errorPhoto": "A fotografia deve ser uma imagem até 6 MB.",
+    "errorServer": "Não foi possível guardar. Tente novamente."
   }
 }

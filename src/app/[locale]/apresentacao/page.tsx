@@ -71,6 +71,19 @@ export default async function ApresentacaoPage({
             </label>
 
             <label className="flex flex-col gap-2">
+              <span className={labelClass}>{t("apelidoLabel")}</span>
+              <input
+                type="text"
+                name="apelido"
+                maxLength={60}
+                className={inputClass}
+              />
+              <span className="font-display text-sm italic text-espresso-2">
+                {t("apelidoHint")}
+              </span>
+            </label>
+
+            <label className="flex flex-col gap-2">
               <span className={labelClass}>{t("emailLabel")}</span>
               <input
                 type="email"

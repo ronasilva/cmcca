@@ -14,6 +14,7 @@ import { DOCUMENT_META, documentThumbPath } from "@/lib/documents";
 import { isAdminUser } from "@/lib/admins";
 import { statusOf, formatSince, type FichaStatus } from "@/lib/fichas";
 import { listQuestions } from "@/lib/questions";
+import { findMemberFicha } from "@/lib/member-ficha";
 
 type Media = { name: string; url: string };
 
@@ -85,58 +86,6 @@ async function signDocumentThumbs(
   return out;
 }
 
-type MemberFicha = {
-  name: string;
-  email?: string;
-  graduation: string;
-  where: string;
-  since: string;
-  status?: FichaStatus;
-  approved?: boolean;
-  photoUrl: string | null;
-};
-
-// The signed-in member's own ficha, for the carteirinha card.
-async function findMemberFicha(userId: string): Promise<MemberFicha | null> {
-  if (!userId) return null;
-  let admin: ReturnType<typeof createAdminClient>;
-  try {
-    admin = createAdminClient();
-  } catch {
-    return null;
-  }
-  const { data: folders } = await admin.storage
-    .from(STUDENT_MEDIA_BUCKET)
-    .list("applications", { limit: 100 });
-  for (const folder of (folders ?? []).filter((f) => f.id === null)) {
-    const { data: blob } = await admin.storage
-      .from(STUDENT_MEDIA_BUCKET)
-      .download(`applications/${folder.name}/ficha.json`);
-    if (!blob) continue;
-    try {
-      const ficha = JSON.parse(await blob.text());
-      if (ficha.userId !== userId) continue;
-      const { data: files } = await admin.storage
-        .from(STUDENT_MEDIA_BUCKET)
-        .list(`applications/${folder.name}`, { limit: 10 });
-      const photoFile = (files ?? []).find((f) => f.name.startsWith("foto"));
-      let photoUrl: string | null = null;
-      if (photoFile) {
-        const { data: signed } = await admin.storage
-          .from(STUDENT_MEDIA_BUCKET)
-          .createSignedUrl(
-            `applications/${folder.name}/${photoFile.name}`,
-            SIGNED_URL_TTL_SECONDS
-          );
-        photoUrl = signed?.signedUrl ?? null;
-      }
-      return { ...ficha, photoUrl };
-    } catch {
-      continue;
-    }
-  }
-  return null;
-}
 
 // Pending introduction forms, for the admin block at the top.
 async function countPendingApplications(): Promise<number> {
@@ -203,7 +152,8 @@ export default async function MembrosPage({
   } catch {
     // Supabase not configured/reachable
   }
-  const card = await findMemberFicha(userId);
+  const member = await findMemberFicha(userId);
+  const card = member ? { ...member.ficha, photoUrl: member.photoUrl } : null;
 
   const [photos, videos, documents] = await Promise.all([
     listFolder("photos"),
@@ -275,9 +225,15 @@ export default async function MembrosPage({
                     <div className="h-20 w-20 shrink-0 rounded-sm border border-espresso/15" />
                   )}
                   <div>
+                    {/* In capoeira the apelido is the known name — it leads */}
                     <p className="font-display text-xl font-light italic leading-tight text-espresso">
-                      {card.name}
+                      {card.apelido || card.name}
                     </p>
+                    {card.apelido && (
+                      <p className="mt-0.5 font-mono text-[9px] uppercase tracking-[0.2em] text-espresso-2">
+                        {card.name}
+                      </p>
+                    )}
                     <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
                       {card.graduation}
                     </p>
@@ -309,6 +265,24 @@ export default async function MembrosPage({
                   ● {tf("statusMember")} · CMC/CA — Capoeira Angola
                 </p>
               </div>
+              <div className="mt-2 text-right">
+                <Link
+                  href="/membros/perfil"
+                  className="font-mono text-[11px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+                >
+                  {t("editProfile")} →
+                </Link>
+              </div>
+            </div>
+          )}
+          {!card && (
+            <div className="md:col-span-4 md:col-start-9">
+              <Link
+                href="/membros/perfil"
+                className="font-mono text-[11px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+              >
+                {t("editProfile")} →
+              </Link>
             </div>
           )}
         </div>

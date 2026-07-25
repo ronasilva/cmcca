@@ -21,6 +21,9 @@ export async function submitApplication(formData: FormData) {
   }
 
   const name = String(formData.get('nome') ?? '').trim()
+  const apelido = String(formData.get('apelido') ?? '')
+    .trim()
+    .slice(0, 60)
   const email = String(formData.get('email') ?? '').trim()
   const where = String(formData.get('onde') ?? '').trim()
   const graduation = String(formData.get('graduacao') ?? '')
@@ -95,7 +98,7 @@ export async function submitApplication(formData: FormData) {
         email,
         password,
         email_confirm: true,
-        user_metadata: { name },
+        user_metadata: { name, apelido },
         app_metadata: { approved: false, status: 'pending' },
       })
     if (userError) {
@@ -131,6 +134,7 @@ export async function submitApplication(formData: FormData) {
 
       const ficha = {
         name,
+        apelido,
         email,
         where,
         since,
