@@ -20,11 +20,11 @@ export default async function PerfilPage({
   searchParams,
 }: {
   params: Promise<{ locale: string }>;
-  searchParams: Promise<{ salvo?: string; erro?: string }>;
+  searchParams: Promise<{ erro?: string }>;
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const { salvo, erro } = await searchParams;
+  const { erro } = await searchParams;
   const t = await getTranslations("ProfilePage");
   const ta = await getTranslations("ApplicationPage");
   const tn = await getTranslations("Nav");
@@ -62,11 +62,6 @@ export default async function PerfilPage({
       <PageHeader eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
 
       <section className="mx-auto w-full max-w-6xl px-6 pb-20 pt-6">
-        {salvo && (
-          <p className="mb-10 max-w-2xl border-l-2 border-terracotta pl-6 font-display text-2xl font-light italic leading-relaxed text-espresso">
-            {t("success")}
-          </p>
-        )}
         {erro && (
           <div className="mb-10 max-w-2xl border-l-2 border-terracotta bg-cream-2/60 px-4 py-3 text-sm text-espresso">
             {erro === "senha"

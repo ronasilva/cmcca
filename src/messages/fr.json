@@ -425,7 +425,6 @@
     "confirmPasswordLabel": "Confirmer le nouveau mot de passe",
     "passwordHint": "Au moins 8 caractères. Laisser vide pour conserver le mot de passe actuel.",
     "save": "Enregistrer les modifications",
-    "success": "Informations mises à jour.",
     "noFicha": "Votre compte n'a pas encore de fiche dans le registre — vous pouvez tout de même changer votre mot de passe ci-dessous.",
     "errorInvalid": "Vérifiez les champs obligatoires et réessayez.",
     "errorPassword": "Les mots de passe ne correspondent pas ou font moins de 8 caractères.",

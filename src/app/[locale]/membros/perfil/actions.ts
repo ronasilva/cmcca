@@ -156,5 +156,6 @@ export async function updateProfile(formData: FormData) {
     redirect({ href: '/membros/perfil?erro=servidor', locale })
   }
 
-  redirect({ href: '/membros/perfil?salvo=1', locale })
+  // Back to the member area — the refreshed carteirinha is the confirmation.
+  redirect({ href: '/membros', locale })
 }

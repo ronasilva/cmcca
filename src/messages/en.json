@@ -425,7 +425,6 @@
     "confirmPasswordLabel": "Confirm new password",
     "passwordHint": "At least 8 characters. Leave empty to keep your current password.",
     "save": "Save changes",
-    "success": "Details updated.",
     "noFicha": "Your account has no record in the registry yet — you can still change your password below.",
     "errorInvalid": "Check the required fields and try again.",
     "errorPassword": "The passwords don't match or are shorter than 8 characters.",

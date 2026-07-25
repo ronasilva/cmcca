@@ -425,7 +425,6 @@
     "confirmPasswordLabel": "Confirmar nova senha",
     "passwordHint": "Mínimo de 8 caracteres. Deixe vazio para manter a senha atual.",
     "save": "Guardar alterações",
-    "success": "Dados atualizados.",
     "noFicha": "A sua conta ainda não tem ficha no registo — pode, mesmo assim, alterar a senha abaixo.",
     "errorInvalid": "Verifique os campos obrigatórios e tente novamente.",
     "errorPassword": "As senhas não coincidem ou têm menos de 8 caracteres.",
