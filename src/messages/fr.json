@@ -359,7 +359,7 @@
   "FichasAdmin": {
     "eyebrow": "Révision · Interne",
     "title": "Fiches",
-    "intro": "Fiches de présentation — le registre de l'association. Approuver débloque l'accès ; désactiver suspend l'accès sans effacer le registre (on part, on revient) ; la suppression n'existe que pour le spam encore en attente.",
+    "intro": "Fiches de présentation — le registre de l'association. Approuver ouvre l'accès ; désactiver suspend l'accès sans effacer la fiche (qui part peut revenir) ; supprimer efface définitivement la fiche et le compte.",
     "empty": "Aucune fiche en attente.",
     "statusPending": "En attente",
     "statusMember": "Membre",
@@ -378,6 +378,8 @@
     "receivedOn": "Reçue le",
     "approve": "Approuver",
     "delete": "Supprimer (spam/erreur)",
+    "deleteForever": "Supprimer définitivement",
+    "deleteConfirm": "Supprimer définitivement la fiche et le compte de {name} ? Cette action est irréversible.",
     "blockTitle": "Fiches de présentation",
     "pendingCount": "{count, plural, one {# en attente} other {# en attente}}",
     "nonePending": "Aucune en attente · registre de l'association",

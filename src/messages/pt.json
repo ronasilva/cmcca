@@ -359,7 +359,7 @@
   "FichasAdmin": {
     "eyebrow": "Revisão · Interno",
     "title": "Fichas",
-    "intro": "Fichas de apresentação — o registro da associação. Aprovar libera o acesso; desativar suspende o acesso sem apagar o registro (quem sai pode voltar); apagar existe apenas para spam ainda pendente.",
+    "intro": "Fichas de apresentação — o registro da associação. Aprovar libera o acesso; desativar suspende o acesso sem apagar o registro (quem sai pode voltar); apagar remove definitivamente a ficha e a conta.",
     "empty": "Nenhuma ficha pendente.",
     "statusPending": "Pendente",
     "statusMember": "Membro",
@@ -378,6 +378,8 @@
     "receivedOn": "Recebida em",
     "approve": "Aprovar",
     "delete": "Apagar (spam/engano)",
+    "deleteForever": "Apagar definitivamente",
+    "deleteConfirm": "Apagar definitivamente a ficha e a conta de {name}? Esta ação não pode ser desfeita.",
     "blockTitle": "Fichas de apresentação",
     "pendingCount": "{count, plural, one {# pendente} other {# pendentes}}",
     "nonePending": "Nenhuma pendente · registro da associação",

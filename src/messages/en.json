@@ -359,7 +359,7 @@
   "FichasAdmin": {
     "eyebrow": "Review · Internal",
     "title": "Introduction forms",
-    "intro": "Introduction forms — the association's registry. Approving unlocks access; deactivating suspends access without erasing the record (people leave and return); deletion exists only for still-pending spam.",
+    "intro": "Introduction forms — the association's registry. Approving unlocks access; deactivating suspends access without erasing the record (people who leave can return); deleting permanently removes the record and the account.",
     "empty": "No pending forms.",
     "statusPending": "Pending",
     "statusMember": "Member",
@@ -378,6 +378,8 @@
     "receivedOn": "Received on",
     "approve": "Approve",
     "delete": "Delete (spam/mistake)",
+    "deleteForever": "Delete permanently",
+    "deleteConfirm": "Permanently delete {name}'s record and account? This cannot be undone.",
     "blockTitle": "Introduction forms",
     "pendingCount": "{count, plural, one {# pending} other {# pending}}",
     "nonePending": "None pending · the association's registry",

@@ -11,6 +11,7 @@ import {
 import { isAdminUser } from "@/lib/admins";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ConfirmSubmit } from "@/components/ConfirmSubmit";
 import { PageHeader } from "@/components/PageHeader";
 import {
   approveApplication,
@@ -270,18 +271,38 @@ export default async function FichasPage({
                           {t("deactivate")} ⏻
                         </button>
                       </form>
+                      <form action={deleteApplication}>
+                        <input type="hidden" name="id" value={f.id} />
+                        <ConfirmSubmit
+                          message={t("deleteConfirm", { name: f.name })}
+                          className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-terracotta"
+                        >
+                          {t("deleteForever")} ✕
+                        </ConfirmSubmit>
+                      </form>
                     </>
                   )}
                   {statusOf(f) === "deactivated" && f.userId && (
-                    <form action={reactivateMember}>
-                      <input type="hidden" name="id" value={f.id} />
-                      <button
-                        type="submit"
-                        className="rounded-sm border border-terracotta px-5 py-2 font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:bg-terracotta hover:text-background"
-                      >
-                        {t("reactivate")} →
-                      </button>
-                    </form>
+                    <>
+                      <form action={reactivateMember}>
+                        <input type="hidden" name="id" value={f.id} />
+                        <button
+                          type="submit"
+                          className="rounded-sm border border-terracotta px-5 py-2 font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:bg-terracotta hover:text-background"
+                        >
+                          {t("reactivate")} →
+                        </button>
+                      </form>
+                      <form action={deleteApplication}>
+                        <input type="hidden" name="id" value={f.id} />
+                        <ConfirmSubmit
+                          message={t("deleteConfirm", { name: f.name })}
+                          className="font-mono text-[12px] uppercase tracking-[0.18em] text-espresso-2 transition hover:text-terracotta"
+                        >
+                          {t("deleteForever")} ✕
+                        </ConfirmSubmit>
+                      </form>
+                    </>
                   )}
                   {statusOf(f) === "pending" && (
                     <form action={deleteApplication}>

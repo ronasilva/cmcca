@@ -8,8 +8,9 @@ import { isAdminUser } from '@/lib/admins'
 import { statusOf, type FichaStatus } from '@/lib/fichas'
 
 // Member lifecycle: pending -> member <-> deactivated. Fichas are the
-// association's registry — people leave and return, so records persist;
-// true deletion exists only for still-pending spam.
+// association's registry — people leave and return, so deactivation is the
+// normal path; permanent deletion exists for spam and for members who ask
+// to be erased.
 
 type StoredFicha = {
   userId?: string
@@ -125,8 +126,9 @@ export async function setAdminRole(formData: FormData) {
   revalidatePath('/membros/fichas')
 }
 
-// Spam/mistake removal — allowed ONLY while still pending. Removes the
-// locked account and every stored file.
+// Permanent removal: spam while pending, or true erasure of a member who
+// asked to be forgotten. Removes the account and every stored file and
+// cannot be undone. Admins cannot delete their own ficha.
 export async function deleteApplication(formData: FormData) {
   const id = String(formData.get('id') ?? '')
   if (!/^[0-9a-f-]{36}$/.test(id)) return
@@ -134,7 +136,13 @@ export async function deleteApplication(formData: FormData) {
 
   const admin = createAdminClient()
   const ficha = await readFicha(id)
-  if (!ficha || statusOf(ficha) !== 'pending') return
+  if (!ficha) return
+
+  const supabase = await createClient()
+  const {
+    data: { user: me },
+  } = await supabase.auth.getUser()
+  if (ficha.userId && ficha.userId === me?.id) return
 
   if (ficha.userId) {
     await admin.auth.admin.deleteUser(ficha.userId).catch(() => {})
