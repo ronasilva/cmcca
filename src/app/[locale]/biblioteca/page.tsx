@@ -38,12 +38,6 @@ const DISCOS: {
     bandcampUrl:
       "https://berinbaucantoriasbraga2.bandcamp.com/album/conhecimento-de-mem-ria-dos-capoeiras-em-capoeira-angola-berimbau-e-cantorias-g-ecaab-rj-2",
   },
-  {
-    title: "Conhecimento de memória dos capoeiras em Capoeira Angola",
-    year: 2024,
-    bandcampUrl:
-      "https://berinbaucantoriasbraga2.bandcamp.com/album/conhecimento-de-memoria-dos-capoeiras-em-capoeira-angola-g-ecaab",
-  },
 ];
 
 const TRACK_URL_TTL = 60 * 60 * 24 * 365; // public track, links live a year
