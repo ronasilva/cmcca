@@ -391,9 +391,9 @@
   "QuestionsPage": {
     "eyebrow": "Intellectual Sphere",
     "title": "Ask the Mestre",
-    "intro": "Send your question about Capoeira Angola, the Bantu, Brazil — the memory this house preserves. Selected questions are answered and published on this page.",
+    "intro": "The Mestre's questions and answers on Capoeira Angola, the Bantu peoples, Brazil: the memory this house keeps. He adds new entries whenever he has something to say, and answers selected questions sent through this page.",
     "archiveTitle": "Para turbinar a memória",
-    "archiveIntro": "The questions and answers are the Mestre's and express his opinions. New questions asked on this page and answered by him join the original list under the same numbering. The texts are in Portuguese. Tap a question to open its answer.",
+    "archiveIntro": "The texts are the Mestre's, in Portuguese, and express his opinions. Tap a question to open its answer.",
     "askedBy": "Asked by {name}",
     "archiveSource": "The Mestre's original text",
     "formTitle": "Ask your question",
