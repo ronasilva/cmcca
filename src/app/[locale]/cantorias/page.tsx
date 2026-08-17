@@ -166,7 +166,22 @@ export default async function CantoriasPage({
       <section className="mx-auto w-full max-w-6xl px-6 pb-24">
         <div className="max-w-3xl">
           <p className="whitespace-pre-line font-display text-base font-light italic leading-relaxed text-espresso">
-            {NOTA_PASTINHA.verso}
+            {NOTA_PASTINHA.verso
+              .split("um mestre classificado")
+              .flatMap((part, i, arr) =>
+                i < arr.length - 1
+                  ? [
+                      part,
+                      // the underline the mestre's note refers to
+                      <u
+                        key={i}
+                        className="underline decoration-terracotta/70 underline-offset-4"
+                      >
+                        um mestre classificado
+                      </u>,
+                    ]
+                  : [part]
+              )}
           </p>
           <p className="mt-6 border-l-2 border-terracotta pl-5 text-sm leading-relaxed text-espresso-2">
             {NOTA_PASTINHA.nota}
