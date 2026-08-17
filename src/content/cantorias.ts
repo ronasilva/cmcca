@@ -475,10 +475,10 @@ export const ARRANJAMENTO = {
   ],
   historicoTitulo: "Berimbaus, breve histórico em texto",
   historico: [
-    "Capoeiras com berimbau é combinação baiana, lá por 1860. Quando no centro de Salvador bem servia pra \"tomar\" dinheiro, principalmente de turistas…",
-    "Só que, no que quiseram diferenciar dos nomes dos \"toques\" para justificarem de moderados, amarrados e acelerados, aí \"deu bode\": acabou igual o ditado popular que diz \"quem conta um conto, de conto em conto aumenta um ponto\"…",
-    "Quando cheguei no Moraes, dos toques do berimbau já dominava bem…",
-    "Quanto o São Bento!!! Três eram, pois mesmo da rua pra quando lá no Moraes nunca mudei disso…",
+    "Capoeiras com berimbau é uma combinação baiana, de lá por 1860, quando no centro de Salvador bem servia para \"tomar\" dinheiro, principalmente de turistas.",
+    "Só que, quando quiseram diferenciar os nomes dos toques para justificar os andamentos moderados, amarrados e acelerados, aí \"deu bode\": acabou como no ditado popular, \"quem conta um conto aumenta um ponto\".",
+    "Quando cheguei no Moraes, já dominava bem os toques do berimbau.",
+    "Quanto ao São Bento: três eram. Desde a rua até o Moraes, nunca mudei disso.",
   ],
   toques: [
     "São Bento (em aceleração)",
@@ -493,9 +493,9 @@ export const ARRANJAMENTO = {
     "Banguela (m/Bimba)",
   ],
   fecho:
-    "Assim é por mim, Braga, para com cantorias motivar para os desenvolvimentos.\n\nJá são três CDs com venda esgotada, embora não seja a minha preocupação maior, já que arco musical e cantorias não estão para ser os protagonistas: estão apenas a dar certo requinte…\n\nmestre/Braga\n\nA continuar »",
+    "Assim é por mim, Braga: com as cantorias, motivar os desenvolvimentos.\n\nJá são três CDs com venda esgotada, embora essa não seja a minha preocupação maior: arco musical e cantorias não estão para ser os protagonistas, apenas dão um certo requinte.\n\nmestre/Braga",
   ajudarTitulo:
-    "Para ajudar no arranjamento musical: berimbaus (disposições de cada instrumento musical), toques e cantorias e obediências…",
+    "Para ajudar no arranjamento musical: berimbaus (disposições de cada instrumento musical), toques, cantorias e obediências",
   ajudar: [
     "Cerimônia de começo",
     "As demonstrações",

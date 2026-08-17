@@ -327,7 +327,7 @@ export default async function BibliotecaPage({
           ))}
         </ul>
 
-        <div className="mt-14 max-w-3xl">
+        <div className="mt-24 max-w-3xl border-t border-espresso/15 pt-12">
           <h3 className="font-display text-2xl font-light italic text-espresso">
             {ARRANJAMENTO.historicoTitulo}
           </h3>
