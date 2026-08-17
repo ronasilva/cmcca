@@ -13,19 +13,36 @@ import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 
 type Book = { title: string; author: string };
 
-// The mestre's discography. Tracks stream from the private bucket via
-// long-lived signed URLs; the WAV masters stay offline.
+// The mestre's discography: Antonio L.N. Braga (m/Braga). Local tracks
+// stream from the private bucket via long-lived signed URLs; the WAV
+// masters stay offline. Released albums live on Bandcamp.
 const DISCOS: {
   title: string;
+  year: number;
   inProduction?: boolean;
-  tracks: { label: string; path: string }[];
+  bandcampUrl?: string;
+  tracks?: { label: string; path: string }[];
 }[] = [
   {
     title: "Novo CD",
+    year: 2026,
     inProduction: true,
     tracks: [
       { label: "Faixa 1", path: "discografia/novo-cd/faixa-1.m4a" },
     ],
+  },
+  {
+    title:
+      "Conhecimento de memória dos capoeiras em Capoeira Angola (berimbau e cantorias)",
+    year: 2024,
+    bandcampUrl:
+      "https://berinbaucantoriasbraga2.bandcamp.com/album/conhecimento-de-mem-ria-dos-capoeiras-em-capoeira-angola-berimbau-e-cantorias-g-ecaab-rj-2",
+  },
+  {
+    title: "Conhecimento de memória dos capoeiras em Capoeira Angola",
+    year: 2024,
+    bandcampUrl:
+      "https://berinbaucantoriasbraga2.bandcamp.com/album/conhecimento-de-memoria-dos-capoeiras-em-capoeira-angola-g-ecaab",
   },
 ];
 
@@ -34,7 +51,7 @@ const TRACK_URL_TTL = 60 * 60 * 24 * 365; // public track, links live a year
 async function signTracks(): Promise<Record<string, string>> {
   try {
     const admin = createAdminClient();
-    const paths = DISCOS.flatMap((d) => d.tracks.map((t) => t.path));
+    const paths = DISCOS.flatMap((d) => (d.tracks ?? []).map((t) => t.path));
     const { data } = await admin.storage
       .from(STUDENT_MEDIA_BUCKET)
       .createSignedUrls(paths, TRACK_URL_TTL);
@@ -241,30 +258,47 @@ export default async function BibliotecaPage({
                 <h3 className="font-display text-2xl font-light italic text-espresso">
                   {disco.title}
                 </h3>
+                <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-espresso-2">
+                  {disco.year}
+                </span>
                 {disco.inProduction && (
                   <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
                     ● {t("discInProduction")}
                   </span>
                 )}
               </div>
-              <ul className="mt-5 flex flex-col gap-4 pl-10">
-                {disco.tracks.map(
-                  (track) =>
-                    trackUrls[track.path] && (
-                      <li key={track.path}>
-                        <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
-                          {track.label}
-                        </p>
-                        <audio
-                          controls
-                          preload="none"
-                          src={trackUrls[track.path]}
-                          className="w-full max-w-xl"
-                        />
-                      </li>
-                    )
-                )}
-              </ul>
+              {disco.tracks && (
+                <ul className="mt-5 flex flex-col gap-4 pl-10">
+                  {disco.tracks.map(
+                    (track) =>
+                      trackUrls[track.path] && (
+                        <li key={track.path}>
+                          <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
+                            {track.label}
+                          </p>
+                          <audio
+                            controls
+                            preload="none"
+                            src={trackUrls[track.path]}
+                            className="w-full max-w-xl"
+                          />
+                        </li>
+                      )
+                  )}
+                </ul>
+              )}
+              {disco.bandcampUrl && (
+                <p className="mt-4 pl-10">
+                  <a
+                    href={disco.bandcampUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+                  >
+                    {t("discListen")} ↗
+                  </a>
+                </p>
+              )}
             </li>
           ))}
         </ul>
