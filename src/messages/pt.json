@@ -391,9 +391,9 @@
   "QuestionsPage": {
     "eyebrow": "Esfera Intelectual",
     "title": "Pergunte ao Mestre",
-    "intro": "Perguntas e respostas do Mestre sobre a Capoeira Angola, os bantus, o Brasil: a memória que esta casa conserva. Ele acrescenta novas questões quando tem algo a dizer e responde às perguntas selecionadas enviadas nesta página.",
+    "intro": "Aqui se pergunta e o Mestre responde: sobre a Capoeira Angola, os bantus, o Brasil, a memória que esta casa conserva.",
     "archiveTitle": "Para turbinar a memória",
-    "archiveIntro": "Os textos são do Mestre e exprimem as suas opiniões. Toque numa questão para abrir a resposta.",
+    "archiveIntro": "As respostas são do Mestre e exprimem as suas opiniões. Toque numa questão para abrir a resposta.",
     "askedBy": "Perguntada por {name}",
     "archiveSource": "Texto original do Mestre",
     "formTitle": "Faça a sua pergunta",

@@ -391,9 +391,9 @@
   "QuestionsPage": {
     "eyebrow": "Sphère intellectuelle",
     "title": "Demandez au Mestre",
-    "intro": "Les questions et réponses du Mestre sur la Capoeira Angola, les peuples bantous, le Brésil : la mémoire que cette maison conserve. Il ajoute de nouvelles entrées quand il a quelque chose à dire et répond aux questions choisies envoyées sur cette page.",
+    "intro": "Ici on pose des questions et le Mestre répond : sur la Capoeira Angola, les peuples bantous, le Brésil, la mémoire que cette maison conserve.",
     "archiveTitle": "Para turbinar a memória",
-    "archiveIntro": "Les textes sont du Mestre, en portugais, et expriment ses opinions. Touchez une question pour ouvrir sa réponse.",
+    "archiveIntro": "Les réponses sont du Mestre et expriment ses opinions. Les textes sont en portugais. Touchez une question pour ouvrir sa réponse.",
     "askedBy": "Posée par {name}",
     "archiveSource": "Le texte original du Mestre",
     "formTitle": "Posez votre question",
