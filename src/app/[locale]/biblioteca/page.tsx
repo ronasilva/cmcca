@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  createAdminClient,
+  STUDENT_MEDIA_BUCKET,
+} from "@/lib/supabase/admin";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
@@ -8,6 +12,41 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 
 type Book = { title: string; author: string };
+
+// The mestre's discography. Tracks stream from the private bucket via
+// long-lived signed URLs; the WAV masters stay offline.
+const DISCOS: {
+  title: string;
+  inProduction?: boolean;
+  tracks: { label: string; path: string }[];
+}[] = [
+  {
+    title: "Novo CD",
+    inProduction: true,
+    tracks: [
+      { label: "Faixa 1", path: "discografia/novo-cd/faixa-1.m4a" },
+    ],
+  },
+];
+
+const TRACK_URL_TTL = 60 * 60 * 24 * 365; // public track, links live a year
+
+async function signTracks(): Promise<Record<string, string>> {
+  try {
+    const admin = createAdminClient();
+    const paths = DISCOS.flatMap((d) => d.tracks.map((t) => t.path));
+    const { data } = await admin.storage
+      .from(STUDENT_MEDIA_BUCKET)
+      .createSignedUrls(paths, TRACK_URL_TTL);
+    const out: Record<string, string> = {};
+    for (const s of data ?? []) {
+      if (s.signedUrl && s.path) out[s.path] = s.signedUrl;
+    }
+    return out;
+  } catch {
+    return {};
+  }
+}
 
 // Curated by Mestre Braga; grouped by the videoteca's four themes
 // (index into LibraryPage.liveCats). Titles are the works' own names.
@@ -61,6 +100,7 @@ export default async function BibliotecaPage({
 
   const books = t.raw("books") as Book[];
   const liveCats = t.raw("liveCats") as string[];
+  const trackUrls = await signTracks();
 
   return (
     <div className="flex flex-col flex-1 text-espresso">
@@ -186,19 +226,48 @@ export default async function BibliotecaPage({
 
       <SectionDivider label={t("recordingsTitle")} />
 
-      {/* RECORDINGS — external reference */}
+      {/* DISCOGRAPHY — the mestre's records, streamed from the archive */}
       <section className="mx-auto w-full max-w-6xl px-6 pb-24">
         <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
           {t("recordingsIntro")}
         </p>
-        <a
-          href="https://www.last.fm/music/Mestre+Braga+-+Grupo+de+Capoeira+Angola+Africa+Bantu"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-block font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-        >
-          {t("recordingsLink")} ↗
-        </a>
+        <ul className="mt-12 flex max-w-3xl flex-col gap-12">
+          {DISCOS.map((disco, i) => (
+            <li key={disco.title}>
+              <div className="flex flex-wrap items-baseline gap-4">
+                <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="font-display text-2xl font-light italic text-espresso">
+                  {disco.title}
+                </h3>
+                {disco.inProduction && (
+                  <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
+                    ● {t("discInProduction")}
+                  </span>
+                )}
+              </div>
+              <ul className="mt-5 flex flex-col gap-4 pl-10">
+                {disco.tracks.map(
+                  (track) =>
+                    trackUrls[track.path] && (
+                      <li key={track.path}>
+                        <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
+                          {track.label}
+                        </p>
+                        <audio
+                          controls
+                          preload="none"
+                          src={trackUrls[track.path]}
+                          className="w-full max-w-xl"
+                        />
+                      </li>
+                    )
+                )}
+              </ul>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <Footer />
