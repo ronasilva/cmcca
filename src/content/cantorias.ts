@@ -467,6 +467,8 @@ export const ARRANJAMENTO = {
     {
       id: "BuwgeQMeYm0",
       title: "Ensino de segundo percurso",
+      note:
+        "Este vídeo inclui uma gravação histórica de Mestre Traíra explicando os toques do berimbau, citada como documento de ensino, com crédito indicado no próprio vídeo. Os direitos da gravação pertencem aos seus detentores; para questões de direitos, contate a associação.",
     },
     {
       id: "JDYZQOa-USU",

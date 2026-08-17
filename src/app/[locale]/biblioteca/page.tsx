@@ -319,8 +319,15 @@ export default async function BibliotecaPage({
                     poster={`/images/videos/${v.id}.jpg`}
                   />
                 </div>
-                <figcaption className="mt-3 font-display text-sm italic leading-snug text-espresso">
-                  {v.title}
+                <figcaption className="mt-3">
+                  <p className="font-display text-sm italic leading-snug text-espresso">
+                    {v.title}
+                  </p>
+                  {"note" in v && v.note && (
+                    <p className="mt-2 text-xs leading-relaxed text-espresso-2">
+                      {v.note}
+                    </p>
+                  )}
                 </figcaption>
               </figure>
             </li>
