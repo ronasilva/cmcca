@@ -494,19 +494,6 @@ export const ARRANJAMENTO = {
   ],
   fecho:
     "Assim é por mim, Braga: com as cantorias, motivar os desenvolvimentos.\n\nJá são três CDs com venda esgotada, embora essa não seja a minha preocupação maior: arco musical e cantorias não estão para ser os protagonistas, apenas dão um certo requinte.\n\nmestre/Braga",
-  ajudarTitulo:
-    "Para ajudar no arranjamento musical: berimbaus (disposições de cada instrumento musical), toques, cantorias e obediências",
-  ajudar: [
-    "Cerimônia de começo",
-    "As demonstrações",
-    "Volta o mundo",
-    "Parada de mãos",
-    "Tempo pra cada participação",
-    "Troca de saída e entrada na roda (sai dois, entra dois, sem passar pelo berimbau depois da primeira crônica)",
-    "Advertências / conflitos",
-    "Aspectos",
-    "Dinheiro / foto",
-  ],
 };
 
 // Ladainha usada no filme "Pastinha, uma vida pela capoeira", com a nota

@@ -367,21 +367,6 @@ export default async function BibliotecaPage({
             {ARRANJAMENTO.fecho}
           </p>
 
-          <h4 className="mt-12 font-mono text-[11px] uppercase tracking-[0.25em] leading-relaxed text-terracotta">
-            {ARRANJAMENTO.ajudarTitulo}
-          </h4>
-          <ol className="mt-5 flex flex-col gap-2">
-            {ARRANJAMENTO.ajudar.map((item, i) => (
-              <li key={item} className="flex gap-4">
-                <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="text-base leading-relaxed text-espresso">
-                  {item}
-                </span>
-              </li>
-            ))}
-          </ol>
         </div>
       </section>
 
