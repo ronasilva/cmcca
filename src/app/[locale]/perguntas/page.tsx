@@ -3,10 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionDivider } from "@/components/SectionDivider";
-import {
-  listPublishedQuestions,
-  listArchiveQuestions,
-} from "@/lib/questions";
+import { listPublishedQuestions } from "@/lib/questions";
 import { submitQuestion } from "./actions";
 
 const labelClass =
@@ -26,10 +23,7 @@ export default async function PerguntasPage({
   const { enviado, erro } = await searchParams;
   const t = await getTranslations("QuestionsPage");
 
-  const [published, arquivo] = await Promise.all([
-    listPublishedQuestions(),
-    listArchiveQuestions(),
-  ]);
+  const corpus = await listPublishedQuestions();
 
   return (
     <div className="flex flex-col flex-1 text-espresso">
@@ -37,55 +31,23 @@ export default async function PerguntasPage({
 
       <PageHeader eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
 
-      {/* PUBLISHED ANSWERS — the mestre's curated responses */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-8 pt-6">
-        {published.length === 0 ? (
-          <p className="font-display text-base italic leading-relaxed text-espresso-2">
-            {t("answersEmpty")}
-          </p>
-        ) : (
-          <ol className="flex max-w-3xl flex-col gap-12">
-            {published.map((q, i) => (
-              <li key={q.id}>
-                <div className="flex items-baseline gap-4">
+      <SectionDivider label={t("archiveTitle")} />
+
+      {/* PARA TURBINAR A MEMÓRIA — one living corpus: the mestre's 39
+          original questions plus published answers to visitor questions,
+          all in one continuous numbering */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-20 pt-2">
+        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
+          {t("archiveIntro")}
+        </p>
+        <ol className="mt-10 max-w-3xl divide-y divide-espresso/15 border-y border-espresso/15">
+          {corpus.map((q) => (
+            <li key={q.id}>
+              <details className="group py-5">
+                <summary className="flex cursor-pointer items-baseline gap-4 list-none [&::-webkit-details-marker]:hidden">
                   <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-                    {String(published.length - i).padStart(2, "0")}
+                    {q.ordem ? String(q.ordem).padStart(2, "0") : "·"}
                   </span>
-                  <h2 className="font-display text-2xl font-light italic leading-snug text-espresso">
-                    {q.question}
-                  </h2>
-                </div>
-                {q.name && (
-                  <p className="mt-1 pl-10 font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
-                    — {q.name}
-                  </p>
-                )}
-                <p className="mt-4 whitespace-pre-line pl-10 text-base leading-relaxed text-espresso-2">
-                  {q.answer}
-                </p>
-              </li>
-            ))}
-          </ol>
-        )}
-      </section>
-
-      {arquivo.length > 0 && (
-        <>
-          <SectionDivider label={t("archiveTitle")} />
-
-          {/* PARA TURBINAR A MEMÓRIA — the mestre's own questions */}
-          <section className="mx-auto w-full max-w-6xl px-6 pb-20 pt-2">
-            <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
-              {t("archiveIntro")}
-            </p>
-            <ol className="mt-10 max-w-3xl divide-y divide-espresso/15 border-y border-espresso/15">
-              {arquivo.map((q) => (
-                <li key={q.id}>
-                  <details className="group py-5">
-                    <summary className="flex cursor-pointer items-baseline gap-4 list-none [&::-webkit-details-marker]:hidden">
-                      <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-                        {String(q.ordem ?? 0).padStart(2, "0")}
-                      </span>
                   <span className="flex-1 font-display text-lg font-light italic leading-snug text-espresso transition group-hover:text-terracotta">
                     {q.question}
                   </span>
@@ -93,6 +55,11 @@ export default async function PerguntasPage({
                     +
                   </span>
                 </summary>
+                {!q.arquivo && q.name && (
+                  <p className="mt-2 pl-10 font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
+                    — {t("askedBy", { name: q.name })}
+                  </p>
+                )}
                 <p className="mt-4 whitespace-pre-line pl-10 pr-6 text-base leading-relaxed text-espresso-2">
                   {q.answer}
                 </p>
@@ -107,12 +74,10 @@ export default async function PerguntasPage({
             rel="noopener noreferrer"
             className="text-terracotta transition hover:text-terracotta-2"
           >
-                {t("archiveSource")} ↗
-              </a>
-            </p>
-          </section>
-        </>
-      )}
+            {t("archiveSource")} ↗
+          </a>
+        </p>
+      </section>
 
       <SectionDivider label={t("formTitle")} />
 

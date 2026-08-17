@@ -60,22 +60,22 @@ export async function listQuestions(): Promise<Question[]> {
     });
 }
 
-// Published answers to visitor questions, newest first.
+// The living archive: the mestre's original 39 plus published answers to
+// visitor questions, one numbered corpus. Every entry gets a permanent
+// ordem stamped at publish time; entries missing one sort last.
 export async function listPublishedQuestions(): Promise<Question[]> {
   const all = await listQuestions();
   return all
-    .filter((q) => !q.arquivo && q.published === true && q.answer)
-    .sort((a, b) =>
-      (b.answeredAt ?? b.submittedAt).localeCompare(
-        a.answeredAt ?? a.submittedAt
-      )
+    .filter((q) => q.published === true && q.answer)
+    .sort(
+      (a, b) =>
+        (a.ordem ?? Number.MAX_SAFE_INTEGER) -
+        (b.ordem ?? Number.MAX_SAFE_INTEGER)
     );
 }
 
-// The mestre's published archive, in his order.
-export async function listArchiveQuestions(): Promise<Question[]> {
+// The next free number in the corpus.
+export async function nextOrdem(): Promise<number> {
   const all = await listQuestions();
-  return all
-    .filter((q) => q.arquivo === true && q.published === true && q.answer)
-    .sort((a, b) => (a.ordem ?? 0) - (b.ordem ?? 0));
+  return Math.max(0, ...all.map((q) => q.ordem ?? 0)) + 1;
 }

@@ -4,6 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient, STUDENT_MEDIA_BUCKET } from '@/lib/supabase/admin'
 import { isAdminUser } from '@/lib/admins'
+import { nextOrdem } from '@/lib/questions'
 
 async function requireAdmin(): Promise<boolean> {
   const supabase = await createClient()
@@ -38,6 +39,15 @@ export async function answerQuestion(formData: FormData) {
   const q = await readQuestion(id)
   if (!q) return
 
+  // First publication assigns the next number in the corpus, permanently —
+  // the entry joins the mestre's numbered archive and keeps its place.
+  const ordem =
+    typeof q.ordem === 'number'
+      ? q.ordem
+      : publish
+        ? await nextOrdem()
+        : undefined
+
   const admin = createAdminClient()
   await admin.storage
     .from(STUDENT_MEDIA_BUCKET)
@@ -50,6 +60,7 @@ export async function answerQuestion(formData: FormData) {
             answer,
             published: publish,
             answeredAt: new Date().toISOString(),
+            ...(ordem !== undefined ? { ordem } : {}),
           },
           null,
           2
