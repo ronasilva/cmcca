@@ -5,6 +5,11 @@ import { PageHeader } from "@/components/PageHeader";
 import { SectionDivider } from "@/components/SectionDivider";
 import { listPublishedQuestions } from "@/lib/questions";
 import { submitQuestion } from "./actions";
+import questoesMestre from "@/content/questoes-mestre.json";
+
+// The mestre's own Q&A archive ("Para turbinar a memória"), reproduced
+// verbatim — his words, his spelling, his emphasis.
+type QuestaoMestre = { n: number; question: string; answer: string };
 
 const labelClass =
   "font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta";
@@ -61,6 +66,47 @@ export default async function PerguntasPage({
             ))}
           </ol>
         )}
+      </section>
+
+      <SectionDivider label={t("archiveTitle")} />
+
+      {/* PARA TURBINAR A MEMÓRIA — the mestre's own 39 questions */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-20 pt-2">
+        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
+          {t("archiveIntro")}
+        </p>
+        <ol className="mt-10 max-w-3xl divide-y divide-espresso/15 border-y border-espresso/15">
+          {(questoesMestre as QuestaoMestre[]).map((q) => (
+            <li key={q.n}>
+              <details className="group py-5">
+                <summary className="flex cursor-pointer items-baseline gap-4 list-none [&::-webkit-details-marker]:hidden">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
+                    {String(q.n).padStart(2, "0")}
+                  </span>
+                  <span className="flex-1 font-display text-lg font-light italic leading-snug text-espresso transition group-hover:text-terracotta">
+                    {q.question}
+                  </span>
+                  <span className="font-mono text-[13px] text-terracotta transition group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 whitespace-pre-line pl-10 pr-6 text-base leading-relaxed text-espresso-2">
+                  {q.answer}
+                </p>
+              </details>
+            </li>
+          ))}
+        </ol>
+        <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-espresso-2">
+          <a
+            href="https://sites.google.com/view/capoeiras-e-capoeira-angola-/quest%C3%B5es-e-respostas"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-terracotta transition hover:text-terracotta-2"
+          >
+            {t("archiveSource")} ↗
+          </a>
+        </p>
       </section>
 
       <SectionDivider label={t("formTitle")} />
