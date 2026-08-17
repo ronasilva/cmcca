@@ -51,8 +51,9 @@ export default async function PerguntasPage({
                   <span className="flex-1 font-display text-lg font-light italic leading-snug text-espresso transition group-hover:text-terracotta">
                     {q.question}
                   </span>
-                  <span className="font-mono text-[13px] text-terracotta transition group-open:rotate-45">
-                    +
+                  <span className="font-mono text-[13px] text-terracotta">
+                    <span className="group-open:hidden">+</span>
+                    <span className="hidden group-open:inline">−</span>
                   </span>
                 </summary>
                 {q.name && (
