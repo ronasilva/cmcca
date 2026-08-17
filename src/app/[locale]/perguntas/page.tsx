@@ -55,7 +55,7 @@ export default async function PerguntasPage({
                     +
                   </span>
                 </summary>
-                {!q.arquivo && q.name && (
+                {q.name && (
                   <p className="mt-2 pl-10 font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
                     — {t("askedBy", { name: q.name })}
                   </p>
