@@ -5,11 +5,13 @@ import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionDivider } from "@/components/SectionDivider";
 import {
+  ARRANJAMENTO,
   CONJUNTOS,
   LOUVACOES,
   NOTA_PASTINHA,
   type Tema,
 } from "@/content/cantorias";
+import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 
 const voiceLabel =
   "w-24 shrink-0 font-mono text-[10px] uppercase tracking-[0.25em]";
@@ -160,6 +162,86 @@ export default async function CantoriasPage({
           </section>
         </div>
       ))}
+
+      {/* ARRANJAMENTO MUSICAL — the mestre's berimbau videos and history */}
+      <SectionDivider label={ARRANJAMENTO.titulo} />
+      <section className="mx-auto w-full max-w-6xl px-6 pb-16">
+        <ul className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+          {ARRANJAMENTO.videos.map((v) => (
+            <li key={v.id}>
+              <figure>
+                <div className="overflow-hidden rounded-sm border border-espresso/15">
+                  <YouTubeEmbed
+                    videoId={v.id}
+                    title={v.title}
+                    poster={`/images/videos/${v.id}.jpg`}
+                  />
+                </div>
+                <figcaption className="mt-3 font-display text-sm italic leading-snug text-espresso">
+                  {v.title}
+                </figcaption>
+              </figure>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-14 max-w-3xl">
+          <h3 className="font-display text-2xl font-light italic text-espresso">
+            {ARRANJAMENTO.historicoTitulo}
+          </h3>
+          <div className="mt-5 flex flex-col gap-4">
+            {ARRANJAMENTO.historico.map((p) => (
+              <p key={p} className="text-base leading-relaxed text-espresso-2">
+                {p}
+              </p>
+            ))}
+          </div>
+          <ol className="mt-6 flex flex-col gap-2">
+            {ARRANJAMENTO.toques.map((toque, i) => (
+              <li key={toque} className="flex gap-4">
+                <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
+                  {i + 1}
+                </span>
+                <span className="font-display text-base font-light italic text-espresso">
+                  {toque}
+                </span>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-6 text-base leading-relaxed text-espresso-2">
+            {ARRANJAMENTO.contrapontosIntro}
+          </p>
+          <ul className="mt-2 flex flex-col gap-2">
+            {ARRANJAMENTO.contrapontos.map((c) => (
+              <li
+                key={c}
+                className="pl-8 font-display text-base font-light italic text-espresso"
+              >
+                {c}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-8 whitespace-pre-line border-l-2 border-terracotta pl-5 text-sm leading-relaxed text-espresso-2">
+            {ARRANJAMENTO.fecho}
+          </p>
+
+          <h4 className="mt-12 font-mono text-[11px] uppercase tracking-[0.25em] leading-relaxed text-terracotta">
+            {ARRANJAMENTO.ajudarTitulo}
+          </h4>
+          <ol className="mt-5 flex flex-col gap-2">
+            {ARRANJAMENTO.ajudar.map((item, i) => (
+              <li key={item} className="flex gap-4">
+                <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="text-base leading-relaxed text-espresso">
+                  {item}
+                </span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
 
       {/* NOTA — the Pastinha ladainha and the mestre's authorship note */}
       <SectionDivider label={t("notaTitle")} />

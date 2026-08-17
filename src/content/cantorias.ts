@@ -454,6 +454,61 @@ export const CONJUNTOS: Conjunto[] = [
   },
 ];
 
+// Seção enviada pelo Mestre: vídeos sobre o berimbau e o seu breve
+// histórico em texto, com a lista de toques e o guia do arranjamento
+// musical da roda. Texto dele, só ortografia corrigida.
+export const ARRANJAMENTO = {
+  titulo: "Arranjamento musical na Capoeira de Angola em continuação",
+  videos: [
+    {
+      id: "hKoXnwy8pG8",
+      title: "Live reajustada: como aprendi do berimbau",
+    },
+    {
+      id: "BuwgeQMeYm0",
+      title: "Ensino de segundo percurso",
+    },
+    {
+      id: "JDYZQOa-USU",
+      title: "Grupo/Escola Capoeira Angola África Bantu",
+    },
+  ],
+  historicoTitulo: "Berimbaus, breve histórico em texto",
+  historico: [
+    "Capoeiras com berimbau é combinação baiana, lá por 1860. Quando no centro de Salvador bem servia pra \"tomar\" dinheiro, principalmente de turistas…",
+    "Só que, no que quiseram diferenciar dos nomes dos \"toques\" para justificarem de moderados, amarrados e acelerados, aí \"deu bode\": acabou igual o ditado popular que diz \"quem conta um conto, de conto em conto aumenta um ponto\"…",
+    "Quando cheguei no Moraes, dos toques do berimbau já dominava bem…",
+    "Quanto o São Bento!!! Três eram, pois mesmo da rua pra quando lá no Moraes nunca mudei disso…",
+  ],
+  toques: [
+    "São Bento (em aceleração)",
+    "São Bento Pequeno (em moderado, por tom inverso ao de Angola)",
+    "São Bento Grande (de maiores acelerações)",
+    "Regional (de pegada do m/Traíra, que amarra)",
+    "Angola (principal toque moderado)",
+  ],
+  contrapontosIntro: "Para contrapontuar, destaco dois:",
+  contrapontos: [
+    "Angola Pequena (da pegada de m/Traíra; muito mais é conhecido por \"jogo de dentro\")",
+    "Banguela (m/Bimba)",
+  ],
+  fecho:
+    "Assim é por mim, Braga, para com cantorias motivar para os desenvolvimentos.\n\nJá são três CDs com venda esgotada, embora não seja a minha preocupação maior, já que arco musical e cantorias não estão para ser os protagonistas: estão apenas a dar certo requinte…\n\nmestre/Braga\n\nA continuar »",
+  ajudarTitulo:
+    "Para ajudar no arranjamento musical: berimbaus (disposições de cada instrumento musical), toques e cantorias e obediências…",
+  ajudar: [
+    "Cerimônia de começo",
+    "As demonstrações",
+    "Volta o mundo",
+    "Parada de mãos",
+    "Tempo pra cada participação",
+    "Troca de saída e entrada na roda (sai dois, entra dois, sem passar pelo berimbau depois da primeira crônica)",
+    "Advertências / conflitos",
+    "Aspectos",
+    "Dinheiro / foto",
+  ],
+};
+
 // Ladainha usada no filme "Pastinha, uma vida pela capoeira", com a nota
 // de esclarecimento do Mestre sobre a autoria.
 export const NOTA_PASTINHA = {
