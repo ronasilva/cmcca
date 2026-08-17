@@ -477,8 +477,7 @@ export const ARRANJAMENTO = {
   historico: [
     "Capoeiras com berimbau é uma combinação baiana, de lá por 1860, quando no centro de Salvador bem servia para \"tomar\" dinheiro, principalmente de turistas.",
     "Só que, quando quiseram diferenciar os nomes dos toques para justificar os andamentos moderados, amarrados e acelerados, aí \"deu bode\": acabou como no ditado popular, \"quem conta um conto aumenta um ponto\".",
-    "Quando cheguei no Moraes, já dominava bem os toques do berimbau.",
-    "Quanto ao São Bento: três eram. Desde a rua até o Moraes, nunca mudei disso.",
+    "Quando cheguei no Moraes, já dominava bem os toques do berimbau, e, quanto ao São Bento, três eram: desde a rua até o tempo no Moraes, nunca mudei disso.",
   ],
   toques: [
     "São Bento (em aceleração)",
