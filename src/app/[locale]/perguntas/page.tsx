@@ -67,16 +67,6 @@ export default async function PerguntasPage({
             </li>
           ))}
         </ol>
-        <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-espresso-2">
-          <a
-            href="https://sites.google.com/view/capoeiras-e-capoeira-angola-/quest%C3%B5es-e-respostas"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-terracotta transition hover:text-terracotta-2"
-          >
-            {t("archiveSource")} ↗
-          </a>
-        </p>
       </section>
 
       <SectionDivider label={t("formTitle")} />
