@@ -106,7 +106,7 @@ export const CONJUNTOS: Conjunto[] = [
         credit: "m/Braga",
         kind: "ladainha",
         verso:
-          "São Bento Pequeno, iê…\nBravo engajamento popular,\nsalve a Princesa Isabel,\nassinou para abolir\nnessa oportunidade\nda luta abolicionista,\npra ter fim escravidão.\nApesar dessa vitória\ndo dia 13 de Maio,\na luta não viu o fim\ndo mau costume de escravizar!!!\nQuerer outro na coleira!!!\nMas a coragem da Princesa,\nda Princesa carioca,\nredentora brasileira…\nfoi de uma grande conquista\nde contra toda essa infâmia, camará!!!",
+          "Iê!!!\nBravo engajamento popular,\nsalve a Princesa Isabel,\nassinou para abolir\nnessa oportunidade\nda luta abolicionista,\npra ter fim escravidão.\nApesar dessa vitória\ndo dia 13 de Maio,\na luta não viu o fim\ndo mau costume de escravizar!!!\nQuerer outro na coleira!!!\nMas a coragem da Princesa,\nda Princesa carioca,\nredentora brasileira…\nfoi de uma grande conquista\nde contra toda essa infâmia, camará!!!",
       },
       {
         title: "Abolição",
@@ -133,7 +133,7 @@ export const CONJUNTOS: Conjunto[] = [
         credit: "m/Braga",
         kind: "ladainha",
         verso:
-          "Iê!!! Regional de Traíra…\nNagoas e Guaiamus\neram maltas importantes\ndo Rio de Janeiro\nquando Estado imperial!\nQuando era aos 12 anos\no ingresso para as maltas,\npor uma iniciação\nque prestava juramento\nlá nas torres das igrejas,\nmuitos capoeiras sineiros;\npor certas pancadas de sino,\nem diferentes horas do dia,\ncomeço da boca da noite,\ndavam o sinal do desafio.\nNa frente de cada malta\nvinham os caxinguelês,\nsempre atrás de confusão,\ntocando da provocação,\ngritando fecha, fecha, no encontro\niminente com a freguesia inimiga.\nRasteira, cabeçada, tapas e rabo de arraia,\nsardinha pro alto da sinagoga, camará!\nViva meu Deus",
+          "Iê!!!\nNagoas e Guaiamus\neram maltas importantes\ndo Rio de Janeiro\nquando Estado imperial!\nQuando era aos 12 anos\no ingresso para as maltas,\npor uma iniciação\nque prestava juramento\nlá nas torres das igrejas,\nmuitos capoeiras sineiros;\npor certas pancadas de sino,\nem diferentes horas do dia,\ncomeço da boca da noite,\ndavam o sinal do desafio.\nNa frente de cada malta\nvinham os caxinguelês,\nsempre atrás de confusão,\ntocando da provocação,\ngritando fecha, fecha, no encontro\niminente com a freguesia inimiga.\nRasteira, cabeçada, tapas e rabo de arraia,\nsardinha pro alto da sinagoga, camará!\nViva meu Deus",
       },
       {
         title: "Não gosto de abraços",
