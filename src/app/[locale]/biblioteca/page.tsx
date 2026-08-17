@@ -282,7 +282,7 @@ export default async function BibliotecaPage({
                 </ul>
               )}
               {disco.bandcampUrl && (
-                <p className="mt-4 pl-10">
+                <p className="mt-4 flex flex-wrap gap-8 pl-10">
                   <a
                     href={disco.bandcampUrl}
                     target="_blank"
@@ -291,6 +291,12 @@ export default async function BibliotecaPage({
                   >
                     {t("discListen")} ↗
                   </a>
+                  <Link
+                    href="/cantorias"
+                    className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+                  >
+                    {t("cadernoLink")} →
+                  </Link>
                 </p>
               )}
             </li>

@@ -90,6 +90,7 @@
     "recordingsIntro": "La mémoire sonore de la maison : les disques du Mestre et du GECAAB, avec des pistes à écouter ici.",
     "discInProduction": "En production",
     "discListen": "Écouter sur Bandcamp",
+    "cadernoLink": "Carnet de chants (caderno de cantorias)",
     "perguntasTitle": "Demandez au Mestre",
     "perguntasIntro": "Une question sur la Capoeira Angola, les Bantous, le Brésil ? Les réponses du Mestre aux questions retenues sont publiées.",
     "perguntasCta": "Poser une question ou lire les réponses"
@@ -435,5 +436,15 @@
     "errorPassword": "Les mots de passe ne correspondent pas ou font moins de 8 caractères.",
     "errorPhoto": "La photographie doit être une image de 6 Mo maximum.",
     "errorServer": "Impossible d'enregistrer. Réessayez."
+  },
+  "CantoriasPage": {
+    "eyebrow": "Gravações · Esfera Intelectual",
+    "title": "Caderno de cantorias",
+    "intro": "Toques de berimbau et chants de Capoeira Angola, dans la manière de Rio de Janeiro après les années 1970 : le carnet du CD de 2024, avec les ladainhas, chulas et corridos organisés par toque de berimbau. Les paroles suivent le carnet ; l'enregistrement comporte de petites variations. Les textes sont en portugais. Touchez un thème pour l'ouvrir.",
+    "louvacoesTitle": "Louvações",
+    "louvacoesIntro": "Après chaque ladainha viennent les louvações, toujours dans la même séquence (cantador / vozes) :",
+    "setLabel": "Ensemble",
+    "afterLadainha": "Suivent les louvações",
+    "notaTitle": "Note du Mestre"
   }
 }

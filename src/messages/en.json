@@ -90,6 +90,7 @@
     "recordingsIntro": "The sound memory of the house: the records of the Mestre and GECAAB, with tracks to listen to here.",
     "discInProduction": "In production",
     "discListen": "Listen on Bandcamp",
+    "cadernoLink": "Songbook (caderno de cantorias)",
     "perguntasTitle": "Ask the Mestre",
     "perguntasIntro": "A question about Capoeira Angola, the Bantu, Brazil? The Mestre's answers to selected questions are published.",
     "perguntasCta": "Ask or read the answers"
@@ -435,5 +436,15 @@
     "errorPassword": "The passwords don't match or are shorter than 8 characters.",
     "errorPhoto": "The photo must be an image up to 6 MB.",
     "errorServer": "Could not save. Please try again."
+  },
+  "CantoriasPage": {
+    "eyebrow": "Gravações · Esfera Intelectual",
+    "title": "Caderno de cantorias",
+    "intro": "Berimbau toques and songs of Capoeira Angola, in the Rio de Janeiro way after the 1970s: the songbook of the 2024 CD, with the ladainhas, chulas and corridos organised by berimbau toque. Lyrics follow the songbook; the recording has small variations. The texts are in Portuguese. Tap a theme to open it.",
+    "louvacoesTitle": "Louvações",
+    "louvacoesIntro": "After each ladainha come the louvações, always in the same sequence (cantador / vozes):",
+    "setLabel": "Set",
+    "afterLadainha": "The louvações follow",
+    "notaTitle": "A note from the Mestre"
   }
 }

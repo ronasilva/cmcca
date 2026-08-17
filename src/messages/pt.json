@@ -90,6 +90,7 @@
     "recordingsIntro": "A memória sonora da casa: os discos do Mestre e do GECAAB, com faixas para ouvir aqui.",
     "discInProduction": "Em produção",
     "discListen": "Ouvir no Bandcamp",
+    "cadernoLink": "Caderno de cantorias",
     "perguntasTitle": "Pergunte ao Mestre",
     "perguntasIntro": "Uma pergunta sobre a Capoeira Angola, os bantus, o Brasil? As respostas do Mestre às perguntas selecionadas são publicadas.",
     "perguntasCta": "Perguntar ou ler as respostas"
@@ -435,5 +436,15 @@
     "errorPassword": "As senhas não coincidem ou têm menos de 8 caracteres.",
     "errorPhoto": "A fotografia deve ser uma imagem até 6 MB.",
     "errorServer": "Não foi possível guardar. Tente novamente."
+  },
+  "CantoriasPage": {
+    "eyebrow": "Gravações · Esfera Intelectual",
+    "title": "Caderno de cantorias",
+    "intro": "Toques e cantorias de Capoeira Angola, na pegada do RJ depois dos anos 70: o caderno do CD de 2024, com as ladainhas, chulas e corridos organizados pelos toques do berimbau. As letras seguem o caderno; na gravação há pequenas variações. Toque num tema para abrir.",
+    "louvacoesTitle": "Louvações",
+    "louvacoesIntro": "Depois de cada ladainha, as louvações em vozes, sempre na mesma sequência (cantador / vozes):",
+    "setLabel": "Conjunto",
+    "afterLadainha": "Seguem as louvações",
+    "notaTitle": "Nota do Mestre"
   }
 }
