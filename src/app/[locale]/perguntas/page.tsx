@@ -3,13 +3,11 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionDivider } from "@/components/SectionDivider";
-import { listPublishedQuestions } from "@/lib/questions";
+import {
+  listPublishedQuestions,
+  listArchiveQuestions,
+} from "@/lib/questions";
 import { submitQuestion } from "./actions";
-import questoesMestre from "@/content/questoes-mestre.json";
-
-// The mestre's own Q&A archive ("Para turbinar a memória"), reproduced
-// verbatim — his words, his spelling, his emphasis.
-type QuestaoMestre = { n: number; question: string; answer: string };
 
 const labelClass =
   "font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta";
@@ -28,7 +26,10 @@ export default async function PerguntasPage({
   const { enviado, erro } = await searchParams;
   const t = await getTranslations("QuestionsPage");
 
-  const published = await listPublishedQuestions();
+  const [published, arquivo] = await Promise.all([
+    listPublishedQuestions(),
+    listArchiveQuestions(),
+  ]);
 
   return (
     <div className="flex flex-col flex-1 text-espresso">
@@ -68,21 +69,23 @@ export default async function PerguntasPage({
         )}
       </section>
 
-      <SectionDivider label={t("archiveTitle")} />
+      {arquivo.length > 0 && (
+        <>
+          <SectionDivider label={t("archiveTitle")} />
 
-      {/* PARA TURBINAR A MEMÓRIA — the mestre's own 39 questions */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-20 pt-2">
-        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
-          {t("archiveIntro")}
-        </p>
-        <ol className="mt-10 max-w-3xl divide-y divide-espresso/15 border-y border-espresso/15">
-          {(questoesMestre as QuestaoMestre[]).map((q) => (
-            <li key={q.n}>
-              <details className="group py-5">
-                <summary className="flex cursor-pointer items-baseline gap-4 list-none [&::-webkit-details-marker]:hidden">
-                  <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-                    {String(q.n).padStart(2, "0")}
-                  </span>
+          {/* PARA TURBINAR A MEMÓRIA — the mestre's own questions */}
+          <section className="mx-auto w-full max-w-6xl px-6 pb-20 pt-2">
+            <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
+              {t("archiveIntro")}
+            </p>
+            <ol className="mt-10 max-w-3xl divide-y divide-espresso/15 border-y border-espresso/15">
+              {arquivo.map((q) => (
+                <li key={q.id}>
+                  <details className="group py-5">
+                    <summary className="flex cursor-pointer items-baseline gap-4 list-none [&::-webkit-details-marker]:hidden">
+                      <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
+                        {String(q.ordem ?? 0).padStart(2, "0")}
+                      </span>
                   <span className="flex-1 font-display text-lg font-light italic leading-snug text-espresso transition group-hover:text-terracotta">
                     {q.question}
                   </span>
@@ -104,10 +107,12 @@ export default async function PerguntasPage({
             rel="noopener noreferrer"
             className="text-terracotta transition hover:text-terracotta-2"
           >
-            {t("archiveSource")} ↗
-          </a>
-        </p>
-      </section>
+                {t("archiveSource")} ↗
+              </a>
+            </p>
+          </section>
+        </>
+      )}
 
       <SectionDivider label={t("formTitle")} />
 
