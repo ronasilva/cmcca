@@ -19,9 +19,11 @@ type Book = { title: string; author: string };
 // masters stay offline. Released albums live on Bandcamp.
 const DISCOS: {
   title: string;
-  year: number;
+  year?: number;
+  yearLabel?: string;
   inProduction?: boolean;
   bandcampUrl?: string;
+  youtubeUrl?: string;
   tracks?: { label: string; path: string }[];
 }[] = [
   {
@@ -38,6 +40,12 @@ const DISCOS: {
     year: 2024,
     bandcampUrl:
       "https://berinbaucantoriasbraga2.bandcamp.com/album/conhecimento-de-mem-ria-dos-capoeiras-em-capoeira-angola-berimbau-e-cantorias-g-ecaab-rj-2",
+  },
+  {
+    title:
+      "Os dois primeiros CDs do Grupo/Escola de Capoeira Angola África Bantu",
+    yearLabel: "anteriores a 2024",
+    youtubeUrl: "https://youtu.be/LFMNk_i0vIk",
   },
 ];
 
@@ -254,7 +262,7 @@ export default async function BibliotecaPage({
                   {disco.title}
                 </h3>
                 <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-espresso-2">
-                  {disco.year}
+                  {disco.year ?? disco.yearLabel}
                 </span>
                 {disco.inProduction && (
                   <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
@@ -281,6 +289,18 @@ export default async function BibliotecaPage({
                       )
                   )}
                 </ul>
+              )}
+              {disco.youtubeUrl && (
+                <p className="mt-4 pl-10">
+                  <a
+                    href={disco.youtubeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+                  >
+                    {t("discListenYt")} ↗
+                  </a>
+                </p>
               )}
               {disco.bandcampUrl && (
                 <p className="mt-4 flex flex-wrap gap-8 pl-10">
