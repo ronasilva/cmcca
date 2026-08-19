@@ -40,6 +40,7 @@ const DISCOS: {
     title:
       "Conhecimento de memória dos capoeiras em Capoeira Angola (berimbau e cantorias)",
     year: 2024,
+    cover: "/images/discografia/cd-2024.jpg",
     bandcampUrl:
       "https://berinbaucantoriasbraga2.bandcamp.com/album/conhecimento-de-mem-ria-dos-capoeiras-em-capoeira-angola-berimbau-e-cantorias-g-ecaab-rj-2",
   },
@@ -276,13 +277,25 @@ export default async function BibliotecaPage({
         <ul className="mt-12 flex max-w-3xl flex-col gap-12">
           {DISCOS.map((disco, i) => (
             <li key={disco.title} className="flex gap-6">
-              {disco.cover && (
+              {disco.cover ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={disco.cover}
                   alt=""
                   className="h-24 w-24 shrink-0 rounded-sm border border-espresso/15 object-cover"
                 />
+              ) : (
+                <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-sm border border-espresso/15 bg-cream-2/40">
+                  {/* placeholder until the album art exists */}
+                  <Image
+                    src="/cmcca-logo.png"
+                    alt=""
+                    width={48}
+                    height={48}
+                    style={{ width: 48, height: 48 }}
+                    className="opacity-70"
+                  />
+                </div>
               )}
               <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-baseline gap-4">
