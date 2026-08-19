@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer";
 import { PageHeader } from "@/components/PageHeader";
 import { SectionDivider } from "@/components/SectionDivider";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
+import { ExclusiveAudio } from "@/components/ExclusiveAudio";
 import { ARRANJAMENTO } from "@/content/cantorias";
 
 type Book = { title: string; author: string };
@@ -197,6 +198,7 @@ export default async function BibliotecaPage({
   return (
     <div className="flex flex-col flex-1 text-espresso">
       <Header />
+      <ExclusiveAudio />
 
       <PageHeader eyebrow={t("eyebrow")} title={t("title")} intro={t("intro")} />
 
