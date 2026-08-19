@@ -25,7 +25,11 @@ const DISCOS: {
   bandcampUrl?: string;
   youtubeUrl?: string;
   cover?: string;
-  encarte?: string;
+  encarte?: {
+    titulo: string;
+    nota?: string;
+    itens: { nome: string; credito?: string }[];
+  }[];
   tracks?: { label: string; path: string }[];
 }[] = [
   {
@@ -49,8 +53,53 @@ const DISCOS: {
     yearLabel: "anterior a 2008",
     youtubeUrl: "https://youtu.be/LFMNk_i0vIk",
     cover: "/images/discografia/cd-vol1.jpg",
-    encarte:
-      "Fatos falados: O arco musical berimbau; Triângulo da história; Invasão holandesa; Capitão do mato; Maltas / Guerra do Paraguai; Cavalaria; Rasteira na polícia; Pastinha. Temas cantados para ouvir e louvar antes de sair: Zebra mandigueira (Elizeu, angolano); Foram pelo mar (m/Braga); Iê tava em casa; Lá atiraram na cruz; Cidade de Assunção (m/Braga: intérprete, adaptação e versão). Temas cantados que indicam jogo: Vai vai vai diz pra mim (Elizeu); No balanço do mar (B); Holandeses (B); Capitão do mato inimigo (B); No Brasil na capoeira (B); Paranaê; Vieram me buscar; Vai dizer avisa lá (B); Quem não pode com besouro; Pau rolou na mata; Quebra gereba; Vou pra Luanda (B); Quem não sabe (B); Apanha a laranja; Me dá meu dinheiro; Dois tostões (B).",
+    encarte: [
+      {
+        titulo: "Fatos falados",
+        itens: [
+          { nome: "O arco musical berimbau" },
+          { nome: "Triângulo da história" },
+          { nome: "Invasão holandesa" },
+          { nome: "Capitão do mato" },
+          { nome: "Maltas / Guerra do Paraguai" },
+          { nome: "Cavalaria" },
+          { nome: "Rasteira na polícia" },
+          { nome: "Pastinha" },
+        ],
+      },
+      {
+        titulo: "Temas cantados para ouvir e louvar antes de sair",
+        nota: "m/Braga: intérprete, adaptação e versão",
+        itens: [
+          { nome: "Zebra mandigueira", credito: "Elizeu (angolano)" },
+          { nome: "Foram pelo mar", credito: "m/Braga" },
+          { nome: "Iê tava em casa" },
+          { nome: "Lá atiraram na cruz" },
+          { nome: "Cidade de Assunção" },
+        ],
+      },
+      {
+        titulo: "Temas cantados que indicam jogo",
+        itens: [
+          { nome: "Vai vai vai diz pra mim", credito: "Elizeu" },
+          { nome: "No balanço do mar", credito: "m/Braga" },
+          { nome: "Holandeses", credito: "m/Braga" },
+          { nome: "Capitão do mato inimigo", credito: "m/Braga" },
+          { nome: "No Brasil na capoeira", credito: "m/Braga" },
+          { nome: "Paranaê" },
+          { nome: "Vieram me buscar" },
+          { nome: "Vai dizer avisa lá", credito: "m/Braga" },
+          { nome: "Quem não pode com besouro" },
+          { nome: "Pau rolou na mata" },
+          { nome: "Quebra gereba" },
+          { nome: "Vou pra Luanda", credito: "m/Braga" },
+          { nome: "Quem não sabe", credito: "m/Braga" },
+          { nome: "Apanha a laranja" },
+          { nome: "Me dá meu dinheiro" },
+          { nome: "Dois tostões", credito: "m/Braga" },
+        ],
+      },
+    ],
     tracks: [
       { label: "Parte 1", path: "discografia/cds-antigos/cd1-parte-01.mp3" },
       { label: "Parte 2", path: "discografia/cds-antigos/cd1-parte-02.mp3" },
@@ -365,13 +414,41 @@ export default async function BibliotecaPage({
                 </p>
               )}
               {disco.encarte && (
-                <div className="mt-5 max-w-2xl pl-10">
+                <div className="mt-6 max-w-2xl pl-10">
                   <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
                     No encarte
                   </p>
-                  <p className="mt-2 text-xs leading-relaxed text-espresso-2">
-                    {disco.encarte}
-                  </p>
+                  <div className="mt-4 flex flex-col gap-6">
+                    {disco.encarte.map((sec) => (
+                      <div key={sec.titulo}>
+                        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-terracotta">
+                          {sec.titulo}
+                        </p>
+                        <ul className="mt-2 grid grid-cols-1 gap-x-8 gap-y-1 sm:grid-cols-2">
+                          {sec.itens.map((item) => (
+                            <li
+                              key={item.nome}
+                              className="flex items-baseline gap-2"
+                            >
+                              <span className="font-display text-sm font-light italic text-espresso">
+                                {item.nome}
+                              </span>
+                              {item.credito && (
+                                <span className="font-mono text-[9px] uppercase tracking-[0.15em] text-espresso-2">
+                                  {item.credito}
+                                </span>
+                              )}
+                            </li>
+                          ))}
+                        </ul>
+                        {sec.nota && (
+                          <p className="mt-2 font-mono text-[9px] uppercase tracking-[0.15em] text-espresso-2">
+                            {sec.nota}
+                          </p>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
               </div>
