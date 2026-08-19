@@ -24,6 +24,8 @@ const DISCOS: {
   inProduction?: boolean;
   bandcampUrl?: string;
   youtubeUrl?: string;
+  cover?: string;
+  encarte?: string;
   tracks?: { label: string; path: string }[];
 }[] = [
   {
@@ -42,10 +44,30 @@ const DISCOS: {
       "https://berinbaucantoriasbraga2.bandcamp.com/album/conhecimento-de-mem-ria-dos-capoeiras-em-capoeira-angola-berimbau-e-cantorias-g-ecaab-rj-2",
   },
   {
-    title:
-      "Os dois primeiros CDs do Grupo/Escola de Capoeira Angola África Bantu",
-    yearLabel: "anteriores a 2024",
+    title: "África Bantu: documentação memória da capoeira, vol. 1",
+    yearLabel: "anterior a 2008",
     youtubeUrl: "https://youtu.be/LFMNk_i0vIk",
+    cover: "/images/discografia/cd-vol1.jpg",
+    encarte:
+      "Fatos falados: O arco musical berimbau; Triângulo da história; Invasão holandesa; Capitão do mato; Maltas / Guerra do Paraguai; Cavalaria; Rasteira na polícia; Pastinha. Temas cantados para ouvir e louvar antes de sair: Zebra mandigueira (Elizeu, angolano); Foram pelo mar (m/Braga); Iê tava em casa; Lá atiraram na cruz; Cidade de Assunção (m/Braga: intérprete, adaptação e versão). Temas cantados que indicam jogo: Vai vai vai diz pra mim (Elizeu); No balanço do mar (B); Holandeses (B); Capitão do mato inimigo (B); No Brasil na capoeira (B); Paranaê; Vieram me buscar; Vai dizer avisa lá (B); Quem não pode com besouro; Pau rolou na mata; Quebra gereba; Vou pra Luanda (B); Quem não sabe (B); Apanha a laranja; Me dá meu dinheiro; Dois tostões (B).",
+    tracks: [
+      { label: "Parte 1", path: "discografia/cds-antigos/cd1-parte-01.mp3" },
+      { label: "Parte 2", path: "discografia/cds-antigos/cd1-parte-02.mp3" },
+      { label: "Parte 3", path: "discografia/cds-antigos/cd1-parte-03.mp3" },
+      { label: "Parte 4", path: "discografia/cds-antigos/cd1-parte-04.mp3" },
+      { label: "Parte 5", path: "discografia/cds-antigos/cd1-parte-05.mp3" },
+      { label: "Parte 6", path: "discografia/cds-antigos/cd1-parte-06.mp3" },
+      { label: "Parte 7", path: "discografia/cds-antigos/cd1-parte-07.mp3" },
+    ],
+  },
+  {
+    title: "Capoeiras: Rio de Janeiro, vol. 2",
+    year: 2008,
+    youtubeUrl: "https://youtu.be/LFMNk_i0vIk",
+    cover: "/images/discografia/cd-vol2.jpg",
+    tracks: [
+      { label: "Gravação completa", path: "discografia/cds-antigos/cd2.mp3" },
+    ],
   },
 ];
 
@@ -253,7 +275,16 @@ export default async function BibliotecaPage({
         </p>
         <ul className="mt-12 flex max-w-3xl flex-col gap-12">
           {DISCOS.map((disco, i) => (
-            <li key={disco.title}>
+            <li key={disco.title} className="flex gap-6">
+              {disco.cover && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={disco.cover}
+                  alt=""
+                  className="h-24 w-24 shrink-0 rounded-sm border border-espresso/15 object-cover"
+                />
+              )}
+              <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-baseline gap-4">
                 <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                   {String(i + 1).padStart(2, "0")}
@@ -320,6 +351,17 @@ export default async function BibliotecaPage({
                   </Link>
                 </p>
               )}
+              {disco.encarte && (
+                <div className="mt-5 max-w-2xl pl-10">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
+                    No encarte
+                  </p>
+                  <p className="mt-2 text-xs leading-relaxed text-espresso-2">
+                    {disco.encarte}
+                  </p>
+                </div>
+              )}
+              </div>
             </li>
           ))}
         </ul>
