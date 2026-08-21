@@ -296,12 +296,12 @@ export default async function BibliotecaPage({
           {t("livesIntro")}
         </p>
 
-        <div className="mt-12 flex flex-col gap-14">
+        <div className="mt-12 grid grid-cols-1 gap-14 sm:grid-cols-2">
           {liveCats.map((cat, i) => {
             const videos = VIDEOS.filter((v) => v.cat === i);
             if (videos.length === 0) return null;
             return (
-              <div key={cat}>
+              <div key={cat} className={videos.length > 1 ? "sm:col-span-2" : ""}>
                 <div className="flex items-baseline gap-3">
                   <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                     N°&nbsp;{String(i + 1).padStart(2, "0")}
@@ -310,7 +310,11 @@ export default async function BibliotecaPage({
                     {cat}
                   </h3>
                 </div>
-                <ul className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
+                <ul
+                  className={`mt-6 grid grid-cols-1 gap-8 ${
+                    videos.length > 1 ? "sm:grid-cols-2" : ""
+                  }`}
+                >
                   {videos.map((v) => (
                     <li key={v.id}>
                       <figure>
