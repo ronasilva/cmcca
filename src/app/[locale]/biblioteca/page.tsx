@@ -122,12 +122,25 @@ const DISCOS: {
   },
 ];
 
-const TRACK_URL_TTL = 60 * 60 * 24 * 365; // public track, links live a year
+const TRACK_URL_TTL = 60 * 60 * 24 * 365; // public media, links live a year
+
+// The association's own videos, self-hosted in the bucket (archived from
+// its YouTube channel). External channels stay as YouTube embeds.
+const ACERVO_VIDEO_IDS = [
+  "IyUg6ebRBvs",
+  "vnm8xUgT6WM",
+  "hKoXnwy8pG8",
+  "BuwgeQMeYm0",
+  "JDYZQOa-USU",
+];
 
 async function signTracks(): Promise<Record<string, string>> {
   try {
     const admin = createAdminClient();
-    const paths = DISCOS.flatMap((d) => (d.tracks ?? []).map((t) => t.path));
+    const paths = [
+      ...DISCOS.flatMap((d) => (d.tracks ?? []).map((t) => t.path)),
+      ...ACERVO_VIDEO_IDS.map((id) => `acervo/videos/${id}.mp4`),
+    ];
     const { data } = await admin.storage
       .from(STUDENT_MEDIA_BUCKET)
       .createSignedUrls(paths, TRACK_URL_TTL);
@@ -143,7 +156,13 @@ async function signTracks(): Promise<Record<string, string>> {
 
 // Curated by Mestre Braga; grouped by the videoteca's four themes
 // (index into LibraryPage.liveCats). Titles are the works' own names.
-const VIDEOS = [
+const VIDEOS: {
+  id: string;
+  cat: number;
+  title: string;
+  channel: string;
+  selfHosted?: boolean;
+}[] = [
   {
     id: "ViVlEwPQL1Q",
     cat: 0,
@@ -173,12 +192,14 @@ const VIDEOS = [
     cat: 2,
     title: "Influência yoruba na formação social de capoeiras",
     channel: "Live · CMC/CA",
+    selfHosted: true,
   },
   {
     id: "vnm8xUgT6WM",
     cat: 3,
     title: "Grupo/Escola de Capoeira Angola África Bantu",
     channel: "Live · CMC/CA",
+    selfHosted: true,
   },
 ];
 
@@ -294,11 +315,22 @@ export default async function BibliotecaPage({
                     <li key={v.id}>
                       <figure>
                         <div className="overflow-hidden rounded-sm border border-espresso/15">
-                          <YouTubeEmbed
-                            videoId={v.id}
-                            title={v.title}
-                            poster={`/images/videos/${v.id}.jpg`}
-                          />
+                          {v.selfHosted &&
+                          trackUrls[`acervo/videos/${v.id}.mp4`] ? (
+                            <video
+                              controls
+                              preload="none"
+                              poster={`/images/videos/${v.id}.jpg`}
+                              src={trackUrls[`acervo/videos/${v.id}.mp4`]}
+                              className="aspect-video w-full"
+                            />
+                          ) : (
+                            <YouTubeEmbed
+                              videoId={v.id}
+                              title={v.title}
+                              poster={`/images/videos/${v.id}.jpg`}
+                            />
+                          )}
                         </div>
                         <figcaption className="mt-3">
                           <p className="font-display text-sm italic leading-snug text-espresso">
@@ -467,11 +499,21 @@ export default async function BibliotecaPage({
             <li key={v.id}>
               <figure>
                 <div className="overflow-hidden rounded-sm border border-espresso/15">
-                  <YouTubeEmbed
-                    videoId={v.id}
-                    title={v.title}
-                    poster={`/images/videos/${v.id}.jpg`}
-                  />
+                  {trackUrls[`acervo/videos/${v.id}.mp4`] ? (
+                    <video
+                      controls
+                      preload="none"
+                      poster={`/images/videos/${v.id}.jpg`}
+                      src={trackUrls[`acervo/videos/${v.id}.mp4`]}
+                      className="aspect-video w-full"
+                    />
+                  ) : (
+                    <YouTubeEmbed
+                      videoId={v.id}
+                      title={v.title}
+                      poster={`/images/videos/${v.id}.jpg`}
+                    />
+                  )}
                 </div>
                 <figcaption className="mt-3">
                   <p className="font-display text-sm italic leading-snug text-espresso">
