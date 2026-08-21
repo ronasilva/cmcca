@@ -179,7 +179,7 @@ export default async function MembrosPage({
       {!supabaseConfigured && (
         <div className="border-b border-terracotta/40 bg-terracotta/10">
           <p className="mx-auto max-w-6xl px-6 py-2 font-mono text-[11px] uppercase tracking-[0.25em] text-terracotta">
-            Pré-visualização de desenvolvimento — autenticação desativada
+            Pré-visualização de desenvolvimento: autenticação desativada
             (Supabase não configurado)
           </p>
         </div>
@@ -262,7 +262,7 @@ export default async function MembrosPage({
                   )}
                 </dl>
                 <p className="mt-4 border-t border-espresso/15 pt-3 font-mono text-[9px] uppercase tracking-[0.25em] text-espresso-2">
-                  ● {tf("statusMember")} · CMC/CA — Capoeira Angola
+                  ● {tf("statusMember")} · CMC/CA · Capoeira Angola
                 </p>
               </div>
               <div className="mt-2 text-right">

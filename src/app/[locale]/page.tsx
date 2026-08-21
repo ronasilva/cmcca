@@ -41,7 +41,7 @@ export default async function Home({
           <div className="order-first md:order-0 md:col-span-4 md:col-start-9">
             <Image
               src="/cmcca-logo.png"
-              alt="Emblema da CMC/CA — Associação de Capoeira Angola"
+              alt="Emblema da CMC/CA · Associação de Capoeira Angola"
               width={370}
               height={373}
               priority
@@ -127,7 +127,7 @@ export default async function Home({
             <div className="overflow-hidden rounded-sm border border-espresso/15">
               <YouTubeEmbed
                 videoId="8hngKFy3gaM"
-                title="Capoeira Angola Tradicional — Antiga na Bahia (TV France)"
+                title="Capoeira Angola Tradicional: Antiga na Bahia (TV France)"
                 poster="/video-bahia-poster.jpg"
               />
             </div>
@@ -183,7 +183,7 @@ export default async function Home({
             <div className="max-w-64 rounded-sm border border-espresso/15 bg-white p-4 md:max-w-none md:p-6">
               <Image
                 src="/africa-bantu-logo.png"
-                alt="Emblema do GECAAB — Grupo/Escola de Capoeira Angola África Bantu"
+                alt="Emblema do GECAAB · Grupo/Escola de Capoeira Angola África Bantu"
                 width={1200}
                 height={860}
                 className="h-auto w-full object-contain"

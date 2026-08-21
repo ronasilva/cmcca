@@ -16,11 +16,11 @@ export const DOCUMENT_META: Record<string, { title: string; author: string }> =
       author: "Mestre Pastinha",
     },
     "04-capoeira-angola-waldeloir-rego.pdf": {
-      title: "Capoeira Angola — ensaio sócio-etnográfico",
+      title: "Capoeira Angola: ensaio sócio-etnográfico",
       author: "Waldeloir Rego",
     },
     "05-a-negregada-instituicao.pdf": {
-      title: "A Negregada Instituição — os capoeiras no Rio de Janeiro",
+      title: "A Negregada Instituição: os capoeiras no Rio de Janeiro",
       author: "Carlos Eugênio Líbano Soares",
     },
   };

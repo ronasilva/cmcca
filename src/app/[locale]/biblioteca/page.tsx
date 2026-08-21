@@ -178,7 +178,7 @@ const VIDEOS: {
   {
     id: "UgChVkbxgBc",
     cat: 0,
-    title: "Os Ilundu não são orixás — Alberto Oliveira Pinto",
+    title: "Os Ilundu não são orixás (Alberto Oliveira Pinto)",
     channel: "Lembra-te, Angola",
   },
   {

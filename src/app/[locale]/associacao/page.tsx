@@ -41,7 +41,7 @@ export default async function AssociacaoPage({
           <div className="md:col-span-3 md:col-start-10">
             <Image
               src="/cmcca-logo.png"
-              alt="Emblema da CMC/CA — Associação de Capoeira Angola"
+              alt="Emblema da CMC/CA · Associação de Capoeira Angola"
               width={370}
               height={373}
               className="h-auto w-44 max-w-full object-contain md:w-full"

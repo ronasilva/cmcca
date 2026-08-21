@@ -131,7 +131,7 @@ export default async function PerfilPage({
                       defaultValue={sinceDay ? Number(sinceDay) : ""}
                       className={`${inputClass} w-20 cursor-pointer`}
                     >
-                      <option value="">—</option>
+                      <option value="">-</option>
                       {Array.from({ length: 31 }, (_, i) => (
                         <option key={i + 1} value={i + 1}>
                           {i + 1}
@@ -150,7 +150,7 @@ export default async function PerfilPage({
                       className={`${inputClass} w-40 cursor-pointer`}
                     >
                       <option value="" disabled>
-                        —
+                        -
                       </option>
                       {Array.from({ length: 12 }, (_, i) => (
                         <option key={i + 1} value={i + 1}>

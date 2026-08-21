@@ -174,7 +174,7 @@ export default async function FichasPage({
                         {t("labelGraduation")}
                       </dt>
                       <dd className="font-display italic text-espresso">
-                        {f.graduation || "—"}
+                        {f.graduation || "-"}
                       </dd>
                     </div>
                     <div>
@@ -194,14 +194,14 @@ export default async function FichasPage({
                       <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
                         {t("labelWhere")}
                       </dt>
-                      <dd className="text-espresso-2">{f.where || "—"}</dd>
+                      <dd className="text-espresso-2">{f.where || "-"}</dd>
                     </div>
                     <div>
                       <dt className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
                         {t("labelSince")}
                       </dt>
                       <dd className="text-espresso-2">
-                        {f.since ? formatSince(f.since) : "—"}
+                        {f.since ? formatSince(f.since) : "-"}
                       </dd>
                     </div>
                     <div>
@@ -219,7 +219,7 @@ export default async function FichasPage({
                             {t("viewCert")} ↗
                           </a>
                         ) : (
-                          <span className="text-espresso-2">—</span>
+                          <span className="text-espresso-2">-</span>
                         )}
                       </dd>
                     </div>
