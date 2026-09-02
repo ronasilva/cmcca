@@ -132,6 +132,9 @@ const ACERVO_VIDEO_IDS = [
   "hKoXnwy8pG8",
   "BuwgeQMeYm0",
   "JDYZQOa-USU",
+  "CYC78Z3gHjE",
+  "DnYeE-V7iHI",
+  "yY_9ey1IbUg",
 ];
 
 async function signTracks(): Promise<Record<string, string>> {
@@ -161,6 +164,7 @@ const VIDEOS: {
   cat: number;
   title: string;
   channel: string;
+  description?: string;
   selfHosted?: boolean;
 }[] = [
   {
@@ -188,6 +192,24 @@ const VIDEOS: {
     channel: "Viagens Cariocas",
   },
   {
+    id: "CYC78Z3gHjE",
+    cat: 1,
+    title: "Live relançada: das capitanias aos capoeiras",
+    channel: "Live · CMC/CA",
+    description:
+      "A história contada de uma vez: da fundação do Brasil e das capitanias às maltas do Rio, do berimbau de 1739 à nomeação da Capoeira Angola, até o relançamento a partir do Rio nos anos 80, quando os jornais a davam por extinta.",
+    selfHosted: true,
+  },
+  {
+    id: "yY_9ey1IbUg",
+    cat: 2,
+    title: "Aglomerados sobre assuntos do fato dos capoeiras",
+    channel: "Live · CMC/CA",
+    description:
+      "Quase uma hora entre cantorias e conversa: ladainhas do caderno, memórias do mestre Pastinha, que chamava Moraes de Pedrinho, e os assuntos do fato dos capoeiras na atualidade.",
+    selfHosted: true,
+  },
+  {
     id: "IyUg6ebRBvs",
     cat: 2,
     title: "Influência yoruba na formação social de capoeiras",
@@ -199,6 +221,15 @@ const VIDEOS: {
     cat: 3,
     title: "Grupo/Escola de Capoeira Angola África Bantu",
     channel: "Live · CMC/CA",
+    selfHosted: true,
+  },
+  {
+    id: "DnYeE-V7iHI",
+    cat: 3,
+    title: "Vários assuntos na atualidade da Capoeira Angola",
+    channel: "Live · CMC/CA",
+    description:
+      "O falso de 1860, as unhas encolhidas e o animal domesticado, a linha e o gol da roda, o que faz um mestre. Malandragem é na roda; fora dela, é na moral.",
     selfHosted: true,
   },
 ];
@@ -343,6 +374,11 @@ export default async function BibliotecaPage({
                           <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.2em] text-espresso-2">
                             {v.channel}
                           </p>
+                          {v.description && (
+                            <p className="mt-2 text-xs leading-relaxed text-espresso-2">
+                              {v.description}
+                            </p>
+                          )}
                         </figcaption>
                       </figure>
                     </li>
