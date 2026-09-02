@@ -62,7 +62,10 @@ export default async function CantoriasPage({
   const t = await getTranslations("CantoriasPage");
   const tl = await getTranslations("LibraryPage");
 
-  let n = 0;
+  // Running tema number, precomputed per conjunto so render stays pure.
+  const numberOffsets = CONJUNTOS.map((c) => c.temas.length).map(
+    (_, i, lens) => lens.slice(0, i).reduce((a, b) => a + b, 0)
+  );
 
   return (
     <div className="flex flex-col flex-1 text-espresso">
@@ -119,8 +122,8 @@ export default async function CantoriasPage({
               </p>
             )}
             <ol className="mt-8 max-w-3xl divide-y divide-espresso/15 border-y border-espresso/15">
-              {conjunto.temas.map((tema) => {
-                n += 1;
+              {conjunto.temas.map((tema, ti) => {
+                const n = numberOffsets[ci] + ti + 1;
                 return (
                   <li key={tema.title}>
                     <details className="group py-5">

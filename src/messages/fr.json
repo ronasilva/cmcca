@@ -94,7 +94,18 @@
     "cadernoLink": "Carnet de chants (caderno de cantorias)",
     "perguntasTitle": "Demandez au Mestre",
     "perguntasIntro": "Une question sur la Capoeira Angola, les Bantous, le Brésil ? Les réponses du Mestre aux questions retenues sont publiées.",
-    "perguntasCta": "Poser une question ou lire les réponses"
+    "perguntasCta": "Poser une question ou lire les réponses",
+    "videoDescriptions": {
+      "CYC78Z3gHjE": "Toute l'histoire en un seul récit : de la fondation du Brésil et des capitaineries aux maltas de Rio, du berimbau de 1739 à la nomination de la Capoeira Angola, jusqu'à la relance depuis Rio dans les années 80, quand les journaux la déclaraient éteinte. En portugais.",
+      "yY_9ey1IbUg": "Près d'une heure entre chants et conversation : des ladainhas du carnet, des souvenirs de mestre Pastinha, qui appelait Moraes « Pedrinho », et les sujets actuels des capoeiras. En portugais.",
+      "DnYeE-V7iHI": "Le « falso » de 1860, les griffes rentrées et l'animal domestiqué, la ligne et le but de la roda, ce qui fait un mestre. En portugais."
+    },
+    "encarteLabel": "Dans le livret",
+    "discYearBefore2008": "avant 2008",
+    "discTrackParte": "Partie {n}",
+    "discTrackFaixa": "Piste {n}",
+    "discTrackFull": "Enregistrement complet",
+    "trairaNote": "Cette vidéo inclut un enregistrement historique de Mestre Traíra expliquant les toques du berimbau, cité comme document d'enseignement, avec crédit indiqué dans la vidéo. Les droits de l'enregistrement appartiennent à leurs détenteurs ; pour toute question de droits, contactez l'association."
   },
   "CoursPage": {
     "eyebrow": "Cours hebdomadaires",

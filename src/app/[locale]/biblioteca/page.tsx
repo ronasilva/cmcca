@@ -21,7 +21,7 @@ type Book = { title: string; author: string };
 const DISCOS: {
   title: string;
   year?: number;
-  yearLabel?: string;
+  yearLabelKey?: string;
   inProduction?: boolean;
   bandcampUrl?: string;
   youtubeUrl?: string;
@@ -31,14 +31,14 @@ const DISCOS: {
     nota?: string;
     itens: { nome: string; credito?: string }[];
   }[];
-  tracks?: { label: string; path: string }[];
+  tracks?: { labelKey: string; n?: number; path: string }[];
 }[] = [
   {
     title: "Novo CD",
     year: 2026,
     inProduction: true,
     tracks: [
-      { label: "Faixa 1", path: "discografia/novo-cd/faixa-1.m4a" },
+      { labelKey: "discTrackFaixa", n: 1, path: "discografia/novo-cd/faixa-1.m4a" },
     ],
   },
   {
@@ -51,7 +51,7 @@ const DISCOS: {
   },
   {
     title: "África Bantu: documentação memória da capoeira, vol. 1",
-    yearLabel: "anterior a 2008",
+    yearLabelKey: "discYearBefore2008",
     youtubeUrl: "https://youtu.be/LFMNk_i0vIk",
     cover: "/images/discografia/cd-vol1.jpg",
     encarte: [
@@ -102,13 +102,13 @@ const DISCOS: {
       },
     ],
     tracks: [
-      { label: "Parte 1", path: "discografia/cds-antigos/cd1-parte-01.mp3" },
-      { label: "Parte 2", path: "discografia/cds-antigos/cd1-parte-02.mp3" },
-      { label: "Parte 3", path: "discografia/cds-antigos/cd1-parte-03.mp3" },
-      { label: "Parte 4", path: "discografia/cds-antigos/cd1-parte-04.mp3" },
-      { label: "Parte 5", path: "discografia/cds-antigos/cd1-parte-05.mp3" },
-      { label: "Parte 6", path: "discografia/cds-antigos/cd1-parte-06.mp3" },
-      { label: "Parte 7", path: "discografia/cds-antigos/cd1-parte-07.mp3" },
+      { labelKey: "discTrackParte", n: 1, path: "discografia/cds-antigos/cd1-parte-01.mp3" },
+      { labelKey: "discTrackParte", n: 2, path: "discografia/cds-antigos/cd1-parte-02.mp3" },
+      { labelKey: "discTrackParte", n: 3, path: "discografia/cds-antigos/cd1-parte-03.mp3" },
+      { labelKey: "discTrackParte", n: 4, path: "discografia/cds-antigos/cd1-parte-04.mp3" },
+      { labelKey: "discTrackParte", n: 5, path: "discografia/cds-antigos/cd1-parte-05.mp3" },
+      { labelKey: "discTrackParte", n: 6, path: "discografia/cds-antigos/cd1-parte-06.mp3" },
+      { labelKey: "discTrackParte", n: 7, path: "discografia/cds-antigos/cd1-parte-07.mp3" },
     ],
   },
   {
@@ -117,7 +117,7 @@ const DISCOS: {
     youtubeUrl: "https://youtu.be/LFMNk_i0vIk",
     cover: "/images/discografia/cd-vol2.jpg",
     tracks: [
-      { label: "Gravação completa", path: "discografia/cds-antigos/cd2.mp3" },
+      { labelKey: "discTrackFull", path: "discografia/cds-antigos/cd2.mp3" },
     ],
   },
 ];
@@ -158,13 +158,13 @@ async function signTracks(): Promise<Record<string, string>> {
 }
 
 // Curated by Mestre Braga; grouped by the videoteca's four themes
-// (index into LibraryPage.liveCats). Titles are the works' own names.
+// (index into LibraryPage.liveCats). Titles are the works' own names;
+// descriptions live in LibraryPage.videoDescriptions keyed by id.
 const VIDEOS: {
   id: string;
   cat: number;
   title: string;
   channel: string;
-  description?: string;
   selfHosted?: boolean;
 }[] = [
   {
@@ -196,8 +196,6 @@ const VIDEOS: {
     cat: 1,
     title: "Live relançada: das capitanias aos capoeiras",
     channel: "Live · CMC/CA",
-    description:
-      "A história contada de uma vez: da fundação do Brasil e das capitanias às maltas do Rio, do berimbau de 1739 à nomeação da Capoeira Angola, até o relançamento a partir do Rio nos anos 80, quando os jornais a davam por extinta.",
     selfHosted: true,
   },
   {
@@ -205,8 +203,6 @@ const VIDEOS: {
     cat: 2,
     title: "Aglomerados sobre assuntos do fato dos capoeiras",
     channel: "Live · CMC/CA",
-    description:
-      "Quase uma hora entre cantorias e conversa: ladainhas do caderno, memórias do mestre Pastinha, que chamava Moraes de Pedrinho, e os assuntos do fato dos capoeiras na atualidade.",
     selfHosted: true,
   },
   {
@@ -228,8 +224,6 @@ const VIDEOS: {
     cat: 3,
     title: "Vários assuntos na atualidade da Capoeira Angola",
     channel: "Live · CMC/CA",
-    description:
-      "O falso de 1860, as unhas encolhidas e o animal domesticado, a linha e o gol da roda, o que faz um mestre. Malandragem é na roda; fora dela, é na moral.",
     selfHosted: true,
   },
 ];
@@ -245,6 +239,10 @@ export default async function BibliotecaPage({
 
   const books = t.raw("books") as Book[];
   const liveCats = t.raw("liveCats") as string[];
+  const videoDescriptions = t.raw("videoDescriptions") as Record<
+    string,
+    string
+  >;
   const trackUrls = await signTracks();
 
   return (
@@ -374,9 +372,9 @@ export default async function BibliotecaPage({
                           <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.2em] text-espresso-2">
                             {v.channel}
                           </p>
-                          {v.description && (
+                          {videoDescriptions[v.id] && (
                             <p className="mt-2 text-xs leading-relaxed text-espresso-2">
-                              {v.description}
+                              {videoDescriptions[v.id]}
                             </p>
                           )}
                         </figcaption>
@@ -429,7 +427,7 @@ export default async function BibliotecaPage({
                   {disco.title}
                 </h3>
                 <span className="font-mono text-[11px] uppercase tracking-[0.25em] text-espresso-2">
-                  {disco.year ?? disco.yearLabel}
+                  {disco.year ?? (disco.yearLabelKey ? t(disco.yearLabelKey) : null)}
                 </span>
                 {disco.inProduction && (
                   <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-terracotta">
@@ -444,7 +442,7 @@ export default async function BibliotecaPage({
                       trackUrls[track.path] && (
                         <li key={track.path}>
                           <p className="mb-2 font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
-                            {track.label}
+                            {t(track.labelKey, { n: track.n ?? 0 })}
                           </p>
                           <audio
                             controls
@@ -490,7 +488,7 @@ export default async function BibliotecaPage({
               {disco.encarte && (
                 <div className="mt-6 max-w-2xl pl-10">
                   <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
-                    No encarte
+                    {t("encarteLabel")}
                   </p>
                   <div className="mt-4 flex flex-col gap-6">
                     {disco.encarte.map((sec) => (
@@ -561,7 +559,7 @@ export default async function BibliotecaPage({
                   </p>
                   {"note" in v && v.note && (
                     <p className="mt-2 text-xs leading-relaxed text-espresso-2">
-                      {v.note}
+                      {t("trairaNote")}
                     </p>
                   )}
                 </figcaption>

@@ -12,7 +12,7 @@ import { Footer } from "@/components/Footer";
 import { SectionDivider } from "@/components/SectionDivider";
 import { DOCUMENT_META, documentThumbPath } from "@/lib/documents";
 import { isAdminUser } from "@/lib/admins";
-import { statusOf, formatSince, type FichaStatus } from "@/lib/fichas";
+import { statusOf, formatSince } from "@/lib/fichas";
 import { listQuestions } from "@/lib/questions";
 import { findMemberFicha } from "@/lib/member-ficha";
 

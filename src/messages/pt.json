@@ -94,7 +94,18 @@
     "cadernoLink": "Caderno de cantorias",
     "perguntasTitle": "Pergunte ao Mestre",
     "perguntasIntro": "Uma pergunta sobre a Capoeira Angola, os bantus, o Brasil? As respostas do Mestre às perguntas selecionadas são publicadas.",
-    "perguntasCta": "Perguntar ou ler as respostas"
+    "perguntasCta": "Perguntar ou ler as respostas",
+    "videoDescriptions": {
+      "CYC78Z3gHjE": "A história contada de uma vez: da fundação do Brasil e das capitanias às maltas do Rio, do berimbau de 1739 à nomeação da Capoeira Angola, até o relançamento a partir do Rio nos anos 80, quando os jornais a davam por extinta.",
+      "yY_9ey1IbUg": "Quase uma hora entre cantorias e conversa: ladainhas do caderno, memórias do mestre Pastinha, que chamava Moraes de Pedrinho, e os assuntos do fato dos capoeiras na atualidade.",
+      "DnYeE-V7iHI": "O falso de 1860, as unhas encolhidas e o animal domesticado, a linha e o gol da roda, o que faz um mestre. Malandragem é na roda; fora dela, é na moral."
+    },
+    "encarteLabel": "No encarte",
+    "discYearBefore2008": "anterior a 2008",
+    "discTrackParte": "Parte {n}",
+    "discTrackFaixa": "Faixa {n}",
+    "discTrackFull": "Gravação completa",
+    "trairaNote": "Este vídeo inclui uma gravação histórica de Mestre Traíra explicando os toques do berimbau, citada como documento de ensino, com crédito indicado no próprio vídeo. Os direitos da gravação pertencem aos seus detentores; para questões de direitos, contate a associação."
   },
   "CoursPage": {
     "eyebrow": "Aulas semanais",
