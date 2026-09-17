@@ -106,7 +106,39 @@
     "discTrackFaixa": "Track {n}",
     "discTrackFull": "Full recording",
     "trairaNote": "This video includes a historical recording of Mestre Traíra explaining the berimbau toques, cited as a teaching document, with credit given in the video itself. The recording's rights belong to their holders; for rights matters, contact the association.",
-    "textosTitle": "Texts by the Mestre"
+    "textosTitle": "Texts by the Mestre",
+    "leituras": {
+      "ocidentalizacao": {
+        "label": "Reading the mestre's words",
+        "intro": "A reading by the site's editors, for those arriving without the history. The mestre has the last word.",
+        "pontos": [
+          {
+            "t": "The name predates Pastinha",
+            "p": "\"Capoeira Angola\" was already in use in the Bahian Recôncavo in the 19th century. In 1941 Pastinha did not invent the name: he consecrated it as a tradition."
+          },
+          {
+            "t": "Rio set the rules",
+            "p": "In the 1930s the capital imposed Aníbal Burlamaqui's Ginástica Nacional, a capoeira regulated as a sport and without the berimbau. The capoeiras of Bahia would not give up their three berimbaus."
+          },
+          {
+            "t": "Bimba's move",
+            "p": "He presented Luta Regional as a sport, in the mould of the Ginástica Nacional, but with one berimbau, justified as a personal matter: warming up before the ring, stage demonstrations. The sports authorities approved, and the instrument was not left out."
+          },
+          {
+            "t": "The surprising thesis",
+            "p": "Coming from an angoleiro: if we have the berimbau today, it is thanks to Bimba. By keeping one berimbau inside something officially accepted, he opened the door through which, later, Pastinha's CECA also entered, as a \"Sports Centre\". Hence the emphasis."
+          },
+          {
+            "t": "\"Regional\" is a political word",
+            "p": "Ginástica Nacional was Rio's name, meant to apply to every state. Calling Bimba's fight Regional, of the Bahia region, placed it inside that same national frame without confrontation. Bimba enters as a collaborator, not a rival."
+          },
+          {
+            "t": "Politics, not politicking",
+            "p": "That was the political vision of the time. What is made of it today, Angola against Regional, is something else."
+          }
+        ]
+      }
+    }
   },
   "CoursPage": {
     "eyebrow": "Weekly classes",

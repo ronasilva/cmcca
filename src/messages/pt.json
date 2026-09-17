@@ -106,7 +106,39 @@
     "discTrackFaixa": "Faixa {n}",
     "discTrackFull": "Gravação completa",
     "trairaNote": "Este vídeo inclui uma gravação histórica de Mestre Traíra explicando os toques do berimbau, citada como documento de ensino, com crédito indicado no próprio vídeo. Os direitos da gravação pertencem aos seus detentores; para questões de direitos, contate a associação.",
-    "textosTitle": "Textos do Mestre"
+    "textosTitle": "Textos do Mestre",
+    "leituras": {
+      "ocidentalizacao": {
+        "label": "Interpretando as palavras do mestre",
+        "intro": "Uma leitura de quem edita o site, para quem chega sem conhecer a história. A última palavra é do mestre.",
+        "pontos": [
+          {
+            "t": "O nome é anterior a Pastinha",
+            "p": "\"Capoeira Angola\" já circulava no Recôncavo baiano no século XIX. Em 1941, Pastinha não inventou o nome: consagrou-o como tradição."
+          },
+          {
+            "t": "O Rio ditava a regra",
+            "p": "Nos anos 30 a capital impôs a Ginástica Nacional de Aníbal Burlamaqui, uma capoeira regrada como esporte e sem berimbau. Os capoeiras da Bahia não queriam abrir mão dos três berimbaus."
+          },
+          {
+            "t": "A jogada de Bimba",
+            "p": "Apresentou a Luta Regional como esporte, no molde da Ginástica Nacional, mas com um berimbau, justificado como coisa pessoal: aquecimento antes do ringue, demonstrações de palco. O esporte aprovou e o instrumento não ficou de fora."
+          },
+          {
+            "t": "A tese que surpreende",
+            "p": "Vinda de um angoleiro: se hoje temos o berimbau, é graças a Bimba. Ao manter um berimbau dentro de algo aceito oficialmente, abriu a porta pela qual, mais tarde, o CECA de Pastinha também entrou, como Centro Esportivo. Daí o grifo."
+          },
+          {
+            "t": "\"Regional\" é palavra política",
+            "p": "Ginástica Nacional era o nome do Rio para valer em todos os estados. Chamar a luta de Bimba de Regional, da região da Bahia, a colocava dentro do mesmo âmbito nacional sem confronto. Bimba entra como colaborador, não como rival."
+          },
+          {
+            "t": "Política, não politicagem",
+            "p": "Essa era a visão política da época. O que hoje se faz dela, Angola contra Regional, é outra coisa."
+          }
+        ]
+      }
+    }
   },
   "CoursPage": {
     "eyebrow": "Aulas semanais",

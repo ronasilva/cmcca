@@ -244,6 +244,10 @@ export default async function BibliotecaPage({
     string,
     string
   >;
+  const leituras = t.raw("leituras") as Record<
+    string,
+    { label: string; intro: string; pontos: { t: string; p: string }[] }
+  >;
   const trackUrls = await signTracks();
 
   return (
@@ -395,7 +399,12 @@ export default async function BibliotecaPage({
       <section className="mx-auto w-full max-w-6xl px-6 pb-20">
         <div className="flex flex-col gap-16">
           {TEXTOS.map((texto) => (
-            <article key={texto.slug} id={texto.slug} className="max-w-3xl">
+            <article
+              key={texto.slug}
+              id={texto.slug}
+              className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-16"
+            >
+            <div className="max-w-3xl">
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                 {texto.eyebrow}
               </p>
@@ -422,6 +431,34 @@ export default async function BibliotecaPage({
                   </p>
                 ))}
               </div>
+            </div>
+            {leituras[texto.slug] && (
+              <aside className="self-start rounded-sm border border-espresso/15 p-6 lg:sticky lg:top-24 lg:mt-10">
+                <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-terracotta">
+                  {leituras[texto.slug].label}
+                </p>
+                <p className="mt-3 font-display text-base italic leading-relaxed text-espresso-2">
+                  {leituras[texto.slug].intro}
+                </p>
+                <ol className="mt-6 flex flex-col gap-5 border-t border-espresso/15 pt-6">
+                  {leituras[texto.slug].pontos.map((ponto, i) => (
+                    <li key={ponto.t} className="flex gap-4">
+                      <span className="pt-0.5 font-mono text-[11px] tracking-[0.3em] text-terracotta">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <p className="font-display text-base font-light italic text-espresso">
+                          {ponto.t}
+                        </p>
+                        <p className="mt-1 text-sm leading-relaxed text-espresso-2">
+                          {ponto.p}
+                        </p>
+                      </div>
+                    </li>
+                  ))}
+                </ol>
+              </aside>
+            )}
             </article>
           ))}
         </div>

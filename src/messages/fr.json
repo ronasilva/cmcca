@@ -106,7 +106,39 @@
     "discTrackFaixa": "Piste {n}",
     "discTrackFull": "Enregistrement complet",
     "trairaNote": "Cette vidéo inclut un enregistrement historique de Mestre Traíra expliquant les toques du berimbau, cité comme document d'enseignement, avec crédit indiqué dans la vidéo. Les droits de l'enregistrement appartiennent à leurs détenteurs ; pour toute question de droits, contactez l'association.",
-    "textosTitle": "Textes du Mestre"
+    "textosTitle": "Textes du Mestre",
+    "leituras": {
+      "ocidentalizacao": {
+        "label": "Lire les mots du mestre",
+        "intro": "Une lecture de la rédaction du site, pour qui arrive sans connaître l'histoire. Le dernier mot revient au mestre.",
+        "pontos": [
+          {
+            "t": "Le nom précède Pastinha",
+            "p": "« Capoeira Angola » circulait déjà dans le Recôncavo de Bahia au XIXe siècle. En 1941, Pastinha n'a pas inventé le nom : il l'a consacré comme tradition."
+          },
+          {
+            "t": "Rio dictait la règle",
+            "p": "Dans les années 30, la capitale impose la Ginástica Nacional d'Aníbal Burlamaqui, une capoeira réglementée comme sport et sans berimbau. Les capoeiras de Bahia ne voulaient pas renoncer à leurs trois berimbaus."
+          },
+          {
+            "t": "Le coup de Bimba",
+            "p": "Il présente la Luta Regional comme un sport, dans le moule de la Ginástica Nacional, mais avec un berimbau, justifié comme affaire personnelle : échauffement avant le ring, démonstrations de scène. Le sport approuve, et l'instrument n'est pas laissé dehors."
+          },
+          {
+            "t": "La thèse qui surprend",
+            "p": "Venant d'un angoleiro : si nous avons le berimbau aujourd'hui, c'est grâce à Bimba. En gardant un berimbau dans quelque chose d'officiellement accepté, il a ouvert la porte par laquelle, plus tard, le CECA de Pastinha est entré lui aussi, comme « Centre Sportif ». D'où le souligné."
+          },
+          {
+            "t": "« Regional » est un mot politique",
+            "p": "Ginástica Nacional était le nom de Rio, censé valoir pour tous les États. Appeler la lutte de Bimba Regional, de la région de Bahia, la plaçait dans le même cadre national sans confrontation. Bimba entre en collaborateur, non en rival."
+          },
+          {
+            "t": "Politique, pas politicaillerie",
+            "p": "C'était la vision politique de l'époque. Ce qu'on en fait aujourd'hui, Angola contre Regional, est autre chose."
+          }
+        ]
+      }
+    }
   },
   "CoursPage": {
     "eyebrow": "Cours hebdomadaires",
