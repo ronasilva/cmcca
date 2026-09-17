@@ -12,6 +12,8 @@ export type Texto = {
   eyebrow: string;
   titulo: string;
   paragrafos: Paragrafo[];
+  // imagem de uma nota, pela sua numeração (a mesma nos três idiomas)
+  notaImagens?: Record<number, { src: string; alt: string }>;
 };
 
 export const TEXTOS: Texto[] = [
@@ -19,6 +21,12 @@ export const TEXTOS: Texto[] = [
     slug: "ocidentalizacao",
     eyebrow: "Breve resumo",
     titulo: "A ocidentalização do conhecimento dos capoeiras",
+    notaImagens: {
+      1: {
+        src: "/images/livros/burlamaqui-1928.jpg",
+        alt: "Capa da 1ª edição de Gymnastica Nacional (Capoeiragem), 1928",
+      },
+    },
     paragrafos: [
       "O nome Capoeira Angola já vinha desde o Recôncavo baiano (referência de 1860). No mestre Pastinha, em 1941, consagrou-se como tradição de angoleiros.",
       "Quanto ao mestre Bimba, nos anos 30, que também era dos que frequentavam a Gengibirra: nesse tempo havia certo conflito entre a capital, o Rio de Janeiro à época, e o estado da Bahia, que resistia, pelos capoeiras de lá, em não querer abandonar a ideia do uso dos três berimbaus, não previsto nas regras da Ginástica Nacional desenvolvida por Aníbal Burlamaqui[[1]].",

@@ -465,6 +465,22 @@ export default async function BibliotecaPage({
                         <span className="pt-0.5 font-mono text-[10px] text-terracotta">
                           {i + 1}
                         </span>
+                        {texto.notaImagens?.[i + 1] && (
+                          <a
+                            href={nota.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="shrink-0"
+                          >
+                            <Image
+                              src={texto.notaImagens[i + 1].src}
+                              alt={texto.notaImagens[i + 1].alt}
+                              width={96}
+                              height={137}
+                              className="w-20 rounded-xs border border-espresso/15 sm:w-24"
+                            />
+                          </a>
+                        )}
                         <p className="text-sm leading-relaxed text-espresso-2">
                           <span className="font-display italic text-espresso">
                             {nota.termo}.
