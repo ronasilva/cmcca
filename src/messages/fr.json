@@ -105,7 +105,8 @@
     "discTrackParte": "Partie {n}",
     "discTrackFaixa": "Piste {n}",
     "discTrackFull": "Enregistrement complet",
-    "trairaNote": "Cette vidéo inclut un enregistrement historique de Mestre Traíra expliquant les toques du berimbau, cité comme document d'enseignement, avec crédit indiqué dans la vidéo. Les droits de l'enregistrement appartiennent à leurs détenteurs ; pour toute question de droits, contactez l'association."
+    "trairaNote": "Cette vidéo inclut un enregistrement historique de Mestre Traíra expliquant les toques du berimbau, cité comme document d'enseignement, avec crédit indiqué dans la vidéo. Les droits de l'enregistrement appartiennent à leurs détenteurs ; pour toute question de droits, contactez l'association.",
+    "textosTitle": "Textes du Mestre"
   },
   "CoursPage": {
     "eyebrow": "Cours hebdomadaires",

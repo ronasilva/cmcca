@@ -105,7 +105,8 @@
     "discTrackParte": "Part {n}",
     "discTrackFaixa": "Track {n}",
     "discTrackFull": "Full recording",
-    "trairaNote": "This video includes a historical recording of Mestre Traíra explaining the berimbau toques, cited as a teaching document, with credit given in the video itself. The recording's rights belong to their holders; for rights matters, contact the association."
+    "trairaNote": "This video includes a historical recording of Mestre Traíra explaining the berimbau toques, cited as a teaching document, with credit given in the video itself. The recording's rights belong to their holders; for rights matters, contact the association.",
+    "textosTitle": "Texts by the Mestre"
   },
   "CoursPage": {
     "eyebrow": "Weekly classes",

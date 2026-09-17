@@ -12,6 +12,7 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { ExclusiveAudio } from "@/components/ExclusiveAudio";
 import { ARRANJAMENTO } from "@/content/cantorias";
+import { TEXTOS } from "@/content/textos";
 
 type Book = { title: string; author: string };
 
@@ -385,6 +386,44 @@ export default async function BibliotecaPage({
               </div>
             );
           })}
+        </div>
+      </section>
+
+      <SectionDivider label={t("textosTitle")} />
+
+      {/* TEXTOS DO MESTRE: ensaios curtos, na voz dele, em português */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-20">
+        <div className="flex flex-col gap-16">
+          {TEXTOS.map((texto) => (
+            <article key={texto.slug} id={texto.slug} className="max-w-3xl">
+              <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
+                {texto.eyebrow}
+              </p>
+              <h3 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso">
+                {texto.titulo}
+              </h3>
+              <div className="mt-6 flex flex-col gap-4">
+                {texto.paragrafos.map((par, i) => (
+                  <p
+                    key={i}
+                    className="text-base leading-relaxed text-espresso-2"
+                  >
+                    {typeof par === "string" ? (
+                      par
+                    ) : (
+                      <>
+                        {par.antes}
+                        <span className="underline decoration-terracotta underline-offset-4">
+                          {par.grifo}
+                        </span>
+                        {par.depois}
+                      </>
+                    )}
+                  </p>
+                ))}
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 
