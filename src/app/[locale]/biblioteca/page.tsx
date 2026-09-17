@@ -291,127 +291,6 @@ export default async function BibliotecaPage({
         </Link>
       </section>
 
-      <SectionDivider label={t("booksTitle")} />
-
-      {/* BOOKS — public bibliography */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-16">
-        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
-          {t("booksIntro")}
-        </p>
-        <ul className="mt-12 divide-y divide-terracotta/20 border-y border-terracotta/20">
-          {books.map((book, i) => (
-            <li
-              key={`${book.title}-${book.author}`}
-              className="grid grid-cols-1 gap-2 py-6 sm:grid-cols-12 sm:items-baseline"
-            >
-              <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta sm:col-span-1">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <p className="font-display text-2xl font-light italic text-espresso sm:col-span-7">
-                {book.title}
-              </p>
-              <p className="text-base text-espresso-2 sm:col-span-4">
-                {book.author}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <SectionDivider label={t("estanteTitle")} />
-
-      {/* A ESTANTE DO MESTRE — the mestre's photographed bookshelf */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-24">
-        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
-          {t("estanteIntro")}
-        </p>
-        <ul className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
-          {Array.from({ length: 17 }, (_, i) => (
-            <li key={i}>
-              <Image
-                src={`/images/estante/estante-${String(i + 1).padStart(2, "0")}.jpg`}
-                alt=""
-                width={700}
-                height={933}
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
-                className="aspect-3/4 w-full rounded-sm border border-espresso/15 object-contain"
-              />
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <SectionDivider label={t("livesTitle")} />
-
-      {/* VIDEO LIBRARY — curated by Mestre Braga, grouped by theme */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-24">
-        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
-          {t("livesIntro")}
-        </p>
-
-        <div className="mt-12 grid grid-cols-1 gap-14 sm:grid-cols-2">
-          {liveCats.map((cat, i) => {
-            const videos = VIDEOS.filter((v) => v.cat === i);
-            if (videos.length === 0) return null;
-            return (
-              <div key={cat} className={videos.length > 1 ? "sm:col-span-2" : ""}>
-                <div className="flex items-baseline gap-3">
-                  <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-                    N°&nbsp;{String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="font-display text-2xl font-light italic text-espresso">
-                    {cat}
-                  </h3>
-                </div>
-                <ul
-                  className={`mt-6 grid grid-cols-1 gap-8 ${
-                    videos.length > 1 ? "sm:grid-cols-2" : ""
-                  }`}
-                >
-                  {videos.map((v) => (
-                    <li key={v.id}>
-                      <figure>
-                        <div className="overflow-hidden rounded-sm border border-espresso/15">
-                          {v.selfHosted &&
-                          trackUrls[`acervo/videos/${v.id}.mp4`] ? (
-                            <video
-                              controls
-                              preload="none"
-                              poster={`/images/videos/${v.id}.jpg`}
-                              src={trackUrls[`acervo/videos/${v.id}.mp4`]}
-                              className="aspect-video w-full"
-                            />
-                          ) : (
-                            <YouTubeEmbed
-                              videoId={v.id}
-                              title={v.title}
-                              poster={`/images/videos/${v.id}.jpg`}
-                            />
-                          )}
-                        </div>
-                        <figcaption className="mt-3">
-                          <p className="font-display text-sm italic leading-snug text-espresso">
-                            {v.title}
-                          </p>
-                          <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.2em] text-espresso-2">
-                            {v.channel}
-                          </p>
-                          {videoDescriptions[v.id] && (
-                            <p className="mt-2 text-xs leading-relaxed text-espresso-2">
-                              {videoDescriptions[v.id]}
-                            </p>
-                          )}
-                        </figcaption>
-                      </figure>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
       <SectionDivider label={t("textosTitle")} />
 
       {/* TEXTOS DO MESTRE: ensaios curtos, na voz dele, em português */}
@@ -535,6 +414,127 @@ export default async function BibliotecaPage({
             )}
             </article>
           ))}
+        </div>
+      </section>
+
+      <SectionDivider label={t("booksTitle")} />
+
+      {/* BOOKS — public bibliography */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-16">
+        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
+          {t("booksIntro")}
+        </p>
+        <ul className="mt-12 divide-y divide-terracotta/20 border-y border-terracotta/20">
+          {books.map((book, i) => (
+            <li
+              key={`${book.title}-${book.author}`}
+              className="grid grid-cols-1 gap-2 py-6 sm:grid-cols-12 sm:items-baseline"
+            >
+              <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta sm:col-span-1">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <p className="font-display text-2xl font-light italic text-espresso sm:col-span-7">
+                {book.title}
+              </p>
+              <p className="text-base text-espresso-2 sm:col-span-4">
+                {book.author}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <SectionDivider label={t("estanteTitle")} />
+
+      {/* A ESTANTE DO MESTRE — the mestre's photographed bookshelf */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-24">
+        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
+          {t("estanteIntro")}
+        </p>
+        <ul className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          {Array.from({ length: 17 }, (_, i) => (
+            <li key={i}>
+              <Image
+                src={`/images/estante/estante-${String(i + 1).padStart(2, "0")}.jpg`}
+                alt=""
+                width={700}
+                height={933}
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                className="aspect-3/4 w-full rounded-sm border border-espresso/15 object-contain"
+              />
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <SectionDivider label={t("livesTitle")} />
+
+      {/* VIDEO LIBRARY — curated by Mestre Braga, grouped by theme */}
+      <section className="mx-auto w-full max-w-6xl px-6 pb-24">
+        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
+          {t("livesIntro")}
+        </p>
+
+        <div className="mt-12 grid grid-cols-1 gap-14 sm:grid-cols-2">
+          {liveCats.map((cat, i) => {
+            const videos = VIDEOS.filter((v) => v.cat === i);
+            if (videos.length === 0) return null;
+            return (
+              <div key={cat} className={videos.length > 1 ? "sm:col-span-2" : ""}>
+                <div className="flex items-baseline gap-3">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
+                    N°&nbsp;{String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="font-display text-2xl font-light italic text-espresso">
+                    {cat}
+                  </h3>
+                </div>
+                <ul
+                  className={`mt-6 grid grid-cols-1 gap-8 ${
+                    videos.length > 1 ? "sm:grid-cols-2" : ""
+                  }`}
+                >
+                  {videos.map((v) => (
+                    <li key={v.id}>
+                      <figure>
+                        <div className="overflow-hidden rounded-sm border border-espresso/15">
+                          {v.selfHosted &&
+                          trackUrls[`acervo/videos/${v.id}.mp4`] ? (
+                            <video
+                              controls
+                              preload="none"
+                              poster={`/images/videos/${v.id}.jpg`}
+                              src={trackUrls[`acervo/videos/${v.id}.mp4`]}
+                              className="aspect-video w-full"
+                            />
+                          ) : (
+                            <YouTubeEmbed
+                              videoId={v.id}
+                              title={v.title}
+                              poster={`/images/videos/${v.id}.jpg`}
+                            />
+                          )}
+                        </div>
+                        <figcaption className="mt-3">
+                          <p className="font-display text-sm italic leading-snug text-espresso">
+                            {v.title}
+                          </p>
+                          <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.2em] text-espresso-2">
+                            {v.channel}
+                          </p>
+                          {videoDescriptions[v.id] && (
+                            <p className="mt-2 text-xs leading-relaxed text-espresso-2">
+                              {videoDescriptions[v.id]}
+                            </p>
+                          )}
+                        </figcaption>
+                      </figure>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
       </section>
 
