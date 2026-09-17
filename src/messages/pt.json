@@ -138,6 +138,17 @@
           }
         ]
       }
+    },
+    "notasLabel": "Notas",
+    "notas": {
+      "ocidentalizacao": [
+        {
+          "termo": "Ginástica Nacional",
+          "texto": "\"Gymnastica Nacional (Capoeiragem) Methodisada e Regrada\", de Anníbal Burlamaqui, o Mestre Zuma (Rio de Janeiro, 1928). É o primeiro manual escrito de capoeira: regras copiadas do boxe, assaltos de três minutos, golpes e contragolpes catalogados, e nenhuma música ou instrumento. Influenciou o Decreto 3.199 de 1941, que criou a estrutura oficial do esporte no Brasil, o mesmo ano em que Pastinha funda o CECA.",
+          "linkLabel": "Ler o livro no Internet Archive",
+          "link": "https://archive.org/details/anibal-burlamaqui-a-ginastica-nacional-capoeiragem-metodizada-e-regrada"
+        }
+      ]
     }
   },
   "CoursPage": {

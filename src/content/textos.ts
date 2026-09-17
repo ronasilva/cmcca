@@ -1,6 +1,7 @@
 // Textos que o mestre manda para a Esfera Intelectual, publicados na sua
 // voz, com correção só de ortografia e gramática. Um parágrafo pode trazer
-// um trecho grifado: { antes, grifo, depois }.
+// um trecho grifado: { antes, grifo, depois }. Um marcador [[n]] no texto
+// chama a nota n do texto (LibraryPage.notas.<slug>), impressa abaixo.
 
 export type Paragrafo =
   | string
@@ -20,7 +21,7 @@ export const TEXTOS: Texto[] = [
     titulo: "A ocidentalização do conhecimento dos capoeiras",
     paragrafos: [
       "O nome Capoeira Angola já vinha desde o Recôncavo baiano (referência de 1860). No mestre Pastinha, em 1941, consagrou-se como tradição de angoleiros.",
-      "Quanto ao mestre Bimba, nos anos 30, que também era dos que frequentavam a Gengibirra: nesse tempo havia certo conflito entre a capital, o Rio de Janeiro à época, e o estado da Bahia, que resistia, pelos capoeiras de lá, em não querer abandonar a ideia do uso dos três berimbaus, não previsto nas regras da Ginástica Nacional desenvolvida por Aníbal Burlamaqui.",
+      "Quanto ao mestre Bimba, nos anos 30, que também era dos que frequentavam a Gengibirra: nesse tempo havia certo conflito entre a capital, o Rio de Janeiro à época, e o estado da Bahia, que resistia, pelos capoeiras de lá, em não querer abandonar a ideia do uso dos três berimbaus, não previsto nas regras da Ginástica Nacional desenvolvida por Aníbal Burlamaqui[[1]].",
       "Foi apresentando o arranjamento de Luta Regional, no âmbito do esporte e da cultura, com essa ideia do mestre Bimba de trazer apenas um berimbau, justificado só para uso pessoal dele, para aquecimento antes de subir ao ringue e por ocasião de demonstrações de palco ou para celebridades, que se viu uma saída para não ver esse instrumento musical de todo fora.",
       "Assim também se coloca o capoeira mestre Bimba como mais um colaborador, que desse jeito teve a aprovação dos setores do esporte nessa regulamentação.",
       {

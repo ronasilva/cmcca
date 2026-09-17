@@ -138,6 +138,17 @@
           }
         ]
       }
+    },
+    "notasLabel": "Notes",
+    "notas": {
+      "ocidentalizacao": [
+        {
+          "termo": "Ginástica Nacional",
+          "texto": "« Gymnastica Nacional (Capoeiragem) Methodisada e Regrada », d'Anníbal Burlamaqui, Mestre Zuma (Rio de Janeiro, 1928). Le premier manuel écrit de capoeira : des règles empruntées à la boxe, des rounds de trois minutes, des coups et contre-coups catalogués, et ni musique ni instruments. Il a influencé le décret 3 199 de 1941, qui a créé la structure officielle du sport au Brésil, l'année même où Pastinha fonde le CECA.",
+          "linkLabel": "Lire le livre sur Internet Archive",
+          "link": "https://archive.org/details/anibal-burlamaqui-a-ginastica-nacional-capoeiragem-metodizada-e-regrada"
+        }
+      ]
     }
   },
   "CoursPage": {

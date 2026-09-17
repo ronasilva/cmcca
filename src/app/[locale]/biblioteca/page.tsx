@@ -244,6 +244,25 @@ export default async function BibliotecaPage({
     string,
     string
   >;
+  const notas = t.raw("notas") as Record<
+    string,
+    { termo: string; texto: string; link?: string; linkLabel?: string }[]
+  >;
+  // [[n]] in the mestre's text becomes a superscript call to note n
+  const comNotas = (texto: string, slug: string) =>
+    texto.split(/\[\[(\d+)\]\]/).map((part, i) =>
+      i % 2 === 1 ? (
+        <a
+          key={i}
+          href={`#${slug}-nota-${part}`}
+          className="ml-0.5 align-super font-mono text-[10px] text-terracotta no-underline hover:text-terracotta-2"
+        >
+          {part}
+        </a>
+      ) : (
+        part
+      )
+    );
   const leituras = t.raw("leituras") as Record<
     string,
     { label: string; intro: string; pontos: { t: string; p: string }[] }
@@ -418,19 +437,58 @@ export default async function BibliotecaPage({
                     className="text-base leading-relaxed text-espresso-2"
                   >
                     {typeof par === "string" ? (
-                      par
+                      comNotas(par, texto.slug)
                     ) : (
                       <>
-                        {par.antes}
+                        {comNotas(par.antes, texto.slug)}
                         <span className="underline decoration-terracotta underline-offset-4">
                           {par.grifo}
                         </span>
-                        {par.depois}
+                        {comNotas(par.depois, texto.slug)}
                       </>
                     )}
                   </p>
                 ))}
               </div>
+              {notas[texto.slug] && (
+                <div className="mt-10 border-t border-espresso/15 pt-6">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
+                    {t("notasLabel")}
+                  </p>
+                  <ol className="mt-4 flex flex-col gap-4">
+                    {notas[texto.slug].map((nota, i) => (
+                      <li
+                        key={nota.termo}
+                        id={`${texto.slug}-nota-${i + 1}`}
+                        className="flex gap-4 scroll-mt-24"
+                      >
+                        <span className="pt-0.5 font-mono text-[10px] text-terracotta">
+                          {i + 1}
+                        </span>
+                        <p className="text-sm leading-relaxed text-espresso-2">
+                          <span className="font-display italic text-espresso">
+                            {nota.termo}.
+                          </span>{" "}
+                          {nota.texto}
+                          {nota.link && (
+                            <>
+                              {" "}
+                              <a
+                                href={nota.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-mono text-[11px] uppercase tracking-[0.15em] text-terracotta transition hover:text-terracotta-2"
+                              >
+                                {nota.linkLabel} ↗
+                              </a>
+                            </>
+                          )}
+                        </p>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
             </div>
             {leituras[texto.slug] && (
               <aside className="self-start rounded-sm border border-espresso/15 p-6 lg:sticky lg:top-24 lg:mt-10">
