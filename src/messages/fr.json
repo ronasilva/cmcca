@@ -137,6 +137,32 @@
             "p": "C'était la vision politique de l'époque. Ce qu'on en fait aujourd'hui, Angola contre Regional, est autre chose."
           }
         ]
+      },
+      "arranjamento": {
+        "label": "Lire les mots du mestre",
+        "intro": "Une lecture de la rédaction du site, pour qui arrive sans connaître l'histoire. Le dernier mot revient au mestre.",
+        "pontos": [
+          {
+            "t": "Le berimbau est venu après",
+            "p": "Capoeira et berimbau ne sont pas nés ensemble. La combinaison est bahianaise et tardive, vers 1860, et elle naît dans la rue, liée au public qui s'arrêtait pour regarder et à l'argent qu'on demandait."
+          },
+          {
+            "t": "Peu de tempos, beaucoup de noms",
+            "p": "Ce qui existe vraiment, ce sont trois tempos : modéré, lié et accéléré. Les noms de toques se sont multipliés ensuite, pour justifier des variantes. « Qui raconte un conte y ajoute un point. »"
+          },
+          {
+            "t": "Cinq toques et deux contrepoints",
+            "p": "La liste du mestre est courte à dessein. São Bento est une famille de trois, qui se distingue par l'accélération ; Angola est le toque modéré principal ; Regional, à la manière de Traíra, lie. Angola Pequena et Banguela entrent en contrepoint."
+          },
+          {
+            "t": "De la rue à l'académie",
+            "p": "« De la rue jusqu'à Moraes, je n'ai jamais changé cela. » Les toques ont précédé le groupe, appris dans les rues de Rio, et le groupe les a reçus tout faits."
+          },
+          {
+            "t": "Le berimbau n'est pas le protagoniste",
+            "p": "La fin renverse l'ordre que beaucoup attendent : l'arc musical et les chants « ne donnent qu'un certain raffinement ». La roda est la chose ; la musique la sert."
+          }
+        ]
       }
     },
     "notasLabel": "Notes",
@@ -147,6 +173,32 @@
           "texto": "« Gymnastica Nacional (Capoeiragem) Methodisada e Regrada », d'Anníbal Burlamaqui, Mestre Zuma (Rio de Janeiro, 1928). Le premier manuel écrit de capoeira : des règles empruntées à la boxe, des rounds de trois minutes, des coups et contre-coups catalogués, et ni musique ni instruments. Il a influencé le décret 3 199 de 1941, qui a créé la structure officielle du sport au Brésil, l'année même où Pastinha fonde le CECA.",
           "linkLabel": "Lire le livre sur Internet Archive",
           "link": "https://archive.org/details/anibal-burlamaqui-a-ginastica-nacional-capoeiragem-metodizada-e-regrada"
+        }
+      ],
+      "arranjamento": [
+        {
+          "termo": "1860",
+          "texto": "Dans le live « Live relançada: das capitanias aos capoeiras », dans la vidéothèque de cette page, le mestre retrace le chemin de l'instrument : arrivé au Brésil en 1739 depuis le Bénin, enregistré au port de Santos à destination de Rio de Janeiro, où des vendeurs ambulants l'ont copié ; vers 1860 un Bahianais a porté l'idée au Recôncavo.",
+          "linkLabel": "Voir le live dans la vidéothèque",
+          "link": "#videoteca"
+        },
+        {
+          "termo": "Moraes",
+          "texto": "Pedro Moraes Trindade, Mestre Moraes (Ilha de Maré, 1959), a vécu à Rio de Janeiro de 1970 à 1982. En 1980 il y fonde le Grupo de Capoeira Angola Pelourinho, le GCAP, avec Mestre Braga parmi les fondateurs ; c'est Braga qui a dessiné l'emblème du groupe, le berimbau aux zèbres. En 1982 le groupe s'installe à Salvador.",
+          "linkLabel": "Mestre Moraes sur Wikipédia",
+          "link": "https://en.wikipedia.org/wiki/Pedro_Moraes_Trindade"
+        },
+        {
+          "termo": "Mestre Traíra",
+          "texto": "José Ramos do Nascimento, Mestre Traíra, enregistre en 1964 le LP « Capoeira da Bahia », avec Cobrinha Verde, référence des angoleiros jusqu'à aujourd'hui. Les pistes portent des noms de toques : Santa Maria, São Bento Pequeno, São Bento Grande, Jogo de Dentro, Cavalaria, Iúna et une séquence de rythmes. C'est cet enregistrement qu'on entend dans la vidéo « Ensino de segundo percurso ».",
+          "linkLabel": "La fiche du disque à Rádio Velhos Mestres",
+          "link": "http://velhosmestres.com/br/cobrinha-1964"
+        },
+        {
+          "termo": "Trois CD",
+          "texto": "Les disques du mestre, avec des pistes à écouter ici même, sont dans la section Enregistrements de cette page.",
+          "linkLabel": "Aller aux enregistrements",
+          "link": "#gravacoes"
         }
       ]
     }

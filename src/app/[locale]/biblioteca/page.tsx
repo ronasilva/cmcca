@@ -11,7 +11,6 @@ import { PageHeader } from "@/components/PageHeader";
 import { SectionDivider } from "@/components/SectionDivider";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { ExclusiveAudio } from "@/components/ExclusiveAudio";
-import { ARRANJAMENTO } from "@/content/cantorias";
 import { TEXTOS } from "@/content/textos";
 
 type Book = { title: string; author: string };
@@ -263,6 +262,40 @@ export default async function BibliotecaPage({
         part
       )
     );
+  const videoFigures = (videos: { id: string; title: string; note?: boolean }[]) =>
+    videos.map((v) => (
+      <li key={v.id}>
+        <figure>
+          <div className="overflow-hidden rounded-sm border border-espresso/15">
+            {trackUrls[`acervo/videos/${v.id}.mp4`] ? (
+              <video
+                controls
+                preload="none"
+                poster={`/images/videos/${v.id}.jpg`}
+                src={trackUrls[`acervo/videos/${v.id}.mp4`]}
+                className="aspect-video w-full"
+              />
+            ) : (
+              <YouTubeEmbed
+                videoId={v.id}
+                title={v.title}
+                poster={`/images/videos/${v.id}.jpg`}
+              />
+            )}
+          </div>
+          <figcaption className="mt-3">
+            <p className="font-display text-sm italic leading-snug text-espresso">
+              {v.title}
+            </p>
+            {v.note && (
+              <p className="mt-2 text-xs leading-relaxed text-espresso-2">
+                {t("trairaNote")}
+              </p>
+            )}
+          </figcaption>
+        </figure>
+      </li>
+    ));
   const leituras = t.raw("leituras") as Record<
     string,
     { label: string; intro: string; pontos: { t: string; p: string }[] }
@@ -302,6 +335,11 @@ export default async function BibliotecaPage({
               id={texto.slug}
               className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-16"
             >
+            {texto.videos && (
+              <ul className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:col-span-2">
+                {videoFigures(texto.videos)}
+              </ul>
+            )}
             <div className="max-w-3xl">
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                 {texto.eyebrow}
@@ -309,6 +347,11 @@ export default async function BibliotecaPage({
               <h3 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso">
                 {texto.titulo}
               </h3>
+              {texto.subtitulo && (
+                <h4 className="mt-8 font-display text-xl font-light italic text-espresso">
+                  {texto.subtitulo}
+                </h4>
+              )}
               <div className="mt-6 flex flex-col gap-4">
                 {texto.paragrafos.map((par, i) => (
                   <p
@@ -329,6 +372,42 @@ export default async function BibliotecaPage({
                   </p>
                 ))}
               </div>
+              {texto.lista && (
+                <ol className="mt-6 flex flex-col gap-2">
+                  {texto.lista.map((item, i) => (
+                    <li key={item} className="flex gap-4">
+                      <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
+                        {i + 1}
+                      </span>
+                      <span className="font-display text-base font-light italic text-espresso">
+                        {comNotas(item, texto.slug)}
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+              )}
+              {texto.contrapontos && (
+                <>
+                  <p className="mt-6 text-base leading-relaxed text-espresso-2">
+                    {texto.contrapontosIntro}
+                  </p>
+                  <ul className="mt-2 flex flex-col gap-2">
+                    {texto.contrapontos.map((c) => (
+                      <li
+                        key={c}
+                        className="pl-8 font-display text-base font-light italic text-espresso"
+                      >
+                        {comNotas(c, texto.slug)}
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {texto.fecho && (
+                <p className="mt-8 whitespace-pre-line border-l-2 border-terracotta pl-5 text-sm leading-relaxed text-espresso-2">
+                  {comNotas(texto.fecho, texto.slug)}
+                </p>
+              )}
               {notas[texto.slug] && (
                 <div className="mt-10 border-t border-espresso/15 pt-6">
                   <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
@@ -470,7 +549,7 @@ export default async function BibliotecaPage({
       <SectionDivider label={t("livesTitle")} />
 
       {/* VIDEO LIBRARY — curated by Mestre Braga, grouped by theme */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-24">
+      <section id="videoteca" className="mx-auto w-full max-w-6xl px-6 pb-24">
         <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
           {t("livesIntro")}
         </p>
@@ -541,7 +620,7 @@ export default async function BibliotecaPage({
       <SectionDivider label={t("recordingsTitle")} />
 
       {/* DISCOGRAPHY — the mestre's records, streamed from the archive */}
-      <section className="mx-auto w-full max-w-6xl px-6 pb-24">
+      <section id="gravacoes" className="mx-auto w-full max-w-6xl px-6 pb-24">
         <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
           {t("recordingsIntro")}
         </p>
@@ -677,88 +756,6 @@ export default async function BibliotecaPage({
             </li>
           ))}
         </ul>
-      </section>
-
-      {/* ARRANJAMENTO MUSICAL — the mestre's berimbau videos and history */}
-      <SectionDivider label={ARRANJAMENTO.titulo} />
-      <section className="mx-auto w-full max-w-6xl px-6 pb-16">
-        <ul className="grid grid-cols-1 gap-8 sm:grid-cols-3">
-          {ARRANJAMENTO.videos.map((v) => (
-            <li key={v.id}>
-              <figure>
-                <div className="overflow-hidden rounded-sm border border-espresso/15">
-                  {trackUrls[`acervo/videos/${v.id}.mp4`] ? (
-                    <video
-                      controls
-                      preload="none"
-                      poster={`/images/videos/${v.id}.jpg`}
-                      src={trackUrls[`acervo/videos/${v.id}.mp4`]}
-                      className="aspect-video w-full"
-                    />
-                  ) : (
-                    <YouTubeEmbed
-                      videoId={v.id}
-                      title={v.title}
-                      poster={`/images/videos/${v.id}.jpg`}
-                    />
-                  )}
-                </div>
-                <figcaption className="mt-3">
-                  <p className="font-display text-sm italic leading-snug text-espresso">
-                    {v.title}
-                  </p>
-                  {"note" in v && v.note && (
-                    <p className="mt-2 text-xs leading-relaxed text-espresso-2">
-                      {t("trairaNote")}
-                    </p>
-                  )}
-                </figcaption>
-              </figure>
-            </li>
-          ))}
-        </ul>
-
-        <div className="mt-24 max-w-3xl border-t border-espresso/15 pt-12">
-          <h3 className="font-display text-2xl font-light italic text-espresso">
-            {ARRANJAMENTO.historicoTitulo}
-          </h3>
-          <div className="mt-5 flex flex-col gap-4">
-            {ARRANJAMENTO.historico.map((p) => (
-              <p key={p} className="text-base leading-relaxed text-espresso-2">
-                {p}
-              </p>
-            ))}
-          </div>
-          <ol className="mt-6 flex flex-col gap-2">
-            {ARRANJAMENTO.toques.map((toque, i) => (
-              <li key={toque} className="flex gap-4">
-                <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-                  {i + 1}
-                </span>
-                <span className="font-display text-base font-light italic text-espresso">
-                  {toque}
-                </span>
-              </li>
-            ))}
-          </ol>
-          <p className="mt-6 text-base leading-relaxed text-espresso-2">
-            {ARRANJAMENTO.contrapontosIntro}
-          </p>
-          <ul className="mt-2 flex flex-col gap-2">
-            {ARRANJAMENTO.contrapontos.map((c) => (
-              <li
-                key={c}
-                className="pl-8 font-display text-base font-light italic text-espresso"
-              >
-                {c}
-              </li>
-            ))}
-          </ul>
-          <p className="mt-8 whitespace-pre-line border-l-2 border-terracotta pl-5 text-sm leading-relaxed text-espresso-2">
-            {ARRANJAMENTO.fecho}
-          </p>
-
-        </div>
       </section>
 
       <Footer />

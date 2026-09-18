@@ -455,48 +455,6 @@ export const CONJUNTOS: Conjunto[] = [
 ];
 
 // Seção enviada pelo Mestre: vídeos sobre o berimbau e o seu breve
-// histórico em texto, com a lista de toques e o guia do arranjamento
-// musical da roda. Texto dele, só ortografia corrigida.
-export const ARRANJAMENTO = {
-  titulo: "Arranjamento musical na Capoeira de Angola em continuação",
-  videos: [
-    {
-      id: "hKoXnwy8pG8",
-      title: "Live reajustada: como aprendi do berimbau",
-    },
-    {
-      id: "BuwgeQMeYm0",
-      title: "Ensino de segundo percurso",
-      note:
-        "Este vídeo inclui uma gravação histórica de Mestre Traíra explicando os toques do berimbau, citada como documento de ensino, com crédito indicado no próprio vídeo. Os direitos da gravação pertencem aos seus detentores; para questões de direitos, contate a associação.",
-    },
-    {
-      id: "JDYZQOa-USU",
-      title: "Grupo/Escola Capoeira Angola África Bantu",
-    },
-  ],
-  historicoTitulo: "Berimbaus, breve histórico em texto",
-  historico: [
-    "Capoeiras com berimbau é uma combinação baiana, de lá por 1860, quando no centro de Salvador bem servia para \"tomar\" dinheiro, principalmente de turistas.",
-    "Só que, quando quiseram diferenciar os nomes dos toques para justificar os andamentos moderados, amarrados e acelerados, aí \"deu bode\": acabou como no ditado popular, \"quem conta um conto aumenta um ponto\".",
-    "Quando cheguei no Moraes, já dominava bem os toques do berimbau, e, quanto ao São Bento, três eram: desde a rua até o tempo no Moraes, nunca mudei disso.",
-  ],
-  toques: [
-    "São Bento (em aceleração)",
-    "São Bento Pequeno (em moderado, por tom inverso ao de Angola)",
-    "São Bento Grande (de maiores acelerações)",
-    "Regional (de pegada do m/Traíra, que amarra)",
-    "Angola (principal toque moderado)",
-  ],
-  contrapontosIntro: "Para contrapontuar, destaco dois:",
-  contrapontos: [
-    "Angola Pequena (da pegada de m/Traíra; muito mais é conhecido por \"jogo de dentro\")",
-    "Banguela (m/Bimba)",
-  ],
-  fecho:
-    "Assim é por mim, Braga: com as cantorias, motivar os desenvolvimentos.\n\nJá são três CDs com venda esgotada, embora essa não seja a minha preocupação maior: arco musical e cantorias não estão para ser os protagonistas, apenas dão um certo requinte.\n\nmestre/Braga",
-};
-
 // Ladainha usada no filme "Pastinha, uma vida pela capoeira", com a nota
 // de esclarecimento do Mestre sobre a autoria.
 export const NOTA_PASTINHA = {

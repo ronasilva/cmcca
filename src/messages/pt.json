@@ -137,6 +137,32 @@
             "p": "Essa era a visão política da época. O que hoje se faz dela, Angola contra Regional, é outra coisa."
           }
         ]
+      },
+      "arranjamento": {
+        "label": "Interpretando as palavras do mestre",
+        "intro": "Uma leitura de quem edita o site, para quem chega sem conhecer a história. A última palavra é do mestre.",
+        "pontos": [
+          {
+            "t": "O berimbau chegou depois",
+            "p": "Capoeira e berimbau não nasceram juntos. A combinação é baiana e tardia, por volta de 1860, e nasce na rua, ligada ao público que parava para ver e ao dinheiro que se pedia."
+          },
+          {
+            "t": "Poucos andamentos, muitos nomes",
+            "p": "O que existe de fato são três andamentos: moderado, amarrado e acelerado. Os nomes de toques foram se multiplicando depois, para justificar variações. \"Quem conta um conto aumenta um ponto.\""
+          },
+          {
+            "t": "Cinco toques e dois contrapontos",
+            "p": "A lista do mestre é curta de propósito. São Bento é uma família de três, que se distingue pela aceleração; Angola é o toque moderado principal; Regional, na pegada do Traíra, amarra. Angola Pequena e Banguela entram como contraponto."
+          },
+          {
+            "t": "Da rua para a academia",
+            "p": "\"Desde a rua até o Moraes, nunca mudei disso.\" Os toques vieram antes do grupo, aprendidos na rua do Rio, e o grupo os recebeu prontos."
+          },
+          {
+            "t": "O berimbau não é o protagonista",
+            "p": "O fecho vira a ordem que muita gente espera: arco musical e cantorias \"apenas dão um certo requinte\". A roda é a coisa; a música serve a ela."
+          }
+        ]
       }
     },
     "notasLabel": "Notas",
@@ -147,6 +173,32 @@
           "texto": "\"Gymnastica Nacional (Capoeiragem) Methodisada e Regrada\", de Anníbal Burlamaqui, o Mestre Zuma (Rio de Janeiro, 1928). É o primeiro manual escrito de capoeira: regras copiadas do boxe, assaltos de três minutos, golpes e contragolpes catalogados, e nenhuma música ou instrumento. Influenciou o Decreto 3.199 de 1941, que criou a estrutura oficial do esporte no Brasil, o mesmo ano em que Pastinha funda o CECA.",
           "linkLabel": "Ler o livro no Internet Archive",
           "link": "https://archive.org/details/anibal-burlamaqui-a-ginastica-nacional-capoeiragem-metodizada-e-regrada"
+        }
+      ],
+      "arranjamento": [
+        {
+          "termo": "1860",
+          "texto": "Na live \"Live relançada: das capitanias aos capoeiras\", na videoteca desta página, o mestre conta o caminho do instrumento: chegou ao Brasil em 1739, vindo do Benim, registrado no porto de Santos com destino ao Rio de Janeiro, onde vendedores ambulantes o copiaram; por volta de 1860 um baiano levou a ideia para o Recôncavo.",
+          "linkLabel": "Ver a live na videoteca",
+          "link": "#videoteca"
+        },
+        {
+          "termo": "Moraes",
+          "texto": "Pedro Moraes Trindade, Mestre Moraes (Ilha de Maré, 1959), viveu no Rio de Janeiro de 1970 a 1982. Em 1980 fundou ali o Grupo de Capoeira Angola Pelourinho, o GCAP, tendo Mestre Braga entre os fundadores; foi ele quem desenhou o emblema do grupo, o berimbau com as zebras. Em 1982 o grupo se estabeleceu em Salvador.",
+          "linkLabel": "Mestre Moraes na Wikipédia",
+          "link": "https://en.wikipedia.org/wiki/Pedro_Moraes_Trindade"
+        },
+        {
+          "termo": "Mestre Traíra",
+          "texto": "José Ramos do Nascimento, Mestre Traíra, gravou em 1964 o LP \"Capoeira da Bahia\", com Cobrinha Verde, referência para os angoleiros até hoje. As faixas levam nome de toque: Santa Maria, São Bento Pequeno, São Bento Grande, Jogo de Dentro, Cavalaria, Iúna e uma sequência de ritmos. É essa gravação que se ouve no vídeo \"Ensino de segundo percurso\".",
+          "linkLabel": "A ficha do disco na Rádio Velhos Mestres",
+          "link": "http://velhosmestres.com/br/cobrinha-1964"
+        },
+        {
+          "termo": "Três CDs",
+          "texto": "Os discos do mestre, com as faixas que se podem ouvir aqui mesmo, estão na seção Gravações desta página.",
+          "linkLabel": "Ir às gravações",
+          "link": "#gravacoes"
         }
       ]
     }

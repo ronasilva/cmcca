@@ -137,6 +137,32 @@
             "p": "That was the political vision of the time. What is made of it today, Angola against Regional, is something else."
           }
         ]
+      },
+      "arranjamento": {
+        "label": "Reading the mestre's words",
+        "intro": "A reading by the site's editors, for those arriving without the history. The mestre has the last word.",
+        "pontos": [
+          {
+            "t": "The berimbau came later",
+            "p": "Capoeira and the berimbau were not born together. The combination is Bahian and late, around 1860, and it was born in the street, tied to the crowd that stopped to watch and the money that was asked for."
+          },
+          {
+            "t": "Few tempos, many names",
+            "p": "What really exists are three tempos: moderate, tied and accelerated. Toque names multiplied later, to justify variations. \"Whoever tells a tale adds a detail.\""
+          },
+          {
+            "t": "Five toques and two counterpoints",
+            "p": "The mestre's list is short on purpose. São Bento is a family of three, told apart by acceleration; Angola is the main moderate toque; Regional, in Traíra's way, ties. Angola Pequena and Banguela come in as counterpoint."
+          },
+          {
+            "t": "From the street to the academy",
+            "p": "\"From the street to Moraes, I never changed that.\" The toques came before the group, learned in the streets of Rio, and the group received them ready."
+          },
+          {
+            "t": "The berimbau is not the protagonist",
+            "p": "The closing turns the order many expect on its head: the musical bow and the songs \"only give a certain refinement\". The roda is the thing; the music serves it."
+          }
+        ]
       }
     },
     "notasLabel": "Notes",
@@ -147,6 +173,32 @@
           "texto": "\"Gymnastica Nacional (Capoeiragem) Methodisada e Regrada\", by Anníbal Burlamaqui, Mestre Zuma (Rio de Janeiro, 1928). The first written capoeira manual: rules borrowed from boxing, three-minute rounds, catalogued blows and counter-blows, and no music or instruments. It influenced Decree 3,199 of 1941, which created the official structure of sport in Brazil, the same year Pastinha founded the CECA.",
           "linkLabel": "Read the book on the Internet Archive",
           "link": "https://archive.org/details/anibal-burlamaqui-a-ginastica-nacional-capoeiragem-metodizada-e-regrada"
+        }
+      ],
+      "arranjamento": [
+        {
+          "termo": "1860",
+          "texto": "In the live \"Live relançada: das capitanias aos capoeiras\", in the videoteca on this page, the mestre traces the instrument's path: it reached Brazil in 1739 from Benin, registered at the port of Santos bound for Rio de Janeiro, where street vendors copied it; around 1860 a Bahian took the idea to the Recôncavo.",
+          "linkLabel": "Watch the live in the videoteca",
+          "link": "#videoteca"
+        },
+        {
+          "termo": "Moraes",
+          "texto": "Pedro Moraes Trindade, Mestre Moraes (Ilha de Maré, 1959), lived in Rio de Janeiro from 1970 to 1982. In 1980 he founded there the Grupo de Capoeira Angola Pelourinho, GCAP, with Mestre Braga among its founders; Braga drew the group's emblem, the berimbau with the zebras. In 1982 the group settled in Salvador.",
+          "linkLabel": "Mestre Moraes on Wikipedia",
+          "link": "https://en.wikipedia.org/wiki/Pedro_Moraes_Trindade"
+        },
+        {
+          "termo": "Mestre Traíra",
+          "texto": "José Ramos do Nascimento, Mestre Traíra, recorded the LP \"Capoeira da Bahia\" in 1964, with Cobrinha Verde, a reference for angoleiros to this day. The tracks are named after toques: Santa Maria, São Bento Pequeno, São Bento Grande, Jogo de Dentro, Cavalaria, Iúna and a sequence of rhythms. It is this recording heard in the video \"Ensino de segundo percurso\".",
+          "linkLabel": "The record at Rádio Velhos Mestres",
+          "link": "http://velhosmestres.com/br/cobrinha-1964"
+        },
+        {
+          "termo": "Three CDs",
+          "texto": "The mestre's records, with tracks you can listen to right here, are in the Recordings section of this page.",
+          "linkLabel": "Go to the recordings",
+          "link": "#gravacoes"
         }
       ]
     }
