@@ -328,25 +328,29 @@ export default async function BibliotecaPage({
 
       {/* TEXTOS DO MESTRE: ensaios curtos, na voz dele, em português */}
       <section className="mx-auto w-full max-w-6xl px-6 pb-20">
-        <div className="flex flex-col gap-16">
-          {TEXTOS.map((texto) => (
+        <div className="flex flex-col gap-20">
+          {TEXTOS.map((texto, ti) => (
             <article
               key={texto.slug}
               id={texto.slug}
-              className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-16"
+              className={`grid grid-cols-1 gap-12 scroll-mt-24 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] lg:gap-x-16 lg:gap-y-10 ${
+                ti > 0 ? "border-t border-espresso/15 pt-20" : ""
+              }`}
             >
-            {texto.videos && (
-              <ul className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:col-span-2">
-                {videoFigures(texto.videos)}
-              </ul>
-            )}
-            <div className="max-w-3xl">
+            <div className="lg:col-span-2">
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                 {texto.eyebrow}
               </p>
-              <h3 className="mt-3 font-display text-3xl font-light italic leading-tight text-espresso">
+              <h3 className="mt-3 max-w-3xl font-display text-3xl font-light italic leading-tight text-espresso">
                 {texto.titulo}
               </h3>
+              {texto.videos && (
+                <ul className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
+                  {videoFigures(texto.videos)}
+                </ul>
+              )}
+            </div>
+            <div className="max-w-3xl">
               {texto.subtitulo && (
                 <h4 className="mt-8 font-display text-xl font-light italic text-espresso">
                   {texto.subtitulo}
@@ -465,7 +469,7 @@ export default async function BibliotecaPage({
               )}
             </div>
             {leituras[texto.slug] && (
-              <aside className="self-start rounded-sm border border-espresso/15 p-6 lg:sticky lg:top-24 lg:mt-10">
+              <aside className="self-start rounded-sm border border-espresso/15 p-6 lg:sticky lg:top-24">
                 <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-terracotta">
                   {leituras[texto.slug].label}
                 </p>
