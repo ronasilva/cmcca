@@ -114,27 +114,31 @@
         "pontos": [
           {
             "t": "O nome é anterior a Pastinha",
-            "p": "\"Capoeira Angola\" já circulava no Recôncavo baiano no século XIX. Em 1941, Pastinha não inventou o nome: consagrou-o como tradição."
+            "p": "\"Capoeira Angola\" já circulava no Recôncavo baiano no século XIX. Só em 1941, com Pastinha, é que se consagra como tradição: ele não inventou o nome, deu-lhe casa."
           },
           {
             "t": "O Rio ditava a regra",
-            "p": "Nos anos 30 a capital impôs a Ginástica Nacional de Aníbal Burlamaqui, uma capoeira regrada como esporte e sem berimbau. Os capoeiras da Bahia não queriam abrir mão dos três berimbaus."
+            "p": "Nos anos 20 e 30 a capital impôs a Ginástica Nacional de Aníbal Burlamaqui (1928), uma capoeira regrada como esporte e sem berimbau. Os capoeiras da Bahia não queriam abrir mão dos três berimbaus."
+          },
+          {
+            "t": "O modelo veio da França",
+            "p": "A receita já tinha sido usada com o savate: uma luta de rua e de porto, disciplinada até virar ginástica nacional no fim do século XIX. O Brasil repetiu o gesto com a capoeira: tirar da rua, regrar, chamar de esporte."
           },
           {
             "t": "A jogada de Bimba",
-            "p": "Apresentou a Luta Regional como esporte, no molde da Ginástica Nacional, mas com um berimbau, justificado como coisa pessoal: aquecimento antes do ringue, demonstrações de palco. O esporte aprovou e o instrumento não ficou de fora."
+            "p": "Apresentou a Luta Regional como esporte, no molde da Ginástica Nacional, mas com um berimbau, justificado como coisa pessoal: aquecimento antes do ringue, demonstrações de palco. O instrumento não ficou de fora."
           },
           {
             "t": "A tese que surpreende",
             "p": "Vinda de um angoleiro: se hoje temos o berimbau, é graças a Bimba. Ao manter um berimbau dentro de algo aceito oficialmente, abriu a porta pela qual, mais tarde, o CECA de Pastinha também entrou, como Centro Esportivo. Daí o grifo."
           },
           {
-            "t": "\"Regional\" é palavra política",
-            "p": "Ginástica Nacional era o nome do Rio para valer em todos os estados. Chamar a luta de Bimba de Regional, da região da Bahia, a colocava dentro do mesmo âmbito nacional sem confronto. Bimba entra como colaborador, não como rival."
+            "t": "Salvar por dentro tem preço",
+            "p": "Com a aprovação das autoridades, Bimba torna-se \"contribuidor para os ideais de engenharia social\", uma nova brasilidade desenhada pelo Estado. O berimbau sobrevive, mas dentro do projeto. O mestre não esconde a ambiguidade."
           },
           {
-            "t": "Política, não politicagem",
-            "p": "Essa era a visão política da época. O que hoje se faz dela, Angola contra Regional, é outra coisa."
+            "t": "\"Regional\" é palavra política",
+            "p": "Ginástica Nacional era o nome do Rio para valer em todos os estados. Chamar a luta de Bimba de Regional, da região da Bahia, a colocava dentro do mesmo âmbito nacional sem confronto."
           }
         ]
       },
@@ -173,6 +177,12 @@
           "texto": "\"Gymnastica Nacional (Capoeiragem) Methodisada e Regrada\", de Anníbal Burlamaqui, o Mestre Zuma (Rio de Janeiro, 1928). É o primeiro manual escrito de capoeira: regras copiadas do boxe, assaltos de três minutos, golpes e contragolpes catalogados, e nenhuma música ou instrumento. Influenciou o Decreto 3.199 de 1941, que criou a estrutura oficial do esporte no Brasil, o mesmo ano em que Pastinha funda o CECA.",
           "linkLabel": "Ler o livro no Internet Archive",
           "link": "https://archive.org/details/anibal-burlamaqui-a-ginastica-nacional-capoeiragem-metodizada-e-regrada"
+        },
+        {
+          "termo": "Savate",
+          "texto": "O savate, ou boxe francês, nasce nas ruas de Paris e nos portos (o \"chausson\" dos marinheiros de Marselha). Os primeiros registros escritos são do início do século XIX: Michel Casseux abre a primeira escola em 1825, Charles Lecour funde os pés do savate com os punhos do boxe inglês por volta de 1830, e Joseph e Charles Charlemont codificam a disciplina no fim do século. O percurso de luta marginal a método regrado é o que o mestre aponta como modelo.",
+          "linkLabel": "Savate na Wikipédia (em francês)",
+          "link": "https://fr.wikipedia.org/wiki/Savate_(sport_de_combat)"
         }
       ],
       "arranjamento": [

@@ -114,27 +114,31 @@
         "pontos": [
           {
             "t": "The name predates Pastinha",
-            "p": "\"Capoeira Angola\" was already in use in the Bahian Recôncavo in the 19th century. In 1941 Pastinha did not invent the name: he consecrated it as a tradition."
+            "p": "\"Capoeira Angola\" was already in use in the Bahian Recôncavo in the 19th century. Only in 1941, with Pastinha, is it consecrated as a tradition: he did not invent the name, he gave it a home."
           },
           {
             "t": "Rio set the rules",
-            "p": "In the 1930s the capital imposed Aníbal Burlamaqui's Ginástica Nacional, a capoeira regulated as a sport and without the berimbau. The capoeiras of Bahia would not give up their three berimbaus."
+            "p": "In the 1920s and 30s the capital imposed Aníbal Burlamaqui's Ginástica Nacional (1928), a capoeira regulated as a sport and without the berimbau. The capoeiras of Bahia would not give up their three berimbaus."
+          },
+          {
+            "t": "The model came from France",
+            "p": "The recipe had already been used on savate: a street and harbour fight, disciplined until it became a national gymnastics at the end of the 19th century. Brazil repeated the gesture with capoeira: take it off the street, regulate it, call it sport."
           },
           {
             "t": "Bimba's move",
-            "p": "He presented Luta Regional as a sport, in the mould of the Ginástica Nacional, but with one berimbau, justified as a personal matter: warming up before the ring, stage demonstrations. The sports authorities approved, and the instrument was not left out."
+            "p": "He presented Luta Regional as a sport, in the mould of the Ginástica Nacional, but with one berimbau, justified as a personal matter: warming up before the ring, stage demonstrations. The instrument was not left out."
           },
           {
             "t": "The surprising thesis",
             "p": "Coming from an angoleiro: if we have the berimbau today, it is thanks to Bimba. By keeping one berimbau inside something officially accepted, he opened the door through which, later, Pastinha's CECA also entered, as a \"Sports Centre\". Hence the emphasis."
           },
           {
-            "t": "\"Regional\" is a political word",
-            "p": "Ginástica Nacional was Rio's name, meant to apply to every state. Calling Bimba's fight Regional, of the Bahia region, placed it inside that same national frame without confrontation. Bimba enters as a collaborator, not a rival."
+            "t": "Saving from within has a price",
+            "p": "With the authorities' approval, Bimba becomes a \"contributor to the ideals of social engineering\", a new Brazilianness designed by the State. The berimbau survives, but inside the project. The mestre does not hide the ambiguity."
           },
           {
-            "t": "Politics, not politicking",
-            "p": "That was the political vision of the time. What is made of it today, Angola against Regional, is something else."
+            "t": "\"Regional\" is a political word",
+            "p": "Ginástica Nacional was Rio's name, meant to apply to every state. Calling Bimba's fight Regional, of the Bahia region, placed it inside that same national frame without confrontation."
           }
         ]
       },
@@ -173,6 +177,12 @@
           "texto": "\"Gymnastica Nacional (Capoeiragem) Methodisada e Regrada\", by Anníbal Burlamaqui, Mestre Zuma (Rio de Janeiro, 1928). The first written capoeira manual: rules borrowed from boxing, three-minute rounds, catalogued blows and counter-blows, and no music or instruments. It influenced Decree 3,199 of 1941, which created the official structure of sport in Brazil, the same year Pastinha founded the CECA.",
           "linkLabel": "Read the book on the Internet Archive",
           "link": "https://archive.org/details/anibal-burlamaqui-a-ginastica-nacional-capoeiragem-metodizada-e-regrada"
+        },
+        {
+          "termo": "Savate",
+          "texto": "Savate, or French boxing, was born in the streets of Paris and in the harbours (the \"chausson\" of Marseille sailors). The first written records date from the early 19th century: Michel Casseux opened the first school in 1825, Charles Lecour merged savate kicks with English boxing punches around 1830, and Joseph and Charles Charlemont codified the discipline at the end of the century. That path from marginal fight to regulated method is what the mestre points to as the model.",
+          "linkLabel": "Savate on Wikipedia (in French)",
+          "link": "https://fr.wikipedia.org/wiki/Savate_(sport_de_combat)"
         }
       ],
       "arranjamento": [

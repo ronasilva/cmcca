@@ -28,7 +28,7 @@ export const TEXTOS: Texto[] = [
   {
     slug: "ocidentalizacao",
     eyebrow: "Breve resumo",
-    titulo: "A ocidentalização do conhecimento dos capoeiras",
+    titulo: "A ocidentalização do conhecimento de capoeiras",
     notaImagens: {
       1: {
         src: "/images/livros/burlamaqui-1928.jpg",
@@ -36,18 +36,19 @@ export const TEXTOS: Texto[] = [
       },
     },
     paragrafos: [
-      "O nome Capoeira Angola já vinha desde o Recôncavo baiano (referência de 1860). No mestre Pastinha, em 1941, consagrou-se como tradição de angoleiros.",
-      "Quanto ao mestre Bimba, nos anos 30, que também era dos que frequentavam a Gengibirra: nesse tempo havia certo conflito entre a capital, o Rio de Janeiro à época, e o estado da Bahia, que resistia, pelos capoeiras de lá, em não querer abandonar a ideia do uso dos três berimbaus, não previsto nas regras da Ginástica Nacional desenvolvida por Aníbal Burlamaqui[[1]].",
-      "Foi apresentando o arranjamento de Luta Regional, no âmbito do esporte e da cultura, com essa ideia do mestre Bimba de trazer apenas um berimbau, justificado só para uso pessoal dele, para aquecimento antes de subir ao ringue e por ocasião de demonstrações de palco ou para celebridades, que se viu uma saída para não ver esse instrumento musical de todo fora.",
-      "Assim também se coloca o capoeira mestre Bimba como mais um colaborador, que desse jeito teve a aprovação dos setores do esporte nessa regulamentação.",
+      "O nome Capoeira Angola já vinha desde o Recôncavo baiano (referência de 1860). No mestre Pastinha, em 1941, é que se consagra como tradição de angoleiros.",
+      "Quanto ao mestre Bimba (décadas de 20 e 30), que também era dos que frequentavam a Gengibirra: nesse tempo havia certo conflito entre a capital, o Rio de Janeiro à época, e o estado da Bahia, que resistia, pelos capoeiras de lá, em não querer abandonar a ideia do uso dos três berimbaus, não previsto nas regras da Ginástica Nacional do autor Aníbal Burlamaqui (1928)[[1]], que de alguns aspectos do conhecimento de capoeiras reaproveitara para desenvolver o esporte-cultura.",
+      "Coisa que nos parece ter se influenciado ou inspirado da França para o governo brasileiro, pois o mesmo ocorria com o savate (ou boxe francês)[[2]]: reaproveitar essa modalidade de luta (1790), meio marginal nos portos do sul da França, para transformá-la em uma ginástica nacional disciplinada (no final do século XIX).",
+      "Foi apresentando o arranjamento de Luta Regional, no âmbito do desporto (esporte-cultura), com a colaboração do mestre Bimba, trazendo apenas um berimbau, justificado só para uso pessoal dele, para aquecimentos antes de subir ao ringue e por ocasião de demonstrações de palco e celebridades, que se viu conseguir uma saída para não ver esse instrumento musical abandonado de todo.",
+      "Conhecendo da aprovação das autoridades governamentais da época, o capoeira mestre Bimba torna-se mais um contribuidor para os ideais de engenharia social, para uma nova compreensão de brasilidade.",
       {
         antes:
-          "Se hoje temos o berimbau, é graças ao capoeira mestre Bimba. Foi quem abriu caminho para, mais tarde, a aceitação do CECA (como Centro ",
+          "Se hoje temos o berimbau, é graças ao capoeira mestre Bimba. Foi quem abriu caminho para, mais à frente, poder haver a aceitação do CECA (Centro ",
         grifo: "Esportivo",
-        depois: " de Capoeira Angola).",
+        depois:
+          " de Capoeira Angola, na linha mais tradicional conservadora), dirigido pelo capoeira m/Pastinha.",
       },
       "Ginástica Nacional era o nome pelo Rio de Janeiro, para ser o mesmo nos demais estados. Daí, para justificar como uma criação de luta da região da Bahia, teve-se a identificação de Luta Regional: uma luta criada na Bahia, que servia para fins desportivos e de defesa pessoal, no mesmo âmbito da Ginástica Nacional. De certa maneira, por ser região de dentro do país, estava no âmbito nacional.",
-      "Isso é a visão política, que foi bem diferente do que se distorce para a politicagem.",
     ],
   },
   {
