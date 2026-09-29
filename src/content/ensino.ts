@@ -55,7 +55,7 @@ export const TRACKS: Track[] = [
           },
           {
             file: "sao-bento-e-banguela.mp4",
-            title: "Os toques, um a um: Angola, São Bento Pequeno e Grande, Regional, Angola Pequena e Banguela",
+            title: "Os toques, um a um: Angola, São Bento, São Bento Pequeno, São Bento Grande, Regional (m/Traíra), Angola Pequena (m/Traíra) e Banguela (m/Bimba)",
             portrait: true,
           },
         ],
