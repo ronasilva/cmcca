@@ -396,11 +396,14 @@ export default async function MembrosPage({
         {/* TEACHING — the two tracks, in stages */}
         <SectionDivider label={t("ensinoTitle")} />
         <section className="mx-auto w-full max-w-6xl px-6 pb-12">
-          <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
-            {t("ensinoIntro")}
-          </p>
+          {/* "Two parallel paths" only makes sense once both are published */}
+          {trackReady("track1") && trackReady("track2") && (
+            <p className="mb-12 max-w-2xl text-base leading-relaxed text-espresso-2">
+              {t("ensinoIntro")}
+            </p>
+          )}
 
-          <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {trackReady("track1") && (
             <div>
               <h2 className="font-display text-2xl font-light italic leading-tight text-espresso">
