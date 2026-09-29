@@ -37,7 +37,10 @@ export default async function EtapaPage({
     >
   )[slug];
   const intro = etapaText?.intro;
+  // keyed by file name without extension (next-intl forbids dots in keys)
   const descriptions = etapaText?.videos ?? {};
+  const descriptionOf = (file: string) =>
+    descriptions[file.replace(/\.[^.]+$/, "")];
 
   const urls: Record<string, string> = {};
   try {
@@ -121,9 +124,9 @@ export default async function EtapaPage({
                         {v.title}
                       </span>
                     </p>
-                    {descriptions[v.file] && (
+                    {descriptionOf(v.file) && (
                       <p className="mt-2 text-sm leading-relaxed text-espresso-2">
-                        {descriptions[v.file]}
+                        {descriptionOf(v.file)}
                       </p>
                     )}
                     {v.trairaNote && (
