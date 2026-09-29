@@ -58,7 +58,7 @@ export const TEXTOS: Texto[] = [
     videos: [
       { id: "hKoXnwy8pG8", title: "Live reajustada: como aprendi do berimbau" },
       { id: "BuwgeQMeYm0", title: "Ensino de segundo percurso", note: true },
-      { id: "JDYZQOa-USU", title: "Terceira etapa: arco musical em mim" },
+      { id: "JDYZQOa-USU", title: "Grupo/Escola Capoeira Angola África Bantu" },
     ],
     subtitulo: "Berimbaus, breve histórico em texto",
     paragrafos: [
