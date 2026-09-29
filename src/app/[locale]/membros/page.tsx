@@ -201,20 +201,24 @@ export default async function MembrosPage({
   const track1Etapas = t.raw("track1Etapas") as string[];
   const track2Etapas = t.raw("track2Etapas") as string[];
   const etapaIntros = t.raw("etapas") as Record<string, { intro?: string }>;
-  // A stage with content becomes a link to its own page
+  // Only stages with content are shown, each linking to its own page;
+  // placeholders would get in the way now that content is arriving.
   const etapaCard = (trackKey: "track1" | "track2", label: string, i: number) => {
     const etapa = TRACKS.find((tr) => tr.key === trackKey)?.etapas[i];
-    const ready = etapa && etapaHasContent(etapa);
+    if (!etapa || !etapaHasContent(etapa)) return null;
     return (
       <EtapaCard
         key={label}
         label={label}
-        note={ready ? etapaIntros[etapa.slug]?.intro ?? "" : t("comingSoon")}
-        href={ready ? `/membros/ensino/${etapa.slug}` : undefined}
+        note={etapaIntros[etapa.slug]?.intro ?? ""}
+        href={`/membros/ensino/${etapa.slug}`}
         open={t("ensinoOpen")}
       />
     );
   };
+  const trackReady = (trackKey: "track1" | "track2") =>
+    TRACKS.find((tr) => tr.key === trackKey)?.etapas.some(etapaHasContent) ??
+    false;
   const hasMedia = photos.length > 0 || videos.length > 0;
 
   const supabaseConfigured = !!process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -397,6 +401,7 @@ export default async function MembrosPage({
           </p>
 
           <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
+            {trackReady("track1") && (
             <div>
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                 01
@@ -409,7 +414,9 @@ export default async function MembrosPage({
                 {track1Etapas.map((label, i) => etapaCard("track1", label, i))}
               </div>
             </div>
+            )}
 
+            {trackReady("track2") && (
             <div>
               <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
                 02
@@ -422,19 +429,11 @@ export default async function MembrosPage({
                 {track2Etapas.map((label, i) => etapaCard("track2", label, i))}
               </div>
             </div>
+            )}
           </div>
         </section>
 
-        {/* VIDEO LIBRARY — Esfera Intelectual (Lives) */}
-        <SectionDivider label={t("livesTitle")} />
-        <section className="mx-auto w-full max-w-6xl px-6 pb-12">
-          <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
-            {t("livesIntro")}
-          </p>
-          <p className="mt-8 font-display text-base italic leading-relaxed text-espresso-2">
-            {t("videotecaSoon")}
-          </p>
-        </section>
+        {/* VIDEO LIBRARY and CERTIFICATES return here once they have content */}
 
         {/* LEITURAS — Esfera Intelectual documents, members only */}
         {documents.length > 0 && (
@@ -494,23 +493,8 @@ export default async function MembrosPage({
           </>
         )}
 
-        {/* CERTIFICATES */}
-        <SectionDivider label={t("certsTitle")} />
-        <section className="mx-auto w-full max-w-6xl px-6 pb-12">
-          <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
-            {t("certsBody")}
-          </p>
-        </section>
-
-        {/* MEDIA — photos & videos from storage */}
-        <SectionDivider label={t("mediaTitle")} />
-        {!hasMedia && (
-          <div className="mx-auto max-w-6xl px-6 pb-16">
-            <p className="font-display text-base italic leading-relaxed text-espresso-2">
-              {t("empty")}
-            </p>
-          </div>
-        )}
+        {/* MEDIA — photos & videos from storage, only when there are any */}
+        {hasMedia && <SectionDivider label={t("mediaTitle")} />}
 
         {videos.length > 0 && (
           <section className="mx-auto w-full max-w-6xl px-6 pb-12">
