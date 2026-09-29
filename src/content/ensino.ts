@@ -89,3 +89,10 @@ export function findEtapa(slug: string) {
 export function etapaHasContent(etapa: Etapa): boolean {
   return (etapa.videos?.length ?? 0) > 0;
 }
+
+// Rótulo de exibição: enquanto nem todas as etapas estão publicadas, a
+// numeração ("Etapa 2: berimbaus") só confunde; mostra-se o nome apenas.
+export function etapaDisplayName(label: string): string {
+  const name = label.replace(/^(Etapa|Stage|Étape)\s*\d+\s*:\s*/i, "");
+  return name.charAt(0).toUpperCase() + name.slice(1);
+}

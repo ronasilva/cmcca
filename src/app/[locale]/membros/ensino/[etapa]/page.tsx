@@ -9,7 +9,7 @@ import {
   STUDENT_MEDIA_BUCKET,
   SIGNED_URL_TTL_SECONDS,
 } from "@/lib/supabase/admin";
-import { findEtapa, etapaHasContent } from "@/content/ensino";
+import { findEtapa, etapaHasContent, etapaDisplayName } from "@/content/ensino";
 
 // One stage of the mestre's teaching, members only (route lives under
 // /membros, guarded by the proxy). Videos stream from ensino/<slug>/ on
@@ -66,7 +66,7 @@ export default async function EtapaPage({
           {t("ensinoTitle")} · {trackNumber} · {trackTitle}
         </p>
         <h1 className="mt-4 font-display text-[clamp(2.2rem,5vw,4rem)] font-light leading-[1] tracking-tight text-espresso">
-          {etapaLabel}
+          {etapaDisplayName(etapaLabel)}
         </h1>
         {intro && (
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-espresso-2">

@@ -15,7 +15,7 @@ import { isAdminUser } from "@/lib/admins";
 import { statusOf, formatSince } from "@/lib/fichas";
 import { listQuestions } from "@/lib/questions";
 import { findMemberFicha } from "@/lib/member-ficha";
-import { TRACKS, etapaHasContent } from "@/content/ensino";
+import { TRACKS, etapaHasContent, etapaDisplayName } from "@/content/ensino";
 
 type Media = { name: string; url: string };
 
@@ -209,7 +209,7 @@ export default async function MembrosPage({
     return (
       <EtapaCard
         key={label}
-        label={label}
+        label={etapaDisplayName(label)}
         note={etapaIntros[etapa.slug]?.intro ?? ""}
         href={`/membros/ensino/${etapa.slug}`}
         open={t("ensinoOpen")}
