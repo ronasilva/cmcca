@@ -200,7 +200,10 @@ export default async function MembrosPage({
 
   const track1Etapas = t.raw("track1Etapas") as string[];
   const track2Etapas = t.raw("track2Etapas") as string[];
-  const etapaIntros = t.raw("etapas") as Record<string, { intro?: string }>;
+  const etapaIntros = t.raw("etapas") as Record<
+    string,
+    { intro?: string; card?: string }
+  >;
   // Only stages with content are shown, each linking to its own page;
   // placeholders would get in the way now that content is arriving.
   const etapaCard = (trackKey: "track1" | "track2", label: string, i: number) => {
@@ -210,7 +213,7 @@ export default async function MembrosPage({
       <EtapaCard
         key={label}
         label={etapaDisplayName(label)}
-        note={etapaIntros[etapa.slug]?.intro ?? ""}
+        note={etapaIntros[etapa.slug]?.card ?? etapaIntros[etapa.slug]?.intro ?? ""}
         href={`/membros/ensino/${etapa.slug}`}
         open={t("ensinoOpen")}
       />

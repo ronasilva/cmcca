@@ -30,8 +30,14 @@ export default async function EtapaPage({
 
   const trackTitle = t(`${track.key}Title`);
   const etapaLabel = (t.raw(`${track.key}Etapas`) as string[])[index];
-  const intro = (t.raw("etapas") as Record<string, { intro?: string }>)[slug]
-    ?.intro;
+  const etapaText = (
+    t.raw("etapas") as Record<
+      string,
+      { intro?: string; videos?: Record<string, string> }
+    >
+  )[slug];
+  const intro = etapaText?.intro;
+  const descriptions = etapaText?.videos ?? {};
 
   const urls: Record<string, string> = {};
   try {
@@ -87,7 +93,7 @@ export default async function EtapaPage({
             const url = urls[`ensino/${slug}/${v.file}`];
             return (
               <li key={v.file}>
-                <figure className={v.portrait ? "mx-auto max-w-xs" : ""}>
+                <figure className={v.portrait ? "mx-auto max-w-sm" : ""}>
                   <div className="overflow-hidden rounded-sm border border-espresso/15 bg-black">
                     {url ? (
                       <video
@@ -115,8 +121,13 @@ export default async function EtapaPage({
                         {v.title}
                       </span>
                     </p>
+                    {descriptions[v.file] && (
+                      <p className="mt-2 text-sm leading-relaxed text-espresso-2">
+                        {descriptions[v.file]}
+                      </p>
+                    )}
                     {v.trairaNote && (
-                      <p className="mt-2 max-w-md text-xs leading-relaxed text-espresso-2">
+                      <p className="mt-2 text-xs leading-relaxed text-espresso-2/80">
                         {tl("trairaNote")}
                       </p>
                     )}
@@ -128,53 +139,16 @@ export default async function EtapaPage({
         </ul>
       </section>
 
-      {etapa.lista && (
+      {etapa.textoLink && (
         <section className="mx-auto w-full max-w-6xl px-6 pb-24">
-          <div className="max-w-2xl border-t border-espresso/15 pt-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-              {t("ensinoRefLabel")}
-            </p>
-            <p className="mt-3 text-sm leading-relaxed text-espresso-2">
-              {t("ensinoRefNote")}
-            </p>
-            <ol className="mt-6 flex flex-col gap-2">
-              {etapa.lista.map((item, i) => (
-                <li key={item} className="flex gap-4">
-                  <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-                    {i + 1}
-                  </span>
-                  <span className="font-display text-base font-light italic text-espresso">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ol>
-            {etapa.contrapontos && (
-              <>
-                <p className="mt-6 text-base leading-relaxed text-espresso-2">
-                  {etapa.contrapontosIntro}
-                </p>
-                <ul className="mt-2 flex flex-col gap-2">
-                  {etapa.contrapontos.map((c) => (
-                    <li
-                      key={c}
-                      className="pl-8 font-display text-base font-light italic text-espresso"
-                    >
-                      {c}
-                    </li>
-                  ))}
-                </ul>
-              </>
-            )}
-            <p className="mt-6">
-              <Link
-                href="/biblioteca#arranjamento"
-                className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
-              >
-                {t("ensinoRefLink")} →
-              </Link>
-            </p>
-          </div>
+          <p className="border-t border-espresso/15 pt-8">
+            <Link
+              href={etapa.textoLink}
+              className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition hover:text-terracotta-2"
+            >
+              {t("ensinoRefLink")} →
+            </Link>
+          </p>
         </section>
       )}
 

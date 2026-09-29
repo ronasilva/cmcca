@@ -419,13 +419,18 @@
     "ensinoOpen": "Ouvrir",
     "ensinoBack": "Espace membre",
     "ensinoVideosLabel": "Vidéos",
-    "ensinoRefLabel": "Référence",
-    "ensinoRefNote": "Les toques, dans l'ordre où le mestre les énumère dans son texte sur l'arrangement musical, dans l'Esfera Intelectual.",
-    "ensinoRefLink": "Lire le texte dans l'Esfera Intelectual",
+    "ensinoRefLink": "Le texte du mestre sur les berimbaus, dans l'Esfera Intelectual",
     "ensinoNotice": "Matériel d'enseignement réservé aux membres, pour l'étude personnelle. Merci de ne pas copier ni diffuser.",
     "etapas": {
       "berimbaus": {
-        "intro": "La bateria du mestre et les berimbaus : les toques dans l'ordre où on les apprend, à partir de Cavalaria ; les tempos modérés, accélérés et lié ; la tonalité des gungas ; et l'enregistrement historique de Mestre Traíra comme document d'enseignement. Vidéos en portugais."
+        "card": "La bateria du mestre et les berimbaus : les toques, les tempos et la combinaison des trois berimbaus, avec l'enregistrement historique de Mestre Traíra. Vidéos en portugais.",
+        "intro": "La bateria du mestre et les berimbaus : les toques dans l'ordre où on les apprend, à partir de Cavalaria ; les trois tempos, modéré, accéléré et amarrado (lié) ; la main sur le dobrão ; et la combinaison des trois berimbaus dans la roda. Avec l'enregistrement historique de Mestre Traíra comme document d'enseignement. Vidéos en portugais.",
+        "videos": {
+          "os-toques-do-berimbau.mp4": "Le mestre explique l'ordre. Cavalaria est le premier toque qu'on apprend : un toque large, d'alerte. Puis les modérés (Angola, le principal, et São Bento Pequeno), les accélérés (São Bento et São Bento Grande), le lié (Regional, à la manière de Mestre Traíra) et les deux contrepoints (Angola Pequena et Banguela).",
+          "sao-bento-e-banguela.mp4": "Chaque toque joué à la suite, pour écouter et répéter.",
+          "ensino-de-segundo-percurso.mp4": "D'abord l'enregistrement historique de Mestre Traíra expliquant les toques ; puis le mestre en pratique : la main sur le dobrão, la pression contre le fil, et les toques un à un à partir de Cavalaria, le toque qui annonçait l'arrivée de la police montée.",
+          "tonalidade-dos-gungas.mp4": "La bateria : comment les trois berimbaus se combinent. Le berra-boi lance un toque, celui du centre répond par un autre, la viola suit en São Bento Pequeno en improvisant. Les combinaisons que le mestre utilise dans la roda, et les deux contrepoints : Angola Pequena avec Regional, Banguela avec São Bento et São Bento Grande."
+        }
       }
     }
   },

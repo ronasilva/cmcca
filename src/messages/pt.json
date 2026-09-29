@@ -419,13 +419,18 @@
     "ensinoOpen": "Abrir",
     "ensinoBack": "Área do membro",
     "ensinoVideosLabel": "Vídeos",
-    "ensinoRefLabel": "Referência",
-    "ensinoRefNote": "Os toques, na ordem em que o mestre os lista no seu texto sobre o arranjamento musical, na Esfera Intelectual.",
-    "ensinoRefLink": "Ler o texto na Esfera Intelectual",
+    "ensinoRefLink": "O texto do mestre sobre os berimbaus, na Esfera Intelectual",
     "ensinoNotice": "Material de ensino reservado aos membros, para estudo pessoal. Por favor, não copiar nem distribuir.",
     "etapas": {
       "berimbaus": {
-        "intro": "A bateria do mestre e os berimbaus: os toques na ordem em que se aprendem, a partir de Cavalaria; os andamentos moderados, de aceleração e amarrado; a tonalidade dos gungas; e a gravação histórica de Mestre Traíra como documento de ensino."
+        "card": "A bateria do mestre e os berimbaus: os toques, os andamentos e a combinação dos três berimbaus, com a gravação histórica de Mestre Traíra.",
+        "intro": "A bateria do mestre e os berimbaus: os toques na ordem em que se aprendem, a partir de Cavalaria; os três andamentos, moderado, acelerado e amarrado; a mão no dobrão; e a combinação dos três berimbaus na roda. Com a gravação histórica de Mestre Traíra como documento de ensino.",
+        "videos": {
+          "os-toques-do-berimbau.mp4": "O mestre explica a ordem. Cavalaria é o primeiro toque que se aprende: toque largo, de alerta. Depois os moderados (Angola, o principal, e São Bento Pequeno), os de aceleração (São Bento e São Bento Grande), o amarrado (Regional, na pegada de Mestre Traíra) e os dois contrapontos (Angola Pequena e Banguela).",
+          "sao-bento-e-banguela.mp4": "Cada toque tocado em sequência, para ouvir e repetir.",
+          "ensino-de-segundo-percurso.mp4": "Primeiro a gravação histórica de Mestre Traíra explicando os toques; depois o mestre na prática: a mão no dobrão, a força contra o arame, e os toques um a um a partir de Cavalaria, o toque que avisava da chegada da polícia montada.",
+          "tonalidade-dos-gungas.mp4": "A bateria: como os três berimbaus se combinam. O berra-boi puxa um toque, o de centro responde com outro, a viola segue em São Bento Pequeno improvisando. As combinações que o mestre usa na roda e os dois contrapontos: Angola Pequena com Regional, Banguela com São Bento e São Bento Grande."
+        }
       }
     }
   },

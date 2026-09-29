@@ -16,10 +16,8 @@ export type EnsinoVideo = {
 export type Etapa = {
   slug: string;
   videos?: EnsinoVideo[];
-  // referência em texto, na voz do mestre (lista numerada + contrapontos)
-  lista?: string[];
-  contrapontosIntro?: string;
-  contrapontos?: string[];
+  // texto do mestre relacionado, na Esfera Intelectual
+  textoLink?: string;
 };
 
 export type Track = { key: "track1" | "track2"; etapas: Etapa[] };
@@ -35,8 +33,19 @@ export const TRACKS: Track[] = [
       { slug: "cantorias" },
       {
         slug: "berimbaus",
-        // os dois horizontais numa fila, os dois verticais na seguinte
+        // ordem de estudo: os toques explicados, os toques tocados, a mão
+        // no dobrão com a gravação do Traíra, e por fim a bateria inteira
         videos: [
+          {
+            file: "os-toques-do-berimbau.mp4",
+            title: "Os toques do berimbau: de Cavalaria aos contrapontos",
+            portrait: true,
+          },
+          {
+            file: "sao-bento-e-banguela.mp4",
+            title: "Os toques, um a um: Angola, São Bento, São Bento Pequeno, São Bento Grande, Regional (m/Traíra), Angola Pequena (m/Traíra) e Banguela (m/Bimba)",
+            portrait: true,
+          },
           {
             file: "ensino-de-segundo-percurso.mp4",
             title: "Ensino de segundo percurso",
@@ -48,29 +57,8 @@ export const TRACKS: Track[] = [
             title: "Tonalidade dos Gungas",
             poster: "/images/videos/JDYZQOa-USU.jpg",
           },
-          {
-            file: "os-toques-do-berimbau.mp4",
-            title: "Os toques do berimbau: de Cavalaria aos contrapontos",
-            portrait: true,
-          },
-          {
-            file: "sao-bento-e-banguela.mp4",
-            title: "Os toques, um a um: Angola, São Bento, São Bento Pequeno, São Bento Grande, Regional (m/Traíra), Angola Pequena (m/Traíra) e Banguela (m/Bimba)",
-            portrait: true,
-          },
         ],
-        lista: [
-          "São Bento (em aceleração)",
-          "São Bento Pequeno (em moderado, por tom inverso ao de Angola)",
-          "São Bento Grande (de maiores acelerações)",
-          "Regional (de pegada do m/Traíra, que amarra)",
-          "Angola (principal toque moderado)",
-        ],
-        contrapontosIntro: "Para contrapontuar, destaco dois:",
-        contrapontos: [
-          "Angola Pequena (da pegada de m/Traíra; muito mais é conhecido por \"jogo de dentro\")",
-          "Banguela (m/Bimba)",
-        ],
+        textoLink: "/biblioteca#arranjamento",
       },
       { slug: "roda" },
       { slug: "obediencias" },

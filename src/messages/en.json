@@ -379,12 +379,12 @@
     "cardSince": "Since",
     "cardEmail": "Email",
     "editProfile": "Edit profile",
-    "ensinoTitle": "The teaching",
+    "ensinoTitle": "Teaching",
     "ensinoIntro": "Two parallel paths, in stages, leading to certificates.",
     "track1Title": "Rational development for resistance",
     "track1Desc": "The body path: movement, endurance and resistance.",
-    "track2Title": "The social of the berimbau",
-    "track2Desc": "The music and community path of the roda.",
+    "track2Title": "The social side of the berimbau",
+    "track2Desc": "The path of music and of the community of the roda.",
     "track1Etapas": [
       "Stage 1",
       "Stage 2",
@@ -419,13 +419,18 @@
     "ensinoOpen": "Open",
     "ensinoBack": "Member area",
     "ensinoVideosLabel": "Videos",
-    "ensinoRefLabel": "Reference",
-    "ensinoRefNote": "The toques, in the order the mestre lists them in his text on the musical arrangement, in the Esfera Intelectual.",
-    "ensinoRefLink": "Read the text in the Esfera Intelectual",
+    "ensinoRefLink": "The mestre's text on the berimbaus, in the Esfera Intelectual",
     "ensinoNotice": "Teaching material reserved for members, for personal study. Please do not copy or distribute.",
     "etapas": {
       "berimbaus": {
-        "intro": "The mestre's bateria and the berimbaus: the toques in the order they are learned, starting with Cavalaria; the moderate, accelerated and tied tempos; the tonality of the gungas; and Mestre Traíra's historical recording as a teaching document. Videos in Portuguese."
+        "card": "The mestre's bateria and the berimbaus: the toques, the tempos and how the three berimbaus combine, with Mestre Traíra's historical recording. Videos in Portuguese.",
+        "intro": "The mestre's bateria and the berimbaus: the toques in the order they are learned, starting with Cavalaria; the three tempos, moderate, accelerated and amarrado (tied); the hand on the dobrão; and how the three berimbaus combine in the roda. With Mestre Traíra's historical recording as a teaching document. Videos in Portuguese.",
+        "videos": {
+          "os-toques-do-berimbau.mp4": "The mestre explains the order. Cavalaria is the first toque one learns: a wide, warning toque. Then the moderate ones (Angola, the main one, and São Bento Pequeno), the accelerated ones (São Bento and São Bento Grande), the tied one (Regional, in Mestre Traíra's way) and the two counterpoints (Angola Pequena and Banguela).",
+          "sao-bento-e-banguela.mp4": "Each toque played in sequence, to listen and repeat.",
+          "ensino-de-segundo-percurso.mp4": "First Mestre Traíra's historical recording explaining the toques; then the mestre in practice: the hand on the dobrão, the pressure against the wire, and the toques one by one starting with Cavalaria, the toque that warned of the mounted police arriving.",
+          "tonalidade-dos-gungas.mp4": "The bateria: how the three berimbaus combine. The berra-boi leads with one toque, the middle one answers with another, the viola follows in São Bento Pequeno, improvising. The combinations the mestre uses in the roda, and the two counterpoints: Angola Pequena with Regional, Banguela with São Bento and São Bento Grande."
+        }
       }
     }
   },
