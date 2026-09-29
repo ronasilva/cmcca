@@ -200,7 +200,7 @@
         },
         {
           "termo": "Mestre Traíra",
-          "texto": "José Ramos do Nascimento, Mestre Traíra, gravou em 1964 o LP \"Capoeira da Bahia\", com Cobrinha Verde, referência para os angoleiros até hoje. As faixas levam nome de toque: Santa Maria, São Bento Pequeno, São Bento Grande, Jogo de Dentro, Cavalaria, Iúna e uma sequência de ritmos. É essa gravação que se ouve no vídeo \"Ensino de segundo percurso\".",
+          "texto": "José Ramos do Nascimento, Mestre Traíra, gravou em 1964 o LP \"Capoeira da Bahia\", com Cobrinha Verde, referência para os angoleiros até hoje. As faixas levam nome de toque: Santa Maria, São Bento Pequeno, São Bento Grande, Jogo de Dentro, Cavalaria, Iúna e uma sequência de ritmos. É essa gravação que se ouve no vídeo \"Ensino de segundo percurso\", na área do membro.",
           "linkLabel": "A ficha do disco na Rádio Velhos Mestres",
           "link": "http://velhosmestres.com/br/cobrinha-1964"
         },
@@ -415,7 +415,19 @@
     "mediaTitle": "Fotos & vídeos",
     "photosTitle": "Fotos",
     "videosTitle": "Vídeos",
-    "empty": "Nenhum conteúdo por enquanto. O mestre vai depositar aqui as fotos e vídeos reservados aos membros."
+    "empty": "Nenhum conteúdo por enquanto. O mestre vai depositar aqui as fotos e vídeos reservados aos membros.",
+    "ensinoOpen": "Abrir a etapa",
+    "ensinoBack": "Área do membro",
+    "ensinoVideosLabel": "Vídeos",
+    "ensinoRefLabel": "Referência",
+    "ensinoRefNote": "Os toques, na ordem em que o mestre os lista no seu texto sobre o arranjamento musical, na Esfera Intelectual.",
+    "ensinoRefLink": "Ler o texto na Esfera Intelectual",
+    "ensinoNotice": "Material de ensino reservado aos membros, para estudo pessoal. Por favor, não copiar nem distribuir.",
+    "etapas": {
+      "berimbaus": {
+        "intro": "A bateria do mestre e os berimbaus: os toques na ordem em que se aprendem, a partir de Cavalaria; os andamentos moderados, de aceleração e amarrado; a tonalidade dos gungas; e a gravação histórica de Mestre Traíra como documento de ensino."
+      }
+    }
   },
   "Footer": {
     "association": "CMC/CA",

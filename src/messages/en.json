@@ -200,7 +200,7 @@
         },
         {
           "termo": "Mestre Traíra",
-          "texto": "José Ramos do Nascimento, Mestre Traíra, recorded the LP \"Capoeira da Bahia\" in 1964, with Cobrinha Verde, a reference for angoleiros to this day. The tracks are named after toques: Santa Maria, São Bento Pequeno, São Bento Grande, Jogo de Dentro, Cavalaria, Iúna and a sequence of rhythms. It is this recording heard in the video \"Ensino de segundo percurso\".",
+          "texto": "José Ramos do Nascimento, Mestre Traíra, recorded the LP \"Capoeira da Bahia\" in 1964, with Cobrinha Verde, a reference for angoleiros to this day. The tracks are named after toques: Santa Maria, São Bento Pequeno, São Bento Grande, Jogo de Dentro, Cavalaria, Iúna and a sequence of rhythms. It is this recording heard in the video \"Ensino de segundo percurso\", in the member area.",
           "linkLabel": "The record at Rádio Velhos Mestres",
           "link": "http://velhosmestres.com/br/cobrinha-1964"
         },
@@ -415,7 +415,19 @@
     "mediaTitle": "Photos & videos",
     "photosTitle": "Photos",
     "videosTitle": "Videos",
-    "empty": "Nothing here yet. The mestre will drop the members-only photos and videos here."
+    "empty": "Nothing here yet. The mestre will drop the members-only photos and videos here.",
+    "ensinoOpen": "Open the stage",
+    "ensinoBack": "Member area",
+    "ensinoVideosLabel": "Videos",
+    "ensinoRefLabel": "Reference",
+    "ensinoRefNote": "The toques, in the order the mestre lists them in his text on the musical arrangement, in the Esfera Intelectual.",
+    "ensinoRefLink": "Read the text in the Esfera Intelectual",
+    "ensinoNotice": "Teaching material reserved for members, for personal study. Please do not copy or distribute.",
+    "etapas": {
+      "berimbaus": {
+        "intro": "The mestre's bateria and the berimbaus: the toques in the order they are learned, starting with Cavalaria; the moderate, accelerated and tied tempos; the tonality of the gungas; and Mestre Traíra's historical recording as a teaching document. Videos in Portuguese."
+      }
+    }
   },
   "Footer": {
     "association": "CMC/CA",

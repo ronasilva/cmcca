@@ -55,10 +55,10 @@ export const TEXTOS: Texto[] = [
     slug: "arranjamento",
     eyebrow: "Berimbaus",
     titulo: "Arranjamento musical na Capoeira de Angola em continuação",
+    // os vídeos de ensino (segundo percurso, tonalidade dos gungas) vivem
+    // na área do membro, etapa "berimbaus"
     videos: [
       { id: "hKoXnwy8pG8", title: "Live reajustada: como aprendi do berimbau" },
-      { id: "BuwgeQMeYm0", title: "Ensino de segundo percurso", note: true },
-      { id: "JDYZQOa-USU", title: "Tonalidade dos Gungas" },
     ],
     subtitulo: "Berimbaus, breve histórico em texto",
     paragrafos: [

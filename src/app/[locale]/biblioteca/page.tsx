@@ -130,8 +130,6 @@ const ACERVO_VIDEO_IDS = [
   "IyUg6ebRBvs",
   "vnm8xUgT6WM",
   "hKoXnwy8pG8",
-  "BuwgeQMeYm0",
-  "JDYZQOa-USU",
   "CYC78Z3gHjE",
   "DnYeE-V7iHI",
   "yY_9ey1IbUg",

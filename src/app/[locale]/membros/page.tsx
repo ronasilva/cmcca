@@ -15,6 +15,7 @@ import { isAdminUser } from "@/lib/admins";
 import { statusOf, formatSince } from "@/lib/fichas";
 import { listQuestions } from "@/lib/questions";
 import { findMemberFicha } from "@/lib/member-ficha";
+import { TRACKS, etapaHasContent } from "@/content/ensino";
 
 type Media = { name: string; url: string };
 
@@ -115,7 +116,37 @@ async function countPendingApplications(): Promise<number> {
   return pending;
 }
 
-function EtapaCard({ label, note }: { label: string; note: string }) {
+function EtapaCard({
+  label,
+  note,
+  href,
+  open,
+}: {
+  label: string;
+  note: string;
+  href?: string;
+  open?: string;
+}) {
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className="group flex flex-wrap items-center justify-between gap-4 rounded-sm border border-terracotta/50 bg-cream-2/40 px-6 py-6 transition hover:border-terracotta"
+      >
+        <span>
+          <span className="font-display text-xl font-light italic text-espresso">
+            {label}
+          </span>
+          <span className="mt-2 block text-sm leading-relaxed text-espresso-2">
+            {note}
+          </span>
+        </span>
+        <span className="font-mono text-[12px] uppercase tracking-[0.18em] text-terracotta transition group-hover:text-terracotta-2">
+          {open} →
+        </span>
+      </Link>
+    );
+  }
   return (
     <div className="rounded-sm border border-espresso/15 bg-cream-2/40 px-6 py-6">
       <p className="font-display text-xl font-light italic text-espresso">
@@ -169,6 +200,21 @@ export default async function MembrosPage({
 
   const track1Etapas = t.raw("track1Etapas") as string[];
   const track2Etapas = t.raw("track2Etapas") as string[];
+  const etapaIntros = t.raw("etapas") as Record<string, { intro?: string }>;
+  // A stage with content becomes a link to its own page
+  const etapaCard = (trackKey: "track1" | "track2", label: string, i: number) => {
+    const etapa = TRACKS.find((tr) => tr.key === trackKey)?.etapas[i];
+    const ready = etapa && etapaHasContent(etapa);
+    return (
+      <EtapaCard
+        key={label}
+        label={label}
+        note={ready ? etapaIntros[etapa.slug]?.intro ?? "" : t("comingSoon")}
+        href={ready ? `/membros/ensino/${etapa.slug}` : undefined}
+        open={t("ensinoOpen")}
+      />
+    );
+  };
   const hasMedia = photos.length > 0 || videos.length > 0;
 
   const supabaseConfigured = !!process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -360,9 +406,7 @@ export default async function MembrosPage({
               </h2>
               <p className="mt-3 text-base text-espresso-2">{t("track1Desc")}</p>
               <div className="mt-6 flex flex-col gap-4">
-                {track1Etapas.map((label) => (
-                  <EtapaCard key={label} label={label} note={t("comingSoon")} />
-                ))}
+                {track1Etapas.map((label, i) => etapaCard("track1", label, i))}
               </div>
             </div>
 
@@ -375,9 +419,7 @@ export default async function MembrosPage({
               </h2>
               <p className="mt-3 text-base text-espresso-2">{t("track2Desc")}</p>
               <div className="mt-6 flex flex-col gap-4">
-                {track2Etapas.map((label) => (
-                  <EtapaCard key={label} label={label} note={t("comingSoon")} />
-                ))}
+                {track2Etapas.map((label, i) => etapaCard("track2", label, i))}
               </div>
             </div>
           </div>

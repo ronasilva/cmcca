@@ -200,7 +200,7 @@
         },
         {
           "termo": "Mestre Traíra",
-          "texto": "José Ramos do Nascimento, Mestre Traíra, enregistre en 1964 le LP « Capoeira da Bahia », avec Cobrinha Verde, référence des angoleiros jusqu'à aujourd'hui. Les pistes portent des noms de toques : Santa Maria, São Bento Pequeno, São Bento Grande, Jogo de Dentro, Cavalaria, Iúna et une séquence de rythmes. C'est cet enregistrement qu'on entend dans la vidéo « Ensino de segundo percurso ».",
+          "texto": "José Ramos do Nascimento, Mestre Traíra, enregistre en 1964 le LP « Capoeira da Bahia », avec Cobrinha Verde, référence des angoleiros jusqu'à aujourd'hui. Les pistes portent des noms de toques : Santa Maria, São Bento Pequeno, São Bento Grande, Jogo de Dentro, Cavalaria, Iúna et une séquence de rythmes. C'est cet enregistrement qu'on entend dans la vidéo « Ensino de segundo percurso », dans l'espace membre.",
           "linkLabel": "La fiche du disque à Rádio Velhos Mestres",
           "link": "http://velhosmestres.com/br/cobrinha-1964"
         },
@@ -415,7 +415,19 @@
     "mediaTitle": "Photos & vidéos",
     "photosTitle": "Photos",
     "videosTitle": "Vidéos",
-    "empty": "Aucun contenu pour le moment. Le mestre déposera ici les photos et vidéos réservées aux membres."
+    "empty": "Aucun contenu pour le moment. Le mestre déposera ici les photos et vidéos réservées aux membres.",
+    "ensinoOpen": "Ouvrir l'étape",
+    "ensinoBack": "Espace membre",
+    "ensinoVideosLabel": "Vidéos",
+    "ensinoRefLabel": "Référence",
+    "ensinoRefNote": "Les toques, dans l'ordre où le mestre les énumère dans son texte sur l'arrangement musical, dans l'Esfera Intelectual.",
+    "ensinoRefLink": "Lire le texte dans l'Esfera Intelectual",
+    "ensinoNotice": "Matériel d'enseignement réservé aux membres, pour l'étude personnelle. Merci de ne pas copier ni diffuser.",
+    "etapas": {
+      "berimbaus": {
+        "intro": "La bateria du mestre et les berimbaus : les toques dans l'ordre où on les apprend, à partir de Cavalaria ; les tempos modérés, accélérés et lié ; la tonalité des gungas ; et l'enregistrement historique de Mestre Traíra comme document d'enseignement. Vidéos en portugais."
+      }
+    }
   },
   "Footer": {
     "association": "CMC/CA",

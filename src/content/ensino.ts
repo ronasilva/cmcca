@@ -1,0 +1,91 @@
+// O ensino, na área do membro: os dois caminhos do mestre e as suas
+// etapas. Os rótulos vêm de MemberArea.track1Etapas / track2Etapas, pela
+// mesma ordem; uma etapa com `videos` ganha página própria em
+// /membros/ensino/<slug>. Os vídeos ficam no bucket, em ensino/<slug>/,
+// e só se assinam (1 h) dentro da área do membro.
+
+export type EnsinoVideo = {
+  file: string;
+  title: string;
+  portrait?: boolean;
+  // true: leva a nota de direitos sobre a gravação de Mestre Traíra
+  trairaNote?: boolean;
+  poster?: string;
+};
+
+export type Etapa = {
+  slug: string;
+  videos?: EnsinoVideo[];
+  // referência em texto, na voz do mestre (lista numerada + contrapontos)
+  lista?: string[];
+  contrapontosIntro?: string;
+  contrapontos?: string[];
+};
+
+export type Track = { key: "track1" | "track2"; etapas: Etapa[] };
+
+export const TRACKS: Track[] = [
+  {
+    key: "track1",
+    etapas: [{ slug: "corpo-1" }, { slug: "corpo-2" }, { slug: "corpo-3" }],
+  },
+  {
+    key: "track2",
+    etapas: [
+      { slug: "cantorias" },
+      {
+        slug: "berimbaus",
+        // os dois horizontais numa fila, os dois verticais na seguinte
+        videos: [
+          {
+            file: "ensino-de-segundo-percurso.mp4",
+            title: "Ensino de segundo percurso",
+            trairaNote: true,
+            poster: "/images/videos/BuwgeQMeYm0.jpg",
+          },
+          {
+            file: "tonalidade-dos-gungas.mp4",
+            title: "Tonalidade dos Gungas",
+            poster: "/images/videos/JDYZQOa-USU.jpg",
+          },
+          {
+            file: "os-toques-do-berimbau.mp4",
+            title: "Os toques do berimbau: de Cavalaria aos contrapontos",
+            portrait: true,
+          },
+          {
+            file: "sao-bento-e-banguela.mp4",
+            title: "São Bento Pequeno, São Bento Grande e Banguela",
+            portrait: true,
+          },
+        ],
+        lista: [
+          "São Bento (em aceleração)",
+          "São Bento Pequeno (em moderado, por tom inverso ao de Angola)",
+          "São Bento Grande (de maiores acelerações)",
+          "Regional (de pegada do m/Traíra, que amarra)",
+          "Angola (principal toque moderado)",
+        ],
+        contrapontosIntro: "Para contrapontuar, destaco dois:",
+        contrapontos: [
+          "Angola Pequena (da pegada de m/Traíra; muito mais é conhecido por \"jogo de dentro\")",
+          "Banguela (m/Bimba)",
+        ],
+      },
+      { slug: "roda" },
+      { slug: "obediencias" },
+    ],
+  },
+];
+
+export function findEtapa(slug: string) {
+  for (const track of TRACKS) {
+    const i = track.etapas.findIndex((e) => e.slug === slug);
+    if (i >= 0) return { track, etapa: track.etapas[i], index: i };
+  }
+  return null;
+}
+
+export function etapaHasContent(etapa: Etapa): boolean {
+  return (etapa.videos?.length ?? 0) > 0;
+}
