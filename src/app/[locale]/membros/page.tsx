@@ -403,10 +403,7 @@ export default async function MembrosPage({
           <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
             {trackReady("track1") && (
             <div>
-              <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-                01
-              </p>
-              <h2 className="mt-3 font-display text-2xl font-light italic leading-tight text-espresso">
+              <h2 className="font-display text-2xl font-light italic leading-tight text-espresso">
                 {t("track1Title")}
               </h2>
               <p className="mt-3 text-base text-espresso-2">{t("track1Desc")}</p>
@@ -418,10 +415,7 @@ export default async function MembrosPage({
 
             {trackReady("track2") && (
             <div>
-              <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-                02
-              </p>
-              <h2 className="mt-3 font-display text-2xl font-light italic leading-tight text-espresso">
+              <h2 className="font-display text-2xl font-light italic leading-tight text-espresso">
                 {t("track2Title")}
               </h2>
               <p className="mt-3 text-base text-espresso-2">{t("track2Desc")}</p>

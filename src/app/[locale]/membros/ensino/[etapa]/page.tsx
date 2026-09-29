@@ -28,7 +28,6 @@ export default async function EtapaPage({
   if (!found || !etapaHasContent(found.etapa)) notFound();
   const { track, etapa, index } = found;
 
-  const trackNumber = track.key === "track1" ? "01" : "02";
   const trackTitle = t(`${track.key}Title`);
   const etapaLabel = (t.raw(`${track.key}Etapas`) as string[])[index];
   const intro = (t.raw("etapas") as Record<string, { intro?: string }>)[slug]
@@ -63,7 +62,7 @@ export default async function EtapaPage({
           ← {t("ensinoBack")}
         </Link>
         <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
-          {t("ensinoTitle")} · {trackNumber} · {trackTitle}
+          {t("ensinoTitle")} · {trackTitle}
         </p>
         <h1 className="mt-4 font-display text-[clamp(2.2rem,5vw,4rem)] font-light leading-[1] tracking-tight text-espresso">
           {etapaDisplayName(etapaLabel)}
