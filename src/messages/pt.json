@@ -538,7 +538,8 @@
     "submit": "Enviar pergunta",
     "success": "Pergunta enviada. As perguntas selecionadas são respondidas e publicadas nesta página.",
     "errorInvalid": "Escreva o seu nome e a sua pergunta e tente novamente.",
-    "errorServer": "Não foi possível enviar agora. Tente novamente mais tarde."
+    "errorServer": "Não foi possível enviar agora. Tente novamente mais tarde.",
+    "askedByArchive": "Perguntada por um capoeira"
   },
   "QuestionsAdmin": {
     "eyebrow": "Curadoria · Interno",

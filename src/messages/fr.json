@@ -538,7 +538,8 @@
     "submit": "Envoyer la question",
     "success": "Question envoyée. Les questions retenues reçoivent une réponse publiée sur cette page.",
     "errorInvalid": "Écrivez votre nom et votre question, puis réessayez.",
-    "errorServer": "Envoi impossible pour le moment. Réessayez plus tard."
+    "errorServer": "Envoi impossible pour le moment. Réessayez plus tard.",
+    "askedByArchive": "Posée par un capoeira"
   },
   "QuestionsAdmin": {
     "eyebrow": "Curation · Interne",

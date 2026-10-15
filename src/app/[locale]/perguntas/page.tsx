@@ -70,9 +70,13 @@ export default async function PerguntasPage({
                     <span className="hidden group-open:inline">−</span>
                   </span>
                 </summary>
-                {q.name && (
+                {/* the mestre's own archive: questions he gathered over the
+                    years, askers unknown */}
+                {(q.arquivo || q.name) && (
                   <p className="mt-2 pl-10 font-mono text-[10px] uppercase tracking-[0.25em] text-espresso-2">
-                    {t("askedBy", { name: q.name })}
+                    {q.arquivo
+                      ? t("askedByArchive")
+                      : t("askedBy", { name: q.name })}
                   </p>
                 )}
                 <p className="mt-4 whitespace-pre-line pl-10 pr-6 text-base leading-relaxed text-espresso-2">

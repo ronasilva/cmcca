@@ -538,7 +538,8 @@
     "submit": "Send question",
     "success": "Question sent. Selected questions are answered and published on this page.",
     "errorInvalid": "Write your name and your question and try again.",
-    "errorServer": "Could not send right now. Please try again later."
+    "errorServer": "Could not send right now. Please try again later.",
+    "askedByArchive": "Asked by a capoeira"
   },
   "QuestionsAdmin": {
     "eyebrow": "Curation · Internal",
