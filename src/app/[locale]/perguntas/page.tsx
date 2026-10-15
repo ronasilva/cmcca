@@ -11,6 +11,20 @@ const labelClass =
 const inputClass =
   "border-b border-espresso/30 bg-transparent py-2 font-display text-lg italic text-espresso focus:border-terracotta focus:outline-none";
 
+// The mestre marks emphasis with asterisks (*assim* or **assim**), the
+// way he writes on WhatsApp; render those runs in bold.
+function emphasized(text: string) {
+  return text.split(/(\*{1,2}[^*]+\*{1,2})/).map((part, i) =>
+    /^\*{1,2}[^*]+\*{1,2}$/.test(part) ? (
+      <strong key={i} className="font-semibold text-espresso">
+        {part.replace(/^\*+|\*+$/g, "")}
+      </strong>
+    ) : (
+      part
+    )
+  );
+}
+
 export default async function PerguntasPage({
   params,
   searchParams,
@@ -62,7 +76,7 @@ export default async function PerguntasPage({
                   </p>
                 )}
                 <p className="mt-4 whitespace-pre-line pl-10 pr-6 text-base leading-relaxed text-espresso-2">
-                  {q.answer}
+                  {emphasized(q.answer ?? "")}
                 </p>
               </details>
             </li>
