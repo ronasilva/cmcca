@@ -12,6 +12,7 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { YouTubeEmbed } from "@/components/YouTubeEmbed";
 import { ExclusiveAudio } from "@/components/ExclusiveAudio";
 import { TEXTOS } from "@/content/textos";
+import { RADIO } from "@/content/radio";
 
 type Book = { title: string; author: string };
 
@@ -141,6 +142,7 @@ async function signTracks(): Promise<Record<string, string>> {
     const paths = [
       ...DISCOS.flatMap((d) => (d.tracks ?? []).map((t) => t.path)),
       ...ACERVO_VIDEO_IDS.map((id) => `acervo/videos/${id}.mp4`),
+      ...RADIO.map((e) => `acervo/radio/${e.file}`),
     ];
     const { data } = await admin.storage
       .from(STUDENT_MEDIA_BUCKET)
@@ -294,6 +296,7 @@ export default async function BibliotecaPage({
         </figure>
       </li>
     ));
+  const radioEpisodes = t.raw("radioEpisodes") as Record<string, string>;
   const leituras = t.raw("leituras") as Record<
     string,
     { label: string; intro: string; pontos: { t: string; p: string }[] }
@@ -617,6 +620,53 @@ export default async function BibliotecaPage({
             );
           })}
         </div>
+      </section>
+
+      <SectionDivider label={t("radioTitle")} />
+
+      {/* RÁDIO-RJ: the mestre's old Rio recordings, public */}
+      <section id="radio" className="mx-auto w-full max-w-6xl px-6 pb-20">
+        <p className="max-w-2xl text-base leading-relaxed text-espresso-2">
+          {t("radioIntro")}
+        </p>
+        <ul className="mt-10 grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2">
+          {RADIO.map((ep, i) => {
+            const url = trackUrls[`acervo/radio/${ep.file}`];
+            if (!url) return null;
+            return (
+              <li key={ep.slug} id={`radio-${ep.slug}`}>
+                <figure>
+                  <div className="overflow-hidden rounded-sm border border-espresso/15 bg-black">
+                    <video
+                      controls
+                      preload="none"
+                      playsInline
+                      poster={ep.poster}
+                      src={url}
+                      className="aspect-video w-full object-contain"
+                    />
+                  </div>
+                  <figcaption className="mt-3">
+                    <p className="flex items-baseline gap-3">
+                      <span className="font-mono text-[11px] uppercase tracking-[0.3em] text-terracotta">
+                        N°&nbsp;{String(i + 1).padStart(2, "0")}
+                        {ep.year ? ` · ${ep.year}` : ""}
+                      </span>
+                    </p>
+                    <p className="mt-1 font-display text-base italic leading-snug text-espresso">
+                      {ep.title}
+                    </p>
+                    {radioEpisodes[ep.slug] && (
+                      <p className="mt-2 text-sm leading-relaxed text-espresso-2">
+                        {radioEpisodes[ep.slug]}
+                      </p>
+                    )}
+                  </figcaption>
+                </figure>
+              </li>
+            );
+          })}
+        </ul>
       </section>
 
       <SectionDivider label={t("recordingsTitle")} />
