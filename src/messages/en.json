@@ -216,7 +216,10 @@
     "radioIntro": "Old recordings from the mestre's archive, from Rio de Janeiro: voices, rodas and classes of the 70s and 80s, with the sound of the tapes of the time. In Portuguese.",
     "radioEpisodes": {
       "moraes-1981": "A 1981 recording in Rio of Mestre Moraes speaking to the group he had raised to mestres (Braga, Neco and José Carlos, with contramestre Marco Aurélio), the year before his definitive return to Salvador. On the cover, the group's emblem and a photo of a roda of the time."
-    }
+    },
+    "radioOriginal": "Original recording",
+    "radioRemaster": "Cleaned sound",
+    "radioRemasterNote": "The same audio, with distortion, tape noise and volume swings reduced. Nothing was added."
   },
   "CoursPage": {
     "eyebrow": "Weekly classes",

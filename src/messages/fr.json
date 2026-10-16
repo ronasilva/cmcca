@@ -216,7 +216,10 @@
     "radioIntro": "Enregistrements anciens des archives du mestre, de Rio de Janeiro : voix, rodas et cours des années 70 et 80, avec le son des cassettes de l'époque. En portugais.",
     "radioEpisodes": {
       "moraes-1981": "Enregistrement de 1981, à Rio, de Mestre Moraes s'adressant au groupe qu'il avait élevé au rang de mestres (Braga, Neco et José Carlos, avec le contramestre Marco Aurélio), l'année précédant son retour définitif à Salvador. Sur la couverture, l'emblème du groupe et une photo d'une roda de l'époque."
-    }
+    },
+    "radioOriginal": "Enregistrement original",
+    "radioRemaster": "Son restauré",
+    "radioRemasterNote": "Le même audio, avec la distorsion, le souffle de la bande et les écarts de volume réduits. Rien n'a été ajouté."
   },
   "CoursPage": {
     "eyebrow": "Cours hebdomadaires",

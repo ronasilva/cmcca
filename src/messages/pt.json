@@ -216,7 +216,10 @@
     "radioIntro": "Gravações antigas do arquivo do mestre, do Rio de Janeiro: vozes, rodas e aulas dos anos 70 e 80, com o som das fitas da época.",
     "radioEpisodes": {
       "moraes-1981": "Gravação de 1981, no Rio, com Mestre Moraes falando à turma que ele elevara a mestres (Braga, Neco e José Carlos, com o contramestre Marco Aurélio), no ano anterior ao seu regresso definitivo a Salvador. Na capa, o emblema do grupo e uma foto da roda da época."
-    }
+    },
+    "radioOriginal": "Gravação original",
+    "radioRemaster": "Som tratado",
+    "radioRemasterNote": "O mesmo áudio, com a distorção, o ruído de fita e as diferenças de volume reduzidos. Nada foi acrescentado."
   },
   "CoursPage": {
     "eyebrow": "Aulas semanais",
