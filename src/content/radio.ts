@@ -24,6 +24,5 @@ export const RADIO: Episodio[] = [
       "Mestre Moraes no Rio em 1981, para a turma CAMM (de elevados a mestres), antes de seu regresso definitivo",
     year: 1981,
     poster: "/images/radio/radio-rj-01.jpg",
-    remaster: "radio-rj-01-remaster.mp4",
   },
 ];
